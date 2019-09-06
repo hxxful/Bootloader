@@ -1,0 +1,46 @@
+#
+# PX4 bootloader build rules for imxrt1052 targets.
+
+# 5 seconds / 5000 ms default delay
+PX4_BOOTLOADER_DELAY	?= 5000
+ARCH=imxrt
+
+IMXRT_ASRCS= devices/MIMXRT1052/gcc/startup_MIMXRT1052.S \
+
+IMXRT_CSRCS= devices/MIMXRT1052/system_MIMXRT1052.c \
+             devices/MIMXRT1052/drivers/fsl_clock.c \
+             devices/MIMXRT1052/drivers/fsl_gpio.c \
+
+IMXRT_INCS=  devices/MIMXRT1052 \
+             devices/MIMXRT1052/drivers \
+			 CMSIS/Include \
+
+ASRCS = $(addprefix $(LIBIMXRT1052)/, $(IMXRT_ASRCS))
+CSRCS = $(addprefix $(LIBIMXRT1052)/, $(IMXRT_CSRCS))
+INCS  = $(addprefix -I $(LIBIMXRT1052)/, $(IMXRT_INCS))
+
+SRCS	  = $(COMMON_SRCS) $(CSRCS) main_imxrt1052.c \
+
+# Keep the build happy
+LIB_WORK_AROUNDS=   -DSTM32F7 \
+                    -DTOWER=0 \
+                    -DFREEDOM=0 \
+
+
+FLAGS += $(LIB_WORK_AROUNDS) \
+       -g -mthumb -mcpu=cortex-m7 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 \
+       -specs=nano.specs -specs=nosys.specs \
+       $(INCS) \
+       -DTARGET_HW_$(TARGET_HW) \
+       -DDEBUG=0 \
+       -DNDEBUG=1 \
+	   -DCPU_MIMXRT1052CVL5B=1 \
+       -DCPU_IS_ARM_CORTEX_M7=1 \
+       -T$(LINKER_FILE) \
+        $(EXTRAFLAGS)
+
+#
+# General rules for making dependency and object files
+# This is where the compiler is called
+#
+include rules.mk

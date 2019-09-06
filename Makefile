@@ -9,6 +9,7 @@ export BUILD_DIR_ROOT ?= build
 export BL_BASE		?= $(wildcard .)
 export LIBOPENCM3	?= $(wildcard libopencm3)
 export LIBKINETIS  	?= $(wildcard lib/kinetis/NXP_Kinetis_Bootloader_2_0_0)
+export LIBIMXRT1052 ?= $(wildcard lib/imxrt/sdk_2.3.1_mimxrt1052)
 MKFLAGS=--no-print-directory
 
 SRC_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
@@ -74,7 +75,8 @@ TARGETS	= \
 	px4io_bl \
 	px4iov3_bl \
 	tapv1_bl \
-	smartap_pro_bl
+	smartap_pro_bl \
+	imxrt1052_bl
 
 all:	$(TARGETS) sizes
 
@@ -160,6 +162,8 @@ tapv1_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
 aerofcv1_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
 	${MAKE} ${MKFLAGS} -f  Makefile.f4 TARGET_HW=AEROFC_V1 LINKER_FILE=stm32f4.ld TARGET_FILE_NAME=$@
 
+imxrt1052_bl: $(MAKEFILE_LIST) $(LIBIMXRT1052)
+	${MAKE} ${MKFLAGS} -f  Makefile.imxrt1052 TARGET_HW=UAVRS_V2 LINKER_FILE=imxrt1052.ld TARGET_FILE_NAME=$@
 #
 # Show sizes
 #

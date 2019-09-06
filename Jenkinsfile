@@ -30,6 +30,7 @@ pipeline {
                      "px4fmuv5_bl",
                      "px4io_bl",
                      "smartap_pro_bl"
+                     "imxrt1052_bl"
             ],
             image: docker_images.nuttx,
             archive: true
