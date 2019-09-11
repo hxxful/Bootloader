@@ -10,10 +10,28 @@ IMXRT_ASRCS= devices/MIMXRT1052/gcc/startup_MIMXRT1052.S \
 IMXRT_CSRCS= devices/MIMXRT1052/system_MIMXRT1052.c \
              devices/MIMXRT1052/drivers/fsl_clock.c \
              devices/MIMXRT1052/drivers/fsl_gpio.c \
+             devices/MIMXRT1052/drivers/fsl_lpuart.c \
+             devices/MIMXRT1052/drivers/fsl_common.c \
+			 devices/MIMXRT1052/utilities/fsl_assert.c \
+			 devices/MIMXRT1052/utilities/fsl_notifier.c \
+			 devices/MIMXRT1052/utilities/fsl_shell.c \
+			 devices/MIMXRT1052/utilities/fsl_sbrk.c \
+			 devices/MIMXRT1052/utilities/fsl_debug_console.c \
+			 devices/MIMXRT1052/utilities/str/fsl_str.c \
+			 devices/MIMXRT1052/utilities/log/fsl_log.c \
+			 devices/MIMXRT1052/utilities/io/fsl_io.c \
+			 boards/evkbimxrt1050/demo_apps/hello_world/board.c \
+			 boards/evkbimxrt1050/demo_apps/hello_world/clock_config.c \
+			 boards/evkbimxrt1050/demo_apps/hello_world/pin_mux.c \
 
-IMXRT_INCS=  devices/MIMXRT1052 \
+IMXRT_INCS=  CMSIS/Include \
+			 devices/MIMXRT1052 \
              devices/MIMXRT1052/drivers \
-			 CMSIS/Include \
+			 devices/MIMXRT1052/utilities \
+			 devices/MIMXRT1052/utilities/io \
+			 devices/MIMXRT1052/utilities/str \
+			 devices/MIMXRT1052/utilities/log \
+			 boards/evkbimxrt1050/demo_apps/hello_world \
 
 ASRCS = $(addprefix $(LIBIMXRT1052)/, $(IMXRT_ASRCS))
 CSRCS = $(addprefix $(LIBIMXRT1052)/, $(IMXRT_CSRCS))
@@ -34,6 +52,8 @@ FLAGS += $(LIB_WORK_AROUNDS) \
        -DTARGET_HW_$(TARGET_HW) \
        -DDEBUG=0 \
        -DNDEBUG=1 \
+	   -DRTE_USART0 \
+	   -DRTE_USART0_DMA_EN \
 	   -DCPU_MIMXRT1052CVL5B=1 \
        -DCPU_IS_ARM_CORTEX_M7=1 \
        -T$(LINKER_FILE) \
