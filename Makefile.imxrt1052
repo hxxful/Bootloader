@@ -20,9 +20,9 @@ IMXRT_CSRCS= devices/MIMXRT1052/system_MIMXRT1052.c \
 			 devices/MIMXRT1052/utilities/str/fsl_str.c \
 			 devices/MIMXRT1052/utilities/log/fsl_log.c \
 			 devices/MIMXRT1052/utilities/io/fsl_io.c \
-			 boards/evkbimxrt1050/demo_apps/hello_world/board.c \
-			 boards/evkbimxrt1050/demo_apps/hello_world/clock_config.c \
-			 boards/evkbimxrt1050/demo_apps/hello_world/pin_mux.c \
+			 boards/uavrs_v2/demo_apps/hello_world/board.c \
+			 boards/uavrs_v2/demo_apps/hello_world/clock_config.c \
+			 boards/uavrs_v2/demo_apps/hello_world/pin_mux.c \
 
 IMXRT_INCS=  CMSIS/Include \
 			 devices/MIMXRT1052 \
@@ -31,7 +31,7 @@ IMXRT_INCS=  CMSIS/Include \
 			 devices/MIMXRT1052/utilities/io \
 			 devices/MIMXRT1052/utilities/str \
 			 devices/MIMXRT1052/utilities/log \
-			 boards/evkbimxrt1050/demo_apps/hello_world \
+			 boards/uavrs_v2/demo_apps/hello_world \
 
 ASRCS = $(addprefix $(LIBIMXRT1052)/, $(IMXRT_ASRCS))
 CSRCS = $(addprefix $(LIBIMXRT1052)/, $(IMXRT_CSRCS))
