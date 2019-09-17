@@ -33,7 +33,7 @@
 /**
  * @brief 延时一段时间
  */
-static void delay(uint32_t count);
+void delay(uint32_t count);
 
 /*******************************************************************
  * Code
@@ -43,7 +43,7 @@ static void delay(uint32_t count);
  *       如flexspi_nor_debug和flexspi_nor_release版本的程序中，
  *       flexspi_nor_release版本的延时要短得多  
  */ 
-static void delay(uint32_t count)
+void delay(uint32_t count)
 {
     volatile uint32_t i = 0;
     for (i = 0; i < count; ++i)
@@ -115,7 +115,7 @@ int main(void)
     
     while(1)
     {         
-			PRINTF("HELLO UAVRS_V2:0x%08X\r\n", BOARD_PWR_PAD_DATA);
+			PRINTF("HELLO WORLD:0x%08X\r\n", BOARD_PWR_PAD_DATA);
       delay(LED_DELAY_COUNT);   
     }     
 
@@ -123,9 +123,3 @@ int main(void)
 
 
 /****************************END OF FILE**********************/
-
-void _start(void)
-{
-    main();
-}
-

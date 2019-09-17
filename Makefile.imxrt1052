@@ -20,9 +20,13 @@ IMXRT_CSRCS= devices/MIMXRT1052/system_MIMXRT1052.c \
 			 devices/MIMXRT1052/utilities/str/fsl_str.c \
 			 devices/MIMXRT1052/utilities/log/fsl_log.c \
 			 devices/MIMXRT1052/utilities/io/fsl_io.c \
-			 boards/uavrs_v2/demo_apps/hello_world/board.c \
-			 boards/uavrs_v2/demo_apps/hello_world/clock_config.c \
-			 boards/uavrs_v2/demo_apps/hello_world/pin_mux.c \
+			 boards/uavrs_v2/demo_apps/test/board.c \
+			 boards/uavrs_v2/demo_apps/test/clock_config.c \
+			 boards/uavrs_v2/demo_apps/test/pin_mux.c \
+			 boards/uavrs_v2/demo_apps/test/bsp/led/bsp_led.c \
+			 boards/uavrs_v2/demo_apps/test/xip/fire_imxrt1052_sdram_ini_dcd.c \
+			 boards/uavrs_v2/demo_apps/test/xip/fire_imxrt1052_spiflash_config.c \
+			 boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.c \
 
 IMXRT_INCS=  CMSIS/Include \
 			 devices/MIMXRT1052 \
@@ -31,7 +35,8 @@ IMXRT_INCS=  CMSIS/Include \
 			 devices/MIMXRT1052/utilities/io \
 			 devices/MIMXRT1052/utilities/str \
 			 devices/MIMXRT1052/utilities/log \
-			 boards/uavrs_v2/demo_apps/hello_world \
+			 boards/uavrs_v2/demo_apps/test \
+			 boards/uavrs_v2/demo_apps/test/bsp \
 
 ASRCS = $(addprefix $(LIBIMXRT1052)/, $(IMXRT_ASRCS))
 CSRCS = $(addprefix $(LIBIMXRT1052)/, $(IMXRT_CSRCS))
@@ -44,19 +49,24 @@ LIB_WORK_AROUNDS=   -DSTM32F7 \
                     -DTOWER=0 \
                     -DFREEDOM=0 \
 
-
+# Compile flags and defined 
 FLAGS += $(LIB_WORK_AROUNDS) \
-       -g -mthumb -mcpu=cortex-m7 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 \
-       -specs=nano.specs -specs=nosys.specs \
-       $(INCS) \
-       -DTARGET_HW_$(TARGET_HW) \
-       -DDEBUG=0 \
-       -DNDEBUG=1 \
-	   -DRTE_USART0 \
-	   -DRTE_USART0_DMA_EN \
-	   -DCPU_MIMXRT1052CVL5B=1 \
-       -DCPU_IS_ARM_CORTEX_M7=1 \
-       -T$(LINKER_FILE) \
+        -g -mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-sp-d16 \
+        -specs=nano.specs -specs=nosys.specs \
+        $(INCS) \
+        -DTARGET_HW_$(TARGET_HW) \
+        -DDEBUG=0 \
+        -DNDEBUG=1 \
+        -DRTE_USART0 \
+        -DRTE_USART0_DMA_EN \
+        -DCPU_MIMXRT1052DVL6B=1 \
+        -DXIP_EXTERNAL_FLASH=1 \
+        -DXIP_BOOT_HEADER_ENABLE=1 \
+        -DXIP_BOOT_HEADER_DCD_ENABLE=1 \
+        -DPRINTF_ADVANCED_ENABLE=1 \
+        -DSCANF_ADVANCED_ENABLE=1 \
+        -DCPU_IS_ARM_CORTEX_M7=1 \
+        -T$(LINKER_FILE) \
         $(EXTRAFLAGS)
 
 #
