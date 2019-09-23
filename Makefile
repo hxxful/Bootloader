@@ -9,7 +9,7 @@ export BUILD_DIR_ROOT ?= build
 export BL_BASE		?= $(wildcard .)
 export LIBOPENCM3	?= $(wildcard libopencm3)
 export LIBKINETIS  	?= $(wildcard lib/kinetis/NXP_Kinetis_Bootloader_2_0_0)
-export LIBIMXRT1052 ?= $(wildcard lib/imxrt/sdk_2.3.1_mimxrt1052)
+export LIBIMXRT1052 ?= $(wildcard lib/imxrt/sdk_2.4.1_mimxrt1052)
 MKFLAGS=--no-print-directory
 
 SRC_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
