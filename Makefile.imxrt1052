@@ -24,9 +24,10 @@ IMXRT_CSRCS= devices/MIMXRT1052/system_MIMXRT1052.c \
 			 boards/uavrs_v2/demo_apps/test/clock_config.c \
 			 boards/uavrs_v2/demo_apps/test/pin_mux.c \
 			 boards/uavrs_v2/demo_apps/test/bsp/led/bsp_led.c \
-			 boards/uavrs_v2/demo_apps/test/xip/fire_imxrt1052_sdram_ini_dcd.c \
-			 boards/uavrs_v2/demo_apps/test/xip/fire_imxrt1052_spiflash_config.c \
+			 boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.c \
 			 boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.c \
+			 boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.c
+
 
 IMXRT_INCS=  CMSIS/Include \
 			 devices/MIMXRT1052 \
@@ -37,6 +38,7 @@ IMXRT_INCS=  CMSIS/Include \
 			 devices/MIMXRT1052/utilities/log \
 			 boards/uavrs_v2/demo_apps/test \
 			 boards/uavrs_v2/demo_apps/test/bsp \
+			 boards/uavrs_v2/demo_apps/test/xip \
 
 ASRCS = $(addprefix $(LIBIMXRT1052)/, $(IMXRT_ASRCS))
 CSRCS = $(addprefix $(LIBIMXRT1052)/, $(IMXRT_CSRCS))

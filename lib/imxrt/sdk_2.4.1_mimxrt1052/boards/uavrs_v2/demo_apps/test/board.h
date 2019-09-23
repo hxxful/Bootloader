@@ -8,6 +8,15 @@
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
+
+#define CONFIG_IMXRT1052_HYPER_FLASH 1
+
+//#define CONFIG_IMXRT1052_QSPI_FLASH
+
+//#define CONFIG_IMXRT1064_QSPI_FLASH 1
+
+//#define CONFIG_IMXRT_SEMC_INIT_DONE 1
+
 /*! @brief The board name */
 #define BOARD_NAME                    "YH i.MX RT1052 Board"
 
