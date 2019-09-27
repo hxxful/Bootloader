@@ -23,6 +23,7 @@
 #include "./led/bsp_led.h"
 
 #include "fsl_iomuxc.h"
+#include "fsl_flexspi.h"
 #include "pad_config.h"
 
 
@@ -50,6 +51,10 @@ static void delay(uint32_t count)
         __asm("NOP"); /* 调用nop空指令 */
     }
 }
+/*******************************************************************
+ * Defines
+ *******************************************************************/
+
 
 #define BOARD_PWR_IOMUXC        IOMUXC_SNVS_PMIC_STBY_REQ_GPIO5_IO02
 #define BOARD_PWR_GPIO          GPIO5
@@ -66,7 +71,107 @@ static void delay(uint32_t count)
 #define BOARD_LED_IOMUXC        IOMUXC_GPIO_EMC_36_GPIO3_IO22
 #define BOARD_LED_GPIO          GPIO3
 #define BOARD_LED_GPIO_PIN      (22U)
-#define BOARD_LED_PAD_DATA      
+#define BOARD_LED_PAD_DATA
+
+#define EXAMPLE_FLEXSPI FLEXSPI
+#define FLASH_SIZE 0x10000
+#define EXAMPLE_FLEXSPI_AMBA_BASE FlexSPI_AMBA_BASE
+#define FLASH_PAGE_SIZE 512
+#define EXAMPLE_SECTOR 101
+#define SECTOR_SIZE 0x40000
+#define EXAMPLE_FLEXSPI_CLOCK kCLOCK_FlexSpi
+#define HYPERFLASH_CMD_LUT_SEQ_IDX_READDATA 0
+#define HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEDATA 1
+#define HYPERFLASH_CMD_LUT_SEQ_IDX_READSTATUS 2
+#define HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEENABLE 4
+#define HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR 6
+#define HYPERFLASH_CMD_LUT_SEQ_IDX_PAGEPROGRAM 10
+#define CUSTOM_LUT_LENGTH 48
+
+
+status_t flexspi_nor_hyperbus_read(FLEXSPI_Type *base, uint32_t addr, uint32_t *buffer, uint32_t bytes)
+{
+    flexspi_transfer_t flashXfer;
+    status_t status;
+
+    flashXfer.deviceAddress = addr * 2;
+    flashXfer.port = kFLEXSPI_PortA1;
+    flashXfer.cmdType = kFLEXSPI_Read;
+    flashXfer.SeqNumber = 1;
+    flashXfer.seqIndex = HYPERFLASH_CMD_LUT_SEQ_IDX_READDATA;
+    flashXfer.data = buffer;
+    flashXfer.dataSize = bytes;
+    status = FLEXSPI_TransferBlocking(base, &flashXfer);
+
+    if (status != kStatus_Success) {
+        return status;
+    }
+
+    return status;
+}
+
+status_t flexspi_nor_hyperbus_write(FLEXSPI_Type *base, uint32_t addr, uint32_t *buffer, uint32_t bytes)
+{
+    flexspi_transfer_t flashXfer;
+    status_t status;
+
+    flashXfer.deviceAddress = addr * 2;
+    flashXfer.port = kFLEXSPI_PortA1;
+    flashXfer.cmdType = kFLEXSPI_Write;
+    flashXfer.SeqNumber = 1;
+    flashXfer.seqIndex = HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEDATA;
+    flashXfer.data = buffer;
+    flashXfer.dataSize = bytes;
+    status = FLEXSPI_TransferBlocking(base, &flashXfer);
+
+    if (status != kStatus_Success) {
+        return status;
+    }
+
+    return status;
+}
+
+status_t flexspi_nor_hyperflash_cfi(FLEXSPI_Type *base)
+{
+    /*
+     * Read ID-CFI Parameters
+     */
+    // CFI Entry
+    status_t status;
+    uint32_t buffer[2];
+    uint32_t data = 0x9800;
+    status = flexspi_nor_hyperbus_write(base, 0x555, &data, 2);
+    if (status != kStatus_Success) {
+        return status;
+    }
+
+    PRINTF("Entering the ASO mode\r\n");
+    // ID-CFI Read
+    // Read Query Unique ASCII String
+    status = flexspi_nor_hyperbus_read(base, 0x10, &buffer[0], sizeof(buffer));
+    if (status != kStatus_Success) {
+        return status;
+    }
+    buffer[1] &= 0xFFFF;
+    // Check that the data read out is  unicode "QRY" in big-endian order
+    if ((buffer[0] != 0x52005100) || (buffer[1] != 0x5900)) {
+        status = kStatus_Fail;
+        PRINTF("Can not found the HyperFlash!\r\n");
+        return status;
+    }
+    // ASO Exit
+    data = 0xF000;
+    status = flexspi_nor_hyperbus_write(base, 0x0, &data, 2);
+    if (status != kStatus_Success) {
+        PRINTF("Can not exit the ASO\r\n");
+        return status;
+    }
+
+    PRINTF("Found the HyperFlash by CFI\r\n");
+
+    return status;
+}
+
 
 
 void BOARD_PowerConfig(void)
@@ -134,8 +239,10 @@ int main(void)
     /* 初始化LED引脚 */
     //LED_GPIO_Config();
 
+    /* HyperFlash 读写测试 */
+    //flexspi_nor_hyperflash_cfi(EXAMPLE_FLEXSPI);
     while(1) {
-        PRINTF("HELLO UAVRS_V2:0x%08X\r\n", BOARD_PWR_PAD_DATA);
+        PRINTF("HELLO UAVRS_V2 BOARD:0x%08X\r\n", BOARD_PWR_PAD_DATA);
         delay(LED_DELAY_COUNT);
     }
 

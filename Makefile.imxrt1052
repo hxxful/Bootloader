@@ -12,6 +12,7 @@ IMXRT_CSRCS= devices/MIMXRT1052/system_MIMXRT1052.c \
              devices/MIMXRT1052/drivers/fsl_gpio.c \
              devices/MIMXRT1052/drivers/fsl_lpuart.c \
              devices/MIMXRT1052/drivers/fsl_common.c \
+             devices/MIMXRT1052/drivers/fsl_flexspi.c \
 			 devices/MIMXRT1052/utilities/fsl_assert.c \
 			 devices/MIMXRT1052/utilities/fsl_notifier.c \
 			 devices/MIMXRT1052/utilities/fsl_shell.c \
