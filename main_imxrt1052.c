@@ -131,6 +131,120 @@ status_t flexspi_nor_hyperbus_write(FLEXSPI_Type *base, uint32_t addr, uint32_t 
     return status;
 }
 
+status_t flexspi_nor_write_enable(FLEXSPI_Type *base, uint32_t baseAddr)
+{
+    flexspi_transfer_t flashXfer;
+    status_t status;
+
+    /* Write neable */
+    flashXfer.deviceAddress = baseAddr;
+    flashXfer.port = kFLEXSPI_PortA1;
+    flashXfer.cmdType = kFLEXSPI_Command;
+    flashXfer.SeqNumber = 2;
+    flashXfer.seqIndex = HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEENABLE;
+
+    status = FLEXSPI_TransferBlocking(base, &flashXfer);
+
+    return status;
+}
+
+status_t flexspi_nor_wait_bus_busy(FLEXSPI_Type *base)
+{
+    /* Wait status ready. */
+    bool isBusy;
+    uint32_t readValue;
+    status_t status;
+    flexspi_transfer_t flashXfer;
+
+    flashXfer.deviceAddress = 0;
+    flashXfer.port = kFLEXSPI_PortA1;
+    flashXfer.cmdType = kFLEXSPI_Read;
+    flashXfer.SeqNumber = 2;
+    flashXfer.seqIndex = HYPERFLASH_CMD_LUT_SEQ_IDX_READSTATUS;
+    flashXfer.data = &readValue;
+    flashXfer.dataSize = 2;
+
+    do {
+        status = FLEXSPI_TransferBlocking(base, &flashXfer);
+
+        if (status != kStatus_Success) {
+            return status;
+        }
+        if (readValue & 0x8000) {
+            isBusy = false;
+        } else {
+            isBusy = true;
+        }
+
+        if (readValue & 0x3200) {
+            status = kStatus_Fail;
+            break;
+        }
+
+    } while (isBusy);
+
+    return status;
+}
+
+status_t flexspi_nor_flash_erase_sector(FLEXSPI_Type *base, uint32_t address)
+{
+    status_t status;
+    flexspi_transfer_t flashXfer;
+
+    /* Write enable */
+    status = flexspi_nor_write_enable(base, address);
+
+    if (status != kStatus_Success) {
+        return status;
+    }
+
+    flashXfer.deviceAddress = address;
+    flashXfer.port = kFLEXSPI_PortA1;
+    flashXfer.cmdType = kFLEXSPI_Command;
+    flashXfer.SeqNumber = 4;
+    flashXfer.seqIndex = HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR;
+    status = FLEXSPI_TransferBlocking(base, &flashXfer);
+
+    if (status != kStatus_Success) {
+        return status;
+    }
+
+    status = flexspi_nor_wait_bus_busy(base);
+
+    return status;
+}
+
+status_t flexspi_nor_flash_page_program(FLEXSPI_Type *base, uint32_t address, const uint32_t *src)
+{
+    status_t status;
+    flexspi_transfer_t flashXfer;
+
+    /* Write neable */
+    status = flexspi_nor_write_enable(base, address);
+
+    if (status != kStatus_Success) {
+        return status;
+    }
+
+    /* Prepare page program command */
+    flashXfer.deviceAddress = address;
+    flashXfer.port = kFLEXSPI_PortA1;
+    flashXfer.cmdType = kFLEXSPI_Write;
+    flashXfer.SeqNumber = 2;
+    flashXfer.seqIndex = HYPERFLASH_CMD_LUT_SEQ_IDX_PAGEPROGRAM;
+    flashXfer.data = (uint32_t *)src;
+    flashXfer.dataSize = FLASH_PAGE_SIZE;
+    status = FLEXSPI_TransferBlocking(base, &flashXfer);
+
+    if (status != kStatus_Success) {
+        return status;
+    }
+
+    status = flexspi_nor_wait_bus_busy(base);
+
+    return status;
+}
+
 status_t flexspi_nor_hyperflash_cfi(FLEXSPI_Type *base)
 {
     /*
@@ -211,6 +325,8 @@ void BOARD_LedConfig(void)
   */
 int main(void)
 {
+    status_t status;
+
     /* 初始化内存保护单元 */
     BOARD_ConfigMPU();
     /* 初始化开发板引脚 */
@@ -240,7 +356,12 @@ int main(void)
     //LED_GPIO_Config();
 
     /* HyperFlash 读写测试 */
-    //flexspi_nor_hyperflash_cfi(EXAMPLE_FLEXSPI);
+    PRINTF("Erasing Serial NOR over FlexSPI...\r\n");
+    status = flexspi_nor_flash_erase_sector(EXAMPLE_FLEXSPI, EXAMPLE_SECTOR * SECTOR_SIZE);
+    if (status != kStatus_Success) {
+        PRINTF("Erase sector failure!, error code:%d\r\n", status);
+        return -1;
+    }
     while(1) {
         PRINTF("HELLO UAVRS_V2 BOARD:0x%08X\r\n", BOARD_PWR_PAD_DATA);
         delay(LED_DELAY_COUNT);
