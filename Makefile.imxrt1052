@@ -69,7 +69,9 @@ FLAGS += $(LIB_WORK_AROUNDS) \
         -DPRINTF_ADVANCED_ENABLE=1 \
         -DSCANF_ADVANCED_ENABLE=1 \
         -DCPU_IS_ARM_CORTEX_M7=1 \
+        -DUSE_RAM_VECTOR_TABLE=1 \
         -T$(LINKER_FILE) \
+        -Wl,-Map=DP.map \
         $(EXTRAFLAGS)
 
 #

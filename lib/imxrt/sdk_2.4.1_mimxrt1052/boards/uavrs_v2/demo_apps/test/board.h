@@ -52,6 +52,8 @@ void BOARD_ConfigMPU(void);
   
 void CopyAndUseRAMVectorTable(void);
 
+void CopyAllTextToITCM(void);
+
 #if defined(__cplusplus)
 }
 #endif /* __cplusplus */

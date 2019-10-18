@@ -1,0 +1,392 @@
+Dependencies for Project 'uavrs_v2_bootloader', Target 'Target 1': (DO NOT MODIFY !)
+F (..\..\devices\MIMXRT1052\arm\startup_MIMXRT1052.s)(0x5B068FAA)(--cpu Cortex-M7.fp.dp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 515" --pd "CPU_MIMXRT1052DVL6B SETA 1" --pd "__STARTUP_INITIALIZE_NONCACHEDATA SETA 1"--list .\listings\startup_mimxrt1052.lst --xref -o .\objects\startup_mimxrt1052.o --depend .\objects\startup_mimxrt1052.d)
+F (..\..\devices\MIMXRT1052\system_MIMXRT1052.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\system_mimxrt1052.o --omf_browse .\objects\system_mimxrt1052.crf --depend .\objects\system_mimxrt1052.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+F (..\..\devices\MIMXRT1052\drivers\fsl_clock.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_clock.o --omf_browse .\objects\fsl_clock.crf --depend .\objects\fsl_clock.d)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+F (..\..\devices\MIMXRT1052\drivers\fsl_common.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_common.o --omf_browse .\objects\fsl_common.crf --depend .\objects\fsl_common.d)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+F (..\..\devices\MIMXRT1052\drivers\fsl_flexspi.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_flexspi.o --omf_browse .\objects\fsl_flexspi.crf --depend .\objects\fsl_flexspi.d)
+I (..\..\devices\MIMXRT1052\drivers\fsl_flexspi.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+F (..\..\devices\MIMXRT1052\drivers\fsl_gpio.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_gpio.o --omf_browse .\objects\fsl_gpio.crf --depend .\objects\fsl_gpio.d)
+I (..\..\devices\MIMXRT1052\drivers\fsl_gpio.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+F (..\..\devices\MIMXRT1052\drivers\fsl_lpuart.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_lpuart.o --omf_browse .\objects\fsl_lpuart.crf --depend .\objects\fsl_lpuart.d)
+I (..\..\devices\MIMXRT1052\drivers\fsl_lpuart.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+F (..\..\devices\MIMXRT1052\utilities\fsl_assert.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_assert.o --omf_browse .\objects\fsl_assert.crf --depend .\objects\fsl_assert.d)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\utilities\fsl_debug_console.h)(0x5B068FAA)
+F (..\..\devices\MIMXRT1052\utilities\fsl_debug_console.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_debug_console.o --omf_browse .\objects\fsl_debug_console.crf --depend .\objects\fsl_debug_console.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\utilities\fsl_debug_console.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\utilities\fsl_debug_console_conf.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\utilities\log\fsl_log.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\utilities\str\fsl_str.h)(0x5B068FAA)
+F (..\..\devices\MIMXRT1052\utilities\fsl_notifier.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_notifier.o --omf_browse .\objects\fsl_notifier.crf --depend .\objects\fsl_notifier.d)
+I (..\..\devices\MIMXRT1052\utilities\fsl_notifier.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+F (..\..\devices\MIMXRT1052\utilities\fsl_sbrk.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_sbrk.o --omf_browse .\objects\fsl_sbrk.crf --depend .\objects\fsl_sbrk.d)
+F (..\..\devices\MIMXRT1052\utilities\fsl_shell.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_shell.o --omf_browse .\objects\fsl_shell.crf --depend .\objects\fsl_shell.d)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\utilities\fsl_shell.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+F (..\..\devices\MIMXRT1052\utilities\str\fsl_str.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_str.o --omf_browse .\objects\fsl_str.crf --depend .\objects\fsl_str.d)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\utilities\str\fsl_str.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\utilities\fsl_debug_console_conf.h)(0x5B068FAA)
+F (..\..\devices\MIMXRT1052\utilities\log\fsl_log.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_log.o --omf_browse .\objects\fsl_log.crf --depend .\objects\fsl_log.d)
+I (..\..\devices\MIMXRT1052\utilities\log\fsl_log.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\utilities\fsl_debug_console_conf.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\utilities\io\fsl_io.h)(0x5B068FAA)
+F (..\..\devices\MIMXRT1052\utilities\io\fsl_io.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_io.o --omf_browse .\objects\fsl_io.crf --depend .\objects\fsl_io.d)
+I (..\..\devices\MIMXRT1052\utilities\io\fsl_io.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\utilities\fsl_debug_console_conf.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_lpuart.h)(0x5B068FAA)
+F (.\demo_apps\test\board.c)(0x5DA9758D)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\board.o --omf_browse .\objects\board.crf --depend .\objects\board.d)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\utilities\fsl_debug_console.h)(0x5B068FAA)
+I (demo_apps\test\board.h)(0x5DA9624E)
+I (demo_apps\test\clock_config.h)(0x5D883CFE)
+I (..\..\devices\MIMXRT1052\drivers\fsl_gpio.h)(0x5B068FAA)
+F (.\demo_apps\test\clock_config.c)(0x5D883CFE)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\clock_config.o --omf_browse .\objects\clock_config.crf --depend .\objects\clock_config.d)
+I (demo_apps\test\clock_config.h)(0x5D883CFE)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+F (.\demo_apps\test\pin_mux.c)(0x5D883CFE)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\pin_mux.o --omf_browse .\objects\pin_mux.crf --depend .\objects\pin_mux.d)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_iomuxc.h)(0x5B068FAA)
+I (demo_apps\test\pin_mux.h)(0x5D883CFE)
+F (.\demo_apps\test\xip\fsl_flexspi_nor_boot.c)(0x5D883CFE)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\fsl_flexspi_nor_boot.o --omf_browse .\objects\fsl_flexspi_nor_boot.crf --depend .\objects\fsl_flexspi_nor_boot.d)
+I (demo_apps\test\xip\fsl_flexspi_nor_boot.h)(0x5D883CFE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (.\demo_apps\test\board.h)(0x5DA9624E)
+I (.\demo_apps\test\clock_config.h)(0x5D883CFE)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_gpio.h)(0x5B068FAA)
+F (.\demo_apps\test\xip\uavrs_v2_flexspi_nor_flash.c)(0x5DA811B3)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\uavrs_v2_flexspi_nor_flash.o --omf_browse .\objects\uavrs_v2_flexspi_nor_flash.crf --depend .\objects\uavrs_v2_flexspi_nor_flash.d)
+I (demo_apps\test\xip\uavrs_v2_flexspi_nor_flash.h)(0x5D885FF5)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (.\demo_apps\test\board.h)(0x5DA9624E)
+I (.\demo_apps\test\clock_config.h)(0x5D883CFE)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_gpio.h)(0x5B068FAA)
+F (.\demo_apps\test\xip\uavrs_v2_sdram_ini_dcd.c)(0x5D81BCFB)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\uavrs_v2_sdram_ini_dcd.o --omf_browse .\objects\uavrs_v2_sdram_ini_dcd.crf --depend .\objects\uavrs_v2_sdram_ini_dcd.d)
+I (demo_apps\test\xip\uavrs_v2_sdram_ini_dcd.h)(0x5D81BCFB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+F (.\demo_apps\test\bsp\led\bsp_led.c)(0x5D883CFE)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\bsp_led.o --omf_browse .\objects\bsp_led.crf --depend .\objects\bsp_led.d)
+I (..\..\devices\MIMXRT1052\drivers\fsl_iomuxc.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_gpio.h)(0x5B068FAA)
+I (.\demo_apps\test\pad_config.h)(0x5D883CFE)
+I (.\demo_apps\test\bsp\./led/bsp_led.h)(0x5D883CFE)
+F (..\..\..\..\..\main_imxrt1052.c)(0x5DA9794B)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\..\CMSIS\Include -I..\..\devices\MIMXRT1052 -I..\..\devices\MIMXRT1052\drivers -I..\..\devices\MIMXRT1052\utilities -I..\..\devices\MIMXRT1052\utilities\io -I..\..\devices\MIMXRT1052\utilities\log -I..\..\devices\MIMXRT1052\utilities\str -I.\demo_apps\test -I.\demo_apps\test\xip -I.\demo_apps\test\bsp-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DDEBUG="0" -DNDEBUG="1" -DRTE_USART0 -DRTE_USART0_DMA_EN -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1" -DCPU_IS_ARM_CORTEX_M7="1" -DUSE_RAM_VECTOR_TABLE-o .\objects\main_imxrt1052.o --omf_browse .\objects\main_imxrt1052.crf --depend .\objects\main_imxrt1052.d)
+I (..\..\devices\MIMXRT1052\utilities\fsl_debug_console.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (..\..\devices\MIMXRT1052\fsl_device_registers.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\core_cm7.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_version.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_compiler.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\cmsis_armcc.h)(0x5B068FAA)
+I (..\..\CMSIS\Include\mpu_armv7.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\system_MIMXRT1052.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\MIMXRT1052_features.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_clock.h)(0x5B068FAA)
+I (.\demo_apps\test\board.h)(0x5DA9624E)
+I (.\demo_apps\test\clock_config.h)(0x5D883CFE)
+I (..\..\devices\MIMXRT1052\drivers\fsl_gpio.h)(0x5B068FAA)
+I (.\demo_apps\test\pin_mux.h)(0x5D883CFE)
+I (.\demo_apps\test\bsp\./led/bsp_led.h)(0x5D883CFE)
+I (..\..\devices\MIMXRT1052\drivers\fsl_iomuxc.h)(0x5B068FAA)
+I (..\..\devices\MIMXRT1052\drivers\fsl_flexspi.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x54C245B8)
+I (.\demo_apps\test\pad_config.h)(0x5D883CFE)

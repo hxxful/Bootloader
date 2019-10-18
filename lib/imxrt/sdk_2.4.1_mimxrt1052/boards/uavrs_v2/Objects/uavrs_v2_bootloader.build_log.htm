@@ -1,0 +1,2008 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.15
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: hxx hxx, hxx, LIC=R4HTG-VFFHN-XBSEC-7UNYP-8GH9H-U5787
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.15.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 2 (build 169)
+Assembler:       Armasm.exe V5.05 update 2 (build 169)
+Linker/Locator:  ArmLink.exe V5.05 update 2 (build 169)
+Library Manager: ArmAr.exe V5.05 update 2 (build 169)
+Hex Converter:   FromElf.exe V5.05 update 2 (build 169)
+CPU DLL:         SARMCM3.DLL V5.15.0
+Dialog DLL:      DCM.DLL V1.13.2.0 
+<h2>Project:</h2>
+Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\uavrs_v2_bootloader.uvprojx
+Project File Date:  10/18/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.05 update 2 (build 169)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling system_MIMXRT1052.c...
+compiling fsl_clock.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\drivers\fsl_clock.c: 49 warnings, 0 errors
+compiling fsl_common.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\drivers\fsl_common.c: 49 warnings, 0 errors
+compiling fsl_flexspi.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\drivers\fsl_flexspi.c: 49 warnings, 0 errors
+compiling fsl_gpio.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\drivers\fsl_gpio.c: 49 warnings, 0 errors
+compiling fsl_lpuart.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\drivers\fsl_lpuart.h(186): warning:  #66-D: enumeration value is out of "int" range
+      kLPUART_LinBreakFlag = (
+PUART_STAT_LBKDIF_MASK), /*!< LIN break detect interrupt flag, sets when LIN break char
+..\..\devices\MIMXRT1052\drivers\fsl_lpuart.c: 50 warnings, 0 errors
+compiling fsl_assert.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\utilities\fsl_assert.c: 49 warnings, 0 errors
+compiling fsl_debug_console.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\utilities\fsl_debug_console.c: 49 warnings, 0 errors
+compiling fsl_notifier.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\utilities\fsl_notifier.c: 49 warnings, 0 errors
+compiling fsl_sbrk.c...
+compiling fsl_shell.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\utilities\fsl_shell.c: 49 warnings, 0 errors
+compiling fsl_str.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\utilities\str\fsl_str.c: 49 warnings, 0 errors
+compiling fsl_log.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\utilities\log\fsl_log.c: 49 warnings, 0 errors
+compiling fsl_io.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\drivers\fsl_lpuart.h(186): warning:  #66-D: enumeration value is out of "int" range
+      kLPUART_LinBreakFlag = (
+PUART_STAT_LBKDIF_MASK), /*!< LIN break detect interrupt flag, sets when LIN break char
+..\..\devices\MIMXRT1052\utilities\io\fsl_io.c: 50 warnings, 0 errors
+compiling board.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+demo_apps\test\board.c: 49 warnings, 0 errors
+compiling clock_config.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+demo_apps\test\clock_config.c: 49 warnings, 0 errors
+compiling pin_mux.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\drivers\fsl_iomuxc.h(1070): warning:  #66-D: enumeration value is out of "int" range
+      kIOMUXC_GPR_AHBClockEnable = 
+OMUXC_GPR_GPR1_CM7_FORCE_HCLK_EN_MASK,  
+demo_apps\test\pin_mux.c: 50 warnings, 0 errors
+compiling fsl_flexspi_nor_boot.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+demo_apps\test\xip\fsl_flexspi_nor_boot.c(47): warning:  #1296-D: extended constant initialiser used
+    
+MAGE_ENTRY_ADDRESS,                /* å›?ä»?å…?å?åœ?å€ */
+demo_apps\test\xip\fsl_flexspi_nor_boot.c(49): warning:  #1296-D: extended constant initialiser used
+    (uint32_t)
+CD_ADDRESS,              /* DCDæ•?æ?å­?å‚?çš?åœ?å€ */
+demo_apps\test\xip\fsl_flexspi_nor_boot.c(50): warning:  #1296-D: extended constant initialiser used
+    (uint32_t)
+OOT_DATA_ADDRESS,        /* å?åŠ?æ•?æ?ç»?æž?å­?å‚?çš?åœ?å€ */
+demo_apps\test\xip\fsl_flexspi_nor_boot.c(51): warning:  #1296-D: extended constant initialiser used
+    (uint32_t)&image_vector_table,      /* IVTè‡?èº?æŒ?é’?çš?å­?å‚?åœ?å€ï¼?ç»?å¯?åœ?å€ï¼? */
+demo_apps\test\xip\fsl_flexspi_nor_boot.c(65): warning:  #1296-D: extended constant initialiser used
+    
+LASH_BASE,                 /* å›?ä»?çš?å?åŠ?åœ?å€ï¼?å?flashçš?é¦?åœ?å€ */
+demo_apps\test\xip\fsl_flexspi_nor_boot.c: 54 warnings, 0 errors
+compiling uavrs_v2_flexspi_nor_flash.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+demo_apps\test\xip\uavrs_v2_flexspi_nor_flash.c: 49 warnings, 0 errors
+compiling uavrs_v2_sdram_ini_dcd.c...
+compiling bsp_led.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\drivers\fsl_iomuxc.h(1070): warning:  #66-D: enumeration value is out of "int" range
+      kIOMUXC_GPR_AHBClockEnable = 
+OMUXC_GPR_GPR1_CM7_FORCE_HCLK_EN_MASK,  
+demo_apps\test\bsp\led\bsp_led.c: 50 warnings, 0 errors
+compiling main_imxrt1052.c...
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(594): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Pll3SwMux = CCM_TUPLE(CCSR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(603): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcAltMux = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(607): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SemcMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(610): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PrePeriphMux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(614): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(616): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Mux = CCM_TUPLE(CBCMR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(620): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(623): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(627): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(631): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Mux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(635): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(637): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(639): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Mux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(641): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkMux = CCM_TUPLE(CSCMR1,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(646): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Mux = CCM_TUPLE(CSCMR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(650): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(653): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(656): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_SpdifMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(658): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Mux = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(663): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(665): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreMux = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(670): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CsiMux = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(687): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PeriphClk2Div = CCM_TUPLE(CBCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(698): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CBCDR, CCM_CBCDR_IPG_PODF_SHIFT, CCM_CBCDR_IPG_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< ipg div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(700): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LpspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(702): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(705): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_FlexspiDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(707): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_PerclkDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(710): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_CanDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(713): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_TraceDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(715): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(717): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Usdhc1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(719): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UartDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(722): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2Div = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(726): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(730): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai3Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(732): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio2PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(736): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1PreDiv = CCM_TUPLE(CS1CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(740): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai1Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(743): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2PreDiv = CCM_TUPLE(CS2CDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(747): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Sai2Div = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(750): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(754): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Spdif0Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(758): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1PreDiv = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(762): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Flexio1Div = CCM_TUPLE(CDCDR,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(767): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_Lpi2cDiv = CCM_TUPLE(CSCDR2,
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(771): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_LcdifPreDiv = CCM_TUPLE(
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(775): warning:  #66-D: enumeration value is out of "int" range
+          
+CM_TUPLE(CSCDR3, CCM_CSCDR3_CSI_PODF_SHIFT, CCM_CSCDR3_CSI_PODF_MASK, CCM_NO_BUSY_WAIT), /*!< csi div name */
+..\..\devices\MIMXRT1052\drivers\fsl_clock.h(782): warning:  #66-D: enumeration value is out of "int" range
+      kCLOCK_UsbSrcUnused = 0xFFFFFFFFU, /*!< Used when the function does not
+..\..\devices\MIMXRT1052\drivers\fsl_iomuxc.h(1070): warning:  #66-D: enumeration value is out of "int" range
+      kIOMUXC_GPR_AHBClockEnable = 
+OMUXC_GPR_GPR1_CM7_FORCE_HCLK_EN_MASK,  
+..\..\..\..\..\main_imxrt1052.c: 50 warnings, 0 errors
+linking...
+Program Size: Code=13920 RO-data=3048 RW-data=32 ZI-data=3108  
+".\Objects\uavrs_v2_bootloader.axf" - 0 Error(s), 941 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE
+  C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1
+
+<h2>Collection of Component Files used:</h2>
+</pre>
+</body>
+</html>

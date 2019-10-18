@@ -89,12 +89,106 @@ static void delay(uint32_t count)
 #define CUSTOM_LUT_LENGTH 48
 
 
+const uint32_t customLUT[CUSTOM_LUT_LENGTH] = {
+        /* Read Data */
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_READDATA] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0xA0, kFLEXSPI_Command_RADDR_DDR, kFLEXSPI_8PAD, 0x18),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_READDATA + 1] = 
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_CADDR_DDR, kFLEXSPI_8PAD, 0x10, kFLEXSPI_Command_READ_DDR, kFLEXSPI_8PAD, 0x04),
+
+        /* Write Data */
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEDATA] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x20, kFLEXSPI_Command_RADDR_DDR, kFLEXSPI_8PAD, 0x18),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEDATA + 1] = 
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_CADDR_DDR, kFLEXSPI_8PAD, 0x10, kFLEXSPI_Command_WRITE_DDR, kFLEXSPI_8PAD, 0x02),
+
+        /* Read Status */
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_READSTATUS] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_READSTATUS + 1] = 
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0xAA), // ADDR 0x555
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_READSTATUS + 2] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x05),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_READSTATUS + 3] = 
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x70), // DATA 0x70
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_READSTATUS + 4] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0xA0, kFLEXSPI_Command_RADDR_DDR, kFLEXSPI_8PAD, 0x18),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_READSTATUS + 5] = 
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_CADDR_DDR, kFLEXSPI_8PAD, 0x10, kFLEXSPI_Command_DUMMY_RWDS_DDR, kFLEXSPI_8PAD, 0x0B),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_READSTATUS + 6] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_READ_DDR, kFLEXSPI_8PAD, 0x04, kFLEXSPI_Command_STOP, kFLEXSPI_1PAD, 0x0),
+
+        /* Write Enable */
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEENABLE] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEENABLE + 1] = 
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0xAA), // ADDR 0x555
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEENABLE + 2] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x05),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEENABLE + 3] = 
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0xAA), // DATA 0xAA
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEENABLE + 4] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEENABLE + 5] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x55),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEENABLE + 6] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x02),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_WRITEENABLE + 7] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x55),
+
+        /* Erase Sector  */
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 1] = 
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0xAA), // ADDR 0x555
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 2] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x05),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 3] = 
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x80), // DATA 0x80
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 4] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 5] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0xAA),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 6] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x05),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 7] = 
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0xAA), // ADDR 0x555
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 8] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 9] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x55),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 10] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x02),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 11] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x55),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 12] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_RADDR_DDR, kFLEXSPI_8PAD, 0x18),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 13] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_CADDR_DDR, kFLEXSPI_8PAD, 0x10, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_ERASESECTOR + 14] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x30, kFLEXSPI_Command_STOP, kFLEXSPI_1PAD, 0x00),
+
+        /* program page */
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_PAGEPROGRAM] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_PAGEPROGRAM + 1] = 
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0xAA), // ADDR 0x555
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_PAGEPROGRAM + 2] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x05),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_PAGEPROGRAM + 3] = 
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0xA0), // DATA 0xA0
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_PAGEPROGRAM + 4] =
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_DDR, kFLEXSPI_8PAD, 0x00, kFLEXSPI_Command_RADDR_DDR, kFLEXSPI_8PAD, 0x18),
+        [4 * HYPERFLASH_CMD_LUT_SEQ_IDX_PAGEPROGRAM + 5] = 
+            FLEXSPI_LUT_SEQ(kFLEXSPI_Command_CADDR_DDR, kFLEXSPI_8PAD, 0x10, kFLEXSPI_Command_WRITE_DDR, kFLEXSPI_8PAD, 0x80),
+};
+
 status_t flexspi_nor_hyperbus_read(FLEXSPI_Type *base, uint32_t addr, uint32_t *buffer, uint32_t bytes)
 {
     flexspi_transfer_t flashXfer;
     status_t status;
 
-    flashXfer.deviceAddress = addr * 2;
+    flashXfer.deviceAddress = addr;
     flashXfer.port = kFLEXSPI_PortA1;
     flashXfer.cmdType = kFLEXSPI_Read;
     flashXfer.SeqNumber = 1;
@@ -115,7 +209,7 @@ status_t flexspi_nor_hyperbus_write(FLEXSPI_Type *base, uint32_t addr, uint32_t 
     flexspi_transfer_t flashXfer;
     status_t status;
 
-    flashXfer.deviceAddress = addr * 2;
+    flashXfer.deviceAddress = addr;
     flashXfer.port = kFLEXSPI_PortA1;
     flashXfer.cmdType = kFLEXSPI_Write;
     flashXfer.SeqNumber = 1;
@@ -325,7 +419,10 @@ void BOARD_LedConfig(void)
   */
 int main(void)
 {
-    status_t status;
+    //status_t status = kStatus_Fail;
+    //uint32_t write_buf[3] = {0x33, 0x22, 0x11};
+    //uint32_t read_buf[3] = {0};
+    //uint32_t sec = 0;
 
     /* 初始化内存保护单元 */
     BOARD_ConfigMPU();
@@ -355,15 +452,55 @@ int main(void)
     /* 初始化LED引脚 */
     //LED_GPIO_Config();
 
+    /* Update LUT table. */
+    //FLEXSPI_UpdateLUT(EXAMPLE_FLEXSPI, 0, customLUT, CUSTOM_LUT_LENGTH);
+
+#if 0
+    /* 使能写 */
+    status = flexspi_nor_write_enable(EXAMPLE_FLEXSPI, sec * SECTOR_SIZE);
+    if (status != kStatus_Success) {
+        PRINTF("[ failed ] Flash write enable:%d sector, code:%d\r\n", sec, status);
+    } else {
+        PRINTF("[   ok   ] Flash write enable:%d sector\r\n", sec);
+    }
+#endif
+
+#if 0
+    /* 测试写入 */
+    status = flexspi_nor_hyperbus_write(EXAMPLE_FLEXSPI, sec * SECTOR_SIZE, write_buf, sizeof(write_buf));
+    if (status != kStatus_Success) {
+        PRINTF("[ failed ] Flash write addr:%d sector, code:%d\r\n", sec, status);
+    } else {
+        PRINTF("[   ok   ] Flash write addr:%d sector\r\n", sec);
+    }
+#endif
+
+#if 0
+    /* 测试读出 */
+    status = flexspi_nor_hyperbus_read(EXAMPLE_FLEXSPI, sec * SECTOR_SIZE, read_buf, sizeof(read_buf));
+    if (status != kStatus_Success) {
+        PRINTF("[ failed ] Flash read addr:%d sector, code:%d\r\n", sec, status);
+    } else {
+        PRINTF("[   ok   ] Flash read addr:%d sector\r\n", sec);
+        PRINTF("Data:0x%08X 0x%08X 0x%08X\r\n", read_buf[0], read_buf[1], read_buf[2]);
+    }
+#endif
+
+#if 0
     /* HyperFlash 读写测试 */
-    PRINTF("Erasing Serial NOR over FlexSPI...\r\n");
     status = flexspi_nor_flash_erase_sector(EXAMPLE_FLEXSPI, EXAMPLE_SECTOR * SECTOR_SIZE);
     if (status != kStatus_Success) {
-        PRINTF("Erase sector failure!, error code:%d\r\n", status);
+        PRINTF("Erase sector failure !, error code:%d\r\n", status);
         return -1;
     }
+#endif
+
+    /* 主循环 */
     while(1) {
-        PRINTF("HELLO UAVRS_V2 BOARD:0x%08X\r\n", BOARD_PWR_PAD_DATA);
+        PRINTF("HELLO UAVRSV2 BOARD:0x%08X\r\n", BOARD_PWR_PAD_DATA);
+        GPIO_PinWrite(BOARD_LED_GPIO, BOARD_LED_GPIO_PIN, 1);
+        delay(LED_DELAY_COUNT);
+        GPIO_PinWrite(BOARD_LED_GPIO, BOARD_LED_GPIO_PIN, 0);
         delay(LED_DELAY_COUNT);
     }
 
@@ -372,8 +509,8 @@ int main(void)
 
 /****************************END OF FILE**********************/
 
-void _start(void)
-{
-    main();
-}
+//void _start(void)
+//{
+//    main();
+//}
 
