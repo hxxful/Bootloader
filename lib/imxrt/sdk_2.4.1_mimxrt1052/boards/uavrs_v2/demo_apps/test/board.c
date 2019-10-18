@@ -165,7 +165,10 @@ void BOARD_ConfigMPU(void)
     /* 启用SDRAM版本的中断向量表 */
     CopyAndUseRAMVectorTable();    
 #endif
+
+#if defined(USE_ITCM_TEXT)
     CopyAllTextToITCM();
+#endif
 }
 
 
@@ -230,19 +233,19 @@ void CopyAndUseRAMVectorTable(void)
 
 #endif
 
-
+#if defined(USE_ITCM_TEXT)
 /* 将所有代码从flash拷贝到ITCM执行 */
 void CopyAllTextToITCM(void)
 {
-//    /* Make these uint8_t/char so they are treated as byte pointers when address-of'ed */
-//    extern uint8_t flash_text_start;
-//    extern uint8_t flash_text_end;
-//    extern uint8_t itcm_text_start;
-//    uint32_t flash_text_size = (uint32_t) (&flash_text_end - &flash_text_start);
-//    
-//    memcpy(&itcm_text_start, &flash_text_start, flash_text_size);
+    /* Make these uint8_t/char so they are treated as byte pointers when address-of'ed */
+    extern uint8_t flash_text_start;
+    extern uint8_t flash_text_end;
+    extern uint8_t itcm_text_start;
+    uint32_t flash_text_size = (uint32_t) (&flash_text_end - &flash_text_start);
+    
+    memcpy(&itcm_text_start, &flash_text_start, flash_text_size);
 
 }
-
+#endif
 
 

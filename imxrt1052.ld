@@ -11,8 +11,8 @@ MEMORY
   m_ivt                 (RX)  : ORIGIN = 0x60001000, LENGTH = 0x00001000
   m_interrupts          (RX)  : ORIGIN = 0x60002000, LENGTH = 0x00000400
   m_text                (RX)  : ORIGIN = 0x60002400, LENGTH = 0x03FFDC00
-  m_ram_interrupts      (RW)  : ORIGIN = 0x00000000, LENGTH = 0x00000400
-  m_ram_text            (RW)  : ORIGIN = 0x00000400, LENGTH = 0x0001FC00
+  m_ram_interrupts      (RWX) : ORIGIN = 0x00000000, LENGTH = 0x00000400
+  m_ram_text            (RWX) : ORIGIN = 0x00000400, LENGTH = 0x0001FC00
   m_data                (RW)  : ORIGIN = 0x20000000, LENGTH = 0x00020000
   m_data2               (RW)  : ORIGIN = 0x20200000, LENGTH = 0x00040000
 }
@@ -48,8 +48,8 @@ SECTIONS
     . = ALIGN(4);
   } > m_interrupts
 
-  __VECTOR_RAM = __VECTOR_TABLE;
-  __RAM_VECTOR_TABLE_SIZE_BYTES = . - __VECTOR_TABLE;
+
+  __RAM_VECTOR_TABLE_SIZE_BYTES = 0x400;
 
   .ram_interrupts :
   {
@@ -57,11 +57,6 @@ SECTIONS
 	. += __RAM_VECTOR_TABLE_SIZE_BYTES;
   } > m_ram_interrupts
 
-  .ram_text :
-  {
-	itcm_text_start = .;
-  } > m_ram_text
-  
   /* The program code and other data goes into internal RAM */
   .text :
   {
@@ -77,12 +72,12 @@ SECTIONS
     KEEP (*(.init))
     KEEP (*(.fini))
     . = ALIGN(4);
-  } > m_ram_text AT > m_text
+  }  > m_text
 
   .ARM.extab :
   {
     *(.ARM.extab* .gnu.linkonce.armextab.*)
-  } > m_ram_text AT > m_text
+  } > m_text
 
   .ARM :
   {
@@ -90,7 +85,43 @@ SECTIONS
     *(.ARM.exidx*)
     __exidx_end = .;
     flash_text_end = .;
-  } > m_ram_text AT > m_text
+  } > m_text
+
+  itcm_text_start = 0x400;
+ .ctors :
+  {
+    __CTOR_LIST__ = .;
+    /* gcc uses crtbegin.o to find the start of
+       the constructors, so we make sure it is
+       first.  Because this is a wildcard, it
+       doesn't matter if the user does not
+       actually link against crtbegin.o; the
+       linker won't look for a file to match a
+       wildcard.  The wildcard also means that it
+       doesn't matter which directory crtbegin.o
+       is in.  */
+    KEEP (*crtbegin.o(.ctors))
+    KEEP (*crtbegin?.o(.ctors))
+    /* We don't want to include the .ctor section from
+       from the crtend.o file until after the sorted ctors.
+       The .ctor section from the crtend file contains the
+       end of ctors marker and it must be last */
+    KEEP (*(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors))
+    KEEP (*(SORT(.ctors.*)))
+    KEEP (*(.ctors))
+    __CTOR_END__ = .;
+  } > m_text
+
+  .dtors :
+  {
+    __DTOR_LIST__ = .;
+    KEEP (*crtbegin.o(.dtors))
+    KEEP (*crtbegin?.o(.dtors))
+    KEEP (*(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors))
+    KEEP (*(SORT(.dtors.*)))
+    KEEP (*(.dtors))
+    __DTOR_END__ = .;
+  } > m_text
 
 
   __etext = .;    /* define a global symbol at end of code */

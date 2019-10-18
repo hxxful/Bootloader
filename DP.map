@@ -18,8 +18,6 @@ Archive member included because of file (symbol)
                               /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-errno.o) (_impure_ptr)
 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-malloc.o)
                               build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_common.o (malloc)
-/opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memcpy.o)
-                              build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o (memcpy)
 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memmove.o)
                               build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_shell.o (memmove)
 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memset.o)
@@ -453,9 +451,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x30 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-malloc.o)
  .ARM.attributes
                 0x00000000       0x39 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-malloc.o)
- .text          0x00000000        0x0 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memcpy.o)
- .data          0x00000000        0x0 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memcpy.o)
- .bss           0x00000000        0x0 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memcpy.o)
  .text          0x00000000        0x0 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memmove.o)
  .data          0x00000000        0x0 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memmove.o)
  .bss           0x00000000        0x0 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memmove.o)
@@ -514,8 +509,8 @@ m_flash_config   0x60000000         0x00001000         xr
 m_ivt            0x60001000         0x00001000         xr
 m_interrupts     0x60002000         0x00000400         xr
 m_text           0x60002400         0x03ffdc00         xr
-m_ram_interrupts 0x00000000         0x00000400         rw
-m_ram_text       0x00000400         0x0001fc00         rw
+m_ram_interrupts 0x00000000         0x00000400         xrw
+m_ram_text       0x00000400         0x0001fc00         xrw
 m_data           0x20000000         0x00020000         rw
 m_data2          0x20200000         0x00040000         rw
 *default*        0x00000000         0xffffffff
@@ -571,7 +566,7 @@ END GROUP
  *(.boot_hdr.conf)
  .boot_hdr.conf
                 0x60000000      0x200 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
-                0x60000000                g_flash_config
+                0x60000000                flash_config
                 0x60000200                . = ALIGN (0x4)
                 0x60001000                ivt_begin = (ORIGIN (m_flash_config) + 0x1000)
 
@@ -597,8 +592,7 @@ END GROUP
  .isr_vector    0x60002000      0x400 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
                 0x60002000                __isr_vector
                 0x60002400                . = ALIGN (0x4)
-                0x60002000                __VECTOR_RAM = __VECTOR_TABLE
-                0x00000400                __RAM_VECTOR_TABLE_SIZE_BYTES = (. - __VECTOR_TABLE)
+                0x00000400                __RAM_VECTOR_TABLE_SIZE_BYTES = 0x400
 
 .ram_interrupts
                 0x00000000      0x400
@@ -606,414 +600,407 @@ END GROUP
                 0x00000400                . = (. + __RAM_VECTOR_TABLE_SIZE_BYTES)
  *fill*         0x00000000      0x400 
 
-.ram_text       0x00000400        0x0
-                0x00000400                itcm_text_start = .
-
-.text           0x00000400     0x2484 load address 0x60002400
-                0x00000400                . = ALIGN (0x4)
-                0x00000400                flash_text_start = .
+.text           0x60002400     0x2454
+                0x60002400                . = ALIGN (0x4)
+                0x60002400                flash_text_start = .
  *(.text)
- .text          0x00000400      0x1f4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
-                0x00000400                Reset_Handler
-                0x00000448                USB_PHY1_IRQHandler
-                0x00000448                LPSPI2_DriverIRQHandler
-                0x00000448                SJC_IRQHandler
-                0x00000448                ADC_ETC_IRQ0_IRQHandler
-                0x00000448                DebugMon_Handler
-                0x00000448                SAI3_RX_DriverIRQHandler
-                0x00000448                PXP_IRQHandler
-                0x00000448                DMA13_DMA29_DriverIRQHandler
-                0x00000448                Reserved86_IRQHandler
-                0x00000448                SRC_IRQHandler
-                0x00000448                LPSPI4_DriverIRQHandler
-                0x00000448                GPIO2_Combined_0_15_IRQHandler
-                0x00000448                SPDIF_DriverIRQHandler
-                0x00000448                GPIO1_INT2_IRQHandler
-                0x00000448                CSI_IRQHandler
-                0x00000448                SNVS_LP_WRAPPER_IRQHandler
-                0x00000448                ENC2_IRQHandler
-                0x00000448                PWM2_2_IRQHandler
-                0x00000448                ANATOP_TEMP_PANIC_IRQHandler
-                0x00000448                Reserved168_IRQHandler
-                0x00000448                PWM4_FAULT_IRQHandler
-                0x00000448                GPIO1_INT7_IRQHandler
-                0x00000448                CCM_1_IRQHandler
-                0x00000448                ADC_ETC_IRQ1_IRQHandler
-                0x00000448                DMA7_DMA23_DriverIRQHandler
-                0x00000448                CTI0_ERROR_IRQHandler
-                0x00000448                GPIO5_Combined_0_15_IRQHandler
-                0x00000448                PWM1_0_IRQHandler
-                0x00000448                Reserved68_IRQHandler
-                0x00000448                LPI2C3_DriverIRQHandler
-                0x00000448                USB_PHY2_IRQHandler
-                0x00000448                TSC_DIG_IRQHandler
-                0x00000448                GPIO4_Combined_0_15_IRQHandler
-                0x00000448                PWM2_0_IRQHandler
-                0x00000448                DCP_VMI_IRQHandler
-                0x00000448                DMA14_DMA30_DriverIRQHandler
-                0x00000448                ENET_1588_Timer_DriverIRQHandler
-                0x00000448                PWM2_1_IRQHandler
-                0x00000448                PWM2_FAULT_IRQHandler
-                0x00000448                FLEXIO2_DriverIRQHandler
-                0x00000448                UsageFault_Handler
-                0x00000448                WDOG1_IRQHandler
-                0x00000448                GPT1_IRQHandler
-                0x00000448                PWM4_1_IRQHandler
-                0x00000448                USB_OTG2_IRQHandler
-                0x00000448                ACMP4_IRQHandler
-                0x00000448                SEMC_IRQHandler
-                0x00000448                DMA0_DMA16_DriverIRQHandler
-                0x00000448                DefaultISR
-                0x00000448                PWM1_1_IRQHandler
-                0x00000448                DMA2_DMA18_DriverIRQHandler
-                0x00000448                PWM3_0_IRQHandler
-                0x00000448                USDHC1_DriverIRQHandler
-                0x00000448                PWM3_3_IRQHandler
-                0x00000448                GPIO1_INT0_IRQHandler
-                0x00000448                CSU_IRQHandler
-                0x00000448                ADC1_IRQHandler
-                0x00000448                FLEXIO1_DriverIRQHandler
-                0x00000448                ENET_DriverIRQHandler
-                0x00000448                GPIO1_Combined_16_31_IRQHandler
-                0x00000448                RTWDOG_IRQHandler
-                0x00000448                SAI1_DriverIRQHandler
-                0x00000448                DMA12_DMA28_DriverIRQHandler
-                0x00000448                ENC3_IRQHandler
-                0x00000448                GPIO3_Combined_16_31_IRQHandler
-                0x00000448                EWM_IRQHandler
-                0x00000448                WDOG2_IRQHandler
-                0x00000448                GPIO1_INT5_IRQHandler
-                0x00000448                PWM3_1_IRQHandler
-                0x00000448                ANATOP_TAMP_LOW_HIGH_IRQHandler
-                0x00000448                PWM2_3_IRQHandler
-                0x00000448                CORE_IRQHandler
-                0x00000448                DMA10_DMA26_DriverIRQHandler
-                0x00000448                Reserved172_IRQHandler
-                0x00000448                GPIO1_INT6_IRQHandler
-                0x00000448                PWM1_2_IRQHandler
-                0x00000448                Reserved144_IRQHandler
-                0x00000448                GPR_IRQ_IRQHandler
-                0x00000448                GPC_IRQHandler
-                0x00000448                DCDC_IRQHandler
-                0x00000448                GPIO3_Combined_0_15_IRQHandler
-                0x00000448                PWM4_3_IRQHandler
-                0x00000448                Reserved173_IRQHandler
-                0x00000448                DMA1_DMA17_DriverIRQHandler
-                0x00000448                USB_OTG1_IRQHandler
-                0x00000448                CAN2_DriverIRQHandler
-                0x00000448                GPIO5_Combined_16_31_IRQHandler
-                0x00000448                TMR2_IRQHandler
-                0x00000448                ADC_ETC_ERROR_IRQ_IRQHandler
-                0x00000448                DMA8_DMA24_DriverIRQHandler
-                0x00000448                PWM4_2_IRQHandler
-                0x00000448                DMA6_DMA22_DriverIRQHandler
-                0x00000448                BEE_IRQHandler
-                0x00000448                GPIO1_INT1_IRQHandler
-                0x00000448                ADC_ETC_IRQ2_IRQHandler
-                0x00000448                GPIO1_INT4_IRQHandler
-                0x00000448                CCM_2_IRQHandler
-                0x00000448                KPP_IRQHandler
-                0x00000448                ADC2_IRQHandler
-                0x00000448                USDHC2_DriverIRQHandler
-                0x00000448                MemManage_Handler
-                0x00000448                SAI2_DriverIRQHandler
-                0x00000448                PIT_IRQHandler
-                0x00000448                Reserved115_IRQHandler
-                0x00000448                SNVS_HP_WRAPPER_IRQHandler
-                0x00000448                DMA11_DMA27_DriverIRQHandler
-                0x00000448                XBAR1_IRQ_2_3_IRQHandler
-                0x00000448                PWM3_2_IRQHandler
-                0x00000448                LPI2C1_DriverIRQHandler
-                0x00000448                DCP_IRQHandler
-                0x00000448                Reserved171_IRQHandler
-                0x00000448                Reserved123_IRQHandler
-                0x00000448                DMA4_DMA20_DriverIRQHandler
-                0x00000448                GPIO1_INT3_IRQHandler
-                0x00000448                SJC_ARM_DEBUG_IRQHandler
-                0x00000448                DMA9_DMA25_DriverIRQHandler
-                0x00000448                GPIO1_Combined_0_15_IRQHandler
-                0x00000448                LPSPI1_DriverIRQHandler
-                0x00000448                DMA3_DMA19_DriverIRQHandler
-                0x00000448                TMR4_IRQHandler
-                0x00000448                ACMP3_IRQHandler
-                0x00000448                ENC1_IRQHandler
-                0x00000448                PWM1_FAULT_IRQHandler
-                0x00000448                Reserved143_IRQHandler
-                0x00000448                ANATOP_EVENT0_IRQHandler
-                0x00000448                GPIO2_Combined_16_31_IRQHandler
-                0x00000448                LPI2C4_DriverIRQHandler
-                0x00000448                TMR3_IRQHandler
-                0x00000448                XBAR1_IRQ_0_1_IRQHandler
-                0x00000448                Reserved169_IRQHandler
-                0x00000448                SNVS_HP_WRAPPER_TZ_IRQHandler
-                0x00000448                SAI3_TX_DriverIRQHandler
-                0x00000448                Reserved170_IRQHandler
-                0x00000448                ACMP2_IRQHandler
-                0x00000448                GPT2_IRQHandler
-                0x00000448                FLEXRAM_IRQHandler
-                0x00000448                DMA5_DMA21_DriverIRQHandler
-                0x00000448                ACMP1_IRQHandler
-                0x00000448                BusFault_Handler
-                0x00000448                Reserved87_IRQHandler
-                0x00000448                DMA15_DMA31_DriverIRQHandler
-                0x00000448                GPIO4_Combined_16_31_IRQHandler
-                0x00000448                LPSPI3_DriverIRQHandler
-                0x00000448                ENC4_IRQHandler
-                0x00000448                LPI2C2_DriverIRQHandler
-                0x00000448                DMA_ERROR_DriverIRQHandler
-                0x00000448                PWM4_0_IRQHandler
-                0x00000448                CAN1_DriverIRQHandler
-                0x00000448                TMR1_IRQHandler
-                0x00000448                TRNG_IRQHandler
-                0x00000448                LCDIF_IRQHandler
-                0x00000448                PWM3_FAULT_IRQHandler
-                0x00000448                ANATOP_EVENT1_IRQHandler
-                0x00000448                CTI1_ERROR_IRQHandler
-                0x00000448                PWM1_3_IRQHandler
-                0x0000044c                NMI_Handler
-                0x00000450                HardFault_Handler
-                0x00000454                SVC_Handler
-                0x00000458                PendSV_Handler
-                0x0000045c                SysTick_Handler
-                0x00000460                NMI_WAKEUP_IRQHandler
-                0x00000464                DMA0_DMA16_IRQHandler
-                0x00000468                DMA1_DMA17_IRQHandler
-                0x0000046c                DMA2_DMA18_IRQHandler
-                0x00000470                DMA3_DMA19_IRQHandler
-                0x00000474                DMA4_DMA20_IRQHandler
-                0x00000478                DMA5_DMA21_IRQHandler
-                0x0000047c                DMA6_DMA22_IRQHandler
-                0x00000480                DMA7_DMA23_IRQHandler
-                0x00000484                DMA8_DMA24_IRQHandler
-                0x00000488                DMA9_DMA25_IRQHandler
-                0x0000048c                DMA10_DMA26_IRQHandler
-                0x00000490                DMA11_DMA27_IRQHandler
-                0x00000494                DMA12_DMA28_IRQHandler
-                0x00000498                DMA13_DMA29_IRQHandler
-                0x0000049c                DMA14_DMA30_IRQHandler
-                0x000004a0                DMA15_DMA31_IRQHandler
-                0x000004a4                DMA_ERROR_IRQHandler
-                0x000004a8                LPUART1_IRQHandler
-                0x000004ac                LPUART2_IRQHandler
-                0x000004b0                LPUART3_IRQHandler
-                0x000004b4                LPUART4_IRQHandler
-                0x000004b8                LPUART5_IRQHandler
-                0x000004bc                LPUART6_IRQHandler
-                0x000004c0                LPUART7_IRQHandler
-                0x000004c4                LPUART8_IRQHandler
-                0x000004c8                LPI2C1_IRQHandler
-                0x000004cc                LPI2C2_IRQHandler
-                0x000004d0                LPI2C3_IRQHandler
-                0x000004d4                LPI2C4_IRQHandler
-                0x000004d8                LPSPI1_IRQHandler
-                0x000004dc                LPSPI2_IRQHandler
-                0x000004e0                LPSPI3_IRQHandler
-                0x000004e4                LPSPI4_IRQHandler
-                0x000004e8                CAN1_IRQHandler
-                0x000004ec                CAN2_IRQHandler
-                0x000004f0                SAI1_IRQHandler
-                0x000004f4                SAI2_IRQHandler
-                0x000004f8                SAI3_RX_IRQHandler
-                0x000004fc                SAI3_TX_IRQHandler
-                0x00000500                SPDIF_IRQHandler
-                0x00000504                FLEXIO1_IRQHandler
-                0x00000508                FLEXIO2_IRQHandler
-                0x0000050c                FLEXSPI_IRQHandler
-                0x00000510                USDHC1_IRQHandler
-                0x00000514                USDHC2_IRQHandler
-                0x00000518                ENET_IRQHandler
-                0x0000051c                ENET_1588_Timer_IRQHandler
- .text          0x000005f4       0x38 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_aeabi_ldivmod.o)
-                0x000005f4                __aeabi_ldivmod
- .text          0x0000062c       0x30 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_aeabi_uldivmod.o)
-                0x0000062c                __aeabi_uldivmod
- .text          0x0000065c       0x60 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(bpabi.o)
-                0x0000065c                __gnu_ldivmod_helper
-                0x0000068c                __gnu_uldivmod_helper
- .text          0x000006bc        0x4 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_dvmd_tls.o)
-                0x000006bc                __aeabi_ldiv0
-                0x000006bc                __aeabi_idiv0
- .text          0x000006c0      0x284 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_divdi3.o)
-                0x000006c0                __divdi3
- .text          0x00000944      0x248 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_udivdi3.o)
-                0x00000944                __udivdi3
+ .text          0x60002400      0x1f4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
+                0x60002400                Reset_Handler
+                0x60002448                USB_PHY1_IRQHandler
+                0x60002448                LPSPI2_DriverIRQHandler
+                0x60002448                SJC_IRQHandler
+                0x60002448                ADC_ETC_IRQ0_IRQHandler
+                0x60002448                DebugMon_Handler
+                0x60002448                SAI3_RX_DriverIRQHandler
+                0x60002448                PXP_IRQHandler
+                0x60002448                DMA13_DMA29_DriverIRQHandler
+                0x60002448                Reserved86_IRQHandler
+                0x60002448                SRC_IRQHandler
+                0x60002448                LPSPI4_DriverIRQHandler
+                0x60002448                GPIO2_Combined_0_15_IRQHandler
+                0x60002448                SPDIF_DriverIRQHandler
+                0x60002448                GPIO1_INT2_IRQHandler
+                0x60002448                CSI_IRQHandler
+                0x60002448                SNVS_LP_WRAPPER_IRQHandler
+                0x60002448                ENC2_IRQHandler
+                0x60002448                PWM2_2_IRQHandler
+                0x60002448                ANATOP_TEMP_PANIC_IRQHandler
+                0x60002448                Reserved168_IRQHandler
+                0x60002448                PWM4_FAULT_IRQHandler
+                0x60002448                GPIO1_INT7_IRQHandler
+                0x60002448                CCM_1_IRQHandler
+                0x60002448                ADC_ETC_IRQ1_IRQHandler
+                0x60002448                DMA7_DMA23_DriverIRQHandler
+                0x60002448                CTI0_ERROR_IRQHandler
+                0x60002448                GPIO5_Combined_0_15_IRQHandler
+                0x60002448                PWM1_0_IRQHandler
+                0x60002448                Reserved68_IRQHandler
+                0x60002448                LPI2C3_DriverIRQHandler
+                0x60002448                USB_PHY2_IRQHandler
+                0x60002448                TSC_DIG_IRQHandler
+                0x60002448                GPIO4_Combined_0_15_IRQHandler
+                0x60002448                PWM2_0_IRQHandler
+                0x60002448                DCP_VMI_IRQHandler
+                0x60002448                DMA14_DMA30_DriverIRQHandler
+                0x60002448                ENET_1588_Timer_DriverIRQHandler
+                0x60002448                PWM2_1_IRQHandler
+                0x60002448                PWM2_FAULT_IRQHandler
+                0x60002448                FLEXIO2_DriverIRQHandler
+                0x60002448                UsageFault_Handler
+                0x60002448                WDOG1_IRQHandler
+                0x60002448                GPT1_IRQHandler
+                0x60002448                PWM4_1_IRQHandler
+                0x60002448                USB_OTG2_IRQHandler
+                0x60002448                ACMP4_IRQHandler
+                0x60002448                SEMC_IRQHandler
+                0x60002448                DMA0_DMA16_DriverIRQHandler
+                0x60002448                DefaultISR
+                0x60002448                PWM1_1_IRQHandler
+                0x60002448                DMA2_DMA18_DriverIRQHandler
+                0x60002448                PWM3_0_IRQHandler
+                0x60002448                USDHC1_DriverIRQHandler
+                0x60002448                PWM3_3_IRQHandler
+                0x60002448                GPIO1_INT0_IRQHandler
+                0x60002448                CSU_IRQHandler
+                0x60002448                ADC1_IRQHandler
+                0x60002448                FLEXIO1_DriverIRQHandler
+                0x60002448                ENET_DriverIRQHandler
+                0x60002448                GPIO1_Combined_16_31_IRQHandler
+                0x60002448                RTWDOG_IRQHandler
+                0x60002448                SAI1_DriverIRQHandler
+                0x60002448                DMA12_DMA28_DriverIRQHandler
+                0x60002448                ENC3_IRQHandler
+                0x60002448                GPIO3_Combined_16_31_IRQHandler
+                0x60002448                EWM_IRQHandler
+                0x60002448                WDOG2_IRQHandler
+                0x60002448                GPIO1_INT5_IRQHandler
+                0x60002448                PWM3_1_IRQHandler
+                0x60002448                ANATOP_TAMP_LOW_HIGH_IRQHandler
+                0x60002448                PWM2_3_IRQHandler
+                0x60002448                CORE_IRQHandler
+                0x60002448                DMA10_DMA26_DriverIRQHandler
+                0x60002448                Reserved172_IRQHandler
+                0x60002448                GPIO1_INT6_IRQHandler
+                0x60002448                PWM1_2_IRQHandler
+                0x60002448                Reserved144_IRQHandler
+                0x60002448                GPR_IRQ_IRQHandler
+                0x60002448                GPC_IRQHandler
+                0x60002448                DCDC_IRQHandler
+                0x60002448                GPIO3_Combined_0_15_IRQHandler
+                0x60002448                PWM4_3_IRQHandler
+                0x60002448                Reserved173_IRQHandler
+                0x60002448                DMA1_DMA17_DriverIRQHandler
+                0x60002448                USB_OTG1_IRQHandler
+                0x60002448                CAN2_DriverIRQHandler
+                0x60002448                GPIO5_Combined_16_31_IRQHandler
+                0x60002448                TMR2_IRQHandler
+                0x60002448                ADC_ETC_ERROR_IRQ_IRQHandler
+                0x60002448                DMA8_DMA24_DriverIRQHandler
+                0x60002448                PWM4_2_IRQHandler
+                0x60002448                DMA6_DMA22_DriverIRQHandler
+                0x60002448                BEE_IRQHandler
+                0x60002448                GPIO1_INT1_IRQHandler
+                0x60002448                ADC_ETC_IRQ2_IRQHandler
+                0x60002448                GPIO1_INT4_IRQHandler
+                0x60002448                CCM_2_IRQHandler
+                0x60002448                KPP_IRQHandler
+                0x60002448                ADC2_IRQHandler
+                0x60002448                USDHC2_DriverIRQHandler
+                0x60002448                MemManage_Handler
+                0x60002448                SAI2_DriverIRQHandler
+                0x60002448                PIT_IRQHandler
+                0x60002448                Reserved115_IRQHandler
+                0x60002448                SNVS_HP_WRAPPER_IRQHandler
+                0x60002448                DMA11_DMA27_DriverIRQHandler
+                0x60002448                XBAR1_IRQ_2_3_IRQHandler
+                0x60002448                PWM3_2_IRQHandler
+                0x60002448                LPI2C1_DriverIRQHandler
+                0x60002448                DCP_IRQHandler
+                0x60002448                Reserved171_IRQHandler
+                0x60002448                Reserved123_IRQHandler
+                0x60002448                DMA4_DMA20_DriverIRQHandler
+                0x60002448                GPIO1_INT3_IRQHandler
+                0x60002448                SJC_ARM_DEBUG_IRQHandler
+                0x60002448                DMA9_DMA25_DriverIRQHandler
+                0x60002448                GPIO1_Combined_0_15_IRQHandler
+                0x60002448                LPSPI1_DriverIRQHandler
+                0x60002448                DMA3_DMA19_DriverIRQHandler
+                0x60002448                TMR4_IRQHandler
+                0x60002448                ACMP3_IRQHandler
+                0x60002448                ENC1_IRQHandler
+                0x60002448                PWM1_FAULT_IRQHandler
+                0x60002448                Reserved143_IRQHandler
+                0x60002448                ANATOP_EVENT0_IRQHandler
+                0x60002448                GPIO2_Combined_16_31_IRQHandler
+                0x60002448                LPI2C4_DriverIRQHandler
+                0x60002448                TMR3_IRQHandler
+                0x60002448                XBAR1_IRQ_0_1_IRQHandler
+                0x60002448                Reserved169_IRQHandler
+                0x60002448                SNVS_HP_WRAPPER_TZ_IRQHandler
+                0x60002448                SAI3_TX_DriverIRQHandler
+                0x60002448                Reserved170_IRQHandler
+                0x60002448                ACMP2_IRQHandler
+                0x60002448                GPT2_IRQHandler
+                0x60002448                FLEXRAM_IRQHandler
+                0x60002448                DMA5_DMA21_DriverIRQHandler
+                0x60002448                ACMP1_IRQHandler
+                0x60002448                BusFault_Handler
+                0x60002448                Reserved87_IRQHandler
+                0x60002448                DMA15_DMA31_DriverIRQHandler
+                0x60002448                GPIO4_Combined_16_31_IRQHandler
+                0x60002448                LPSPI3_DriverIRQHandler
+                0x60002448                ENC4_IRQHandler
+                0x60002448                LPI2C2_DriverIRQHandler
+                0x60002448                DMA_ERROR_DriverIRQHandler
+                0x60002448                PWM4_0_IRQHandler
+                0x60002448                CAN1_DriverIRQHandler
+                0x60002448                TMR1_IRQHandler
+                0x60002448                TRNG_IRQHandler
+                0x60002448                LCDIF_IRQHandler
+                0x60002448                PWM3_FAULT_IRQHandler
+                0x60002448                ANATOP_EVENT1_IRQHandler
+                0x60002448                CTI1_ERROR_IRQHandler
+                0x60002448                PWM1_3_IRQHandler
+                0x6000244c                NMI_Handler
+                0x60002450                HardFault_Handler
+                0x60002454                SVC_Handler
+                0x60002458                PendSV_Handler
+                0x6000245c                SysTick_Handler
+                0x60002460                NMI_WAKEUP_IRQHandler
+                0x60002464                DMA0_DMA16_IRQHandler
+                0x60002468                DMA1_DMA17_IRQHandler
+                0x6000246c                DMA2_DMA18_IRQHandler
+                0x60002470                DMA3_DMA19_IRQHandler
+                0x60002474                DMA4_DMA20_IRQHandler
+                0x60002478                DMA5_DMA21_IRQHandler
+                0x6000247c                DMA6_DMA22_IRQHandler
+                0x60002480                DMA7_DMA23_IRQHandler
+                0x60002484                DMA8_DMA24_IRQHandler
+                0x60002488                DMA9_DMA25_IRQHandler
+                0x6000248c                DMA10_DMA26_IRQHandler
+                0x60002490                DMA11_DMA27_IRQHandler
+                0x60002494                DMA12_DMA28_IRQHandler
+                0x60002498                DMA13_DMA29_IRQHandler
+                0x6000249c                DMA14_DMA30_IRQHandler
+                0x600024a0                DMA15_DMA31_IRQHandler
+                0x600024a4                DMA_ERROR_IRQHandler
+                0x600024a8                LPUART1_IRQHandler
+                0x600024ac                LPUART2_IRQHandler
+                0x600024b0                LPUART3_IRQHandler
+                0x600024b4                LPUART4_IRQHandler
+                0x600024b8                LPUART5_IRQHandler
+                0x600024bc                LPUART6_IRQHandler
+                0x600024c0                LPUART7_IRQHandler
+                0x600024c4                LPUART8_IRQHandler
+                0x600024c8                LPI2C1_IRQHandler
+                0x600024cc                LPI2C2_IRQHandler
+                0x600024d0                LPI2C3_IRQHandler
+                0x600024d4                LPI2C4_IRQHandler
+                0x600024d8                LPSPI1_IRQHandler
+                0x600024dc                LPSPI2_IRQHandler
+                0x600024e0                LPSPI3_IRQHandler
+                0x600024e4                LPSPI4_IRQHandler
+                0x600024e8                CAN1_IRQHandler
+                0x600024ec                CAN2_IRQHandler
+                0x600024f0                SAI1_IRQHandler
+                0x600024f4                SAI2_IRQHandler
+                0x600024f8                SAI3_RX_IRQHandler
+                0x600024fc                SAI3_TX_IRQHandler
+                0x60002500                SPDIF_IRQHandler
+                0x60002504                FLEXIO1_IRQHandler
+                0x60002508                FLEXIO2_IRQHandler
+                0x6000250c                FLEXSPI_IRQHandler
+                0x60002510                USDHC1_IRQHandler
+                0x60002514                USDHC2_IRQHandler
+                0x60002518                ENET_IRQHandler
+                0x6000251c                ENET_1588_Timer_IRQHandler
+ .text          0x600025f4       0x38 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_aeabi_ldivmod.o)
+                0x600025f4                __aeabi_ldivmod
+ .text          0x6000262c       0x30 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_aeabi_uldivmod.o)
+                0x6000262c                __aeabi_uldivmod
+ .text          0x6000265c       0x60 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(bpabi.o)
+                0x6000265c                __gnu_ldivmod_helper
+                0x6000268c                __gnu_uldivmod_helper
+ .text          0x600026bc        0x4 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_dvmd_tls.o)
+                0x600026bc                __aeabi_ldiv0
+                0x600026bc                __aeabi_idiv0
+ .text          0x600026c0      0x284 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_divdi3.o)
+                0x600026c0                __divdi3
+ .text          0x60002944      0x248 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_udivdi3.o)
+                0x60002944                __udivdi3
  *(.text*)
  .text.SystemInitHook
-                0x00000b8c        0x2 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
-                0x00000b8c                SystemInitHook
- *fill*         0x00000b8e        0x2 
+                0x60002b8c        0x2 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
+                0x60002b8c                SystemInitHook
+ *fill*         0x60002b8e        0x2 
  .text.SystemInit
-                0x00000b90      0x118 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
-                0x00000b90                SystemInit
+                0x60002b90      0x118 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
+                0x60002b90                SystemInit
  .text.CLOCK_GetOscFreq
-                0x00000ca8       0x20 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x60002ca8       0x20 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
  .text.CLOCK_InitArmPll
-                0x00000cc8       0x44 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x00000cc8                CLOCK_InitArmPll
+                0x60002cc8       0x44 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x60002cc8                CLOCK_InitArmPll
  .text.CLOCK_InitSysPll
-                0x00000d0c       0x44 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x00000d0c                CLOCK_InitSysPll
+                0x60002d0c       0x44 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x60002d0c                CLOCK_InitSysPll
  .text.CLOCK_GetPllFreq
-                0x00000d50      0x1a0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x00000d50                CLOCK_GetPllFreq
+                0x60002d50      0x1a0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x60002d50                CLOCK_GetPllFreq
  .text.CLOCK_GetSysPfdFreq
-                0x00000ef0       0x5c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x00000ef0                CLOCK_GetSysPfdFreq
+                0x60002ef0       0x5c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x60002ef0                CLOCK_GetSysPfdFreq
  .text.CLOCK_GetPeriphClkFreq
-                0x00000f4c       0x94 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x60002f4c       0x94 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
  .text.CLOCK_GetUsb1PfdFreq
-                0x00000fe0       0x5c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x00000fe0                CLOCK_GetUsb1PfdFreq
+                0x60002fe0       0x5c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x60002fe0                CLOCK_GetUsb1PfdFreq
  .text.CLOCK_GetFreq
-                0x0000103c      0x104 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x0000103c                CLOCK_GetFreq
+                0x6000303c      0x104 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x6000303c                CLOCK_GetFreq
  .text.GPIO_PinWrite
-                0x00001140       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
-                0x00001140                GPIO_PinWrite
+                0x60003140       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
+                0x60003140                GPIO_PinWrite
  .text.GPIO_PinSetInterruptConfig
-                0x00001158       0x76 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
-                0x00001158                GPIO_PinSetInterruptConfig
- *fill*         0x000011ce        0x2 
+                0x60003158       0x76 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
+                0x60003158                GPIO_PinSetInterruptConfig
+ *fill*         0x600031ce        0x2 
  .text.GPIO_PinInit
-                0x000011d0       0x78 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
-                0x000011d0                GPIO_PinInit
+                0x600031d0       0x78 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
+                0x600031d0                GPIO_PinInit
  .text.CLOCK_ControlGate
-                0x00001248       0x24 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003248       0x24 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
  .text.LPUART_GetInstance
-                0x0000126c       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x0000126c                LPUART_GetInstance
+                0x6000326c       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x6000326c                LPUART_GetInstance
  .text.LPUART_Init
-                0x00001288      0x1a4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x00001288                LPUART_Init
+                0x60003288      0x1a4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003288                LPUART_Init
  .text.LPUART_GetDefaultConfig
-                0x0000142c       0x26 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x0000142c                LPUART_GetDefaultConfig
+                0x6000342c       0x26 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x6000342c                LPUART_GetDefaultConfig
  .text.LPUART_GetStatusFlags
-                0x00001452        0xe build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x00001452                LPUART_GetStatusFlags
+                0x60003452        0xe build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003452                LPUART_GetStatusFlags
  .text.LPUART_ClearStatusFlags
-                0x00001460       0x4c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x00001460                LPUART_ClearStatusFlags
+                0x60003460       0x4c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003460                LPUART_ClearStatusFlags
  .text.LPUART_WriteBlocking
-                0x000014ac       0x16 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x000014ac                LPUART_WriteBlocking
+                0x600034ac       0x16 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600034ac                LPUART_WriteBlocking
  .text.LPUART_ReadBlocking
-                0x000014c2       0x94 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x000014c2                LPUART_ReadBlocking
- *fill*         0x00001556        0x2 
+                0x600034c2       0x94 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600034c2                LPUART_ReadBlocking
+ *fill*         0x60003556        0x2 
  .text.LPUART1_DriverIRQHandler
-                0x00001558       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x00001558                LPUART1_DriverIRQHandler
+                0x60003558       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003558                LPUART1_DriverIRQHandler
  .text.LPUART2_DriverIRQHandler
-                0x0000156c       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x0000156c                LPUART2_DriverIRQHandler
+                0x6000356c       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x6000356c                LPUART2_DriverIRQHandler
  .text.LPUART3_DriverIRQHandler
-                0x00001580       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x00001580                LPUART3_DriverIRQHandler
+                0x60003580       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003580                LPUART3_DriverIRQHandler
  .text.LPUART4_DriverIRQHandler
-                0x00001594       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x00001594                LPUART4_DriverIRQHandler
+                0x60003594       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003594                LPUART4_DriverIRQHandler
  .text.LPUART5_DriverIRQHandler
-                0x000015a8       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x000015a8                LPUART5_DriverIRQHandler
+                0x600035a8       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600035a8                LPUART5_DriverIRQHandler
  .text.LPUART6_DriverIRQHandler
-                0x000015bc       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x000015bc                LPUART6_DriverIRQHandler
+                0x600035bc       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600035bc                LPUART6_DriverIRQHandler
  .text.LPUART7_DriverIRQHandler
-                0x000015d0       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x000015d0                LPUART7_DriverIRQHandler
+                0x600035d0       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600035d0                LPUART7_DriverIRQHandler
  .text.LPUART8_DriverIRQHandler
-                0x000015e4       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x000015e4                LPUART8_DriverIRQHandler
+                0x600035e4       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600035e4                LPUART8_DriverIRQHandler
  .text.FLEXSPI_CheckAndClearError
-                0x000015f8       0x4e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
-                0x000015f8                FLEXSPI_CheckAndClearError
+                0x600035f8       0x4e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
+                0x600035f8                FLEXSPI_CheckAndClearError
  .text.FLEXSPI_TransferHandleIRQ
-                0x00001646      0x14e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
-                0x00001646                FLEXSPI_TransferHandleIRQ
+                0x60003646      0x14e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
+                0x60003646                FLEXSPI_TransferHandleIRQ
  .text.FLEXSPI_DriverIRQHandler
-                0x00001794       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
-                0x00001794                FLEXSPI_DriverIRQHandler
+                0x60003794       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
+                0x60003794                FLEXSPI_DriverIRQHandler
  .text.DbgConsole_RelocateLog
-                0x000017a8       0x38 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
+                0x600037a8       0x38 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
  .text.DbgConsole_Init
-                0x000017e0       0x10 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
-                0x000017e0                DbgConsole_Init
+                0x600037e0       0x10 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
+                0x600037e0                DbgConsole_Init
  .text.DbgConsole_Printf
-                0x000017f0       0x3c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
-                0x000017f0                DbgConsole_Printf
+                0x600037f0       0x3c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
+                0x600037f0                DbgConsole_Printf
  .text.StrFormatPrintf
-                0x0000182c      0x57e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
-                0x0000182c                StrFormatPrintf
+                0x6000382c      0x57e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
+                0x6000382c                StrFormatPrintf
  .text.LOG_Init
-                0x00001daa       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
-                0x00001daa                LOG_Init
- .text.LOG_Pop  0x00001dc6       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
-                0x00001dc6                LOG_Pop
+                0x60003daa       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
+                0x60003daa                LOG_Init
+ .text.LOG_Pop  0x60003dc6       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
+                0x60003dc6                LOG_Pop
  .text.LOG_Push
-                0x00001dde        0x4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
-                0x00001dde                LOG_Push
- *fill*         0x00001de2        0x2 
- .text.IO_Init  0x00001de4       0x44 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
-                0x00001de4                IO_Init
+                0x60003dde        0x4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
+                0x60003dde                LOG_Push
+ *fill*         0x60003de2        0x2 
+ .text.IO_Init  0x60003de4       0x44 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
+                0x60003de4                IO_Init
  .text.IO_Transfer
-                0x00001e28       0x30 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
-                0x00001e28                IO_Transfer
+                0x60003e28       0x30 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
+                0x60003e28                IO_Transfer
  .text.BOARD_DebugConsoleSrcFreq
-                0x00001e58       0x5c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
-                0x00001e58                BOARD_DebugConsoleSrcFreq
+                0x60003e58       0x5c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                0x60003e58                BOARD_DebugConsoleSrcFreq
  .text.BOARD_InitDebugConsole
-                0x00001eb4       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
-                0x00001eb4                BOARD_InitDebugConsole
+                0x60003eb4       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                0x60003eb4                BOARD_InitDebugConsole
  .text.CopyAndUseRAMVectorTable
-                0x00001ed0       0x48 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
-                0x00001ed0                CopyAndUseRAMVectorTable
- .text.CopyAllTextToITCM
-                0x00001f18       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
-                0x00001f18                CopyAllTextToITCM
+                0x60003ed0       0x48 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                0x60003ed0                CopyAndUseRAMVectorTable
  .text.BOARD_ConfigMPU
-                0x00001f30      0x1ac build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
-                0x00001f30                BOARD_ConfigMPU
+                0x60003f18      0x1a8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                0x60003f18                BOARD_ConfigMPU
  .text.CLOCK_SetMux
-                0x000020dc       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+                0x600040c0       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
  .text.CLOCK_SetDiv
-                0x0000211c       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+                0x60004100       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
  .text.BOARD_BootClockRUN
-                0x0000215c      0x2fc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
-                0x0000215c                BOARD_BootClockRUN
+                0x60004140      0x2fc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+                0x60004140                BOARD_BootClockRUN
  .text.BOARD_InitPins
-                0x00002458       0x28 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
-                0x00002458                BOARD_InitPins
+                0x6000443c       0x28 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
+                0x6000443c                BOARD_InitPins
  .text.delay.constprop.2
-                0x00002480       0x20 build/imxrt1052_bl/main_imxrt1052.o
+                0x60004464       0x20 build/imxrt1052_bl/main_imxrt1052.o
  .text.BOARD_PowerConfig
-                0x000024a0       0x34 build/imxrt1052_bl/main_imxrt1052.o
-                0x000024a0                BOARD_PowerConfig
+                0x60004484       0x34 build/imxrt1052_bl/main_imxrt1052.o
+                0x60004484                BOARD_PowerConfig
  .text.BOARD_LedConfig
-                0x000024d4       0x38 build/imxrt1052_bl/main_imxrt1052.o
-                0x000024d4                BOARD_LedConfig
+                0x600044b8       0x38 build/imxrt1052_bl/main_imxrt1052.o
+                0x600044b8                BOARD_LedConfig
  .text.startup.main
-                0x0000250c       0xf8 build/imxrt1052_bl/main_imxrt1052.o
-                0x0000250c                main
- .text._start   0x00002604        0x6 build/imxrt1052_bl/main_imxrt1052.o
-                0x00002604                _start
- .text.memcpy   0x0000260a       0x16 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memcpy.o)
-                0x0000260a                memcpy
- .text.memset   0x00002620       0x10 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memset.o)
-                0x00002620                memset
- .text.strlen   0x00002630       0x10 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-strlen.o)
-                0x00002630                strlen
+                0x600044f0       0xf8 build/imxrt1052_bl/main_imxrt1052.o
+                0x600044f0                main
+ .text._start   0x600045e8        0x6 build/imxrt1052_bl/main_imxrt1052.o
+                0x600045e8                _start
+ .text.memset   0x600045ee       0x10 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memset.o)
+                0x600045ee                memset
+ .text.strlen   0x600045fe       0x10 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-strlen.o)
+                0x600045fe                strlen
  *(.rodata)
- .rodata        0x00002640       0x10 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
- .rodata        0x00002650       0x24 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
- .rodata        0x00002674       0x48 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
- .rodata        0x000026bc       0x1a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
-                0x000026bc                armPllConfig_BOARD_BootClockRUN
-                0x000026c4                sysPllConfig_BOARD_BootClockRUN
-                0x000026d4                usb1PllConfig_BOARD_BootClockRUN
+ *fill*         0x6000460e        0x2 
+ .rodata        0x60004610       0x10 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+ .rodata        0x60004620       0x24 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
+ .rodata        0x60004644       0x48 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+ .rodata        0x6000468c       0x1a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+                0x6000468c                armPllConfig_BOARD_BootClockRUN
+                0x60004694                sysPllConfig_BOARD_BootClockRUN
+                0x600046a4                usb1PllConfig_BOARD_BootClockRUN
  *(.rodata*)
  .rodata.str1.1
-                0x000026d6      0x1ad build/imxrt1052_bl/main_imxrt1052.o
+                0x600046a6      0x1ad build/imxrt1052_bl/main_imxrt1052.o
                                 0x1b0 (size before relaxing)
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
@@ -1022,36 +1009,55 @@ END GROUP
  *(.eh_frame)
  *(.init)
  *(.fini)
-                0x00002884                . = ALIGN (0x4)
- *fill*         0x00002883        0x1 
+                0x60004854                . = ALIGN (0x4)
+ *fill*         0x60004853        0x1 
 
-.vfp11_veneer   0x00002884        0x0 load address 0x60004884
+.vfp11_veneer   0x60004854        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00002884        0x0 load address 0x60004884
+.v4_bx          0x60004854        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00002884        0x0 load address 0x60004884
+.iplt           0x60004854        0x0
  .iplt          0x00000000        0x0 build/imxrt1052_bl/bl.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x00002884        0x8 load address 0x60004884
-                0x00002884                __exidx_start = .
+.ARM            0x60004854        0x8
+                0x60004854                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x00002884        0x8 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_divdi3.o)
- .ARM.exidx     0x0000288c        0x0 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_udivdi3.o)
+ .ARM.exidx     0x60004854        0x8 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_divdi3.o)
+ .ARM.exidx     0x6000485c        0x0 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_udivdi3.o)
                                   0x8 (size before relaxing)
-                0x0000288c                __exidx_end = .
-                0x0000288c                flash_text_end = .
-                0x0000288c                __etext = .
-                0x0000288c                __DATA_ROM = .
+                0x6000485c                __exidx_end = .
+                0x6000485c                flash_text_end = .
+                0x00000400                itcm_text_start = 0x400
 
-.rel.dyn        0x0000288c        0x0 load address 0x6000488c
+.rel.dyn        0x6000485c        0x0
  .rel.iplt      0x00000000        0x0 build/imxrt1052_bl/bl.o
 
-.data           0x20000000        0x4 load address 0x0000288c
+.ctors          0x6000485c        0x0
+                0x6000485c                __CTOR_LIST__ = .
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+                0x6000485c                __CTOR_END__ = .
+
+.dtors          0x6000485c        0x0
+                0x6000485c                __DTOR_LIST__ = .
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x6000485c                __DTOR_END__ = .
+                0x6000485c                __etext = .
+                0x6000485c                __DATA_ROM = .
+
+.data           0x20000000        0x4 load address 0x6000485c
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                __DATA_RAM = .
                 0x20000000                __data_start__ = .
@@ -1063,12 +1069,12 @@ END GROUP
  *(.jcr*)
                 0x20000004                . = ALIGN (0x4)
                 0x20000004                __data_end__ = .
-                0x00002890                __NDATA_ROM = (__DATA_ROM + (__data_end__ - __data_start__))
+                0x60004860                __NDATA_ROM = (__DATA_ROM + (__data_end__ - __data_start__))
 
-.igot.plt       0x20000004        0x0 load address 0x00002890
+.igot.plt       0x20000004        0x0 load address 0x60004860
  .igot.plt      0x00000000        0x0 build/imxrt1052_bl/bl.o
 
-.ncache.init    0x20000004        0x0 load address 0x00002890
+.ncache.init    0x20000004        0x0 load address 0x60004860
                 0x20000004                __noncachedata_start__ = .
  *(NonCacheable.init)
                 0x20000004                . = ALIGN (0x4)
@@ -1079,11 +1085,11 @@ END GROUP
  *(NonCacheable)
                 0x20000004                . = ALIGN (0x4)
                 0x20000004                __noncachedata_end__ = .
-                0x00002890                __DATA_END = (__NDATA_ROM + (__noncachedata_init_end__ - __noncachedata_start__))
+                0x60004860                __DATA_END = (__NDATA_ROM + (__noncachedata_init_end__ - __noncachedata_start__))
                 0x64000000                text_end = (ORIGIN (m_text) + 0x3ffdc00)
                 0x00000001                ASSERT ((__DATA_END <= text_end), region m_text overflowed with text and data)
 
-.bss            0x20000004       0x3c load address 0x00002890
+.bss            0x20000004       0x3c load address 0x60004860
                 0x20000004                . = ALIGN (0x4)
                 0x20000004                __START_BSS = .
                 0x20000004                __bss_start__ = .
@@ -1101,7 +1107,7 @@ END GROUP
                 0x20000040                __bss_end__ = .
                 0x20000040                __END_BSS = .
 
-.heap           0x20000040     0x2000 load address 0x000028cc
+.heap           0x20000040     0x2000 load address 0x6000489c
                 0x20000040                . = ALIGN (0x8)
                 0x20000040                __end__ = .
                 0x20000040                PROVIDE (end, .)
@@ -1111,7 +1117,7 @@ END GROUP
                 0x20002040                __HeapLimit = .
                 0x20002040                __heap_limit = .
 
-.stack          0x20002040     0x2000 load address 0x000048cc
+.stack          0x20002040     0x2000 load address 0x6000689c
                 0x20002040                . = ALIGN (0x8)
                 0x20004040                . = (. + STACK_SIZE)
  *fill*         0x20002040     0x2000 
@@ -1169,15 +1175,13 @@ END GROUP
  .ARM.attributes
                 0x00000496       0x39 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_udivdi3.o)
  .ARM.attributes
-                0x000004cf       0x39 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memcpy.o)
+                0x000004cf       0x39 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x00000508       0x39 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memset.o)
- .ARM.attributes
-                0x00000541       0x39 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-strlen.o)
+                0x00000508       0x39 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-strlen.o)
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region m_data overflowed with stack and heap)
 OUTPUT(build/imxrt1052_bl/imxrt1052_bl.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x10776
+.debug_info     0x00000000    0x106be
  .debug_info    0x00000000      0xc68 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
  .debug_info    0x00000c68     0x1c66 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
  .debug_info    0x000028ce      0xfe7 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
@@ -1187,16 +1191,16 @@ OUTPUT(build/imxrt1052_bl/imxrt1052_bl.elf elf32-littlearm)
  .debug_info    0x00008c4f      0xa56 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
  .debug_info    0x000096a5      0x459 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
  .debug_info    0x00009afe      0xeaa build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
- .debug_info    0x0000a9a8     0x1266 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
- .debug_info    0x0000bc0e     0x1304 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
- .debug_info    0x0000cf12      0x8b5 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
- .debug_info    0x0000d7c7       0xa8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
- .debug_info    0x0000d86f      0x938 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
- .debug_info    0x0000e1a7      0xca4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
- .debug_info    0x0000ee4b     0x1896 build/imxrt1052_bl/main_imxrt1052.o
- .debug_info    0x000106e1       0x95 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
+ .debug_info    0x0000a9a8     0x11ba build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+ .debug_info    0x0000bb62     0x1304 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+ .debug_info    0x0000ce66      0x8b5 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
+ .debug_info    0x0000d71b       0xa8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
+ .debug_info    0x0000d7c3      0x938 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
+ .debug_info    0x0000e0fb      0xc98 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
+ .debug_info    0x0000ed93     0x1896 build/imxrt1052_bl/main_imxrt1052.o
+ .debug_info    0x00010629       0x95 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
 
-.debug_abbrev   0x00000000     0x265e
+.debug_abbrev   0x00000000     0x2634
  .debug_abbrev  0x00000000      0x192 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
  .debug_abbrev  0x00000192      0x3b9 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
  .debug_abbrev  0x0000054b      0x2ae build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
@@ -1206,16 +1210,16 @@ OUTPUT(build/imxrt1052_bl/imxrt1052_bl.elf elf32-littlearm)
  .debug_abbrev  0x00001288      0x278 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
  .debug_abbrev  0x00001500      0x1dd build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
  .debug_abbrev  0x000016dd      0x272 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
- .debug_abbrev  0x0000194f      0x36c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
- .debug_abbrev  0x00001cbb      0x21a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
- .debug_abbrev  0x00001ed5      0x1a0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
- .debug_abbrev  0x00002075       0x5d build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
- .debug_abbrev  0x000020d2      0x131 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
- .debug_abbrev  0x00002203      0x110 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
- .debug_abbrev  0x00002313      0x337 build/imxrt1052_bl/main_imxrt1052.o
- .debug_abbrev  0x0000264a       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
+ .debug_abbrev  0x0000194f      0x342 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+ .debug_abbrev  0x00001c91      0x21a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+ .debug_abbrev  0x00001eab      0x1a0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
+ .debug_abbrev  0x0000204b       0x5d build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
+ .debug_abbrev  0x000020a8      0x131 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
+ .debug_abbrev  0x000021d9      0x110 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
+ .debug_abbrev  0x000022e9      0x337 build/imxrt1052_bl/main_imxrt1052.o
+ .debug_abbrev  0x00002620       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
 
-.debug_loc      0x00000000     0x4ce5
+.debug_loc      0x00000000     0x4cd2
  .debug_loc     0x00000000       0xe9 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
  .debug_loc     0x000000e9      0xa79 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
  .debug_loc     0x00000b62      0x468 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
@@ -1225,12 +1229,12 @@ OUTPUT(build/imxrt1052_bl/imxrt1052_bl.elf elf32-littlearm)
  .debug_loc     0x000032c1     0x10ac build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
  .debug_loc     0x0000436d      0x232 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
  .debug_loc     0x0000459f      0x1f7 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
- .debug_loc     0x00004796      0x115 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
- .debug_loc     0x000048ab       0xca build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
- .debug_loc     0x00004975       0x50 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
- .debug_loc     0x000049c5      0x320 build/imxrt1052_bl/main_imxrt1052.o
+ .debug_loc     0x00004796      0x102 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+ .debug_loc     0x00004898       0xca build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+ .debug_loc     0x00004962       0x50 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
+ .debug_loc     0x000049b2      0x320 build/imxrt1052_bl/main_imxrt1052.o
 
-.debug_aranges  0x00000000      0x5f8
+.debug_aranges  0x00000000      0x5f0
  .debug_aranges
                 0x00000000       0x30 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
  .debug_aranges
@@ -1250,23 +1254,23 @@ OUTPUT(build/imxrt1052_bl/imxrt1052_bl.elf elf32-littlearm)
  .debug_aranges
                 0x00000440       0x38 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
  .debug_aranges
-                0x00000478       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                0x00000478       0x38 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
  .debug_aranges
-                0x000004b8       0x38 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+                0x000004b0       0x38 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
  .debug_aranges
-                0x000004f0       0x28 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
+                0x000004e8       0x28 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
  .debug_aranges
-                0x00000518       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
+                0x00000510       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
  .debug_aranges
-                0x00000530       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
+                0x00000528       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
  .debug_aranges
-                0x00000548       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
+                0x00000540       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
  .debug_aranges
-                0x00000560       0x78 build/imxrt1052_bl/main_imxrt1052.o
+                0x00000558       0x78 build/imxrt1052_bl/main_imxrt1052.o
  .debug_aranges
-                0x000005d8       0x20 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
+                0x000005d0       0x20 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
 
-.debug_ranges   0x00000000      0x6e8
+.debug_ranges   0x00000000      0x6e0
  .debug_ranges  0x00000000       0x20 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
  .debug_ranges  0x00000020      0x160 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
  .debug_ranges  0x00000180       0x58 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
@@ -1276,12 +1280,12 @@ OUTPUT(build/imxrt1052_bl/imxrt1052_bl.elf elf32-littlearm)
  .debug_ranges  0x000004d0       0x20 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
  .debug_ranges  0x000004f0       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
  .debug_ranges  0x00000530       0x28 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
- .debug_ranges  0x00000558       0xa0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
- .debug_ranges  0x000005f8       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
- .debug_ranges  0x00000638       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
- .debug_ranges  0x00000650       0x98 build/imxrt1052_bl/main_imxrt1052.o
+ .debug_ranges  0x00000558       0x98 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+ .debug_ranges  0x000005f0       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+ .debug_ranges  0x00000630       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
+ .debug_ranges  0x00000648       0x98 build/imxrt1052_bl/main_imxrt1052.o
 
-.debug_line     0x00000000     0x3ccf
+.debug_line     0x00000000     0x3c2b
  .debug_line    0x00000000      0x236 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
  .debug_line    0x00000236      0x62b build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
  .debug_line    0x00000861      0x243 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
@@ -1291,16 +1295,16 @@ OUTPUT(build/imxrt1052_bl/imxrt1052_bl.elf elf32-littlearm)
  .debug_line    0x00001cfc      0x537 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
  .debug_line    0x00002233      0x2f4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
  .debug_line    0x00002527      0x2d9 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
- .debug_line    0x00002800      0x494 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
- .debug_line    0x00002c94      0x2bc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
- .debug_line    0x00002f50      0x20a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
- .debug_line    0x0000315a      0x118 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
- .debug_line    0x00003272      0x206 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
- .debug_line    0x00003478      0x212 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
- .debug_line    0x0000368a      0x498 build/imxrt1052_bl/main_imxrt1052.o
- .debug_line    0x00003b22      0x1ad build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
+ .debug_line    0x00002800      0x3f0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+ .debug_line    0x00002bf0      0x2bc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+ .debug_line    0x00002eac      0x20a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
+ .debug_line    0x000030b6      0x118 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
+ .debug_line    0x000031ce      0x206 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
+ .debug_line    0x000033d4      0x212 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
+ .debug_line    0x000035e6      0x498 build/imxrt1052_bl/main_imxrt1052.o
+ .debug_line    0x00003a7e      0x1ad build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
 
-.debug_str      0x00000000     0x6685
+.debug_str      0x00000000     0x65e3
  .debug_str     0x00000000      0x766 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
                                 0x7d9 (size before relaxing)
  .debug_str     0x00000766     0x125a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
@@ -1319,19 +1323,19 @@ OUTPUT(build/imxrt1052_bl/imxrt1052_bl.elf elf32-littlearm)
                                 0x3a5 (size before relaxing)
  .debug_str     0x0000512a       0x79 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
                                0x1315 (size before relaxing)
- .debug_str     0x000051a3      0x61b build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
-                                0xcb0 (size before relaxing)
- .debug_str     0x000057be      0x12c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+ .debug_str     0x000051a3      0x5c2 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                                0xc50 (size before relaxing)
+ .debug_str     0x00005765      0x12c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
                                0x1075 (size before relaxing)
- .debug_str     0x000058ea       0xd8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
+ .debug_str     0x00005891       0xd8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
                                 0xa43 (size before relaxing)
- .debug_str     0x000059c2       0x64 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
+ .debug_str     0x00005969       0x64 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
                                 0x1df (size before relaxing)
- .debug_str     0x00005a26       0xd3 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
+ .debug_str     0x000059cd       0xd3 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
                                 0xba9 (size before relaxing)
- .debug_str     0x00005af9      0x713 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
-                               0x11f8 (size before relaxing)
- .debug_str     0x0000620c      0x479 build/imxrt1052_bl/main_imxrt1052.o
+ .debug_str     0x00005aa0      0x6c3 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
+                               0x11a8 (size before relaxing)
+ .debug_str     0x00006163      0x480 build/imxrt1052_bl/main_imxrt1052.o
                                0x162b (size before relaxing)
 
 .comment        0x00000000       0x70
@@ -1353,7 +1357,7 @@ OUTPUT(build/imxrt1052_bl/imxrt1052_bl.elf elf32-littlearm)
  .comment       0x00000000       0x71 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
  .comment       0x00000000       0x71 build/imxrt1052_bl/main_imxrt1052.o
 
-.debug_frame    0x00000000      0xf5c
+.debug_frame    0x00000000      0xf20
  .debug_frame   0x00000000       0x58 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
  .debug_frame   0x00000058      0x2ec build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
  .debug_frame   0x00000344       0x60 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
@@ -1363,15 +1367,14 @@ OUTPUT(build/imxrt1052_bl/imxrt1052_bl.elf elf32-littlearm)
  .debug_frame   0x000009b0       0x74 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
  .debug_frame   0x00000a24       0xb0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
  .debug_frame   0x00000ad4       0x8c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
- .debug_frame   0x00000b60       0x94 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
- .debug_frame   0x00000bf4       0x70 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
- .debug_frame   0x00000c64       0x30 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
- .debug_frame   0x00000c94      0x154 build/imxrt1052_bl/main_imxrt1052.o
- .debug_frame   0x00000de8       0x28 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_aeabi_ldivmod.o)
- .debug_frame   0x00000e10       0x28 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00000e38       0x54 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(bpabi.o)
- .debug_frame   0x00000e8c       0x34 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_divdi3.o)
- .debug_frame   0x00000ec0       0x34 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_udivdi3.o)
- .debug_frame   0x00000ef4       0x28 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memcpy.o)
- .debug_frame   0x00000f1c       0x20 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memset.o)
- .debug_frame   0x00000f3c       0x20 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-strlen.o)
+ .debug_frame   0x00000b60       0x80 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+ .debug_frame   0x00000be0       0x70 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+ .debug_frame   0x00000c50       0x30 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
+ .debug_frame   0x00000c80      0x154 build/imxrt1052_bl/main_imxrt1052.o
+ .debug_frame   0x00000dd4       0x28 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_aeabi_ldivmod.o)
+ .debug_frame   0x00000dfc       0x28 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00000e24       0x54 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(bpabi.o)
+ .debug_frame   0x00000e78       0x34 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_divdi3.o)
+ .debug_frame   0x00000eac       0x34 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_udivdi3.o)
+ .debug_frame   0x00000ee0       0x20 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000f00       0x20 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-strlen.o)

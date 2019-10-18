@@ -509,8 +509,8 @@ int main(void)
 
 /****************************END OF FILE**********************/
 
-//void _start(void)
-//{
-//    main();
-//}
+void _start(void)
+{
+    main();
+}
 
