@@ -1,0 +1,302 @@
+Dependencies for Project 'flexspi_nor_polling_transfer', Target 'flexspi_nor_polling_transfer release': (DO NOT MODIFY !)
+F (../flexspi_nor_polling_transfer.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\flexspi_nor_polling_transfer.o --omf_browse release\flexspi_nor_polling_transfer.crf --depend release\flexspi_nor_polling_transfer.d)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_flexspi.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/utilities/fsl_debug_console.h)(0x5B068FAA)
+I (../pin_mux.h)(0x5B068FAA)
+I (../board.h)(0x5B068FAA)
+I (../clock_config.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_gpio.h)(0x5B068FAA)
+F (../pin_mux.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\pin_mux.o --omf_browse release\pin_mux.crf --depend release\pin_mux.d)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_iomuxc.h)(0x5B068FAA)
+I (../pin_mux.h)(0x5B068FAA)
+F (../pin_mux.h)(0x5B068FAA)()
+F (../board.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\board.o --omf_browse release\board.crf --depend release\board.d)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/utilities/fsl_debug_console.h)(0x5B068FAA)
+I (../board.h)(0x5B068FAA)
+I (../clock_config.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_gpio.h)(0x5B068FAA)
+F (../board.h)(0x5B068FAA)()
+F (../clock_config.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\clock_config.o --omf_browse release\clock_config.crf --depend release\clock_config.d)
+I (../clock_config.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+F (../clock_config.h)(0x5B068FAA)()
+F (../readme.txt)(0x5B068FAA)()
+F (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)()
+F (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\fsl_clock.o --omf_browse release\fsl_clock.crf --depend release\fsl_clock.d)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+F (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)()
+F (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\fsl_common.o --omf_browse release\fsl_common.crf --depend release\fsl_common.d)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+F (../../../../../../../devices/MIMXRT1052/drivers/fsl_lpuart.h)(0x5B068FAA)()
+F (../../../../../../../devices/MIMXRT1052/drivers/fsl_lpuart.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\fsl_lpuart.o --omf_browse release\fsl_lpuart.crf --depend release\fsl_lpuart.d)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_lpuart.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+F (../../../../../../../devices/MIMXRT1052/drivers/fsl_iomuxc.h)(0x5B068FAA)()
+F (../../../../../../../devices/MIMXRT1052/drivers/fsl_gpio.h)(0x5B068FAA)()
+F (../../../../../../../devices/MIMXRT1052/drivers/fsl_gpio.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\fsl_gpio.o --omf_browse release\fsl_gpio.crf --depend release\fsl_gpio.d)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_gpio.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+F (../../../../../../../devices/MIMXRT1052/drivers/fsl_flexspi.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\fsl_flexspi.o --omf_browse release\fsl_flexspi.crf --depend release\fsl_flexspi.d)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_flexspi.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+F (../../../../../../../devices/MIMXRT1052/drivers/fsl_flexspi.h)(0x5B068FAA)()
+F (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\system_mimxrt1052.o --omf_browse release\system_mimxrt1052.crf --depend release\system_mimxrt1052.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+F (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)()
+F (../../../../../../../devices/MIMXRT1052/arm/startup_MIMXRT1052.s)(0x5B068FAA)(--cpu Cortex-M7.fp.dp --apcs=interwork --pd "__MICROLIB SETA 1"-I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include--pd "__UVISION_VERSION SETA 515" --pd "CPU_MIMXRT1052DVL6B SETA 1" --pd "NDEBUG SETA 1" --pd "__STARTUP_INITIALIZE_NONCACHEDATA SETA 1"--list .\output\startup_mimxrt1052.lst -o release\startup_mimxrt1052.o --depend release\startup_mimxrt1052.d)
+F (../../../../../../../devices/MIMXRT1052/utilities/io/fsl_io.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\fsl_io.o --omf_browse release\fsl_io.crf --depend release\fsl_io.d)
+I (../../../../../../../devices/MIMXRT1052/utilities/io/fsl_io.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/utilities/fsl_debug_console_conf.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_lpuart.h)(0x5B068FAA)
+F (../../../../../../../devices/MIMXRT1052/utilities/io/fsl_io.h)(0x5B068FAA)()
+F (../../../../../../../devices/MIMXRT1052/utilities/log/fsl_log.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\fsl_log.o --omf_browse release\fsl_log.crf --depend release\fsl_log.d)
+I (../../../../../../../devices/MIMXRT1052/utilities/log/fsl_log.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/utilities/fsl_debug_console_conf.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/utilities/io/fsl_io.h)(0x5B068FAA)
+F (../../../../../../../devices/MIMXRT1052/utilities/log/fsl_log.h)(0x5B068FAA)()
+F (../../../../../../../devices/MIMXRT1052/utilities/str/fsl_str.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\fsl_str.o --omf_browse release\fsl_str.crf --depend release\fsl_str.d)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/utilities/str/fsl_str.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/utilities/fsl_debug_console_conf.h)(0x5B068FAA)
+F (../../../../../../../devices/MIMXRT1052/utilities/str/fsl_str.h)(0x5B068FAA)()
+F (../../../../../../../devices/MIMXRT1052/utilities/fsl_debug_console.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\fsl_debug_console.o --omf_browse release\fsl_debug_console.crf --depend release\fsl_debug_console.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/utilities/fsl_debug_console.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/utilities/fsl_debug_console_conf.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/utilities/log/fsl_log.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/utilities/str/fsl_str.h)(0x5B068FAA)
+F (../../../../../../../devices/MIMXRT1052/utilities/fsl_debug_console.h)(0x5B068FAA)()
+F (../../../../../../../devices/MIMXRT1052/utilities/fsl_debug_console_conf.h)(0x5B068FAA)()
+F (../../../../../../../devices/MIMXRT1052/utilities/fsl_assert.c)(0x5B068FAA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -O3 --apcs=interwork --split_sections -I../../../../../../../CMSIS/Include -I../../../../../../../devices -I.. -I../../../../.. -I../../../../../../../devices/MIMXRT1052/drivers -I../../../../../../../devices/MIMXRT1052 -I../../../../../../../devices/MIMXRT1052/utilities/io -I../../../../../../../devices/MIMXRT1052/utilities/str -I../../../../../../../devices/MIMXRT1052/utilities/log -I../../../../../../../devices/MIMXRT1052/utilities --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186  -I Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\evkbimxrt1050\driver_examples\flexspi\nor\polling_transfer\mdk\RTE-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1\Device\Include-D__UVISION_VERSION="515" -DCPU_MIMXRT1052DVL6B -DNDEBUG -DCPU_MIMXRT1052DVL6B-o release\fsl_assert.o --omf_browse release\fsl_assert.crf --depend release\fsl_assert.d)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_common.h)(0x5B068FAA)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54C245B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54C245B8)
+I (../../../../../../../devices/MIMXRT1052/fsl_device_registers.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/core_cm7.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_version.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_compiler.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/cmsis_armcc.h)(0x5B068FAA)
+I (../../../../../../../CMSIS/Include/mpu_armv7.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/system_MIMXRT1052.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/MIMXRT1052_features.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/drivers/fsl_clock.h)(0x5B068FAA)
+I (../../../../../../../devices/MIMXRT1052/utilities/fsl_debug_console.h)(0x5B068FAA)

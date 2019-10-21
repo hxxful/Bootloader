@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\uavrs_v2_bootloader.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\uavrs_v2_bootloader.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050169: Last Updated: Fri Oct 18 16:50:06 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050169: Last Updated: Mon Oct 21 10:22:19 2019
 <BR><P>
 <H3>Maximum Stack Usage =        584 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -387,7 +387,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[f3]"></a>BOARD_InitDebugConsole</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, board.o(i.BOARD_InitDebugConsole))
-<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = BOARD_InitDebugConsole &rArr; DbgConsole_Init &rArr; LOG_Init &rArr; IO_Init &rArr; LPUART_Init &rArr; CLOCK_ControlGate
+<BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = BOARD_InitDebugConsole &rArr; DbgConsole_Init &rArr; LOG_Init &rArr; IO_Init &rArr; LPUART_Init &rArr; CLOCK_ControlGate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_DebugConsoleSrcFreq
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Init
@@ -403,8 +403,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[f7]"></a>BOARD_LedConfig</STRONG> (Thumb, 52 bytes, Stack size 32 bytes, main_imxrt1052.o(i.BOARD_LedConfig))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = BOARD_LedConfig &rArr; GPIO_PinInit &rArr; GPIO_PinSetInterruptConfig
+<P><STRONG><a name="[f7]"></a>BOARD_LedConfig</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, main_imxrt1052.o(i.BOARD_LedConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = BOARD_LedConfig &rArr; GPIO_PinInit &rArr; GPIO_PinSetInterruptConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinInit
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOMUXC_SetPinMux
@@ -412,8 +412,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[fa]"></a>BOARD_PowerConfig</STRONG> (Thumb, 54 bytes, Stack size 32 bytes, main_imxrt1052.o(i.BOARD_PowerConfig))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = BOARD_PowerConfig &rArr; GPIO_PinInit &rArr; GPIO_PinSetInterruptConfig
+<P><STRONG><a name="[fa]"></a>BOARD_PowerConfig</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, main_imxrt1052.o(i.BOARD_PowerConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = BOARD_PowerConfig &rArr; GPIO_PinInit &rArr; GPIO_PinSetInterruptConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinInit
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOMUXC_SetPinMux
@@ -478,7 +478,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[f4]"></a>DbgConsole_Init</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, fsl_debug_console.o(i.DbgConsole_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = DbgConsole_Init &rArr; LOG_Init &rArr; IO_Init &rArr; LPUART_Init &rArr; CLOCK_ControlGate
+<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = DbgConsole_Init &rArr; LOG_Init &rArr; IO_Init &rArr; LPUART_Init &rArr; CLOCK_ControlGate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Init
 </UL>
@@ -540,8 +540,8 @@ Global Symbols
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[10e]"></a>IO_Init</STRONG> (Thumb, 62 bytes, Stack size 64 bytes, fsl_io.o(i.IO_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = IO_Init &rArr; LPUART_Init &rArr; CLOCK_ControlGate
+<P><STRONG><a name="[10e]"></a>IO_Init</STRONG> (Thumb, 62 bytes, Stack size 40 bytes, fsl_io.o(i.IO_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = IO_Init &rArr; LPUART_Init &rArr; CLOCK_ControlGate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_Init
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_GetDefaultConfig
@@ -559,7 +559,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[104]"></a>LOG_Init</STRONG> (Thumb, 28 bytes, Stack size 24 bytes, fsl_log.o(i.LOG_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = LOG_Init &rArr; IO_Init &rArr; LPUART_Init &rArr; CLOCK_ControlGate
+<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = LOG_Init &rArr; IO_Init &rArr; LPUART_Init &rArr; CLOCK_ControlGate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
 </UL>
@@ -615,7 +615,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_ReadBlocking
 </UL>
 
-<P><STRONG><a name="[10f]"></a>LPUART_GetDefaultConfig</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, fsl_lpuart.o(i.LPUART_GetDefaultConfig))
+<P><STRONG><a name="[10f]"></a>LPUART_GetDefaultConfig</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, fsl_lpuart.o(i.LPUART_GetDefaultConfig))
 <BR><BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
 </UL>
 
@@ -628,7 +628,7 @@ Global Symbols
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_ClearStatusFlags
 </UL>
 
-<P><STRONG><a name="[110]"></a>LPUART_Init</STRONG> (Thumb, 410 bytes, Stack size 40 bytes, fsl_lpuart.o(i.LPUART_Init))
+<P><STRONG><a name="[110]"></a>LPUART_Init</STRONG> (Thumb, 404 bytes, Stack size 40 bytes, fsl_lpuart.o(i.LPUART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = LPUART_Init &rArr; CLOCK_ControlGate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_ControlGate

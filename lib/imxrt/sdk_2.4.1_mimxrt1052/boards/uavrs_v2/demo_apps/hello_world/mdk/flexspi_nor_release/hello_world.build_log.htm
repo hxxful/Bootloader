@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.15
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: hxx hxx, hxx, LIC=R4HTG-VFFHN-XBSEC-7UNYP-8GH9H-U5787
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.15.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 2 (build 169)
+Assembler:       Armasm.exe V5.05 update 2 (build 169)
+Linker/Locator:  ArmLink.exe V5.05 update 2 (build 169)
+Library Manager: ArmAr.exe V5.05 update 2 (build 169)
+Hex Converter:   FromElf.exe V5.05 update 2 (build 169)
+CPU DLL:         SARMCM3.DLL V5.15.0
+Dialog DLL:      DCM.DLL V1.13.2.0
+Target DLL:      CMSIS_AGDI.dll V1.21.12.0
+Dialog DLL:      TCM.DLL V1.14.5.0
+ 
+<h2>Project:</h2>
+Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\demo_apps\hello_world\mdk\hello_world.uvprojx
+Project File Date:  09/23/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.05 update 2 (build 169)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'hello_world flexspi_nor_release'
+compiling hello_world.c...
+compiling pin_mux.c...
+compiling board.c...
+compiling clock_config.c...
+compiling fsl_clock.c...
+compiling fsl_common.c...
+compiling fsl_lpuart.c...
+compiling fsl_gpio.c...
+compiling system_MIMXRT1052.c...
+assembling startup_MIMXRT1052.s...
+compiling fsl_io.c...
+compiling fsl_log.c...
+compiling fsl_str.c...
+compiling fsl_debug_console.c...
+compiling fsl_assert.c...
+compiling fsl_flexspi_nor_boot.c...
+compiling evkbimxrt1050_hyper_config.c...
+"no source": Error:  #5: cannot open source input file "../../../../../devices/MIMXRT1052/xip/evkbimxrt1050_hyper_config.c": No such file or directory
+../../../../../devices/MIMXRT1052/xip/evkbimxrt1050_hyper_config.c: 0 warnings, 1 error
+compiling evkbimxrt1050_sdram_ini_dcd.c...
+linking...
+flexspi_nor_release\hello_world.out: error: L6002U: Could not open file flexspi_nor_release\evkbimxrt1050_hyper_config.o: No such file or directory
+Finished: 0 information, 0 warning, 0 error and 1 fatal error messages.
+"flexspi_nor_release\hello_world.out" - 1 Error(s), 0 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  Z:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\demo_apps\hello_world\mdk\RTE
+  C:\Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+</pre>
+</body>
+</html>

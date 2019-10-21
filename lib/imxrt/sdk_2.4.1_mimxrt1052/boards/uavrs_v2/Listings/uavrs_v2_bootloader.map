@@ -41,7 +41,7 @@ Section Cross References
     fsl_flexspi.o(i.FLEXSPI_Deinit) refers to fsl_flexspi.o(i.FLEXSPI_SoftwareReset) for FLEXSPI_SoftwareReset
     fsl_flexspi.o(i.FLEXSPI_DriverIRQHandler) refers to fsl_flexspi.o(i.FLEXSPI_TransferHandleIRQ) for FLEXSPI_TransferHandleIRQ
     fsl_flexspi.o(i.FLEXSPI_DriverIRQHandler) refers to fsl_flexspi.o(.data) for .data
-    fsl_flexspi.o(i.FLEXSPI_GetDefaultConfig) refers to memseta.o(.text) for __aeabi_memclr4
+    fsl_flexspi.o(i.FLEXSPI_GetDefaultConfig) refers to memseta.o(.text) for __aeabi_memclr
     fsl_flexspi.o(i.FLEXSPI_GetInstance) refers to fsl_flexspi.o(.constdata) for .constdata
     fsl_flexspi.o(i.FLEXSPI_Init) refers to fsl_flexspi.o(i.FLEXSPI_GetInstance) for FLEXSPI_GetInstance
     fsl_flexspi.o(i.FLEXSPI_Init) refers to fsl_flexspi.o(i.FLEXSPI_SoftwareReset) for FLEXSPI_SoftwareReset
@@ -129,7 +129,7 @@ Section Cross References
     fsl_shell.o(i.AutoComplete) refers to fsl_shell.o(i.StrCopy) for StrCopy
     fsl_shell.o(i.AutoComplete) refers to fsl_shell.o(.bss) for .bss
     fsl_shell.o(i.GetHistoryCommand) refers to fsl_shell.o(i.StrLen) for StrLen
-    fsl_shell.o(i.GetHistoryCommand) refers to memseta.o(.text) for __aeabi_memclr4
+    fsl_shell.o(i.GetHistoryCommand) refers to memseta.o(.text) for __aeabi_memclr
     fsl_shell.o(i.GetHistoryCommand) refers to fsl_shell.o(i.StrCopy) for StrCopy
     fsl_shell.o(i.HelpCommand) refers to fsl_shell.o(.bss) for .bss
     fsl_shell.o(i.ParseLine) refers to memseta.o(.text) for __aeabi_memclr4
@@ -151,7 +151,7 @@ Section Cross References
     fsl_shell.o(i.SHELL_Main) refers to fsl_shell.o(i.StrLen) for StrLen
     fsl_shell.o(i.SHELL_Main) refers to memmovea.o(.text) for __aeabi_memmove
     fsl_shell.o(i.SHELL_Main) refers to fsl_shell.o(i.ProcessCommand) for ProcessCommand
-    fsl_shell.o(i.SHELL_Main) refers to memseta.o(.text) for __aeabi_memclr4
+    fsl_shell.o(i.SHELL_Main) refers to memseta.o(.text) for __aeabi_memclr
     fsl_shell.o(i.SHELL_Main) refers to fsl_shell.o(.data) for .data
     fsl_shell.o(i.SHELL_RegisterCommand) refers to fsl_shell.o(.bss) for .bss
     fsl_shell.o(.constdata) refers to fsl_shell.o(.conststring) for .conststring
@@ -213,6 +213,7 @@ Section Cross References
     main_imxrt1052.o(i.BOARD_LedConfig) refers to fsl_gpio.o(i.GPIO_PinInit) for GPIO_PinInit
     main_imxrt1052.o(i.BOARD_PowerConfig) refers to main_imxrt1052.o(i.IOMUXC_SetPinMux) for IOMUXC_SetPinMux
     main_imxrt1052.o(i.BOARD_PowerConfig) refers to fsl_gpio.o(i.GPIO_PinInit) for GPIO_PinInit
+    main_imxrt1052.o(i._start) refers to main_imxrt1052.o(i.main) for main
     main_imxrt1052.o(i.flexspi_nor_flash_erase_sector) refers to main_imxrt1052.o(i.flexspi_nor_write_enable) for flexspi_nor_write_enable
     main_imxrt1052.o(i.flexspi_nor_flash_erase_sector) refers to fsl_flexspi.o(i.FLEXSPI_TransferBlocking) for FLEXSPI_TransferBlocking
     main_imxrt1052.o(i.flexspi_nor_flash_erase_sector) refers to main_imxrt1052.o(i.flexspi_nor_wait_bus_busy) for flexspi_nor_wait_bus_busy
@@ -422,7 +423,7 @@ Removing Unused input sections from the image.
     Removing fsl_flexspi.o(i.FLEXSPI_GetInstance), (20 bytes).
     Removing fsl_flexspi.o(i.FLEXSPI_Init), (428 bytes).
     Removing fsl_flexspi.o(i.FLEXSPI_ReadBlocking), (166 bytes).
-    Removing fsl_flexspi.o(i.FLEXSPI_SetFlashConfig), (380 bytes).
+    Removing fsl_flexspi.o(i.FLEXSPI_SetFlashConfig), (372 bytes).
     Removing fsl_flexspi.o(i.FLEXSPI_SoftwareReset), (16 bytes).
     Removing fsl_flexspi.o(i.FLEXSPI_TransferBlocking), (198 bytes).
     Removing fsl_flexspi.o(i.FLEXSPI_TransferCreateHandle), (84 bytes).
@@ -430,7 +431,7 @@ Removing Unused input sections from the image.
     Removing fsl_flexspi.o(i.FLEXSPI_TransferNonBlocking), (176 bytes).
     Removing fsl_flexspi.o(i.FLEXSPI_UpdateLUT), (68 bytes).
     Removing fsl_flexspi.o(i.FLEXSPI_WriteBlocking), (116 bytes).
-    Removing fsl_flexspi.o(.constdata), (12 bytes).
+    Removing fsl_flexspi.o(.constdata), (8 bytes).
     Removing fsl_gpio.o(.rev16_text), (4 bytes).
     Removing fsl_gpio.o(.revsh_text), (4 bytes).
     Removing fsl_gpio.o(.rrx_text), (6 bytes).
@@ -476,13 +477,13 @@ Removing Unused input sections from the image.
     Removing fsl_notifier.o(.rrx_text), (6 bytes).
     Removing fsl_notifier.o(i.NOTIFIER_CreateHandle), (68 bytes).
     Removing fsl_notifier.o(i.NOTIFIER_GetErrorCallbackIndex), (4 bytes).
-    Removing fsl_notifier.o(i.NOTIFIER_SwitchConfig), (226 bytes).
+    Removing fsl_notifier.o(i.NOTIFIER_SwitchConfig), (234 bytes).
     Removing fsl_shell.o(.rev16_text), (4 bytes).
     Removing fsl_shell.o(.revsh_text), (4 bytes).
     Removing fsl_shell.o(.rrx_text), (6 bytes).
-    Removing fsl_shell.o(i.AutoComplete), (200 bytes).
+    Removing fsl_shell.o(i.AutoComplete), (196 bytes).
     Removing fsl_shell.o(i.ExitCommand), (40 bytes).
-    Removing fsl_shell.o(i.GetHistoryCommand), (116 bytes).
+    Removing fsl_shell.o(i.GetHistoryCommand), (112 bytes).
     Removing fsl_shell.o(i.HelpCommand), (44 bytes).
     Removing fsl_shell.o(i.ParseLine), (128 bytes).
     Removing fsl_shell.o(i.ProcessCommand), (316 bytes).
@@ -518,7 +519,6 @@ Removing Unused input sections from the image.
     Removing board.o(.rev16_text), (4 bytes).
     Removing board.o(.revsh_text), (4 bytes).
     Removing board.o(.rrx_text), (6 bytes).
-    Removing board.o(i.CopyAllTextToITCM), (2 bytes).
     Removing clock_config.o(.rev16_text), (4 bytes).
     Removing clock_config.o(.revsh_text), (4 bytes).
     Removing clock_config.o(.rrx_text), (6 bytes).
@@ -538,17 +538,18 @@ Removing Unused input sections from the image.
     Removing bsp_led.o(.revsh_text), (4 bytes).
     Removing bsp_led.o(.rrx_text), (6 bytes).
     Removing bsp_led.o(i.IOMUXC_SetPinMux), (28 bytes).
-    Removing bsp_led.o(i.LED_GPIO_Config), (168 bytes).
+    Removing bsp_led.o(i.LED_GPIO_Config), (172 bytes).
     Removing main_imxrt1052.o(.rev16_text), (4 bytes).
     Removing main_imxrt1052.o(.revsh_text), (4 bytes).
     Removing main_imxrt1052.o(.rrx_text), (6 bytes).
-    Removing main_imxrt1052.o(i.flexspi_nor_flash_erase_sector), (56 bytes).
-    Removing main_imxrt1052.o(i.flexspi_nor_flash_page_program), (68 bytes).
-    Removing main_imxrt1052.o(i.flexspi_nor_hyperbus_read), (36 bytes).
-    Removing main_imxrt1052.o(i.flexspi_nor_hyperbus_write), (36 bytes).
+    Removing main_imxrt1052.o(i._start), (4 bytes).
+    Removing main_imxrt1052.o(i.flexspi_nor_flash_erase_sector), (58 bytes).
+    Removing main_imxrt1052.o(i.flexspi_nor_flash_page_program), (74 bytes).
+    Removing main_imxrt1052.o(i.flexspi_nor_hyperbus_read), (40 bytes).
+    Removing main_imxrt1052.o(i.flexspi_nor_hyperbus_write), (40 bytes).
     Removing main_imxrt1052.o(i.flexspi_nor_hyperflash_cfi), (232 bytes).
-    Removing main_imxrt1052.o(i.flexspi_nor_wait_bus_busy), (66 bytes).
-    Removing main_imxrt1052.o(i.flexspi_nor_write_enable), (34 bytes).
+    Removing main_imxrt1052.o(i.flexspi_nor_wait_bus_busy), (70 bytes).
+    Removing main_imxrt1052.o(i.flexspi_nor_write_enable), (36 bytes).
     Removing main_imxrt1052.o(.constdata), (192 bytes).
     Removing dmul.o(.text), (228 bytes).
     Removing ddiv.o(.text), (222 bytes).
@@ -556,7 +557,7 @@ Removing Unused input sections from the image.
     Removing d2f.o(.text), (56 bytes).
     Removing fepilogue.o(.text), (110 bytes).
 
-181 unused section(s) (total 10588 bytes) removed from the image.
+181 unused section(s) (total 10604 bytes) removed from the image.
 
 ==============================================================================
 
@@ -738,43 +739,43 @@ Image Symbol Table
     i.LPUART8_DriverIRQHandler               0x000018b0   Section        0  fsl_lpuart.o(i.LPUART8_DriverIRQHandler)
     i.LPUART_ClearStatusFlags                0x000018c8   Section        0  fsl_lpuart.o(i.LPUART_ClearStatusFlags)
     i.LPUART_GetDefaultConfig                0x00001918   Section        0  fsl_lpuart.o(i.LPUART_GetDefaultConfig)
-    i.LPUART_GetInstance                     0x00001944   Section        0  fsl_lpuart.o(i.LPUART_GetInstance)
-    i.LPUART_GetStatusFlags                  0x00001960   Section        0  fsl_lpuart.o(i.LPUART_GetStatusFlags)
-    i.LPUART_Init                            0x00001970   Section        0  fsl_lpuart.o(i.LPUART_Init)
-    i.LPUART_ReadBlocking                    0x00001b18   Section        0  fsl_lpuart.o(i.LPUART_ReadBlocking)
-    i.LPUART_WriteBlocking                   0x00001ba6   Section        0  fsl_lpuart.o(i.LPUART_WriteBlocking)
-    i.StrFormatPrintf                        0x00001bbc   Section        0  fsl_str.o(i.StrFormatPrintf)
-    i.__ARM_fpclassify                       0x00002096   Section        0  fpclassify.o(i.__ARM_fpclassify)
-    i.__hardfp_modf                          0x000020c8   Section        0  modf.o(i.__hardfp_modf)
-    i.__hardfp_pow                           0x00002188   Section        0  pow.o(i.__hardfp_pow)
-    i.__kernel_poly                          0x00002a60   Section        0  poly.o(i.__kernel_poly)
-    i.__mathlib_dbl_divzero                  0x00002ad0   Section        0  dunder.o(i.__mathlib_dbl_divzero)
-    i.__mathlib_dbl_infnan2                  0x00002af0   Section        0  dunder.o(i.__mathlib_dbl_infnan2)
-    i.__mathlib_dbl_invalid                  0x00002af8   Section        0  dunder.o(i.__mathlib_dbl_invalid)
-    i.__mathlib_dbl_overflow                 0x00002b10   Section        0  dunder.o(i.__mathlib_dbl_overflow)
-    i.__mathlib_dbl_underflow                0x00002b28   Section        0  dunder.o(i.__mathlib_dbl_underflow)
-    i.__set_errno                            0x00002b40   Section        0  errno.o(i.__set_errno)
-    i.delay                                  0x00002b4c   Section        0  main_imxrt1052.o(i.delay)
-    delay                                    0x00002b4d   Thumb Code    18  main_imxrt1052.o(i.delay)
-    i.fabs                                   0x00002b5e   Section        0  fabs.o(i.fabs)
-    i.main                                   0x00002b78   Section        0  main_imxrt1052.o(i.main)
-    i.sqrt                                   0x00002dac   Section        0  sqrt.o(i.sqrt)
-    .constdata                               0x00002e18   Section       16  fsl_clock.o(.constdata)
-    .constdata                               0x00002e28   Section       48  fsl_gpio.o(.constdata)
-    s_gpioBases                              0x00002e28   Data          24  fsl_gpio.o(.constdata)
-    s_gpioClock                              0x00002e40   Data          24  fsl_gpio.o(.constdata)
-    .constdata                               0x00002e58   Section      108  fsl_lpuart.o(.constdata)
-    s_lpuartBases                            0x00002e58   Data          36  fsl_lpuart.o(.constdata)
-    s_lpuartIRQ                              0x00002e7c   Data          36  fsl_lpuart.o(.constdata)
-    s_lpuartClock                            0x00002ea0   Data          36  fsl_lpuart.o(.constdata)
-    .constdata                               0x00002ec4   Section       24  clock_config.o(.constdata)
-    .constdata                               0x00002ee0   Section      136  pow.o(.constdata)
-    bp                                       0x00002ee0   Data          16  pow.o(.constdata)
-    dp_h                                     0x00002ef0   Data          16  pow.o(.constdata)
-    dp_l                                     0x00002f00   Data          16  pow.o(.constdata)
-    L                                        0x00002f10   Data          48  pow.o(.constdata)
-    P                                        0x00002f40   Data          40  pow.o(.constdata)
-    .constdata                               0x00002f68   Section        8  qnan.o(.constdata)
+    i.LPUART_GetInstance                     0x00001940   Section        0  fsl_lpuart.o(i.LPUART_GetInstance)
+    i.LPUART_GetStatusFlags                  0x0000195c   Section        0  fsl_lpuart.o(i.LPUART_GetStatusFlags)
+    i.LPUART_Init                            0x0000196c   Section        0  fsl_lpuart.o(i.LPUART_Init)
+    i.LPUART_ReadBlocking                    0x00001b0c   Section        0  fsl_lpuart.o(i.LPUART_ReadBlocking)
+    i.LPUART_WriteBlocking                   0x00001b9a   Section        0  fsl_lpuart.o(i.LPUART_WriteBlocking)
+    i.StrFormatPrintf                        0x00001bb0   Section        0  fsl_str.o(i.StrFormatPrintf)
+    i.__ARM_fpclassify                       0x0000208a   Section        0  fpclassify.o(i.__ARM_fpclassify)
+    i.__hardfp_modf                          0x000020bc   Section        0  modf.o(i.__hardfp_modf)
+    i.__hardfp_pow                           0x00002180   Section        0  pow.o(i.__hardfp_pow)
+    i.__kernel_poly                          0x00002a58   Section        0  poly.o(i.__kernel_poly)
+    i.__mathlib_dbl_divzero                  0x00002ac8   Section        0  dunder.o(i.__mathlib_dbl_divzero)
+    i.__mathlib_dbl_infnan2                  0x00002ae8   Section        0  dunder.o(i.__mathlib_dbl_infnan2)
+    i.__mathlib_dbl_invalid                  0x00002af0   Section        0  dunder.o(i.__mathlib_dbl_invalid)
+    i.__mathlib_dbl_overflow                 0x00002b08   Section        0  dunder.o(i.__mathlib_dbl_overflow)
+    i.__mathlib_dbl_underflow                0x00002b20   Section        0  dunder.o(i.__mathlib_dbl_underflow)
+    i.__set_errno                            0x00002b38   Section        0  errno.o(i.__set_errno)
+    i.delay                                  0x00002b44   Section        0  main_imxrt1052.o(i.delay)
+    delay                                    0x00002b45   Thumb Code    18  main_imxrt1052.o(i.delay)
+    i.fabs                                   0x00002b56   Section        0  fabs.o(i.fabs)
+    i.main                                   0x00002b70   Section        0  main_imxrt1052.o(i.main)
+    i.sqrt                                   0x00002da4   Section        0  sqrt.o(i.sqrt)
+    .constdata                               0x00002e10   Section       16  fsl_clock.o(.constdata)
+    .constdata                               0x00002e20   Section       36  fsl_gpio.o(.constdata)
+    s_gpioBases                              0x00002e20   Data          24  fsl_gpio.o(.constdata)
+    s_gpioClock                              0x00002e38   Data          12  fsl_gpio.o(.constdata)
+    .constdata                               0x00002e44   Section       72  fsl_lpuart.o(.constdata)
+    s_lpuartBases                            0x00002e44   Data          36  fsl_lpuart.o(.constdata)
+    s_lpuartIRQ                              0x00002e68   Data          18  fsl_lpuart.o(.constdata)
+    s_lpuartClock                            0x00002e7a   Data          18  fsl_lpuart.o(.constdata)
+    .constdata                               0x00002e8c   Section       24  clock_config.o(.constdata)
+    .constdata                               0x00002ea8   Section      136  pow.o(.constdata)
+    bp                                       0x00002ea8   Data          16  pow.o(.constdata)
+    dp_h                                     0x00002eb8   Data          16  pow.o(.constdata)
+    dp_l                                     0x00002ec8   Data          16  pow.o(.constdata)
+    L                                        0x00002ed8   Data          48  pow.o(.constdata)
+    P                                        0x00002f08   Data          40  pow.o(.constdata)
+    .constdata                               0x00002f30   Section        8  qnan.o(.constdata)
     .data                                    0x20000000   Section        4  system_mimxrt1052.o(.data)
     .data                                    0x20000004   Section        4  fsl_clock.o(.data)
     .data                                    0x20000008   Section        4  fsl_clock.o(.data)
@@ -816,7 +817,7 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPv5_D16$PE$PLD8$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$ENUMINT$~SHL$OTIME$ROPI$IEEEX$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPv5_D16$PE$PLD8$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$IEEEX$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
     Image$$VECTOR_RAM$$Base                  0x00000000   Number         0  anon$$obj.o ABSOLUTE
     __ARM_use_no_argv                        0x00000000   Number         0  main_imxrt1052.o ABSOLUTE
     __cpp_initialize__aeabi_                  - Undefined Weak Reference
@@ -884,29 +885,29 @@ Image Symbol Table
     LPUART7_DriverIRQHandler                 0x00001899   Thumb Code    12  fsl_lpuart.o(i.LPUART7_DriverIRQHandler)
     LPUART8_DriverIRQHandler                 0x000018b1   Thumb Code    12  fsl_lpuart.o(i.LPUART8_DriverIRQHandler)
     LPUART_ClearStatusFlags                  0x000018c9   Thumb Code    74  fsl_lpuart.o(i.LPUART_ClearStatusFlags)
-    LPUART_GetDefaultConfig                  0x00001919   Thumb Code    42  fsl_lpuart.o(i.LPUART_GetDefaultConfig)
-    LPUART_GetInstance                       0x00001945   Thumb Code    24  fsl_lpuart.o(i.LPUART_GetInstance)
-    LPUART_GetStatusFlags                    0x00001961   Thumb Code    14  fsl_lpuart.o(i.LPUART_GetStatusFlags)
-    LPUART_Init                              0x00001971   Thumb Code   410  fsl_lpuart.o(i.LPUART_Init)
-    LPUART_ReadBlocking                      0x00001b19   Thumb Code   142  fsl_lpuart.o(i.LPUART_ReadBlocking)
-    LPUART_WriteBlocking                     0x00001ba7   Thumb Code    20  fsl_lpuart.o(i.LPUART_WriteBlocking)
-    StrFormatPrintf                          0x00001bbd   Thumb Code  1242  fsl_str.o(i.StrFormatPrintf)
-    __ARM_fpclassify                         0x00002097   Thumb Code    48  fpclassify.o(i.__ARM_fpclassify)
-    __hardfp_modf                            0x000020c9   Thumb Code   186  modf.o(i.__hardfp_modf)
-    __hardfp_pow                             0x00002189   Thumb Code  2116  pow.o(i.__hardfp_pow)
-    __kernel_poly                            0x00002a61   Thumb Code   112  poly.o(i.__kernel_poly)
-    __mathlib_dbl_divzero                    0x00002ad1   Thumb Code    14  dunder.o(i.__mathlib_dbl_divzero)
-    __mathlib_dbl_infnan2                    0x00002af1   Thumb Code     6  dunder.o(i.__mathlib_dbl_infnan2)
-    __mathlib_dbl_invalid                    0x00002af9   Thumb Code    10  dunder.o(i.__mathlib_dbl_invalid)
-    __mathlib_dbl_overflow                   0x00002b11   Thumb Code    10  dunder.o(i.__mathlib_dbl_overflow)
-    __mathlib_dbl_underflow                  0x00002b29   Thumb Code    10  dunder.o(i.__mathlib_dbl_underflow)
-    __set_errno                              0x00002b41   Thumb Code     6  errno.o(i.__set_errno)
-    fabs                                     0x00002b5f   Thumb Code    24  fabs.o(i.fabs)
-    main                                     0x00002b79   Thumb Code   200  main_imxrt1052.o(i.main)
-    sqrt                                     0x00002dad   Thumb Code   106  sqrt.o(i.sqrt)
-    armPllConfig_BOARD_BootClockRUN          0x00002ec4   Data           8  clock_config.o(.constdata)
-    sysPllConfig_BOARD_BootClockRUN          0x00002ecc   Data          16  clock_config.o(.constdata)
-    __mathlib_zero                           0x00002f68   Data           8  qnan.o(.constdata)
+    LPUART_GetDefaultConfig                  0x00001919   Thumb Code    38  fsl_lpuart.o(i.LPUART_GetDefaultConfig)
+    LPUART_GetInstance                       0x00001941   Thumb Code    24  fsl_lpuart.o(i.LPUART_GetInstance)
+    LPUART_GetStatusFlags                    0x0000195d   Thumb Code    14  fsl_lpuart.o(i.LPUART_GetStatusFlags)
+    LPUART_Init                              0x0000196d   Thumb Code   404  fsl_lpuart.o(i.LPUART_Init)
+    LPUART_ReadBlocking                      0x00001b0d   Thumb Code   142  fsl_lpuart.o(i.LPUART_ReadBlocking)
+    LPUART_WriteBlocking                     0x00001b9b   Thumb Code    20  fsl_lpuart.o(i.LPUART_WriteBlocking)
+    StrFormatPrintf                          0x00001bb1   Thumb Code  1242  fsl_str.o(i.StrFormatPrintf)
+    __ARM_fpclassify                         0x0000208b   Thumb Code    48  fpclassify.o(i.__ARM_fpclassify)
+    __hardfp_modf                            0x000020bd   Thumb Code   186  modf.o(i.__hardfp_modf)
+    __hardfp_pow                             0x00002181   Thumb Code  2116  pow.o(i.__hardfp_pow)
+    __kernel_poly                            0x00002a59   Thumb Code   112  poly.o(i.__kernel_poly)
+    __mathlib_dbl_divzero                    0x00002ac9   Thumb Code    14  dunder.o(i.__mathlib_dbl_divzero)
+    __mathlib_dbl_infnan2                    0x00002ae9   Thumb Code     6  dunder.o(i.__mathlib_dbl_infnan2)
+    __mathlib_dbl_invalid                    0x00002af1   Thumb Code    10  dunder.o(i.__mathlib_dbl_invalid)
+    __mathlib_dbl_overflow                   0x00002b09   Thumb Code    10  dunder.o(i.__mathlib_dbl_overflow)
+    __mathlib_dbl_underflow                  0x00002b21   Thumb Code    10  dunder.o(i.__mathlib_dbl_underflow)
+    __set_errno                              0x00002b39   Thumb Code     6  errno.o(i.__set_errno)
+    fabs                                     0x00002b57   Thumb Code    24  fabs.o(i.fabs)
+    main                                     0x00002b71   Thumb Code   200  main_imxrt1052.o(i.main)
+    sqrt                                     0x00002da5   Thumb Code   106  sqrt.o(i.sqrt)
+    armPllConfig_BOARD_BootClockRUN          0x00002e8c   Data           8  clock_config.o(.constdata)
+    sysPllConfig_BOARD_BootClockRUN          0x00002e94   Data          16  clock_config.o(.constdata)
+    __mathlib_zero                           0x00002f30   Data           8  qnan.o(.constdata)
     SystemCoreClock                          0x20000000   Data           4  system_mimxrt1052.o(.data)
     g_xtalFreq                               0x20000004   Data           4  fsl_clock.o(.data)
     g_rtcXtalFreq                            0x20000008   Data           4  fsl_clock.o(.data)
@@ -914,7 +915,7 @@ Image Symbol Table
     Image$$ARM_LIB_HEAP$$ZI$$Limit           0x20000444   Number         0  anon$$obj.o ABSOLUTE
     Image$$ARM_LIB_STACK$$ZI$$Limit          0x20020000   Number         0  anon$$obj.o ABSOLUTE
     Image$$RW_m_config_text$$Base            0x60000000   Number         0  anon$$obj.o ABSOLUTE
-    g_flash_config                           0x60000000   Data         512  uavrs_v2_flexspi_nor_flash.o(.boot_hdr.conf)
+    flash_config                             0x60000000   Data         512  uavrs_v2_flexspi_nor_flash.o(.boot_hdr.conf)
     image_vector_table                       0x60001000   Data          32  fsl_flexspi_nor_boot.o(.boot_hdr.ivt)
     boot_data                                0x60001020   Data          16  fsl_flexspi_nor_boot.o(.boot_hdr.boot_data)
     dcd_data                                 0x60001030   Data        1072  uavrs_v2_sdram_ini_dcd.o(.boot_hdr.dcd_data)
@@ -1163,7 +1164,7 @@ Memory Map of the image
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x60000000   0x00000200   Data   RO         1440    .boot_hdr.conf      uavrs_v2_flexspi_nor_flash.o
+    0x60000000   0x00000200   Data   RO         1435    .boot_hdr.conf      uavrs_v2_flexspi_nor_flash.o
 
 
 
@@ -1173,13 +1174,13 @@ Memory Map of the image
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x60001000   0x00000020   Data   RO         1408    .boot_hdr.ivt       fsl_flexspi_nor_boot.o
-    0x60001020   0x00000010   Data   RO         1407    .boot_hdr.boot_data  fsl_flexspi_nor_boot.o
-    0x60001030   0x00000430   Data   RO         1461    .boot_hdr.dcd_data  uavrs_v2_sdram_ini_dcd.o
+    0x60001000   0x00000020   Data   RO         1403    .boot_hdr.ivt       fsl_flexspi_nor_boot.o
+    0x60001020   0x00000010   Data   RO         1402    .boot_hdr.boot_data  fsl_flexspi_nor_boot.o
+    0x60001030   0x00000430   Data   RO         1456    .boot_hdr.dcd_data  uavrs_v2_sdram_ini_dcd.o
 
 
 
-  Load Region LR_m_text (Base: 0x60002000, Size: 0x000032dc, Max: 0x63fffc00, ABSOLUTE)
+  Load Region LR_m_text (Base: 0x60002000, Size: 0x000032a4, Max: 0x63fffc00, ABSOLUTE)
 
     Execution Region VECTOR_RAM (Base: 0x00000000, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
 
@@ -1188,29 +1189,29 @@ Memory Map of the image
     0x00000000   0x00000400   Zero   RW            1    VECTOR_RAM.bss      anon$$obj.o
 
 
-    Execution Region ER_m_ram_text (Base: 0x00000400, Size: 0x00002b70, Max: 0x0001fc00, ABSOLUTE)
+    Execution Region ER_m_ram_text (Base: 0x00000400, Size: 0x00002b38, Max: 0x0001fc00, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000400   0x00000062   Code   RO         1640    .text               mc_w.l(uldiv.o)
-    0x00000462   0x00000062   Code   RO         1642    .text               mc_w.l(ldiv.o)
-    0x000004c4   0x00000024   Code   RO         1646    .text               mc_w.l(memseta.o)
-    0x000004e8   0x0000000e   Code   RO         1648    .text               mc_w.l(strlen.o)
-    0x000004f6   0x00000028   Code   RO         1680    .text               mf_w.l(dfltl.o)
-    0x0000051e   0x0000004a   Code   RO         1682    .text               mf_w.l(dfixl.o)
-    0x00000568   0x0000001e   Code   RO         1735    .text               mc_w.l(llshl.o)
-    0x00000586   0x00000020   Code   RO         1737    .text               mc_w.l(llushr.o)
-    0x000005a6   0x00000000   Code   RO         1754    .text               mc_w.l(iusefp.o)
-    0x000005a6   0x000000ba   Code   RO         1755    .text               mf_w.l(depilogue.o)
-    0x00000660   0x0000002e   Code   RO         1757    .text               mf_w.l(dscalb.o)
+    0x00000400   0x00000062   Code   RO         1641    .text               mc_w.l(uldiv.o)
+    0x00000462   0x00000062   Code   RO         1643    .text               mc_w.l(ldiv.o)
+    0x000004c4   0x00000024   Code   RO         1647    .text               mc_w.l(memseta.o)
+    0x000004e8   0x0000000e   Code   RO         1649    .text               mc_w.l(strlen.o)
+    0x000004f6   0x00000028   Code   RO         1681    .text               mf_w.l(dfltl.o)
+    0x0000051e   0x0000004a   Code   RO         1683    .text               mf_w.l(dfixl.o)
+    0x00000568   0x0000001e   Code   RO         1736    .text               mc_w.l(llshl.o)
+    0x00000586   0x00000020   Code   RO         1738    .text               mc_w.l(llushr.o)
+    0x000005a6   0x00000000   Code   RO         1755    .text               mc_w.l(iusefp.o)
+    0x000005a6   0x000000ba   Code   RO         1756    .text               mf_w.l(depilogue.o)
+    0x00000660   0x0000002e   Code   RO         1758    .text               mf_w.l(dscalb.o)
     0x0000068e   0x00000002   PAD
-    0x00000690   0x000002d8   Code   RO         1314    i.BOARD_BootClockRUN  clock_config.o
+    0x00000690   0x000002d8   Code   RO         1309    i.BOARD_BootClockRUN  clock_config.o
     0x00000968   0x000001b8   Code   RO         1234    i.BOARD_ConfigMPU   board.o
     0x00000b20   0x00000058   Code   RO         1235    i.BOARD_DebugConsoleSrcFreq  board.o
     0x00000b78   0x0000001c   Code   RO         1236    i.BOARD_InitDebugConsole  board.o
-    0x00000b94   0x0000004c   Code   RO         1367    i.BOARD_InitPins    pin_mux.o
-    0x00000be0   0x00000040   Code   RO         1514    i.BOARD_LedConfig   main_imxrt1052.o
-    0x00000c20   0x00000040   Code   RO         1515    i.BOARD_PowerConfig  main_imxrt1052.o
+    0x00000b94   0x0000004c   Code   RO         1362    i.BOARD_InitPins    pin_mux.o
+    0x00000be0   0x00000040   Code   RO         1509    i.BOARD_LedConfig   main_imxrt1052.o
+    0x00000c20   0x00000040   Code   RO         1510    i.BOARD_PowerConfig  main_imxrt1052.o
     0x00000c60   0x00000024   Code   RO          566    i.CLOCK_ControlGate  fsl_lpuart.o
     0x00000c84   0x0000001c   Code   RO         1237    i.CLOCK_GetDiv      board.o
     0x00000ca0   0x000000f8   Code   RO          102    i.CLOCK_GetFreq     fsl_clock.o
@@ -1221,12 +1222,12 @@ Memory Map of the image
     0x00001024   0x00000058   Code   RO          107    i.CLOCK_GetUsb1PfdFreq  fsl_clock.o
     0x0000107c   0x0000003c   Code   RO          108    i.CLOCK_InitArmPll  fsl_clock.o
     0x000010b8   0x0000003c   Code   RO          114    i.CLOCK_InitSysPll  fsl_clock.o
-    0x000010f4   0x00000040   Code   RO         1316    i.CLOCK_SetDiv      clock_config.o
-    0x00001134   0x00000040   Code   RO         1317    i.CLOCK_SetMux      clock_config.o
+    0x000010f4   0x00000040   Code   RO         1311    i.CLOCK_SetDiv      clock_config.o
+    0x00001134   0x00000040   Code   RO         1312    i.CLOCK_SetMux      clock_config.o
     0x00001174   0x00000158   Code   RO         1059    i.ConvertFloatRadixNumToString  fsl_str.o
     0x000012cc   0x000000d2   Code   RO         1060    i.ConvertRadixNumToString  fsl_str.o
     0x0000139e   0x00000002   PAD
-    0x000013a0   0x00000044   Code   RO         1239    i.CopyAndUseRAMVectorTable  board.o
+    0x000013a0   0x00000044   Code   RO         1238    i.CopyAndUseRAMVectorTable  board.o
     0x000013e4   0x0000000e   Code   RO          825    i.DbgConsole_Init   fsl_debug_console.o
     0x000013f2   0x00000002   PAD
     0x000013f4   0x0000002c   Code   RO          826    i.DbgConsole_Printf  fsl_debug_console.o
@@ -1240,8 +1241,8 @@ Memory Map of the image
     0x00001628   0x00000074   Code   RO          525    i.GPIO_PinInit      fsl_gpio.o
     0x0000169c   0x0000006e   Code   RO          526    i.GPIO_PinSetInterruptConfig  fsl_gpio.o
     0x0000170a   0x00000014   Code   RO          527    i.GPIO_PinWrite     fsl_gpio.o
-    0x0000171e   0x0000001c   Code   RO         1368    i.IOMUXC_SetPinMux  pin_mux.o
-    0x0000173a   0x0000001c   Code   RO         1516    i.IOMUXC_SetPinMux  main_imxrt1052.o
+    0x0000171e   0x0000001c   Code   RO         1363    i.IOMUXC_SetPinMux  pin_mux.o
+    0x0000173a   0x0000001c   Code   RO         1511    i.IOMUXC_SetPinMux  main_imxrt1052.o
     0x00001756   0x00000002   PAD
     0x00001758   0x00000044   Code   RO         1185    i.IO_Init           fsl_io.o
     0x0000179c   0x00000034   Code   RO         1186    i.IO_Transfer       fsl_io.o
@@ -1258,41 +1259,42 @@ Memory Map of the image
     0x00001898   0x00000018   Code   RO          573    i.LPUART7_DriverIRQHandler  fsl_lpuart.o
     0x000018b0   0x00000018   Code   RO          574    i.LPUART8_DriverIRQHandler  fsl_lpuart.o
     0x000018c8   0x00000050   Code   RO          575    i.LPUART_ClearStatusFlags  fsl_lpuart.o
-    0x00001918   0x0000002a   Code   RO          579    i.LPUART_GetDefaultConfig  fsl_lpuart.o
-    0x00001942   0x00000002   PAD
-    0x00001944   0x0000001c   Code   RO          581    i.LPUART_GetInstance  fsl_lpuart.o
-    0x00001960   0x0000000e   Code   RO          582    i.LPUART_GetStatusFlags  fsl_lpuart.o
-    0x0000196e   0x00000002   PAD
-    0x00001970   0x000001a8   Code   RO          583    i.LPUART_Init       fsl_lpuart.o
-    0x00001b18   0x0000008e   Code   RO          584    i.LPUART_ReadBlocking  fsl_lpuart.o
-    0x00001ba6   0x00000014   Code   RO          600    i.LPUART_WriteBlocking  fsl_lpuart.o
-    0x00001bba   0x00000002   PAD
-    0x00001bbc   0x000004da   Code   RO         1062    i.StrFormatPrintf   fsl_str.o
-    0x00002096   0x00000030   Code   RO         1704    i.__ARM_fpclassify  m_wv.l(fpclassify.o)
-    0x000020c6   0x00000002   PAD
-    0x000020c8   0x000000c0   Code   RO         1611    i.__hardfp_modf     m_wv.l(modf.o)
-    0x00002188   0x000008d8   Code   RO         1617    i.__hardfp_pow      m_wv.l(pow.o)
-    0x00002a60   0x00000070   Code   RO         1706    i.__kernel_poly     m_wv.l(poly.o)
-    0x00002ad0   0x00000020   Code   RO         1684    i.__mathlib_dbl_divzero  m_wv.l(dunder.o)
-    0x00002af0   0x00000006   Code   RO         1686    i.__mathlib_dbl_infnan2  m_wv.l(dunder.o)
-    0x00002af6   0x00000002   PAD
-    0x00002af8   0x00000018   Code   RO         1687    i.__mathlib_dbl_invalid  m_wv.l(dunder.o)
-    0x00002b10   0x00000018   Code   RO         1688    i.__mathlib_dbl_overflow  m_wv.l(dunder.o)
-    0x00002b28   0x00000018   Code   RO         1690    i.__mathlib_dbl_underflow  m_wv.l(dunder.o)
-    0x00002b40   0x0000000c   Code   RO         1747    i.__set_errno       mc_w.l(errno.o)
-    0x00002b4c   0x00000012   Code   RO         1517    i.delay             main_imxrt1052.o
-    0x00002b5e   0x00000018   Code   RO         1700    i.fabs              m_wv.l(fabs.o)
-    0x00002b76   0x00000002   PAD
-    0x00002b78   0x00000234   Code   RO         1525    i.main              main_imxrt1052.o
-    0x00002dac   0x0000006a   Code   RO         1711    i.sqrt              m_wv.l(sqrt.o)
-    0x00002e16   0x00000002   PAD
-    0x00002e18   0x00000010   Data   RO          120    .constdata          fsl_clock.o
-    0x00002e28   0x00000030   Data   RO          528    .constdata          fsl_gpio.o
-    0x00002e58   0x0000006c   Data   RO          602    .constdata          fsl_lpuart.o
-    0x00002ec4   0x00000018   Data   RO         1318    .constdata          clock_config.o
-    0x00002edc   0x00000004   PAD
-    0x00002ee0   0x00000088   Data   RO         1620    .constdata          m_wv.l(pow.o)
-    0x00002f68   0x00000008   Data   RO         1708    .constdata          m_wv.l(qnan.o)
+    0x00001918   0x00000026   Code   RO          579    i.LPUART_GetDefaultConfig  fsl_lpuart.o
+    0x0000193e   0x00000002   PAD
+    0x00001940   0x0000001c   Code   RO          581    i.LPUART_GetInstance  fsl_lpuart.o
+    0x0000195c   0x0000000e   Code   RO          582    i.LPUART_GetStatusFlags  fsl_lpuart.o
+    0x0000196a   0x00000002   PAD
+    0x0000196c   0x000001a0   Code   RO          583    i.LPUART_Init       fsl_lpuart.o
+    0x00001b0c   0x0000008e   Code   RO          584    i.LPUART_ReadBlocking  fsl_lpuart.o
+    0x00001b9a   0x00000014   Code   RO          600    i.LPUART_WriteBlocking  fsl_lpuart.o
+    0x00001bae   0x00000002   PAD
+    0x00001bb0   0x000004da   Code   RO         1062    i.StrFormatPrintf   fsl_str.o
+    0x0000208a   0x00000030   Code   RO         1705    i.__ARM_fpclassify  m_wv.l(fpclassify.o)
+    0x000020ba   0x00000002   PAD
+    0x000020bc   0x000000c0   Code   RO         1612    i.__hardfp_modf     m_wv.l(modf.o)
+    0x0000217c   0x00000004   PAD
+    0x00002180   0x000008d8   Code   RO         1618    i.__hardfp_pow      m_wv.l(pow.o)
+    0x00002a58   0x00000070   Code   RO         1707    i.__kernel_poly     m_wv.l(poly.o)
+    0x00002ac8   0x00000020   Code   RO         1685    i.__mathlib_dbl_divzero  m_wv.l(dunder.o)
+    0x00002ae8   0x00000006   Code   RO         1687    i.__mathlib_dbl_infnan2  m_wv.l(dunder.o)
+    0x00002aee   0x00000002   PAD
+    0x00002af0   0x00000018   Code   RO         1688    i.__mathlib_dbl_invalid  m_wv.l(dunder.o)
+    0x00002b08   0x00000018   Code   RO         1689    i.__mathlib_dbl_overflow  m_wv.l(dunder.o)
+    0x00002b20   0x00000018   Code   RO         1691    i.__mathlib_dbl_underflow  m_wv.l(dunder.o)
+    0x00002b38   0x0000000c   Code   RO         1748    i.__set_errno       mc_w.l(errno.o)
+    0x00002b44   0x00000012   Code   RO         1513    i.delay             main_imxrt1052.o
+    0x00002b56   0x00000018   Code   RO         1701    i.fabs              m_wv.l(fabs.o)
+    0x00002b6e   0x00000002   PAD
+    0x00002b70   0x00000234   Code   RO         1521    i.main              main_imxrt1052.o
+    0x00002da4   0x0000006a   Code   RO         1712    i.sqrt              m_wv.l(sqrt.o)
+    0x00002e0e   0x00000002   PAD
+    0x00002e10   0x00000010   Data   RO          120    .constdata          fsl_clock.o
+    0x00002e20   0x00000024   Data   RO          528    .constdata          fsl_gpio.o
+    0x00002e44   0x00000048   Data   RO          602    .constdata          fsl_lpuart.o
+    0x00002e8c   0x00000018   Data   RO         1313    .constdata          clock_config.o
+    0x00002ea4   0x00000004   PAD
+    0x00002ea8   0x00000088   Data   RO         1621    .constdata          m_wv.l(pow.o)
+    0x00002f30   0x00000008   Data   RO         1709    .constdata          m_wv.l(qnan.o)
 
 
     Execution Region RW_m_data (Base: 0x20000000, Size: 0x00000044, Max: 0x0001f800, ABSOLUTE)
@@ -1305,7 +1307,7 @@ Memory Map of the image
     0x2000000c   0x00000004   Data   RW          395    .data               fsl_flexspi.o
     0x20000010   0x00000004   Data   RW          603    .data               fsl_lpuart.o
     0x20000014   0x00000008   Data   RW         1188    .data               fsl_io.o
-    0x2000001c   0x00000004   Data   RW         1748    .data               mc_w.l(errno.o)
+    0x2000001c   0x00000004   Data   RW         1749    .data               mc_w.l(errno.o)
     0x20000020   0x00000024   Zero   RW          601    .bss                fsl_lpuart.o
 
 
@@ -1334,23 +1336,23 @@ Memory Map of the image
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x60002400   0x00000000   Code   RO         1637  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x60002400   0x00000004   Code   RO         1721    .ARM.Collect$$$$00000003  mc_w.l(entry4.o)
-    0x60002404   0x00000004   Code   RO         1724    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x60002408   0x00000000   Code   RO         1726    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x60002408   0x00000000   Code   RO         1728    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x60002408   0x00000008   Code   RO         1729    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x60002410   0x00000000   Code   RO         1731    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x60002410   0x00000000   Code   RO         1733    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x60002410   0x00000004   Code   RO         1722    .ARM.Collect$$$$00002714  mc_w.l(entry4.o)
+    0x60002400   0x00000000   Code   RO         1638  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x60002400   0x00000004   Code   RO         1722    .ARM.Collect$$$$00000003  mc_w.l(entry4.o)
+    0x60002404   0x00000004   Code   RO         1725    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x60002408   0x00000000   Code   RO         1727    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x60002408   0x00000000   Code   RO         1729    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x60002408   0x00000008   Code   RO         1730    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x60002410   0x00000000   Code   RO         1732    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x60002410   0x00000000   Code   RO         1734    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x60002410   0x00000004   Code   RO         1723    .ARM.Collect$$$$00002714  mc_w.l(entry4.o)
     0x60002414   0x000001bc   Code   RO            5    .text               startup_mimxrt1052.o
-    0x600025d0   0x00000024   Code   RO         1759    .text               mc_w.l(init.o)
+    0x600025d0   0x00000024   Code   RO         1760    .text               mc_w.l(init.o)
     0x600025f4   0x00000108   Code   RO           15    i.SystemInit        system_mimxrt1052.o
     0x600026fc   0x00000002   Code   RO           16    i.SystemInitHook    system_mimxrt1052.o
-    0x600026fe   0x0000000e   Code   RO         1784    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x6000270c   0x00000002   Code   RO         1785    i.__scatterload_null  mc_w.l(handlers.o)
-    0x6000270e   0x0000000e   Code   RO         1786    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x6000271c   0x00000030   Data   RO         1782    Region$$Table       anon$$obj.o
+    0x600026fe   0x0000000e   Code   RO         1785    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x6000270c   0x00000002   Code   RO         1786    i.__scatterload_null  mc_w.l(handlers.o)
+    0x6000270e   0x0000000e   Code   RO         1787    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x6000271c   0x00000030   Data   RO         1783    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_m_ncache (Base: 0x81e00000, Size: 0x00000000, Max: 0x00200000, ABSOLUTE)
@@ -1371,20 +1373,20 @@ Image component sizes
        114          4          0          0          0       3562   fsl_debug_console.o
        460         10          0          4          0      27359   fsl_flexspi.o
          0          0         48          0          0       2234   fsl_flexspi_nor_boot.o
-       246         14         48          0          0       5500   fsl_gpio.o
+       246         14         36          0          0       5492   fsl_gpio.o
        120         12          0          8          0       7292   fsl_io.o
         54          0          0          0          0       3404   fsl_log.o
-       978        126        108          4         36      31791   fsl_lpuart.o
+       966        124         72          4         36      31767   fsl_lpuart.o
       1796          0          0          0          0       6490   fsl_str.o
-       738        386          0          0          0      12100   main_imxrt1052.o
+       738        386          0          0          0      12044   main_imxrt1052.o
        104         14          0          0          0      70057   pin_mux.o
        444        210       1024          0          0       3212   startup_mimxrt1052.o
        266         26          0          4          0    1390591   system_mimxrt1052.o
-         0          0        512          0          0       5953   uavrs_v2_flexspi_nor_flash.o
+         0          0        512          0          0       5951   uavrs_v2_flexspi_nor_flash.o
          0          0       1072          0          0        611   uavrs_v2_sdram_ini_dcd.o
 
     ----------------------------------------------------------------------
-      7954       1178       2904         28       3108    1668728   Object Totals
+      7942       1176       2856         28       3108    1668638   Object Totals
          0          0         48          0       3072          0   (incl. Generated)
         18          0          4          0          0          0   (incl. Padding)
 
@@ -1424,8 +1426,8 @@ Image component sizes
         46          0          0          0          0         80   dscalb.o
 
     ----------------------------------------------------------------------
-      3618        388        144          4          0       2604   Library Totals
-        10          0          0          0          0          0   (incl. Padding)
+      3622        392        144          4          0       2604   Library Totals
+        14          4          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1436,7 +1438,7 @@ Image component sizes
        346          0          0          0          0        416   mf_w.l
 
     ----------------------------------------------------------------------
-      3618        388        144          4          0       2604   Library Totals
+      3622        392        144          4          0       2604   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -1445,15 +1447,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     11572       1566       3048         32       3108    1664620   Grand Totals
-     11572       1566       3048         32       3108    1664620   ELF Image Totals
-     11572       1566       3048         32          0          0   ROM Totals
+     11564       1568       3000         32       3108    1664530   Grand Totals
+     11564       1568       3000         32       3108    1664530   ELF Image Totals
+     11564       1568       3000         32          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                14620 (  14.28kB)
+    Total RO  Size (Code + RO Data)                14564 (  14.22kB)
     Total RW  Size (RW Data + ZI Data)              3140 (   3.07kB)
-    Total ROM Size (Code + RO Data + RW Data)      14652 (  14.31kB)
+    Total ROM Size (Code + RO Data + RW Data)      14596 (  14.25kB)
 
 ==============================================================================
 

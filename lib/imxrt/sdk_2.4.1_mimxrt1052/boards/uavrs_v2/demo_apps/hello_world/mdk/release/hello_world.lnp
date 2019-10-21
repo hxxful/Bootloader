@@ -1,0 +1,24 @@
+--cpu Cortex-M7.fp.dp --scatter "./RTE/Device/MIMXRT1052DVL6B/MIMXRT1052xxxxx_ram.scf"
+"release\hello_world.o"
+"release\pin_mux.o"
+"release\board.o"
+"release\clock_config.o"
+"release\fsl_clock.o"
+"release\fsl_common.o"
+"release\fsl_lpuart.o"
+"release\fsl_gpio.o"
+"release\system_mimxrt1052.o"
+"release\startup_mimxrt1052.o"
+"release\fsl_io.o"
+"release\fsl_log.o"
+"release\fsl_str.o"
+"release\fsl_debug_console.o"
+"release\fsl_assert.o"
+"release\fsl_flexspi_nor_boot.o"
+"release\evkbimxrt1050_hyper_config.o"
+"release\evkbimxrt1050_sdram_ini_dcd.o"
+--library_type=microlib --nodebug --diag_suppress 6314 --strict --scatter "MIMXRT1052xxxxx_ram.scf"
+--remove 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\output\hello_world.map" -o release\hello_world.out
