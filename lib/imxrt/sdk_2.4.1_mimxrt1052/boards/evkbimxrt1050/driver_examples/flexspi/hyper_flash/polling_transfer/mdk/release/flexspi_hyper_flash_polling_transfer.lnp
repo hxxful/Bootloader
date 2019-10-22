@@ -1,0 +1,22 @@
+--cpu Cortex-M7.fp.dp --scatter "./RTE/Device/MIMXRT1052DVL6B/MIMXRT1052xxxxx_ram.scf"
+"release\flexspi_hyper_flash_polling_transfer.o"
+"release\pin_mux.o"
+"release\board.o"
+"release\clock_config.o"
+"release\fsl_clock.o"
+"release\fsl_common.o"
+"release\fsl_lpuart.o"
+"release\fsl_gpio.o"
+"release\fsl_flexspi.o"
+"release\system_mimxrt1052.o"
+"release\startup_mimxrt1052.o"
+"release\fsl_io.o"
+"release\fsl_log.o"
+"release\fsl_str.o"
+"release\fsl_debug_console.o"
+"release\fsl_assert.o"
+--library_type=microlib --diag_suppress 6314 --strict --scatter "MIMXRT1052xxxxx_ram.scf"
+--remove 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\output\flexspi_hyper_flash_polling_transfer.map" -o release\flexspi_hyper_flash_polling_transfer.out

@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Objects\uavrs_v2_bootloader.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\uavrs_v2_bootloader.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050169: Last Updated: Mon Oct 21 10:22:19 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050169: Last Updated: Tue Oct 22 14:34:39 2019
 <BR><P>
-<H3>Maximum Stack Usage =        584 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        688 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-main &rArr; DbgConsole_Printf &rArr; StrFormatPrintf &rArr; ConvertFloatRadixNumToString &rArr; __hardfp_pow &rArr; sqrt
+main &rArr; board_init_hyperflash &rArr; flexspi_nor_hyperflash_cfi &rArr; DbgConsole_Printf &rArr; StrFormatPrintf &rArr; ConvertFloatRadixNumToString &rArr; __hardfp_pow &rArr; sqrt
 <P>
 <H3>
 Mutually Recursive functions
@@ -260,7 +260,7 @@ Global Symbols
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPllFreq
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertRadixNumToString
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertRadixNumToString
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ldivmod
 </UL>
 
@@ -269,34 +269,43 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertRadixNumToString
+<BR>[Called By]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertRadixNumToString
 </UL>
 
-<P><STRONG><a name="[e3]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[e3]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hyperflash_ip_command_test
 </UL>
 
-<P><STRONG><a name="[12a]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[145]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[12b]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[146]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[e2]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[e2]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
-
-<P><STRONG><a name="[106]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
+<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_GetDefaultConfig
 </UL>
 
-<P><STRONG><a name="[12c]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[102]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
+</UL>
+
+<P><STRONG><a name="[147]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[e4]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[119]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StrFormatPrintf
+<P><STRONG><a name="[120]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StrFormatPrintf
+</UL>
+
+<P><STRONG><a name="[13c]"></a>memcmp</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, memcmp.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = memcmp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hyperflash_ip_command_test
 </UL>
 
 <P><STRONG><a name="[e5]"></a>__aeabi_l2d</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, dfltl.o(.text))
@@ -304,7 +313,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertFloatRadixNumToString
+<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertFloatRadixNumToString
 </UL>
 
 <P><STRONG><a name="[e7]"></a>__aeabi_d2lz</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, dfixl.o(.text))
@@ -313,7 +322,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertFloatRadixNumToString
+<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertFloatRadixNumToString
 </UL>
 
 <P><STRONG><a name="[e0]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
@@ -322,7 +331,7 @@ Global Symbols
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[12d]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[148]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[df]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2lz
@@ -330,9 +339,9 @@ Global Symbols
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[12e]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[149]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
-<P><STRONG><a name="[12f]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[14a]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, iusefp.o(.text), UNUSED)
 
 <P><STRONG><a name="[e8]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _double_round
@@ -350,13 +359,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_l2d
 </UL>
 
-<P><STRONG><a name="[123]"></a>__ARM_scalbn</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, dscalb.o(.text))
+<P><STRONG><a name="[12a]"></a>__ARM_scalbn</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, dscalb.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __ARM_scalbn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 </UL>
 
-<P><STRONG><a name="[130]"></a>scalbn</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, dscalb.o(.text), UNUSED)
+<P><STRONG><a name="[14b]"></a>scalbn</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, dscalb.o(.text), UNUSED)
 
 <P><STRONG><a name="[e9]"></a>BOARD_BootClockRUN</STRONG> (Thumb, 580 bytes, Stack size 16 bytes, clock_config.o(i.BOARD_BootClockRUN))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = BOARD_BootClockRUN &rArr; CLOCK_SetMux
@@ -403,64 +412,46 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[f7]"></a>BOARD_LedConfig</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, main_imxrt1052.o(i.BOARD_LedConfig))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = BOARD_LedConfig &rArr; GPIO_PinInit &rArr; GPIO_PinSetInterruptConfig
-</UL>
-<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinInit
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOMUXC_SetPinMux
-</UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[fa]"></a>BOARD_PowerConfig</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, main_imxrt1052.o(i.BOARD_PowerConfig))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = BOARD_PowerConfig &rArr; GPIO_PinInit &rArr; GPIO_PinSetInterruptConfig
-</UL>
-<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinInit
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOMUXC_SetPinMux
-</UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[fb]"></a>CLOCK_GetFreq</STRONG> (Thumb, 218 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetFreq))
+<P><STRONG><a name="[f7]"></a>CLOCK_GetFreq</STRONG> (Thumb, 218 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = CLOCK_GetFreq &rArr; CLOCK_GetPeriphClkFreq &rArr; CLOCK_GetSysPfdFreq &rArr; CLOCK_GetPllFreq &rArr; __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetUsb1PfdFreq
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetSysPfdFreq
+<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetUsb1PfdFreq
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetSysPfdFreq
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPllFreq
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPeriphClkFreq
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOscFreq
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPeriphClkFreq
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOscFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_info
 </UL>
 
 <P><STRONG><a name="[f1]"></a>CLOCK_GetPllFreq</STRONG> (Thumb, 372 bytes, Stack size 40 bytes, fsl_clock.o(i.CLOCK_GetPllFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = CLOCK_GetPllFreq &rArr; __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOscFreq
+<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOscFreq
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetUsb1PfdFreq
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetSysPfdFreq
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPeriphClkFreq
+<BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetUsb1PfdFreq
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetSysPfdFreq
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPeriphClkFreq
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_DebugConsoleSrcFreq
 </UL>
 
-<P><STRONG><a name="[fe]"></a>CLOCK_GetSysPfdFreq</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetSysPfdFreq))
+<P><STRONG><a name="[fa]"></a>CLOCK_GetSysPfdFreq</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetSysPfdFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = CLOCK_GetSysPfdFreq &rArr; CLOCK_GetPllFreq &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPllFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPeriphClkFreq
+<BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPeriphClkFreq
 </UL>
 
-<P><STRONG><a name="[fd]"></a>CLOCK_GetUsb1PfdFreq</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetUsb1PfdFreq))
+<P><STRONG><a name="[f9]"></a>CLOCK_GetUsb1PfdFreq</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetUsb1PfdFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = CLOCK_GetUsb1PfdFreq &rArr; CLOCK_GetPllFreq &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPllFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+<BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
 </UL>
 
 <P><STRONG><a name="[eb]"></a>CLOCK_InitArmPll</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, fsl_clock.o(i.CLOCK_InitArmPll))
@@ -469,6 +460,16 @@ Global Symbols
 
 <P><STRONG><a name="[ec]"></a>CLOCK_InitSysPll</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, fsl_clock.o(i.CLOCK_InitSysPll))
 <BR><BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_BootClockRUN
+</UL>
+
+<P><STRONG><a name="[12e]"></a>CLOCK_InitUsb1Pfd</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, fsl_clock.o(i.CLOCK_InitUsb1Pfd))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = CLOCK_InitUsb1Pfd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_hyperflash
+</UL>
+
+<P><STRONG><a name="[12d]"></a>CLOCK_InitUsb1Pll</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, fsl_clock.o(i.CLOCK_InitUsb1Pll))
+<BR><BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_hyperflash
 </UL>
 
 <P><STRONG><a name="[ef]"></a>CopyAndUseRAMVectorTable</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, board.o(i.CopyAndUseRAMVectorTable))
@@ -480,106 +481,182 @@ Global Symbols
 <P><STRONG><a name="[f4]"></a>DbgConsole_Init</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, fsl_debug_console.o(i.DbgConsole_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = DbgConsole_Init &rArr; LOG_Init &rArr; IO_Init &rArr; LPUART_Init &rArr; CLOCK_ControlGate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Init
+<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_InitDebugConsole
 </UL>
 
-<P><STRONG><a name="[105]"></a>DbgConsole_Printf</STRONG> (Thumb, 40 bytes, Stack size 152 bytes, fsl_debug_console.o(i.DbgConsole_Printf))
+<P><STRONG><a name="[101]"></a>DbgConsole_Printf</STRONG> (Thumb, 40 bytes, Stack size 152 bytes, fsl_debug_console.o(i.DbgConsole_Printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 584<LI>Call Chain = DbgConsole_Printf &rArr; StrFormatPrintf &rArr; ConvertFloatRadixNumToString &rArr; __hardfp_pow &rArr; sqrt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StrFormatPrintf
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Push
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StrFormatPrintf
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Push
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_info
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hyperflash_ip_command_test
+<LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_hyperflash_cfi
+<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_hyperflash
 </UL>
 
-<P><STRONG><a name="[10a]"></a>FLEXSPI_CheckAndClearError</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, fsl_flexspi.o(i.FLEXSPI_CheckAndClearError))
-<BR><BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferHandleIRQ
+<P><STRONG><a name="[10b]"></a>FLEXSPI_CheckAndClearError</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, fsl_flexspi.o(i.FLEXSPI_CheckAndClearError))
+<BR><BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_WriteBlocking
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferHandleIRQ
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferBlocking
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_ReadBlocking
 </UL>
 
 <P><STRONG><a name="[d8]"></a>FLEXSPI_DriverIRQHandler</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, fsl_flexspi.o(i.FLEXSPI_DriverIRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = FLEXSPI_DriverIRQHandler &rArr; FLEXSPI_TransferHandleIRQ
 </UL>
-<BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferHandleIRQ
+<BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferHandleIRQ
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mimxrt1052.o(.text)
 </UL>
-<P><STRONG><a name="[10b]"></a>FLEXSPI_TransferAbort</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, fsl_flexspi.o(i.FLEXSPI_TransferAbort))
-<BR><BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferHandleIRQ
+<P><STRONG><a name="[106]"></a>FLEXSPI_GetDefaultConfig</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, fsl_flexspi.o(i.FLEXSPI_GetDefaultConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = FLEXSPI_GetDefaultConfig
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_hyperflash
 </UL>
 
-<P><STRONG><a name="[109]"></a>FLEXSPI_TransferHandleIRQ</STRONG> (Thumb, 350 bytes, Stack size 32 bytes, fsl_flexspi.o(i.FLEXSPI_TransferHandleIRQ))
+<P><STRONG><a name="[108]"></a>FLEXSPI_GetInstance</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, fsl_flexspi.o(i.FLEXSPI_GetInstance))
+<BR><BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_Init
+</UL>
+
+<P><STRONG><a name="[107]"></a>FLEXSPI_Init</STRONG> (Thumb, 412 bytes, Stack size 40 bytes, fsl_flexspi.o(i.FLEXSPI_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = FLEXSPI_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_GetInstance
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_SoftwareReset
+</UL>
+<BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_hyperflash
+</UL>
+
+<P><STRONG><a name="[10a]"></a>FLEXSPI_ReadBlocking</STRONG> (Thumb, 166 bytes, Stack size 20 bytes, fsl_flexspi.o(i.FLEXSPI_ReadBlocking))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = FLEXSPI_ReadBlocking
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_CheckAndClearError
+</UL>
+<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferBlocking
+</UL>
+
+<P><STRONG><a name="[10c]"></a>FLEXSPI_SetFlashConfig</STRONG> (Thumb, 362 bytes, Stack size 24 bytes, fsl_flexspi.o(i.FLEXSPI_SetFlashConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = FLEXSPI_SetFlashConfig
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_GetBusIdleStatus
+</UL>
+<BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_hyperflash
+</UL>
+
+<P><STRONG><a name="[110]"></a>FLEXSPI_TransferAbort</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, fsl_flexspi.o(i.FLEXSPI_TransferAbort))
+<BR><BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferHandleIRQ
+</UL>
+
+<P><STRONG><a name="[10e]"></a>FLEXSPI_TransferBlocking</STRONG> (Thumb, 198 bytes, Stack size 24 bytes, fsl_flexspi.o(i.FLEXSPI_TransferBlocking))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = FLEXSPI_TransferBlocking &rArr; FLEXSPI_WriteBlocking
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_WriteBlocking
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_ReadBlocking
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_CheckAndClearError
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_GetBusIdleStatus
+</UL>
+<BR>[Called By]<UL><LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_write_enable
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_wait_bus_busy
+<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_hyperbus_write
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_hyperbus_read
+<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_flash_page_program
+<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_flash_erase_sector
+</UL>
+
+<P><STRONG><a name="[105]"></a>FLEXSPI_TransferHandleIRQ</STRONG> (Thumb, 350 bytes, Stack size 32 bytes, fsl_flexspi.o(i.FLEXSPI_TransferHandleIRQ))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = FLEXSPI_TransferHandleIRQ
 </UL>
-<BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferAbort
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_CheckAndClearError
+<BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferAbort
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_CheckAndClearError
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_DriverIRQHandler
 </UL>
 
-<P><STRONG><a name="[f9]"></a>GPIO_PinInit</STRONG> (Thumb, 108 bytes, Stack size 20 bytes, fsl_gpio.o(i.GPIO_PinInit))
+<P><STRONG><a name="[111]"></a>FLEXSPI_UpdateLUT</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, fsl_flexspi.o(i.FLEXSPI_UpdateLUT))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = FLEXSPI_UpdateLUT
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_GetBusIdleStatus
+</UL>
+<BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_hyperflash
+</UL>
+
+<P><STRONG><a name="[10f]"></a>FLEXSPI_WriteBlocking</STRONG> (Thumb, 116 bytes, Stack size 20 bytes, fsl_flexspi.o(i.FLEXSPI_WriteBlocking))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = FLEXSPI_WriteBlocking
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_CheckAndClearError
+</UL>
+<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferBlocking
+</UL>
+
+<P><STRONG><a name="[112]"></a>GPIO_PinInit</STRONG> (Thumb, 108 bytes, Stack size 20 bytes, fsl_gpio.o(i.GPIO_PinInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = GPIO_PinInit &rArr; GPIO_PinSetInterruptConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinWrite
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinSetInterruptConfig
+<BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinWrite
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinSetInterruptConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_PowerConfig
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_LedConfig
+<BR>[Called By]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_power
+<LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_led
 </UL>
 
-<P><STRONG><a name="[10d]"></a>GPIO_PinSetInterruptConfig</STRONG> (Thumb, 110 bytes, Stack size 20 bytes, fsl_gpio.o(i.GPIO_PinSetInterruptConfig))
+<P><STRONG><a name="[114]"></a>GPIO_PinSetInterruptConfig</STRONG> (Thumb, 110 bytes, Stack size 20 bytes, fsl_gpio.o(i.GPIO_PinSetInterruptConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIO_PinSetInterruptConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinInit
+<BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinInit
 </UL>
 
-<P><STRONG><a name="[10c]"></a>GPIO_PinWrite</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, fsl_gpio.o(i.GPIO_PinWrite))
-<BR><BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinInit
+<P><STRONG><a name="[113]"></a>GPIO_PinWrite</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, fsl_gpio.o(i.GPIO_PinWrite))
+<BR><BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinInit
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[10e]"></a>IO_Init</STRONG> (Thumb, 62 bytes, Stack size 40 bytes, fsl_io.o(i.IO_Init))
+<P><STRONG><a name="[115]"></a>IO_Init</STRONG> (Thumb, 62 bytes, Stack size 40 bytes, fsl_io.o(i.IO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = IO_Init &rArr; LPUART_Init &rArr; CLOCK_ControlGate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_Init
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_GetDefaultConfig
+<BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_Init
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_GetDefaultConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Init
+<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Init
 </UL>
 
-<P><STRONG><a name="[111]"></a>IO_Transfer</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, fsl_io.o(i.IO_Transfer))
+<P><STRONG><a name="[118]"></a>IO_Transfer</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, fsl_io.o(i.IO_Transfer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = IO_Transfer &rArr; LPUART_ReadBlocking &rArr; LPUART_ClearStatusFlags
 </UL>
-<BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_WriteBlocking
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_ReadBlocking
+<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_WriteBlocking
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_ReadBlocking
 </UL>
-<BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Pop
+<BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Pop
 </UL>
 
-<P><STRONG><a name="[104]"></a>LOG_Init</STRONG> (Thumb, 28 bytes, Stack size 24 bytes, fsl_log.o(i.LOG_Init))
+<P><STRONG><a name="[100]"></a>LOG_Init</STRONG> (Thumb, 28 bytes, Stack size 24 bytes, fsl_log.o(i.LOG_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = LOG_Init &rArr; IO_Init &rArr; LPUART_Init &rArr; CLOCK_ControlGate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
+<BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Init
 </UL>
 
-<P><STRONG><a name="[114]"></a>LOG_Pop</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, fsl_log.o(i.LOG_Pop))
+<P><STRONG><a name="[11b]"></a>LOG_Pop</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, fsl_log.o(i.LOG_Pop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = LOG_Pop &rArr; IO_Transfer &rArr; LPUART_ReadBlocking &rArr; LPUART_ClearStatusFlags
 </UL>
-<BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Transfer
+<BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Transfer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Push
+<BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Push
 </UL>
 
-<P><STRONG><a name="[108]"></a>LOG_Push</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, fsl_log.o(i.LOG_Push))
+<P><STRONG><a name="[104]"></a>LOG_Push</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, fsl_log.o(i.LOG_Push))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = LOG_Push &rArr; LOG_Pop &rArr; IO_Transfer &rArr; LPUART_ReadBlocking &rArr; LPUART_ClearStatusFlags
 </UL>
-<BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Pop
+<BR>[Calls]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Pop
 </UL>
-<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
+<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_RelocateLog
 </UL>
 
@@ -607,170 +684,298 @@ Global Symbols
 <P><STRONG><a name="[c6]"></a>LPUART8_DriverIRQHandler</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, fsl_lpuart.o(i.LPUART8_DriverIRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mimxrt1052.o(.text)
 </UL>
-<P><STRONG><a name="[115]"></a>LPUART_ClearStatusFlags</STRONG> (Thumb, 74 bytes, Stack size 20 bytes, fsl_lpuart.o(i.LPUART_ClearStatusFlags))
+<P><STRONG><a name="[11c]"></a>LPUART_ClearStatusFlags</STRONG> (Thumb, 74 bytes, Stack size 20 bytes, fsl_lpuart.o(i.LPUART_ClearStatusFlags))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = LPUART_ClearStatusFlags
 </UL>
-<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_GetStatusFlags
+<BR>[Calls]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_GetStatusFlags
 </UL>
-<BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_ReadBlocking
-</UL>
-
-<P><STRONG><a name="[10f]"></a>LPUART_GetDefaultConfig</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, fsl_lpuart.o(i.LPUART_GetDefaultConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
+<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_ReadBlocking
 </UL>
 
-<P><STRONG><a name="[117]"></a>LPUART_GetInstance</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, fsl_lpuart.o(i.LPUART_GetInstance))
-<BR><BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_Init
+<P><STRONG><a name="[116]"></a>LPUART_GetDefaultConfig</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, fsl_lpuart.o(i.LPUART_GetDefaultConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
 </UL>
 
-<P><STRONG><a name="[116]"></a>LPUART_GetStatusFlags</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, fsl_lpuart.o(i.LPUART_GetStatusFlags))
-<BR><BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_ReadBlocking
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_ClearStatusFlags
+<P><STRONG><a name="[11e]"></a>LPUART_GetInstance</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, fsl_lpuart.o(i.LPUART_GetInstance))
+<BR><BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_Init
 </UL>
 
-<P><STRONG><a name="[110]"></a>LPUART_Init</STRONG> (Thumb, 404 bytes, Stack size 40 bytes, fsl_lpuart.o(i.LPUART_Init))
+<P><STRONG><a name="[11d]"></a>LPUART_GetStatusFlags</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, fsl_lpuart.o(i.LPUART_GetStatusFlags))
+<BR><BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_ReadBlocking
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_ClearStatusFlags
+</UL>
+
+<P><STRONG><a name="[117]"></a>LPUART_Init</STRONG> (Thumb, 404 bytes, Stack size 40 bytes, fsl_lpuart.o(i.LPUART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = LPUART_Init &rArr; CLOCK_ControlGate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_ControlGate
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_GetInstance
+<BR>[Calls]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_ControlGate
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_GetInstance
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
+<BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
 </UL>
 
-<P><STRONG><a name="[113]"></a>LPUART_ReadBlocking</STRONG> (Thumb, 142 bytes, Stack size 12 bytes, fsl_lpuart.o(i.LPUART_ReadBlocking))
+<P><STRONG><a name="[11a]"></a>LPUART_ReadBlocking</STRONG> (Thumb, 142 bytes, Stack size 12 bytes, fsl_lpuart.o(i.LPUART_ReadBlocking))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = LPUART_ReadBlocking &rArr; LPUART_ClearStatusFlags
 </UL>
-<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_GetStatusFlags
-<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_ClearStatusFlags
+<BR>[Calls]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_GetStatusFlags
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_ClearStatusFlags
 </UL>
-<BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Transfer
-</UL>
-
-<P><STRONG><a name="[112]"></a>LPUART_WriteBlocking</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, fsl_lpuart.o(i.LPUART_WriteBlocking))
-<BR><BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Transfer
+<BR>[Called By]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Transfer
 </UL>
 
-<P><STRONG><a name="[107]"></a>StrFormatPrintf</STRONG> (Thumb, 1242 bytes, Stack size 160 bytes, fsl_str.o(i.StrFormatPrintf))
+<P><STRONG><a name="[119]"></a>LPUART_WriteBlocking</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, fsl_lpuart.o(i.LPUART_WriteBlocking))
+<BR><BR>[Called By]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Transfer
+</UL>
+
+<P><STRONG><a name="[103]"></a>StrFormatPrintf</STRONG> (Thumb, 1242 bytes, Stack size 160 bytes, fsl_str.o(i.StrFormatPrintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 432<LI>Call Chain = StrFormatPrintf &rArr; ConvertFloatRadixNumToString &rArr; __hardfp_pow &rArr; sqrt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertRadixNumToString
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertFloatRadixNumToString
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertRadixNumToString
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertFloatRadixNumToString
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
+<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
 </UL>
 
-<P><STRONG><a name="[124]"></a>__ARM_fpclassify</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, fpclassify.o(i.__ARM_fpclassify))
+<P><STRONG><a name="[12b]"></a>__ARM_fpclassify</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, fpclassify.o(i.__ARM_fpclassify))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __ARM_fpclassify
 </UL>
-<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 </UL>
 
-<P><STRONG><a name="[101]"></a>__hardfp_modf</STRONG> (Thumb, 186 bytes, Stack size 24 bytes, modf.o(i.__hardfp_modf))
+<P><STRONG><a name="[fd]"></a>__hardfp_modf</STRONG> (Thumb, 186 bytes, Stack size 24 bytes, modf.o(i.__hardfp_modf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __hardfp_modf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertFloatRadixNumToString
+<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertFloatRadixNumToString
 </UL>
 
-<P><STRONG><a name="[102]"></a>__hardfp_pow</STRONG> (Thumb, 2116 bytes, Stack size 192 bytes, pow.o(i.__hardfp_pow))
+<P><STRONG><a name="[fe]"></a>__hardfp_pow</STRONG> (Thumb, 2116 bytes, Stack size 192 bytes, pow.o(i.__hardfp_pow))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = __hardfp_pow &rArr; sqrt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
-<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
-<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
-<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
-<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
-<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_overflow
-<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
-<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan2
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_divzero
-<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
+<BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
+<LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
+<LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
+<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
+<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
+<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_overflow
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan2
+<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_divzero
+<LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertFloatRadixNumToString
-</UL>
-
-<P><STRONG><a name="[122]"></a>__kernel_poly</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, poly.o(i.__kernel_poly))
-<BR><BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertFloatRadixNumToString
 </UL>
 
-<P><STRONG><a name="[11c]"></a>__mathlib_dbl_divzero</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_divzero))
-<BR><BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+<P><STRONG><a name="[129]"></a>__kernel_poly</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, poly.o(i.__kernel_poly))
+<BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 </UL>
 
-<P><STRONG><a name="[11a]"></a>__mathlib_dbl_infnan2</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_infnan2))
-<BR><BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+<P><STRONG><a name="[123]"></a>__mathlib_dbl_divzero</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_divzero))
+<BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 </UL>
 
-<P><STRONG><a name="[120]"></a>__mathlib_dbl_invalid</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_invalid))
-<BR><BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+<P><STRONG><a name="[121]"></a>__mathlib_dbl_infnan2</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_infnan2))
+<BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 </UL>
 
-<P><STRONG><a name="[11d]"></a>__mathlib_dbl_overflow</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_overflow))
-<BR><BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+<P><STRONG><a name="[127]"></a>__mathlib_dbl_invalid</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_invalid))
+<BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 </UL>
 
-<P><STRONG><a name="[121]"></a>__mathlib_dbl_underflow</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_underflow))
-<BR><BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+<P><STRONG><a name="[124]"></a>__mathlib_dbl_overflow</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_overflow))
+<BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 </UL>
 
-<P><STRONG><a name="[11b]"></a>__set_errno</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errno.o(i.__set_errno))
-<BR><BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+<P><STRONG><a name="[128]"></a>__mathlib_dbl_underflow</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_underflow))
+<BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 </UL>
 
-<P><STRONG><a name="[11f]"></a>fabs</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, fabs.o(i.fabs))
+<P><STRONG><a name="[122]"></a>__set_errno</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errno.o(i.__set_errno))
+<BR><BR>[Called By]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+</UL>
+
+<P><STRONG><a name="[12c]"></a>board_init_hyperflash</STRONG> (Thumb, 196 bytes, Stack size 80 bytes, main_imxrt1052.o(i.board_init_hyperflash))
+<BR><BR>[Stack]<UL><LI>Max Depth = 688<LI>Call Chain = board_init_hyperflash &rArr; flexspi_nor_hyperflash_cfi &rArr; DbgConsole_Printf &rArr; StrFormatPrintf &rArr; ConvertFloatRadixNumToString &rArr; __hardfp_pow &rArr; sqrt
+</UL>
+<BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_UpdateLUT
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_SetFlashConfig
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_Init
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_GetDefaultConfig
+<LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_InitUsb1Pll
+<LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_InitUsb1Pfd
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
+<LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_hyperflash_cfi
+<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_SoftwareReset
+<LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_SetDiv
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[132]"></a>board_init_led</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, main_imxrt1052.o(i.board_init_led))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = board_init_led &rArr; GPIO_PinInit &rArr; GPIO_PinSetInterruptConfig
+</UL>
+<BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinInit
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOMUXC_SetPinMux
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[134]"></a>board_init_power</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, main_imxrt1052.o(i.board_init_power))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = board_init_power &rArr; GPIO_PinInit &rArr; GPIO_PinSetInterruptConfig
+</UL>
+<BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinInit
+<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOMUXC_SetPinMux
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[126]"></a>fabs</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, fabs.o(i.fabs))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = fabs
 </UL>
-<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 </UL>
 
-<P><STRONG><a name="[ab]"></a>main</STRONG> (Thumb, 200 bytes, Stack size 0 bytes, main_imxrt1052.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 584<LI>Call Chain = main &rArr; DbgConsole_Printf &rArr; StrFormatPrintf &rArr; ConvertFloatRadixNumToString &rArr; __hardfp_pow &rArr; sqrt
+<P><STRONG><a name="[135]"></a>flexspi_nor_flash_erase_sector</STRONG> (Thumb, 58 bytes, Stack size 32 bytes, main_imxrt1052.o(i.flexspi_nor_flash_erase_sector))
+<BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = flexspi_nor_flash_erase_sector &rArr; flexspi_nor_wait_bus_busy &rArr; FLEXSPI_TransferBlocking &rArr; FLEXSPI_WriteBlocking
 </UL>
-<BR>[Calls]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinWrite
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+<BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferBlocking
+<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_write_enable
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_wait_bus_busy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hyperflash_ip_command_test
+</UL>
+
+<P><STRONG><a name="[138]"></a>flexspi_nor_flash_page_program</STRONG> (Thumb, 74 bytes, Stack size 40 bytes, main_imxrt1052.o(i.flexspi_nor_flash_page_program))
+<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = flexspi_nor_flash_page_program &rArr; flexspi_nor_wait_bus_busy &rArr; FLEXSPI_TransferBlocking &rArr; FLEXSPI_WriteBlocking
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferBlocking
+<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_write_enable
+<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_wait_bus_busy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hyperflash_ip_command_test
+</UL>
+
+<P><STRONG><a name="[139]"></a>flexspi_nor_hyperbus_read</STRONG> (Thumb, 42 bytes, Stack size 32 bytes, main_imxrt1052.o(i.flexspi_nor_hyperbus_read))
+<BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = flexspi_nor_hyperbus_read &rArr; FLEXSPI_TransferBlocking &rArr; FLEXSPI_WriteBlocking
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferBlocking
+</UL>
+<BR>[Called By]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hyperflash_ip_command_test
+<LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_hyperflash_cfi
+</UL>
+
+<P><STRONG><a name="[13a]"></a>flexspi_nor_hyperbus_write</STRONG> (Thumb, 42 bytes, Stack size 32 bytes, main_imxrt1052.o(i.flexspi_nor_hyperbus_write))
+<BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = flexspi_nor_hyperbus_write &rArr; FLEXSPI_TransferBlocking &rArr; FLEXSPI_WriteBlocking
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferBlocking
+</UL>
+<BR>[Called By]<UL><LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_hyperflash_cfi
+</UL>
+
+<P><STRONG><a name="[131]"></a>flexspi_nor_hyperflash_cfi</STRONG> (Thumb, 114 bytes, Stack size 24 bytes, main_imxrt1052.o(i.flexspi_nor_hyperflash_cfi))
+<BR><BR>[Stack]<UL><LI>Max Depth = 608<LI>Call Chain = flexspi_nor_hyperflash_cfi &rArr; DbgConsole_Printf &rArr; StrFormatPrintf &rArr; ConvertFloatRadixNumToString &rArr; __hardfp_pow &rArr; sqrt
+</UL>
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
+<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_hyperbus_write
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_hyperbus_read
+</UL>
+<BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_hyperflash
+</UL>
+
+<P><STRONG><a name="[137]"></a>flexspi_nor_wait_bus_busy</STRONG> (Thumb, 70 bytes, Stack size 32 bytes, main_imxrt1052.o(i.flexspi_nor_wait_bus_busy))
+<BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = flexspi_nor_wait_bus_busy &rArr; FLEXSPI_TransferBlocking &rArr; FLEXSPI_WriteBlocking
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferBlocking
+</UL>
+<BR>[Called By]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_flash_page_program
+<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_flash_erase_sector
+</UL>
+
+<P><STRONG><a name="[136]"></a>flexspi_nor_write_enable</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, main_imxrt1052.o(i.flexspi_nor_write_enable))
+<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = flexspi_nor_write_enable &rArr; FLEXSPI_TransferBlocking &rArr; FLEXSPI_WriteBlocking
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferBlocking
+</UL>
+<BR>[Called By]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_flash_page_program
+<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_flash_erase_sector
+</UL>
+
+<P><STRONG><a name="[13b]"></a>hyperflash_ip_command_test</STRONG> (Thumb, 302 bytes, Stack size 32 bytes, main_imxrt1052.o(i.hyperflash_ip_command_test))
+<BR><BR>[Stack]<UL><LI>Max Depth = 616<LI>Call Chain = hyperflash_ip_command_test &rArr; DbgConsole_Printf &rArr; StrFormatPrintf &rArr; ConvertFloatRadixNumToString &rArr; __hardfp_pow &rArr; sqrt
+</UL>
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memcmp
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_hyperbus_read
+<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_flash_page_program
+<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexspi_nor_flash_erase_sector
+<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_SoftwareReset
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_Enable
+<LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_SetDiv
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_ControlGate
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[ab]"></a>main</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, main_imxrt1052.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 688<LI>Call Chain = main &rArr; board_init_hyperflash &rArr; flexspi_nor_hyperflash_cfi &rArr; DbgConsole_Printf &rArr; StrFormatPrintf &rArr; ConvertFloatRadixNumToString &rArr; __hardfp_pow &rArr; sqrt
+</UL>
+<BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinWrite
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_BootClockRUN
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_InitDebugConsole
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_ConfigMPU
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
-<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_PowerConfig
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_LedConfig
-<LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
+<LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_info
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hyperflash_ip_command_test
+<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_power
+<LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_led
+<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_hyperflash
+<LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_InitPins
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[11e]"></a>sqrt</STRONG> (Thumb, 106 bytes, Stack size 24 bytes, sqrt.o(i.sqrt))
+<P><STRONG><a name="[125]"></a>sqrt</STRONG> (Thumb, 106 bytes, Stack size 24 bytes, sqrt.o(i.sqrt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = sqrt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
+<BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 </UL>
-<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+</UL>
+
+<P><STRONG><a name="[13f]"></a>system_clock_info</STRONG> (Thumb, 130 bytes, Stack size 8 bytes, main_imxrt1052.o(i.system_clock_info))
+<BR><BR>[Stack]<UL><LI>Max Depth = 592<LI>Call Chain = system_clock_info &rArr; DbgConsole_Printf &rArr; StrFormatPrintf &rArr; ConvertFloatRadixNumToString &rArr; __hardfp_pow &rArr; sqrt
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[ad]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mimxrt1052.o(.text)
 </UL>
-<P><STRONG><a name="[131]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry4.o(.ARM.Collect$$$$00000003))
+<P><STRONG><a name="[14c]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry4.o(.ARM.Collect$$$$00000003))
 
-<P><STRONG><a name="[126]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Calls]<UL><LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[141]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[128]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Called By]<UL><LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[143]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[132]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[14d]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[133]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[14e]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[134]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[14f]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[135]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[150]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[136]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[151]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, startup_mimxrt1052.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mimxrt1052.o(RESET)
@@ -1436,81 +1641,91 @@ Global Symbols
 <P><STRONG><a name="[7f]"></a>XBAR1_IRQ_2_3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mimxrt1052.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mimxrt1052.o(RESET)
 </UL>
-<P><STRONG><a name="[127]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+<P><STRONG><a name="[142]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
-<BR>[Called By]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
+<BR>[Called By]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[137]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[152]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[ac]"></a>SystemInit</STRONG> (Thumb, 238 bytes, Stack size 24 bytes, system_mimxrt1052.o(i.SystemInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SystemInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInitHook
+<BR>[Calls]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInitHook
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mimxrt1052.o(.text)
 </UL>
-<P><STRONG><a name="[129]"></a>SystemInitHook</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, system_mimxrt1052.o(i.SystemInitHook))
+<P><STRONG><a name="[144]"></a>SystemInitHook</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, system_mimxrt1052.o(i.SystemInitHook))
 <BR><BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
-<P><STRONG><a name="[138]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[153]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[139]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[154]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[13a]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[155]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[ff]"></a>CLOCK_GetOscFreq</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, fsl_clock.o(i.CLOCK_GetOscFreq))
+<P><STRONG><a name="[fb]"></a>CLOCK_GetOscFreq</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, fsl_clock.o(i.CLOCK_GetOscFreq))
 <BR><BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPllFreq
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPeriphClkFreq
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPeriphClkFreq
 </UL>
 
-<P><STRONG><a name="[fc]"></a>CLOCK_GetPeriphClkFreq</STRONG> (Thumb, 126 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetPeriphClkFreq))
+<P><STRONG><a name="[f8]"></a>CLOCK_GetPeriphClkFreq</STRONG> (Thumb, 126 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetPeriphClkFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = CLOCK_GetPeriphClkFreq &rArr; CLOCK_GetSysPfdFreq &rArr; CLOCK_GetPllFreq &rArr; __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetSysPfdFreq
+<BR>[Calls]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetSysPfdFreq
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPllFreq
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOscFreq
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOscFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+<BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
 </UL>
 
-<P><STRONG><a name="[118]"></a>CLOCK_ControlGate</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, fsl_lpuart.o(i.CLOCK_ControlGate))
+<P><STRONG><a name="[10d]"></a>FLEXSPI_GetBusIdleStatus</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, fsl_flexspi.o(i.FLEXSPI_GetBusIdleStatus))
+<BR><BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_UpdateLUT
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_TransferBlocking
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_SetFlashConfig
+</UL>
+
+<P><STRONG><a name="[109]"></a>FLEXSPI_SoftwareReset</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, fsl_flexspi.o(i.FLEXSPI_SoftwareReset))
+<BR><BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLEXSPI_Init
+</UL>
+
+<P><STRONG><a name="[11f]"></a>CLOCK_ControlGate</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, fsl_lpuart.o(i.CLOCK_ControlGate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = CLOCK_ControlGate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_Init
+<BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPUART_Init
 </UL>
 
 <P><STRONG><a name="[dd]"></a>DbgConsole_RelocateLog</STRONG> (Thumb, 56 bytes, Stack size 32 bytes, fsl_debug_console.o(i.DbgConsole_RelocateLog))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = DbgConsole_RelocateLog &rArr; LOG_Push &rArr; LOG_Pop &rArr; IO_Transfer &rArr; LPUART_ReadBlocking &rArr; LPUART_ClearStatusFlags
 </UL>
-<BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Push
+<BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Push
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> fsl_debug_console.o(i.DbgConsole_Printf)
 </UL>
-<P><STRONG><a name="[100]"></a>ConvertFloatRadixNumToString</STRONG> (Thumb, 344 bytes, Stack size 56 bytes, fsl_str.o(i.ConvertFloatRadixNumToString))
+<P><STRONG><a name="[fc]"></a>ConvertFloatRadixNumToString</STRONG> (Thumb, 344 bytes, Stack size 56 bytes, fsl_str.o(i.ConvertFloatRadixNumToString))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = ConvertFloatRadixNumToString &rArr; __hardfp_pow &rArr; sqrt
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_l2d
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2lz
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_modf
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_modf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StrFormatPrintf
+<BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StrFormatPrintf
 </UL>
 
-<P><STRONG><a name="[103]"></a>ConvertRadixNumToString</STRONG> (Thumb, 210 bytes, Stack size 40 bytes, fsl_str.o(i.ConvertRadixNumToString))
+<P><STRONG><a name="[ff]"></a>ConvertRadixNumToString</STRONG> (Thumb, 210 bytes, Stack size 40 bytes, fsl_str.o(i.ConvertRadixNumToString))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = ConvertRadixNumToString &rArr; __aeabi_ldivmod &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ldivmod
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StrFormatPrintf
+<BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StrFormatPrintf
 </UL>
 
 <P><STRONG><a name="[f2]"></a>CLOCK_GetDiv</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, board.o(i.CLOCK_GetDiv))
@@ -1537,14 +1752,36 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_InitPins
 </UL>
 
-<P><STRONG><a name="[f8]"></a>IOMUXC_SetPinMux</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, main_imxrt1052.o(i.IOMUXC_SetPinMux))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = IOMUXC_SetPinMux
+<P><STRONG><a name="[13e]"></a>CLOCK_ControlGate</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, main_imxrt1052.o(i.CLOCK_ControlGate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = CLOCK_ControlGate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_PowerConfig
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_LedConfig
+<BR>[Called By]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hyperflash_ip_command_test
 </UL>
 
-<P><STRONG><a name="[125]"></a>delay</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, main_imxrt1052.o(i.delay))
+<P><STRONG><a name="[12f]"></a>CLOCK_SetDiv</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, main_imxrt1052.o(i.CLOCK_SetDiv))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = CLOCK_SetDiv
+</UL>
+<BR>[Called By]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hyperflash_ip_command_test
+<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_hyperflash
+</UL>
+
+<P><STRONG><a name="[13d]"></a>FLEXSPI_Enable</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main_imxrt1052.o(i.FLEXSPI_Enable))
+<BR><BR>[Called By]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hyperflash_ip_command_test
+</UL>
+
+<P><STRONG><a name="[130]"></a>FLEXSPI_SoftwareReset</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main_imxrt1052.o(i.FLEXSPI_SoftwareReset))
+<BR><BR>[Called By]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hyperflash_ip_command_test
+<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_hyperflash
+</UL>
+
+<P><STRONG><a name="[133]"></a>IOMUXC_SetPinMux</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, main_imxrt1052.o(i.IOMUXC_SetPinMux))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = IOMUXC_SetPinMux
+</UL>
+<BR>[Called By]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_power
+<LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init_led
+</UL>
+
+<P><STRONG><a name="[140]"></a>delay</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, main_imxrt1052.o(i.delay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
