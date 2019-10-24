@@ -1,9 +1,21 @@
+/****************************************************************************
+ *
+ * Copyright (c) 2018 UAVRS. All rights reserved.
+ *
+ ****************************************************************************/
 #ifndef _BOARD_H_
 #define _BOARD_H_
 
+#include "pad_config.h"
 #include "clock_config.h"
 #include "fsl_common.h"
 #include "fsl_gpio.h"
+#include "fsl_iomuxc.h"
+#include "fsl_flexspi.h"
+#include "fsl_debug_console.h"
+
+#include "pin_mux.h"
+#include "./led/bsp_led.h"
 
 /*******************************************************************************
  * Definitions
@@ -20,6 +32,11 @@
 /*! @brief The board name */
 #define BOARD_NAME                    "YH i.MX RT1052 Board"
 
+/* USB PHY condfiguration */
+#define BOARD_USB_PHY_D_CAL (0x0CU)
+#define BOARD_USB_PHY_TXCAL45DP (0x06U)
+#define BOARD_USB_PHY_TXCAL45DM (0x06U)
+
 /* 调试串口定义的信息 */
 #define BOARD_DEBUG_UART_TYPE         DEBUG_CONSOLE_DEVICE_TYPE_LPUART
 #define BOARD_DEBUG_UART_BASEADDR     (uint32_t) LPUART1
@@ -35,7 +52,7 @@
 #endif /* BOARD_DEBUG_UART_BAUDRATE */
 
 /*! @brief FLASH空间大小 */
-#define BOARD_FLASH_SIZE    (0x2000000U)
+#define BOARD_NOR_FLASH_SIZE    (0x2000000U)
 
 #if defined(__cplusplus)
 extern "C" {
@@ -44,6 +61,22 @@ extern "C" {
 /*******************************************************************************
  * API
  ******************************************************************************/
+status_t flexspi_nor_hyperbus_read(FLEXSPI_Type *base, uint32_t addr, uint32_t *buffer, uint32_t bytes);
+status_t flexspi_nor_hyperbus_write(FLEXSPI_Type *base, uint32_t addr, uint32_t *buffer, uint32_t bytes);
+status_t flexspi_nor_write_enable(FLEXSPI_Type *base, uint32_t baseAddr);
+status_t flexspi_nor_wait_bus_busy(FLEXSPI_Type *base);
+status_t flexspi_nor_flash_erase_sector(FLEXSPI_Type *base, uint32_t address);
+status_t flexspi_nor_flash_page_program(FLEXSPI_Type *base, uint32_t address, const uint32_t *src);
+status_t flexspi_nor_hyperflash_cfi(FLEXSPI_Type *base);
+status_t board_init_hyperflash(void);
+status_t hyperflash_ip_command_test(void);
+status_t hyperflash_ahb_command_test(void);
+
+void board_init_power(void);
+void board_init_led(void);
+void system_clock_info(void);
+
+
 uint32_t BOARD_DebugConsoleSrcFreq(void);
 
 void BOARD_InitDebugConsole(void);

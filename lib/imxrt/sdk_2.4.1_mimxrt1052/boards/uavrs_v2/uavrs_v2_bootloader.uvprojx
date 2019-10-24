@@ -366,10 +366,10 @@
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
             <VariousControls>
-              <MiscControls>--library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186</MiscControls>
-              <Define>DEBUG=0,NDEBUG=1,RTE_USART0,RTE_USART0_DMA_EN,CPU_MIMXRT1052DVL6B,XIP_EXTERNAL_FLASH=1, XIP_BOOT_HEADER_ENABLE =1,XIP_BOOT_HEADER_DCD_ENABLE =1,PRINTF_FLOAT_ENABLE=1, SCANF_FLOAT_ENABLE=1, PRINTF_ADVANCED_ENABLE=1, SCANF_ADVANCED_ENABLE=1,CPU_IS_ARM_CORTEX_M7=1,USE_RAM_VECTOR_TABLE</Define>
+              <MiscControls>--library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186,171</MiscControls>
+              <Define>TARGET_HW_UAVRS_V2,STM32F4,TOWER=0,FREEDOM=0,DEBUG=0,NDEBUG=1,RTE_USART0,RTE_USART0_DMA_EN,CPU_MIMXRT1052DVL6B,XIP_EXTERNAL_FLASH=1, XIP_BOOT_HEADER_ENABLE =1,XIP_BOOT_HEADER_DCD_ENABLE =1,PRINTF_FLOAT_ENABLE=1, SCANF_FLOAT_ENABLE=1, PRINTF_ADVANCED_ENABLE=1, SCANF_ADVANCED_ENABLE=1,CPU_IS_ARM_CORTEX_M7=1,USE_RAM_VECTOR_TABLE</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\CMSIS\Include;..\..\devices\MIMXRT1052;..\..\devices\MIMXRT1052\drivers;..\..\devices\MIMXRT1052\utilities;..\..\devices\MIMXRT1052\utilities\io;..\..\devices\MIMXRT1052\utilities\log;..\..\devices\MIMXRT1052\utilities\str;.\demo_apps\test;.\demo_apps\test\xip;.\demo_apps\test\bsp</IncludePath>
+              <IncludePath>..\..\..\..\..\..\Bootloader;..\..\CMSIS\Include;..\..\devices\MIMXRT1052;..\..\devices\MIMXRT1052\drivers;..\..\devices\MIMXRT1052\utilities;..\..\devices\MIMXRT1052\utilities\io;..\..\devices\MIMXRT1052\utilities\log;..\..\devices\MIMXRT1052\utilities\str;.\demo_apps\test;.\demo_apps\test\xip;.\demo_apps\test\bsp;..\..\..\..\..\libopencm3\include;..\..\..\..\..\imxrt</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -527,6 +527,11 @@
               <FileName>main_imxrt1052.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\main_imxrt1052.c</FilePath>
+            </File>
+            <File>
+              <FileName>bl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\bl.c</FilePath>
             </File>
           </Files>
         </Group>

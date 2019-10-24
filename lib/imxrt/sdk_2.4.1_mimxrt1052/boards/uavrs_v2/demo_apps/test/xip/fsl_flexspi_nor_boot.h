@@ -120,7 +120,7 @@ typedef struct _boot_data_ {
   uint32_t placeholder;     /* placehoder to make even 0x10 size */
 }BOOT_DATA_T;
 
-#define FLASH_SIZE            BOARD_FLASH_SIZE
+#define FLASH_SIZE            BOARD_NOR_FLASH_SIZE
 #define PLUGIN_FLAG           (uint32_t)0
 
 /* External Variables */

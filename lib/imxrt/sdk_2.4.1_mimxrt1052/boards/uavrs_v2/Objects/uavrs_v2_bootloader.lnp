@@ -22,6 +22,7 @@
 ".\objects\uavrs_v2_sdram_ini_dcd.o"
 ".\objects\bsp_led.o"
 ".\objects\main_imxrt1052.o"
+".\objects\bl.o"
 --library_type=microlib --diag_suppress 6314 --strict --scatter ".\MIMXRT1052xxxxx_nor_itcm_txt_ram.scf"
 --keep=*(.boot_hdr.conf)
 --keep=*(.boot_hdr.ivt) --summary_stderr --info summarysizes --map --xref --callgraph --symbols

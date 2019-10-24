@@ -1,5 +1,6 @@
 #
 # PX4 bootloader build rules for imxrt1052 targets.
+#boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/virtual_com.c 
 
 # 5 seconds / 5000 ms default delay
 PX4_BOOTLOADER_DELAY	?= 5000
@@ -27,7 +28,16 @@ IMXRT_CSRCS= devices/MIMXRT1052/system_MIMXRT1052.c \
 			 boards/uavrs_v2/demo_apps/test/bsp/led/bsp_led.c \
 			 boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.c \
 			 boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.c \
-			 boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.c
+			 boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.c \
+			 boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.c \
+			 boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.c \
+			 boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.c \
+			 boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.c \
+			 middleware/usb/device/usb_device_ehci.c \
+			 middleware/usb/device/usb_device_dci.c \
+			 middleware/usb/osa/usb_osa_bm.c \
+			 middleware/usb/phy/usb_phy.c \
+			 
 
 
 IMXRT_INCS=  CMSIS/Include \
@@ -40,12 +50,20 @@ IMXRT_INCS=  CMSIS/Include \
 			 boards/uavrs_v2/demo_apps/test \
 			 boards/uavrs_v2/demo_apps/test/bsp \
 			 boards/uavrs_v2/demo_apps/test/xip \
+			 boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm \
+			 middleware/usb \
+			 middleware/usb/phy \
+			 middleware/usb/include \
+			 middleware/usb/osa \
+			 middleware/usb/device \
+			 
+			 
 
 ASRCS = $(addprefix $(LIBIMXRT1052)/, $(IMXRT_ASRCS))
 CSRCS = $(addprefix $(LIBIMXRT1052)/, $(IMXRT_CSRCS))
 INCS  = $(addprefix -I $(LIBIMXRT1052)/, $(IMXRT_INCS))
 
-SRCS	  = $(COMMON_SRCS) $(CSRCS) main_imxrt1052.c \
+SRCS	  = $(COMMON_SRCS) $(addprefix $(ARCH)/,$(ARCH_SRCS)) $(CSRCS) main_imxrt1052.c imxrt.c \
 
 # Keep the build happy
 LIB_WORK_AROUNDS=   -DSTM32F7 \
@@ -66,6 +84,7 @@ FLAGS += $(LIB_WORK_AROUNDS) \
         -DXIP_EXTERNAL_FLASH=1 \
         -DXIP_BOOT_HEADER_ENABLE=1 \
         -DXIP_BOOT_HEADER_DCD_ENABLE=1 \
+        -DUSB_STACK_BM \
         -DPRINTF_ADVANCED_ENABLE=1 \
         -DSCANF_ADVANCED_ENABLE=1 \
         -DCPU_IS_ARM_CORTEX_M7=1 \

@@ -1,0 +1,38 @@
+--cpu Cortex-M7.fp.dp --scatter "./RTE/Device/MIMXRT1052DVL6B/MIMXRT1052xxxxx_ram.scf"
+"flexspi_nor_release\usb_device_descriptor.o"
+"flexspi_nor_release\virtual_com.o"
+"flexspi_nor_release\board.o"
+"flexspi_nor_release\clock_config.o"
+"flexspi_nor_release\pin_mux.o"
+"flexspi_nor_release\usb_device_ehci.o"
+"flexspi_nor_release\usb_osa_bm.o"
+"flexspi_nor_release\usb_phy.o"
+"flexspi_nor_release\fsl_cache.o"
+"flexspi_nor_release\fsl_common.o"
+"flexspi_nor_release\fsl_clock.o"
+"flexspi_nor_release\fsl_lpuart.o"
+"flexspi_nor_release\fsl_gpio.o"
+"flexspi_nor_release\usb_device_dci.o"
+"flexspi_nor_release\usb_device_ch9.o"
+"flexspi_nor_release\usb_device_class.o"
+"flexspi_nor_release\usb_device_cdc_acm.o"
+"flexspi_nor_release\system_mimxrt1052.o"
+"flexspi_nor_release\startup_mimxrt1052.o"
+"flexspi_nor_release\fsl_io.o"
+"flexspi_nor_release\fsl_log.o"
+"flexspi_nor_release\fsl_str.o"
+"flexspi_nor_release\fsl_debug_console.o"
+"flexspi_nor_release\fsl_assert.o"
+"flexspi_nor_release\fsl_flexspi_nor_boot.o"
+"flexspi_nor_release\evkbimxrt1050_flexspi_nor_config.o"
+"flexspi_nor_release\evkbimxrt1050_sdram_ini_dcd.o"
+--library_type=microlib --diag_suppress 6314 --strict --scatter "MIMXRT1052xxxxx_flexspi_nor.scf"
+--remove 
+--keep=*(.boot_hdr.ivt) 
+--keep=*(.boot_hdr.boot_data) 
+--keep=*(.boot_hdr.dcd_data) 
+--keep=*(.boot_hdr.conf) 
+--predefine="-DXIP_BOOT_HEADER_ENABLE=1" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\output\dev_cdc_vcom_bm.map" -o flexspi_nor_release\dev_cdc_vcom_bm.out

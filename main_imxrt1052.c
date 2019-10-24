@@ -1,13 +1,8 @@
 /*
- * Kinetis K66 board support for the bootloader.
+ * UAVRS_V2 board support for the bootloader.
  *
  */
-
-#include "kinetis.h"
-#include "gpio/fsl_gpio.h"
-#include "port/fsl_port.h"
-#include "smc/smc.h"
-#include "flash/fsl_flash.h"
+#include "board.h"
 
 #include "hw_config.h"
 
@@ -18,58 +13,17 @@
 #include "bl.h"
 #include "uart.h"
 
-#define BOOTLOADER_RESERVATION_SIZE	(24 * 1024)
-#define FIRST_FLASH_SECTOR_TO_ERASE  (BOARD_FIRST_FLASH_SECTOR_TO_ERASE + (BOOTLOADER_RESERVATION_SIZE/FLASH_SECTOR_SIZE))
-
-#define BOARD_RESETCLOCKRUN_CORE_CLOCK             20971520U  /*!< Core clock frequency: 20971520Hz */
-
-#define MCG_IRCLK_DISABLE                                 0U  /*!< MCGIRCLK disabled */
-#define MCG_PLL_DISABLE                                   0U  /*!< MCGPLLCLK disabled */
-#define OSC_CAP0P                                         0U  /*!< Oscillator 0pF capacitor load */
-#define OSC_ER_CLK_DISABLE                                0U  /*!< Disable external reference clock */
-#define SIM_OSC32KSEL_OSC32KCLK_CLK                       0U  /*!< OSC32KSEL select: OSC32KCLK clock */
-#define SIM_PLLFLLSEL_MCGFLLCLK_CLK                       0U  /*!< PLLFLL select: MCGFLLCLK clock */
-
-// SIM_SDID
-#define KINETIS_UNKNOWN	0
-#define KINETIS_K66
-
-#define PIN_MASK           0x0000000f
-#define PIN_SHIFTS         0
-#define FAM_MASK           0x00000070
-#define FAM_SHIFTS         4
-#define DIEID_MASK         0x00000f80
-#define DIE_SHIFTS         7
-#define REVID_MASK         0x0000f000
-#define REVID_SHIFTS       12
-#define RESID_MASK         0x000f0000
-#define RESID_SHIFTS       16
-#define SERIESID_MASK      0x00f00000
-#define SERIESID_SHIFTS    20
-#define SUBFAMID_MASK      0x0f000000
-#define SUBFAMID_SHIFTS    24
-#define FAMID_MASK         0xf0000000
-#define FAMID_SHIFTS       28
-
-#define APP_SIZE_MAX			(BOARD_FLASH_SIZE - (BOOTLOADER_RESERVATION_SIZE + APP_RESERVATION_SIZE))
+#define BOOTLOADER_RESERVATION_SIZE     (24 * 1024)
+#define FIRST_FLASH_SECTOR_TO_ERASE     (BOARD_FIRST_FLASH_SECTOR_TO_ERASE + (BOOTLOADER_RESERVATION_SIZE/FLASH_SECTOR_SIZE))
+#define APP_SIZE_MAX                    (BOARD_FLASH_SIZE - (BOOTLOADER_RESERVATION_SIZE + APP_RESERVATION_SIZE))
 
 /* context passed to cinit */
 #if INTERFACE_USART
-# define BOARD_INTERFACE_CONFIG_USART	(void *)BOARD_USART
+# define BOARD_INTERFACE_CONFIG_USART	(void *)BOARD_UART
 #endif
 #if INTERFACE_USB
 # define BOARD_INTERFACE_CONFIG_USB  	NULL
 #endif
-
-flash_config_t s_flashDriver;                       //!< Flash driver instance.
-static uint32_t s_flashRunCommand[kFLASH_ExecuteInRamFunctionMaxSizeInWords];
-static uint32_t s_flashCacheClearCommand[kFLASH_ExecuteInRamFunctionMaxSizeInWords];
-static flash_execute_in_ram_function_config_t s_flashExecuteInRamFunctionInfo = {
-	.activeFunctionCount = 0,
-	.flashRunCommand = s_flashRunCommand,
-	.flashCacheClearCommand = s_flashCacheClearCommand,
-};
-
 
 /* board definition */
 struct boardinfo board_info = {
@@ -106,67 +60,11 @@ board_test_force_pin()
 {
 	return false;
 }
+
 #if INTERFACE_USART == 1
 static bool
 board_test_usart_receiving_break()
 {
-#if !defined(SERIAL_BREAK_DETECT_DISABLED)
-	/* (re)start the SysTick timer system */
-	systick_interrupt_disable(); // Kill the interrupt if it is still active
-	systick_counter_disable(); // Stop the timer
-	systick_set_clocksource(SYSTIC_CLKSOURCE_AHB);
-
-	/* Set the timer period to be half the bit rate
-	 *
-	 * Baud rate = 115200, therefore bit period = 8.68us
-	 * Half the bit rate = 4.34us
-	 * Set period to 4.34 microseconds (timer_period = timer_tick / timer_reset_frequency = 168MHz / (1/4.34us) = 729.12 ~= 729)
-	 */
-	systick_set_reload(729);  /* 4.3us tick, magic number */
-	systick_counter_enable(); // Start the timer
-
-	uint8_t cnt_consecutive_low = 0;
-	uint8_t cnt = 0;
-
-	/* Loop for 3 transmission byte cycles and count the low and high bits. Sampled at a rate to be able to count each bit twice.
-	 *
-	 * One transmission byte is 10 bits (8 bytes of data + 1 start bit + 1 stop bit)
-	 * We sample at every half bit time, therefore 20 samples per transmission byte,
-	 * therefore 60 samples for 3 transmission bytes
-	 */
-	while (cnt < 60) {
-		// Only read pin when SysTick timer is true
-		if (systick_get_countflag() == 1) {
-			if (GPIO_ReadPinInput(BOARD_PORT_UART, BOARD_PIN_RX) == 0) {
-				cnt_consecutive_low++;	// Increment the consecutive low counter
-
-			} else {
-				cnt_consecutive_low = 0; // Reset the consecutive low counter
-			}
-
-			cnt++;
-		}
-
-		// If 9 consecutive low bits were received break out of the loop
-		if (cnt_consecutive_low >= 18) {
-			break;
-		}
-
-	}
-
-	systick_counter_disable(); // Stop the timer
-
-	/*
-	 * If a break is detected, return true, else false
-	 *
-	 * Break is detected if line was low for 9 consecutive bits.
-	 */
-	if (cnt_consecutive_low >= 18) {
-		return true;
-	}
-
-#endif // !defined(SERIAL_BREAK_DETECT_DISABLED)
-
 	return false;
 }
 #endif
@@ -186,461 +84,80 @@ board_get_devices(void)
 static void
 board_init(void)
 {
-	exit_vlpr();
+    /* 初始化内存保护单元 */
+    BOARD_ConfigMPU();
+    /* 初始化引脚 */
+    BOARD_InitPins();
+    /* 初始化开发板时钟 */
+    BOARD_BootClockRUN();
+    /* 初始化调试串口 */
+    BOARD_InitDebugConsole();
+    /* 初始化底板电源 */
+    board_init_power();
+    /* 初始化状态LED灯 */
+    board_init_led();
+    /* 初始化HyperFlash */
+    board_init_hyperflash();
 
-	/* fix up the max firmware size, we have to read memory to get this */
-	board_info.fw_size = APP_SIZE_MAX;
+    /* 初始化LED引脚 */
+    //LED_GPIO_Config();
 
-#if defined(BOARD_POWER_PIN_OUT)
-
-	/* Configure the Power pins */
-
-	/*  Sets the ports clocking */
-
-	CLOCK_EnableClock(KINETIS_CLOCK_PORT(BOARD_POWER_PORT));
-
-	port_pin_config_t power_port_config = {
-		.pullSelect           = kPORT_PullDown,
-		.slewRate             = kPORT_FastSlewRate,
-		.passiveFilterEnable  = kPORT_PassiveFilterDisable,
-		.openDrainEnable      = kPORT_OpenDrainDisable,
-		.driveStrength        = kPORT_LowDriveStrength,
-		.mux                  = kPORT_MuxAsGpio,
-		.lockRegister         = kPORT_UnLockRegister,
-	};
-
-	/*  Sets the port configuration */
-
-	PORT_SetPinConfig(KINETIS_PORT(BOARD_POWER_PORT), BOARD_POWER_PIN_OUT, &power_port_config);
-
-	gpio_pin_config_t power_pin_config = {
-		kGPIO_DigitalOutput,
-		1,
-	};
-
-	/*  Sets the pin configuration */
-
-	GPIO_PinInit(KINETIS_GPIO(BOARD_POWER_PORT), BOARD_POWER_PIN_OUT, &power_pin_config);
-
-	BOARD_POWER_ON(KINETIS_GPIO(BOARD_POWER_PORT), BOARD_POWER_PIN_OUT);
-#endif
-
-#if INTERFACE_USB
-
-	// Disable the MPU otherwise USB cannot access the bus
-
-	MPU->CESR = 0;
-
-	/* enable Port pin to sample VBUS */
-
-	CLOCK_EnableClock(KINETIS_CLOCK_PORT(BOARD_PORT_VBUS));
-
-	port_pin_config_t vbus_port_config = {
-		.pullSelect           = kPORT_PullDown,
-		.slewRate             = kPORT_FastSlewRate,
-		.passiveFilterEnable  = kPORT_PassiveFilterDisable,
-		.openDrainEnable      = kPORT_OpenDrainDisable,
-		.driveStrength        = kPORT_LowDriveStrength,
-		.mux                  = kPORT_MuxAsGpio,
-		.lockRegister         = kPORT_UnLockRegister,
-	};
-
-	/*  Sets the port configuration */
-
-	PORT_SetPinConfig(KINETIS_PORT(BOARD_PORT_VBUS), BOARD_PIN_VBUS, &vbus_port_config);
-
-	gpio_pin_config_t vbus_pin_config = {
-		kGPIO_DigitalInput,
-		0,
-	};
-
-	/*  Sets the pin configuration */
-
-	GPIO_PinInit(KINETIS_GPIO(BOARD_PORT_VBUS), BOARD_PIN_VBUS, &vbus_pin_config);
-
-#endif
-
-	/* Regardless of UART booting ensure CTS on Radio is set High to not enter
-	 * bootloader on sik
-	 */
-
-#if INTERFACE_USB == 0
-	/* enable Clock to Port E pin if USB was not selected to set RTS */
-
-	CLOCK_EnableClock(KINETIS_CLOCK_PORT(BOARD_PORT_UART_RTS));
-#endif
-
-	port_pin_config_t uart_rts_port_config = {
-		.pullSelect           = kPORT_PullDisable,
-		.slewRate             = kPORT_FastSlewRate,
-		.passiveFilterEnable  = kPORT_PassiveFilterDisable,
-		.openDrainEnable      = kPORT_OpenDrainDisable,
-		.driveStrength        = kPORT_LowDriveStrength,
-		.mux                  = kPORT_MuxAsGpio,
-		.lockRegister         = kPORT_UnLockRegister,
-	};
-
-	/*  Sets the port configuration */
-
-	PORT_SetPinConfig(KINETIS_PORT(BOARD_PORT_UART_RTS), BOARD_UART_RTS_PIN, &uart_rts_port_config);
-
-	gpio_pin_config_t rts_pin_config = {
-		kGPIO_DigitalOutput,
-		1,
-	};
-	GPIO_PinInit(KINETIS_GPIO(BOARD_PORT_UART_RTS), BOARD_UART_RTS_PIN, &rts_pin_config);
-
-#if INTERFACE_USART
-
-	/* configure USART clock */
-
-	CLOCK_EnableClock(KINETIS_CLOCK_UART(BOARD_USART));
-
-	/* configure USART pins */
-
-	CLOCK_EnableClock(KINETIS_CLOCK_PORT(BOARD_PORT_UART));
-
-	port_pin_config_t uart_port_config = {
-		.pullSelect           = kPORT_PullDisable,
-		.slewRate             = kPORT_FastSlewRate,
-		.passiveFilterEnable  = kPORT_PassiveFilterDisable,
-		.openDrainEnable      = kPORT_OpenDrainDisable,
-		.driveStrength        = kPORT_LowDriveStrength,
-		.mux                  = BOARD_PORT_UART_AF,
-		.lockRegister         = kPORT_UnLockRegister,
-	};
-
-	/*  Sets the port configuration */
-
-	PORT_SetMultiplePinsConfig(KINETIS_PORT(BOARD_PORT_UART), KINETIS_MASK(BOARD_PIN_TX) | KINETIS_MASK(BOARD_PIN_RX),
-				   &uart_port_config);
-
-#endif
-
-	/* Initialize LEDs */
-
-	port_pin_config_t led_port_config = {
-		.pullSelect           = kPORT_PullDisable,
-		.slewRate             = kPORT_FastSlewRate,
-		.passiveFilterEnable  = kPORT_PassiveFilterDisable,
-		.openDrainEnable      = kPORT_OpenDrainDisable,
-		.driveStrength        = kPORT_LowDriveStrength,
-		.mux                  = kPORT_MuxAsGpio,
-		.lockRegister         = kPORT_UnLockRegister,
-	};
-
-	uint32_t leds = 0;
-#if defined(BOARD_PIN_LED_ACTIVITY)
-	leds |= KINETIS_MASK(BOARD_PIN_LED_ACTIVITY);
-#endif
-
-#if defined(BOARD_PIN_LED_BOOTLOADER)
-	leds |= KINETIS_MASK(BOARD_PIN_LED_BOOTLOADER);
-#endif
-
-	if (leds) {
-		CLOCK_EnableClock(KINETIS_CLOCK_PORT(BOARD_PORT_LEDS));
-
-		PORT_SetMultiplePinsConfig(KINETIS_PORT(BOARD_PORT_LEDS), leds, &led_port_config);
-
-		gpio_pin_config_t led_pin_config = {
-			kGPIO_DigitalOutput,
-			1,
-		};
-
-		/*  Sets the pin configuration */
-
-#if defined(BOARD_PIN_LED_ACTIVITY)
-		GPIO_PinInit(KINETIS_GPIO(BOARD_PORT_LEDS), BOARD_PIN_LED_ACTIVITY, &led_pin_config);
-#endif
-#if defined(BOARD_PIN_LED_BOOTLOADER)
-		GPIO_PinInit(KINETIS_GPIO(BOARD_PORT_LEDS), BOARD_PIN_LED_BOOTLOADER, &led_pin_config);
-#endif
-		BOARD_LED_ON(KINETIS_GPIO(BOARD_PORT_LEDS), leds);
-	}
+    /* 显示系统时钟信息 */
+    system_clock_info();
+    while(1);
 }
 
 void
 board_deinit(void)
 {
 
-	port_pin_config_t unconfigure_port_config = {
-		kPORT_PullDisable,
-		kPORT_FastSlewRate,
-		kPORT_PassiveFilterDisable,
-		kPORT_OpenDrainDisable,
-		kPORT_LowDriveStrength,
-		kPORT_PinDisabledOrAnalog,
-		kPORT_UnLockRegister,
-	};
-	gpio_pin_config_t unconfigure_pin_config = {
-		kGPIO_DigitalInput,
-		0,
-	};
-
-#if defined(BOARD_POWER_PIN_OUT) && defined(BOARD_POWER_PIN_RELEASE)
-	/* deinitialize the POWER pin - with the assumption the hold up time of
-	 * the voltage being bleed off by an inupt pin impedance will allow
-	 * enough time to boot the app
-	 */
-	GPIO_PinInit(KINETIS_GPIO(BOARD_POWER_PORT), BOARD_POWER_PIN_OUT, &unconfigure_pin_config);
-	PORT_SetPinConfig(KINETIS_PORT(BOARD_POWER_PORT), BOARD_POWER_PIN, &unconfigure_port_config);
-
-#endif
-
-#if INTERFACE_USB
-	PORT_SetPinConfig(KINETIS_PORT(BOARD_PORT_VBUS), BOARD_PIN_VBUS, &unconfigure_port_config);
-#endif
-
-#if INTERFACE_USART
-	PORT_SetMultiplePinsConfig(KINETIS_PORT(BOARD_PORT_UART), KINETIS_MASK(BOARD_PIN_TX) | KINETIS_MASK(BOARD_PIN_RX),
-				   &unconfigure_port_config);
-#endif
-
-	/* deinitialise RTS */
-	GPIO_PinInit(KINETIS_GPIO(BOARD_PORT_UART_RTS), BOARD_UART_RTS_PIN, &unconfigure_pin_config);
-	PORT_SetPinConfig(KINETIS_PORT(BOARD_PORT_UART_RTS), BOARD_UART_RTS_PIN, &unconfigure_port_config);
-
-	/* deinitialise LEDs */
-	uint32_t leds = 0;
-#if defined(BOARD_PIN_LED_ACTIVITY)
-	leds |= KINETIS_MASK(BOARD_PIN_LED_ACTIVITY);
-#endif
-
-#if defined(BOARD_PIN_LED_BOOTLOADER)
-	leds |= KINETIS_MASK(BOARD_PIN_LED_BOOTLOADER);
-#endif
-
-	if (leds) {
-		GPIO_ClearPinsOutput(KINETIS_GPIO(BOARD_PORT_LEDS), leds);
-
-#if defined(BOARD_PIN_LED_ACTIVITY)
-		GPIO_PinInit(KINETIS_GPIO(BOARD_PORT_LEDS), BOARD_PIN_LED_ACTIVITY, &unconfigure_pin_config);
-#endif
-#if defined(BOARD_PIN_LED_BOOTLOADER)
-		GPIO_PinInit(KINETIS_GPIO(BOARD_PORT_LEDS), BOARD_PIN_LED_BOOTLOADER, &unconfigure_pin_config);
-#endif
-
-		PORT_SetMultiplePinsConfig(KINETIS_PORT(BOARD_PORT_LEDS), leds, &unconfigure_port_config);
-	}
-
-	/*  Incase of any over lap un-configure clocks last -*/
-
-#if defined(BOARD_POWER_PIN_OUT) && defined(BOARD_POWER_PIN_RELEASE)
-	CLOCK_DisableClock(KINETIS_CLOCK_PORT(BOARD_POWER_PORT));
-#endif
-
-#if INTERFACE_USB
-	CLOCK_DisableClock(KINETIS_CLOCK_PORT(BOARD_PORT_VBUS));
-#endif
-
-#if INTERFACE_USB == 0
-	CLOCK_DisableClock(KINETIS_CLOCK_PORT(BOARD_PORT_UART_RTS));
-#endif
-
-#if INTERFACE_USART
-	CLOCK_DisableClock(KINETIS_CLOCK_PORT(BOARD_PORT_UART));
-	CLOCK_DisableClock(KINETIS_CLOCK_UART(BOARD_UART));
-#endif
-
-	if (leds) {
-		CLOCK_DisableClock(KINETIS_CLOCK_PORT(BOARD_PORT_LEDS));
-	}
 }
 
-
-static void CLOCK_CONFIG_FllStableDelay(void)
-{
-	uint32_t i = 30000U;
-
-	while (i--) {
-		__NOP();
-	}
-}
 
 void
 clock_deinit(void)
 {
 
-	const mcg_config_t mcgConfig_BOARD_BootClockHSRUN = {
-		.mcgMode = kMCG_ModePBE,                  /* PEE - PLL Engaged External */
-		.irclkEnableMode = kMCG_IrclkEnable,      /* MCGIRCLK enabled, MCGIRCLK disabled in STOP mode */
-		.ircs = kMCG_IrcSlow,                     /* Slow internal reference clock selected */
-		.fcrdiv = 0x1U,                           /* Fast IRC divider: divided by 2 */
-		.frdiv = 0x0U,                            /* FLL reference clock divider: divided by 32 */
-		.drs = kMCG_DrsLow,                       /* Low frequency range */
-		.dmx32 = kMCG_Dmx32Default,               /* DCO has a default range of 25% */
-		.oscsel = kMCG_OscselOsc,                 /* Selects System Oscillator (OSCCLK) */
-		.pll0Config =
-		{
-			.enableMode = MCG_PLL_DISABLE,    /* MCGPLLCLK disabled */
-			.prdiv = 0x0U,                    /* PLL Reference divider: divided by 1 */
-			.vdiv = 0xeU,                     /* VCO divider: multiplied by 30 */
-		},
-		.pllcs = kMCG_PllClkSelPll0,              /* PLL0 output clock is selected */
-	};
-	const osc_config_t oscConfig_BOARD_BootClockHSRUN = {
-		.freq = 12000000U,                        /* Oscillator frequency: 12000000Hz */
-		.capLoad = (OSC_CAP0P),                   /* Oscillator capacity load: 0pF */
-		.workMode = kOSC_ModeOscLowPower,         /* Oscillator low power */
-		.oscerConfig =
-		{
-			.enableMode = kOSC_ErClkEnable,   /* Enable external reference clock, disable external reference clock in STOP mode */
-			.erclkDiv = 0,                    /* Divider for OSCERCLK: divided by 1 */
-		}
-	};
-
-	/*******************************************************************************
-	 * Code for BOARD_BootClockHSRUN configuration
-	 ******************************************************************************/
-
-	/* Set the system clock dividers in SIM to safe value. */
-	CLOCK_SetSimSafeDivs();
-	/* Initializes OSC0 according to board configuration. */
-	CLOCK_InitOsc0(&oscConfig_BOARD_BootClockHSRUN);
-	CLOCK_SetXtal0Freq(oscConfig_BOARD_BootClockHSRUN.freq);
-	/* Configure the Internal Reference clock (MCGIRCLK). */
-	CLOCK_SetInternalRefClkConfig(mcgConfig_BOARD_BootClockHSRUN.irclkEnableMode,
-				      mcgConfig_BOARD_BootClockHSRUN.ircs,
-				      mcgConfig_BOARD_BootClockHSRUN.fcrdiv);
-	/* Set MCG to PEE mode. */
-	CLOCK_BootToBlpeMode(mcgConfig_BOARD_BootClockHSRUN.oscsel);
-
-	const mcg_config_t mcgConfig_ClocksFunc_1 = {
-		.mcgMode = kMCG_ModeFEI,                  /* FEI - FLL Engaged Internal */
-		.irclkEnableMode = MCG_IRCLK_DISABLE,     /* MCGIRCLK disabled */
-		.ircs = kMCG_IrcSlow,                     /* Slow internal reference clock selected */
-		.fcrdiv = 0x1U,                           /* Fast IRC divider: divided by 2 */
-		.frdiv = 0x0U,                            /* FLL reference clock divider: divided by 1 */
-		.drs = kMCG_DrsLow,                       /* Low frequency range */
-		.dmx32 = kMCG_Dmx32Default,               /* DCO has a default range of 25% */
-		.oscsel = kMCG_OscselOsc,                 /* Selects System Oscillator (OSCCLK) */
-		.pll0Config =
-		{
-			.enableMode = MCG_PLL_DISABLE,    /* MCGPLLCLK disabled */
-			.prdiv = 0x0U,                    /* PLL Reference divider: divided by 1 */
-			.vdiv = 0x0U,                     /* VCO divider: multiplied by 16 */
-		},
-		.pllcs = kMCG_PllClkSelPll0,              /* PLL0 output clock is selected */
-	};
-	const sim_clock_config_t simConfig_ClocksFunc_1 = {
-		.pllFllSel = SIM_PLLFLLSEL_MCGFLLCLK_CLK, /* PLLFLL select: MCGFLLCLK clock */
-		.pllFllDiv = 0,                           /* PLLFLLSEL clock divider divisor: divided by 1 */
-		.pllFllFrac = 0,                          /* PLLFLLSEL clock divider fraction: multiplied by 1 */
-		.er32kSrc = SIM_OSC32KSEL_OSC32KCLK_CLK,  /* OSC32KSEL select: OSC32KCLK clock */
-		.clkdiv1 = 0x110000U,                     /* SIM_CLKDIV1 - OUTDIV1: /1, OUTDIV2: /1, OUTDIV3: /2, OUTDIV4: /2 */
-	};
-
-	/* Set MCG to FEI mode. */
-#if FSL_CLOCK_DRIVER_VERSION >= MAKE_VERSION(2, 2, 0)
-	CLOCK_SetFbeMode(0, mcgConfig_ClocksFunc_1.dmx32,
-			 mcgConfig_ClocksFunc_1.drs,
-			 CLOCK_CONFIG_FllStableDelay);
-
-	CLOCK_BootToFeiMode(mcgConfig_ClocksFunc_1.dmx32,
-			    mcgConfig_ClocksFunc_1.drs,
-			    CLOCK_CONFIG_FllStableDelay);
-#else
-	CLOCK_BootToFeiMode(mcgConfig_ClocksFunc_1.drs,
-			    CLOCK_CONFIG_FllStableDelay);
-#endif
-	/* Set the clock configuration in SIM module. */
-	CLOCK_SetSimConfig(&simConfig_ClocksFunc_1);
-	/* Set SystemCoreClock variable. */
-	SystemCoreClock = BOARD_RESETCLOCKRUN_CORE_CLOCK;
 }
 
 void flash_lock(void)
 {
+
 }
 
 uint32_t flash_func_sector_size(unsigned sector)
 {
-	return (sector < BOARD_FLASH_SECTORS) ? FLASH_SECTOR_SIZE : 0;
-}
-
-void flash_erase_sector(unsigned sector)
-{
-	__disable_irq();
-	FLASH_Erase(&s_flashDriver, (sector * FLASH_SECTOR_SIZE), FLASH_SECTOR_SIZE, kFLASH_ApiEraseKey);
-	__enable_irq();
-
+    return 0;
 }
 
 static bool flash_verify_erase(unsigned sector)
 {
-	/* Calculate the physical address of the sector
-	 */
-	volatile uint32_t address = APP_LOAD_ADDRESS + (sector - FIRST_FLASH_SECTOR_TO_ERASE) * FLASH_SECTOR_SIZE;
-	__disable_irq();
-	volatile status_t status = FLASH_VerifyErase(&s_flashDriver, address, FLASH_SECTOR_SIZE, kFLASH_MarginValueNormal);
-	__enable_irq();
-	return status == kStatus_FLASH_Success;
+    return true;
 }
+
+void flash_erase_sector(unsigned sector)
+{
+        flash_verify_erase(sector);
+}
+
+
 
 void flash_func_erase_sector(unsigned sector)
 {
-	if (sector >= BOARD_FLASH_SECTORS || sector < FIRST_FLASH_SECTOR_TO_ERASE) {
-		return;
-	}
+        flash_erase_sector(sector);
 
-	if (!flash_verify_erase(sector)) {
-
-		/* erase the sector if it failed the blank check */
-
-		flash_erase_sector(sector);
-	}
 }
 
-static uint32_t words[2] = {0, 0};
-static uint32_t second_word = 0xffffffff;
-static uint32_t pending = 0;
 
 void
 flash_func_write_word(uint32_t address, uint32_t word)
 {
-	address += APP_LOAD_ADDRESS;
-
-	uint32_t loc = (address & 4) >> 2;
-	pending = loc == 0;
-
-	// Cache words
-	words[loc] = word;
-
-	/* Program the 64bits. */
-
-	// Time to write first and second word
-
-	if (address == APP_LOAD_ADDRESS && second_word != 0xffffffff) {
-		words[1] = second_word;
-		loc = 1;
-		pending = 0;
-		address +=  sizeof(words[1]);
-	}
-
-	if (loc == 1) {
-		if (address == APP_LOAD_ADDRESS + sizeof(word) && second_word == 0xffffffff) {
-			second_word = words[1];
-			return;
-		}
-
-		__disable_irq();
-		FLASH_Program(&s_flashDriver, address - sizeof(words[1]), &words[0], sizeof(words));
-		__enable_irq();
-
-	}
 
 }
 
 uint32_t flash_func_read_word(uint32_t address)
 {
-	if (address & 3) {
-		return 0;
-	}
-
-	if (address == sizeof(uint32_t) && second_word != 0xffffffff) { return second_word; }
-
-	return (pending) ? words[0] : *(uint32_t *)(address + APP_LOAD_ADDRESS);
+        return 0;
 }
 
 uint32_t
@@ -651,20 +168,20 @@ flash_func_read_otp(uint32_t address)
 
 uint32_t get_mcu_id(void)
 {
-	return SIM->SDID;
+	return 0;
 }
 
 int get_mcu_desc(int max, uint8_t *revstr)
 {
 	const char dig[] = "0123456789ABCDEF";
-	const char none[] = "MK66FN2M0VMD18,0";
+	const char none[] = "i.MXRT1052,0";
 	int i;
 
 	for (i = 0; none[i] && i < max - 1; i++) {
 		revstr[i] = none[i];
 	}
 
-	uint32_t id = (get_mcu_id() & REVID_MASK) >> REVID_SHIFTS;
+	uint32_t id = get_mcu_id();
 	revstr[i - 1] = dig[id];
 	return i;
 }
@@ -678,9 +195,7 @@ int check_silicon(void)
 uint32_t
 flash_func_read_sn(uint32_t address)
 {
-	address /= sizeof(address);
-	const volatile uint32_t *p = &SIM->UIDH;
-	return p[address];
+	return 0;
 }
 
 void
@@ -689,13 +204,13 @@ led_on(unsigned led)
 	switch (led) {
 	case LED_ACTIVITY:
 #if defined(BOARD_PIN_LED_ACTIVITY)
-		BOARD_LED_ON(KINETIS_GPIO(BOARD_PORT_LEDS), KINETIS_MASK(BOARD_PIN_LED_ACTIVITY));
+		//BOARD_LED_ON(KINETIS_GPIO(BOARD_PORT_LEDS), KINETIS_MASK(BOARD_PIN_LED_ACTIVITY));
 #endif
 		break;
 
 	case LED_BOOTLOADER:
 #if defined(BOARD_PIN_LED_BOOTLOADER)
-		BOARD_LED_ON(KINETIS_GPIO(BOARD_PORT_LEDS), KINETIS_MASK(BOARD_PIN_LED_BOOTLOADER));
+		//BOARD_LED_ON(KINETIS_GPIO(BOARD_PORT_LEDS), KINETIS_MASK(BOARD_PIN_LED_BOOTLOADER));
 #endif
 		break;
 	}
@@ -707,13 +222,13 @@ led_off(unsigned led)
 	switch (led) {
 	case LED_ACTIVITY:
 #if defined(BOARD_PIN_LED_ACTIVITY)
-		BOARD_LED_OFF(KINETIS_GPIO(BOARD_PORT_LEDS), KINETIS_MASK(BOARD_PIN_LED_ACTIVITY));
+		//BOARD_LED_OFF(KINETIS_GPIO(BOARD_PORT_LEDS), KINETIS_MASK(BOARD_PIN_LED_ACTIVITY));
 #endif
 		break;
 
 	case LED_BOOTLOADER:
 #if defined(BOARD_PIN_LED_BOOTLOADER)
-		BOARD_LED_OFF(KINETIS_GPIO(BOARD_PORT_LEDS), KINETIS_MASK(BOARD_PIN_LED_BOOTLOADER));
+		//BOARD_LED_OFF(KINETIS_GPIO(BOARD_PORT_LEDS), KINETIS_MASK(BOARD_PIN_LED_BOOTLOADER));
 #endif
 		break;
 	}
@@ -725,13 +240,13 @@ led_toggle(unsigned led)
 	switch (led) {
 	case LED_ACTIVITY:
 #if defined(BOARD_PIN_LED_ACTIVITY)
-		GPIO_TogglePinsOutput(KINETIS_GPIO(BOARD_PORT_LEDS), KINETIS_MASK(BOARD_PIN_LED_ACTIVITY));
+		//GPIO_TogglePinsOutput(KINETIS_GPIO(BOARD_PORT_LEDS), KINETIS_MASK(BOARD_PIN_LED_ACTIVITY));
 #endif
 		break;
 
 	case LED_BOOTLOADER:
 #if defined(BOARD_PIN_LED_BOOTLOADER)
-		GPIO_TogglePinsOutput(KINETIS_GPIO(BOARD_PORT_LEDS), KINETIS_MASK(BOARD_PIN_LED_BOOTLOADER));
+		//GPIO_TogglePinsOutput(KINETIS_GPIO(BOARD_PORT_LEDS), KINETIS_MASK(BOARD_PIN_LED_BOOTLOADER));
 #endif
 		break;
 	}
@@ -740,8 +255,6 @@ led_toggle(unsigned led)
 int
 main(void)
 {
-	// The Kinetis start up code has initialized Clocks and MPU, FPU
-
 	bool try_boot = true;			/* try booting before we drop to the bootloader */
 	unsigned timeout = BOOTLOADER_DELAY;	/* if nonzero, drop out of the bootloader after this time */
 
@@ -805,11 +318,11 @@ main(void)
 	try_boot = false;
 #else
 
-	if (GPIO_ReadPinInput(KINETIS_GPIO(BOARD_PORT_VBUS), BOARD_PIN_VBUS) != 0) {
-		usb_connected = true;
-		/* don't try booting before we set up the bootloader */
-		try_boot = false;
-	}
+//	if (GPIO_ReadPinInput(KINETIS_GPIO(BOARD_PORT_VBUS), BOARD_PIN_VBUS) != 0) {
+//		usb_connected = true;
+//		/* don't try booting before we set up the bootloader */
+//		try_boot = false;
+//	}
 
 #endif
 #endif
@@ -892,13 +405,3 @@ void _start()
 	main();
 }
 
-
-void SysTick_Handler()
-{
-	sys_tick_handler();
-}
-
-int DbgConsole_Printf(char *fmt_s, ...)
-{
-	return 0;
-}
