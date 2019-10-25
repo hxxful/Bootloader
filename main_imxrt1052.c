@@ -84,27 +84,7 @@ board_get_devices(void)
 static void
 board_init(void)
 {
-    /* 初始化内存保护单元 */
-    BOARD_ConfigMPU();
-    /* 初始化引脚 */
-    BOARD_InitPins();
-    /* 初始化开发板时钟 */
-    BOARD_BootClockRUN();
-    /* 初始化调试串口 */
-    BOARD_InitDebugConsole();
-    /* 初始化底板电源 */
-    board_init_power();
-    /* 初始化状态LED灯 */
-    board_init_led();
-    /* 初始化HyperFlash */
-    board_init_hyperflash();
 
-    /* 初始化LED引脚 */
-    //LED_GPIO_Config();
-
-    /* 显示系统时钟信息 */
-    system_clock_info();
-    while(1);
 }
 
 void
@@ -251,10 +231,42 @@ led_toggle(unsigned led)
 		break;
 	}
 }
-
+extern void USB_DeviceApplicationInit(void);
 int
 main(void)
 {
+        /* 初始化内存保护单元 */
+        BOARD_ConfigMPU();
+        /* 初始化底板电源 */
+        board_init_power();
+        /* 初始化引脚 */
+        BOARD_InitPins();
+        /* 初始化开发板时钟 */
+        BOARD_BootClockRUN();
+        /* 初始化调试串口 */
+        BOARD_InitDebugConsole();
+        
+        /* 初始化状态LED灯 */
+        //board_init_led();
+        /* 初始化HyperFlash */
+        //board_init_hyperflash();
+        
+        /* 初始化LED引脚 */
+        //LED_GPIO_Config();
+        
+        /* 显示系统时钟信息 */
+        system_clock_info();
+        USB_DeviceApplicationInit();
+        while(1) {
+
+        }
+        /* 使GCC编译时不报错 */
+        board_init();
+        board_get_rtc_signature();
+        board_set_rtc_signature(0);
+        board_test_force_pin();
+
+#if 0
 	bool try_boot = true;			/* try booting before we drop to the bootloader */
 	unsigned timeout = BOOTLOADER_DELAY;	/* if nonzero, drop out of the bootloader after this time */
 
@@ -398,6 +410,7 @@ main(void)
 		/* launching the app failed - stay in the bootloader forever */
 		timeout = 0;
 	}
+#endif
 }
 
 void _start()

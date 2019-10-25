@@ -531,7 +531,7 @@ usb_status_t USB_DeviceCallback(usb_device_handle handle, uint32_t event, void *
  *
  * @return None.
  */
-void APPInit(void)
+void USB_DeviceApplicationInit(void)
 {
     USB_DeviceClockInit();
 #if (defined(FSL_FEATURE_SOC_SYSMPU_COUNT) && (FSL_FEATURE_SOC_SYSMPU_COUNT > 0U))
@@ -626,6 +626,29 @@ void APPTask(void)
         }
 #endif
     }
+}
+
+void usb_cinit(void)
+{
+
+}
+
+void
+usb_cfini(void)
+{
+
+
+}
+
+int usb_cin(void)
+{
+        return 0;
+}
+
+void
+usb_cout(uint8_t *buf, unsigned count)
+{
+
 }
 
 #if 0

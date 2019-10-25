@@ -1768,14 +1768,14 @@ ARM Macro Assembler    Page 28
               00000000 
               00000000 
               00000000 
-Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M7.fp.dp --apcs=
-interwork --depend=.\objects\startup_mimxrt1052.d -o.\objects\startup_mimxrt105
-2.o -IZ:\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE -IC:\
-Keil_v5\ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1 -IC:\Keil_v5\ARM\CMSIS\Include --pre
-define="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 515" --predefine
-="CPU_MIMXRT1052DVL6B SETA 1" --predefine="__STARTUP_INITIALIZE_NONCACHEDATA SE
-TA 1" --list=.\listings\startup_mimxrt1052.lst ..\..\devices\MIMXRT1052\arm\sta
-rtup_MIMXRT1052.s
+Command Line: --xref --diag_suppress=9931 --cpu=Cortex-M7.fp.dp --apcs=interwor
+k --depend=.\objects\startup_mimxrt1052.d -o.\objects\startup_mimxrt1052.o -IZ:
+\fc\Bootloader\lib\imxrt\sdk_2.4.1_mimxrt1052\boards\uavrs_v2\RTE -IC:\Keil_v5\
+ARM\PACK\NXP\MIMXRT1052_DFP\10.0.1 -IC:\Keil_v5\ARM\CMSIS\Include --predefine="
+__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 515" --predefine="CPU_MI
+MXRT1052DVL6B SETA 1" --predefine="__STARTUP_INITIALIZE_NONCACHEDATA SETA 1" --
+list=.\listings\startup_mimxrt1052.lst ..\..\devices\MIMXRT1052\arm\startup_MIM
+XRT1052.s
 
 
 

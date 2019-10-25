@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>Target 1</TargetName>
+      <TargetName>bootloader</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <TargetOption>
@@ -50,9 +50,9 @@
           <OutputName>uavrs_v2_bootloader</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>1</CreateHexFile>
-          <DebugInformation>1</DebugInformation>
-          <BrowseInformation>1</BrowseInformation>
+          <CreateHexFile>0</CreateHexFile>
+          <DebugInformation>0</DebugInformation>
+          <BrowseInformation>0</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -349,7 +349,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -367,9 +367,9 @@
             <v6LangP>0</v6LangP>
             <VariousControls>
               <MiscControls>--library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186,171</MiscControls>
-              <Define>TARGET_HW_UAVRS_V2,STM32F4,TOWER=0,FREEDOM=0,DEBUG=0,NDEBUG=1,RTE_USART0,RTE_USART0_DMA_EN,CPU_MIMXRT1052DVL6B,XIP_EXTERNAL_FLASH=1, XIP_BOOT_HEADER_ENABLE =1,XIP_BOOT_HEADER_DCD_ENABLE =1,PRINTF_FLOAT_ENABLE=1, SCANF_FLOAT_ENABLE=1, PRINTF_ADVANCED_ENABLE=1, SCANF_ADVANCED_ENABLE=1,CPU_IS_ARM_CORTEX_M7=1,USE_RAM_VECTOR_TABLE</Define>
+              <Define>USB_STACK_BM,TARGET_HW_UAVRS_V2,STM32F7,TOWER=0,FREEDOM=0,USB_STACK_BM,DEBUG=0,NDEBUG=1,RTE_USART0,RTE_USART0_DMA_EN,CPU_MIMXRT1052DVL6B,XIP_EXTERNAL_FLASH=1, XIP_BOOT_HEADER_ENABLE =1,XIP_BOOT_HEADER_DCD_ENABLE =1,PRINTF_FLOAT_ENABLE=1, SCANF_FLOAT_ENABLE=1, PRINTF_ADVANCED_ENABLE=1, SCANF_ADVANCED_ENABLE=1,CPU_IS_ARM_CORTEX_M7=1,USE_RAM_VECTOR_TABLE</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\..\..\Bootloader;..\..\CMSIS\Include;..\..\devices\MIMXRT1052;..\..\devices\MIMXRT1052\drivers;..\..\devices\MIMXRT1052\utilities;..\..\devices\MIMXRT1052\utilities\io;..\..\devices\MIMXRT1052\utilities\log;..\..\devices\MIMXRT1052\utilities\str;.\demo_apps\test;.\demo_apps\test\xip;.\demo_apps\test\bsp;..\..\..\..\..\libopencm3\include;..\..\..\..\..\imxrt</IncludePath>
+              <IncludePath>..\..\..\..\..\..\Bootloader;..\..\CMSIS\Include;..\..\devices\MIMXRT1052;..\..\devices\MIMXRT1052\drivers;..\..\devices\MIMXRT1052\utilities;..\..\devices\MIMXRT1052\utilities\io;..\..\devices\MIMXRT1052\utilities\log;..\..\devices\MIMXRT1052\utilities\str;.\demo_apps\test;.\demo_apps\test\xip;.\demo_apps\test\bsp;..\..\..\..\..\libopencm3\include;..\..\..\..\..\imxrt;..\..\middleware\usb;..\..\middleware\usb\phy;..\..\middleware\usb\include;..\..\middleware\usb\osa;..\..\middleware\usb\device;..\evkbimxrt1050\usb_examples\usb_device_cdc_vcom\bm</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -411,7 +411,82 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
+          <GroupName>user</GroupName>
+          <Files>
+            <File>
+              <FileName>main_imxrt1052.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\main_imxrt1052.c</FilePath>
+            </File>
+            <File>
+              <FileName>bl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\bl.c</FilePath>
+            </File>
+            <File>
+              <FileName>imxrt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\imxrt.c</FilePath>
+            </File>
+            <File>
+              <FileName>cdcacm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\imxrt\cdcacm.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\imxrt\usart.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usb</GroupName>
+          <Files>
+            <File>
+              <FileName>usb_device_cdc_acm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\evkbimxrt1050\usb_examples\usb_device_cdc_vcom\bm\usb_device_cdc_acm.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_device_ch9.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\evkbimxrt1050\usb_examples\usb_device_cdc_vcom\bm\usb_device_ch9.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_device_class.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\evkbimxrt1050\usb_examples\usb_device_cdc_vcom\bm\usb_device_class.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_device_descriptor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\evkbimxrt1050\usb_examples\usb_device_cdc_vcom\bm\usb_device_descriptor.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_device_ehci.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\middleware\usb\device\usb_device_ehci.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_device_dci.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\middleware\usb\device\usb_device_dci.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_osa_bm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\middleware\usb\osa\usb_osa_bm.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_phy.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\middleware\usb\phy\usb_phy.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>bsp</GroupName>
           <Files>
             <File>
               <FileName>startup_MIMXRT1052.s</FileName>
@@ -522,16 +597,6 @@
               <FileName>bsp_led.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\demo_apps\test\bsp\led\bsp_led.c</FilePath>
-            </File>
-            <File>
-              <FileName>main_imxrt1052.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\main_imxrt1052.c</FilePath>
-            </File>
-            <File>
-              <FileName>bl.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\bl.c</FilePath>
             </File>
           </Files>
         </Group>

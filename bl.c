@@ -161,14 +161,16 @@ inline void cinit(void *config, uint8_t interface)
 #if INTERFACE_USB
 
 	if (interface == USB) {
-		return usb_cinit();
+		//return usb_cinit();
+		usb_cinit();
 	}
 
 #endif
 #if INTERFACE_USART
 
 	if (interface == USART) {
-		return uart_cinit(config);
+		//return uart_cinit(config);
+		uart_cinit(config);
 	}
 
 #endif
@@ -269,10 +271,10 @@ buf_get(void)
 static void
 do_jump(uint32_t stacktop, uint32_t entrypoint)
 {
-	asm volatile(
-		"msr msp, %0	\n"
-		"bx	%1	\n"
-		: : "r"(stacktop), "r"(entrypoint) :);
+//	asm volatile(
+//		"msr msp, %0	\n"
+//		"bx	%1	\n"
+//		: : "r"(stacktop), "r"(entrypoint) :);
 
 	// just to keep noreturn happy
 	for (;;) ;
