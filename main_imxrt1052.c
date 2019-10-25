@@ -258,7 +258,7 @@ main(void)
         system_clock_info();
         USB_DeviceApplicationInit();
         while(1) {
-
+                //USB_DeviceCdcAcmSend(s_cdcVcom.cdcAcmHandle, USB_CDC_VCOM_BULK_IN_ENDPOINT, NULL, 0);
         }
         /* 使GCC编译时不报错 */
         board_init();

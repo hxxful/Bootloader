@@ -1308,151 +1308,151 @@ Image Symbol Table
     i.USB_DeviceCdcAcmRecv                   0x000033c0   Section        0  usb_device_cdc_acm.o(i.USB_DeviceCdcAcmRecv)
     i.USB_DeviceCdcAcmSend                   0x00003424   Section        0  usb_device_cdc_acm.o(i.USB_DeviceCdcAcmSend)
     i.USB_DeviceCdcVcomCallback              0x000034ac   Section        0  cdcacm.o(i.USB_DeviceCdcVcomCallback)
-    i.USB_DeviceCh9GetConfiguration          0x00003720   Section        0  usb_device_ch9.o(i.USB_DeviceCh9GetConfiguration)
-    USB_DeviceCh9GetConfiguration            0x00003721   Thumb Code    62  usb_device_ch9.o(i.USB_DeviceCh9GetConfiguration)
-    i.USB_DeviceCh9GetDescriptor             0x0000375e   Section        0  usb_device_ch9.o(i.USB_DeviceCh9GetDescriptor)
-    USB_DeviceCh9GetDescriptor               0x0000375f   Thumb Code   148  usb_device_ch9.o(i.USB_DeviceCh9GetDescriptor)
-    i.USB_DeviceCh9GetInterface              0x000037f2   Section        0  usb_device_ch9.o(i.USB_DeviceCh9GetInterface)
-    USB_DeviceCh9GetInterface                0x000037f3   Thumb Code    76  usb_device_ch9.o(i.USB_DeviceCh9GetInterface)
-    i.USB_DeviceCh9GetStatus                 0x0000383e   Section        0  usb_device_ch9.o(i.USB_DeviceCh9GetStatus)
-    USB_DeviceCh9GetStatus                   0x0000383f   Thumb Code   174  usb_device_ch9.o(i.USB_DeviceCh9GetStatus)
-    i.USB_DeviceCh9SetAddress                0x000038ec   Section        0  usb_device_ch9.o(i.USB_DeviceCh9SetAddress)
-    USB_DeviceCh9SetAddress                  0x000038ed   Thumb Code   120  usb_device_ch9.o(i.USB_DeviceCh9SetAddress)
-    i.USB_DeviceCh9SetClearFeature           0x00003964   Section        0  usb_device_ch9.o(i.USB_DeviceCh9SetClearFeature)
-    USB_DeviceCh9SetClearFeature             0x00003965   Thumb Code   168  usb_device_ch9.o(i.USB_DeviceCh9SetClearFeature)
-    i.USB_DeviceCh9SetConfiguration          0x00003a0c   Section        0  usb_device_ch9.o(i.USB_DeviceCh9SetConfiguration)
-    USB_DeviceCh9SetConfiguration            0x00003a0d   Thumb Code    92  usb_device_ch9.o(i.USB_DeviceCh9SetConfiguration)
-    i.USB_DeviceCh9SetInterface              0x00003a68   Section        0  usb_device_ch9.o(i.USB_DeviceCh9SetInterface)
-    USB_DeviceCh9SetInterface                0x00003a69   Thumb Code    66  usb_device_ch9.o(i.USB_DeviceCh9SetInterface)
-    i.USB_DeviceCh9SynchFrame                0x00003aaa   Section        0  usb_device_ch9.o(i.USB_DeviceCh9SynchFrame)
-    USB_DeviceCh9SynchFrame                  0x00003aab   Thumb Code    70  usb_device_ch9.o(i.USB_DeviceCh9SynchFrame)
-    i.USB_DeviceClassAllocateHandle          0x00003af0   Section        0  usb_device_class.o(i.USB_DeviceClassAllocateHandle)
-    USB_DeviceClassAllocateHandle            0x00003af1   Thumb Code   124  usb_device_class.o(i.USB_DeviceClassAllocateHandle)
-    i.USB_DeviceClassCallback                0x00003b74   Section        0  usb_device_class.o(i.USB_DeviceClassCallback)
-    i.USB_DeviceClassEvent                   0x00003bb8   Section        0  usb_device_class.o(i.USB_DeviceClassEvent)
-    i.USB_DeviceClassFreeHandle              0x00003c54   Section        0  usb_device_class.o(i.USB_DeviceClassFreeHandle)
-    USB_DeviceClassFreeHandle                0x00003c55   Thumb Code    88  usb_device_class.o(i.USB_DeviceClassFreeHandle)
-    i.USB_DeviceClassGetDeviceHandle         0x00003cb0   Section        0  usb_device_class.o(i.USB_DeviceClassGetDeviceHandle)
-    i.USB_DeviceClassGetHandleByControllerId 0x00003d00   Section        0  usb_device_class.o(i.USB_DeviceClassGetHandleByControllerId)
-    USB_DeviceClassGetHandleByControllerId   0x00003d01   Thumb Code    72  usb_device_class.o(i.USB_DeviceClassGetHandleByControllerId)
-    i.USB_DeviceClassGetHandleByDeviceHandle 0x00003d4c   Section        0  usb_device_class.o(i.USB_DeviceClassGetHandleByDeviceHandle)
-    USB_DeviceClassGetHandleByDeviceHandle   0x00003d4d   Thumb Code    62  usb_device_class.o(i.USB_DeviceClassGetHandleByDeviceHandle)
-    i.USB_DeviceClassGetSpeed                0x00003d90   Section        0  usb_device_class.o(i.USB_DeviceClassGetSpeed)
-    i.USB_DeviceClassInit                    0x00003dbc   Section        0  usb_device_class.o(i.USB_DeviceClassInit)
-    i.USB_DeviceClockInit                    0x00003e8c   Section        0  cdcacm.o(i.USB_DeviceClockInit)
-    i.USB_DeviceControl                      0x00003ebc   Section        0  usb_device_dci.o(i.USB_DeviceControl)
-    USB_DeviceControl                        0x00003ebd   Thumb Code    52  usb_device_dci.o(i.USB_DeviceControl)
-    i.USB_DeviceControlCallback              0x00003ef0   Section        0  usb_device_ch9.o(i.USB_DeviceControlCallback)
-    i.USB_DeviceControlCallbackFeedback      0x00004124   Section        0  usb_device_ch9.o(i.USB_DeviceControlCallbackFeedback)
-    USB_DeviceControlCallbackFeedback        0x00004125   Thumb Code   132  usb_device_ch9.o(i.USB_DeviceControlCallbackFeedback)
-    i.USB_DeviceControlPipeInit              0x000041a8   Section        0  usb_device_ch9.o(i.USB_DeviceControlPipeInit)
-    i.USB_DeviceDeinit                       0x0000420c   Section        0  usb_device_dci.o(i.USB_DeviceDeinit)
-    i.USB_DeviceDeinitEndpoint               0x00004232   Section        0  usb_device_dci.o(i.USB_DeviceDeinitEndpoint)
-    i.USB_DeviceEhciCancel                   0x000042aa   Section        0  usb_device_ehci.o(i.USB_DeviceEhciCancel)
-    i.USB_DeviceEhciCancelControlPipe        0x00004414   Section        0  usb_device_ehci.o(i.USB_DeviceEhciCancelControlPipe)
-    USB_DeviceEhciCancelControlPipe          0x00004415   Thumb Code   258  usb_device_ehci.o(i.USB_DeviceEhciCancelControlPipe)
-    i.USB_DeviceEhciControl                  0x00004516   Section        0  usb_device_ehci.o(i.USB_DeviceEhciControl)
-    i.USB_DeviceEhciDeinit                   0x0000468a   Section        0  usb_device_ehci.o(i.USB_DeviceEhciDeinit)
-    i.USB_DeviceEhciEndpointDeinit           0x000046c0   Section        0  usb_device_ehci.o(i.USB_DeviceEhciEndpointDeinit)
-    USB_DeviceEhciEndpointDeinit             0x000046c1   Thumb Code   162  usb_device_ehci.o(i.USB_DeviceEhciEndpointDeinit)
-    i.USB_DeviceEhciEndpointInit             0x00004762   Section        0  usb_device_ehci.o(i.USB_DeviceEhciEndpointInit)
-    USB_DeviceEhciEndpointInit               0x00004763   Thumb Code   358  usb_device_ehci.o(i.USB_DeviceEhciEndpointInit)
-    i.USB_DeviceEhciEndpointStall            0x000048c8   Section        0  usb_device_ehci.o(i.USB_DeviceEhciEndpointStall)
-    USB_DeviceEhciEndpointStall              0x000048c9   Thumb Code   158  usb_device_ehci.o(i.USB_DeviceEhciEndpointStall)
-    i.USB_DeviceEhciEndpointUnstall          0x00004966   Section        0  usb_device_ehci.o(i.USB_DeviceEhciEndpointUnstall)
-    USB_DeviceEhciEndpointUnstall            0x00004967   Thumb Code   128  usb_device_ehci.o(i.USB_DeviceEhciEndpointUnstall)
-    i.USB_DeviceEhciFillSetupBuffer          0x000049e6   Section        0  usb_device_ehci.o(i.USB_DeviceEhciFillSetupBuffer)
-    USB_DeviceEhciFillSetupBuffer            0x000049e7   Thumb Code   126  usb_device_ehci.o(i.USB_DeviceEhciFillSetupBuffer)
-    i.USB_DeviceEhciInit                     0x00004a64   Section        0  usb_device_ehci.o(i.USB_DeviceEhciInit)
-    i.USB_DeviceEhciInterruptPortChange      0x00004b10   Section        0  usb_device_ehci.o(i.USB_DeviceEhciInterruptPortChange)
-    USB_DeviceEhciInterruptPortChange        0x00004b11   Thumb Code    80  usb_device_ehci.o(i.USB_DeviceEhciInterruptPortChange)
-    i.USB_DeviceEhciInterruptReset           0x00004b60   Section        0  usb_device_ehci.o(i.USB_DeviceEhciInterruptReset)
-    USB_DeviceEhciInterruptReset             0x00004b61   Thumb Code   106  usb_device_ehci.o(i.USB_DeviceEhciInterruptReset)
-    i.USB_DeviceEhciInterruptSof             0x00004bca   Section        0  usb_device_ehci.o(i.USB_DeviceEhciInterruptSof)
-    USB_DeviceEhciInterruptSof               0x00004bcb   Thumb Code     2  usb_device_ehci.o(i.USB_DeviceEhciInterruptSof)
-    i.USB_DeviceEhciInterruptTokenDone       0x00004bcc   Section        0  usb_device_ehci.o(i.USB_DeviceEhciInterruptTokenDone)
-    USB_DeviceEhciInterruptTokenDone         0x00004bcd   Thumb Code   648  usb_device_ehci.o(i.USB_DeviceEhciInterruptTokenDone)
-    i.USB_DeviceEhciIsrFunction              0x00004e54   Section        0  usb_device_ehci.o(i.USB_DeviceEhciIsrFunction)
-    i.USB_DeviceEhciRecv                     0x00004eac   Section        0  usb_device_ehci.o(i.USB_DeviceEhciRecv)
-    i.USB_DeviceEhciSend                     0x00004eca   Section        0  usb_device_ehci.o(i.USB_DeviceEhciSend)
-    i.USB_DeviceEhciSetDefaultState          0x00004eec   Section        0  usb_device_ehci.o(i.USB_DeviceEhciSetDefaultState)
-    USB_DeviceEhciSetDefaultState            0x00004eed   Thumb Code   198  usb_device_ehci.o(i.USB_DeviceEhciSetDefaultState)
-    i.USB_DeviceEhciTransfer                 0x00004fb2   Section        0  usb_device_ehci.o(i.USB_DeviceEhciTransfer)
-    USB_DeviceEhciTransfer                   0x00004fb3   Thumb Code   528  usb_device_ehci.o(i.USB_DeviceEhciTransfer)
-    i.USB_DeviceFreeHandle                   0x000051c2   Section        0  usb_device_dci.o(i.USB_DeviceFreeHandle)
-    USB_DeviceFreeHandle                     0x000051c3   Thumb Code    28  usb_device_dci.o(i.USB_DeviceFreeHandle)
-    i.USB_DeviceGetConfigurationDescriptor   0x000051e0   Section        0  usb_device_descriptor.o(i.USB_DeviceGetConfigurationDescriptor)
-    i.USB_DeviceGetControllerInterface       0x000051fc   Section        0  usb_device_dci.o(i.USB_DeviceGetControllerInterface)
-    USB_DeviceGetControllerInterface         0x000051fd   Thumb Code    30  usb_device_dci.o(i.USB_DeviceGetControllerInterface)
-    i.USB_DeviceGetDeviceDescriptor          0x00005220   Section        0  usb_device_descriptor.o(i.USB_DeviceGetDeviceDescriptor)
-    i.USB_DeviceGetStatus                    0x00005234   Section        0  usb_device_dci.o(i.USB_DeviceGetStatus)
-    i.USB_DeviceGetStringDescriptor          0x000052c8   Section        0  usb_device_descriptor.o(i.USB_DeviceGetStringDescriptor)
-    i.USB_DeviceInit                         0x00005344   Section        0  usb_device_dci.o(i.USB_DeviceInit)
-    i.USB_DeviceInitEndpoint                 0x0000544a   Section        0  usb_device_dci.o(i.USB_DeviceInitEndpoint)
-    i.USB_DeviceIsrEnable                    0x000054c8   Section        0  cdcacm.o(i.USB_DeviceIsrEnable)
-    i.USB_DeviceNotification                 0x0000552c   Section        0  usb_device_dci.o(i.USB_DeviceNotification)
-    USB_DeviceNotification                   0x0000552d   Thumb Code   172  usb_device_dci.o(i.USB_DeviceNotification)
-    i.USB_DeviceNotificationTrigger          0x000055d8   Section        0  usb_device_dci.o(i.USB_DeviceNotificationTrigger)
-    i.USB_DeviceRecvRequest                  0x00005600   Section        0  usb_device_dci.o(i.USB_DeviceRecvRequest)
-    i.USB_DeviceResetNotification            0x0000561e   Section        0  usb_device_dci.o(i.USB_DeviceResetNotification)
-    USB_DeviceResetNotification              0x0000561f   Thumb Code   100  usb_device_dci.o(i.USB_DeviceResetNotification)
-    i.USB_DeviceRun                          0x00005682   Section        0  usb_device_dci.o(i.USB_DeviceRun)
-    i.USB_DeviceSendRequest                  0x00005692   Section        0  usb_device_dci.o(i.USB_DeviceSendRequest)
-    i.USB_DeviceSetSpeed                     0x000056b4   Section        0  usb_device_descriptor.o(i.USB_DeviceSetSpeed)
-    i.USB_DeviceSetStatus                    0x00005814   Section        0  usb_device_dci.o(i.USB_DeviceSetStatus)
-    i.USB_DeviceStallEndpoint                0x000058bc   Section        0  usb_device_dci.o(i.USB_DeviceStallEndpoint)
-    i.USB_DeviceTransfer                     0x000058dc   Section        0  usb_device_dci.o(i.USB_DeviceTransfer)
-    USB_DeviceTransfer                       0x000058dd   Thumb Code   194  usb_device_dci.o(i.USB_DeviceTransfer)
-    i.USB_DeviceUnstallEndpoint              0x0000599e   Section        0  usb_device_dci.o(i.USB_DeviceUnstallEndpoint)
-    i.USB_EhciPhyGetBase                     0x000059c0   Section        0  usb_phy.o(i.USB_EhciPhyGetBase)
-    i.USB_EhciPhyInit                        0x00005a20   Section        0  usb_phy.o(i.USB_EhciPhyInit)
-    i.USB_OTG1_IRQHandler                    0x00005a90   Section        0  cdcacm.o(i.USB_OTG1_IRQHandler)
-    i.USB_OTG2_IRQHandler                    0x00005aa0   Section        0  cdcacm.o(i.USB_OTG2_IRQHandler)
-    i.USB_OsaEnterCritical                   0x00005ab0   Section        0  usb_osa_bm.o(i.USB_OsaEnterCritical)
-    i.USB_OsaExitCritical                    0x00005ac4   Section        0  usb_osa_bm.o(i.USB_OsaExitCritical)
-    i.USB_OsaMutexCreate                     0x00005ad4   Section        0  usb_osa_bm.o(i.USB_OsaMutexCreate)
-    i.USB_OsaMutexDestroy                    0x00005ae8   Section        0  usb_osa_bm.o(i.USB_OsaMutexDestroy)
-    i.__ARM_fpclassify                       0x00005aee   Section        0  fpclassify.o(i.__ARM_fpclassify)
-    i.__hardfp_modf                          0x00005b20   Section        0  modf.o(i.__hardfp_modf)
-    i.__hardfp_pow                           0x00005be0   Section        0  pow.o(i.__hardfp_pow)
-    i.__kernel_poly                          0x000064b8   Section        0  poly.o(i.__kernel_poly)
-    i.__mathlib_dbl_divzero                  0x00006528   Section        0  dunder.o(i.__mathlib_dbl_divzero)
-    i.__mathlib_dbl_infnan2                  0x00006548   Section        0  dunder.o(i.__mathlib_dbl_infnan2)
-    i.__mathlib_dbl_invalid                  0x00006550   Section        0  dunder.o(i.__mathlib_dbl_invalid)
-    i.__mathlib_dbl_overflow                 0x00006568   Section        0  dunder.o(i.__mathlib_dbl_overflow)
-    i.__mathlib_dbl_underflow                0x00006580   Section        0  dunder.o(i.__mathlib_dbl_underflow)
-    i.__set_errno                            0x00006598   Section        0  errno.o(i.__set_errno)
-    i.board_init_power                       0x000065a4   Section        0  board.o(i.board_init_power)
-    i.fabs                                   0x000065f4   Section        0  fabs.o(i.fabs)
-    i.main                                   0x0000660c   Section        0  main_imxrt1052.o(i.main)
-    i.sqrt                                   0x0000662c   Section        0  sqrt.o(i.sqrt)
-    i.system_clock_info                      0x00006698   Section        0  board.o(i.system_clock_info)
-    .constdata                               0x0000682c   Section        3  cdcacm.o(.constdata)
-    .constdata                               0x00006830   Section       52  usb_device_ch9.o(.constdata)
-    s_UsbDeviceStandardRequest               0x00006830   Data          52  usb_device_ch9.o(.constdata)
-    .constdata                               0x00006864   Section       32  usb_device_class.o(.constdata)
-    s_UsbDeviceClassInterfaceMap             0x00006864   Data          32  usb_device_class.o(.constdata)
-    .constdata                               0x00006884   Section        8  usb_device_ehci.o(.constdata)
-    .constdata                               0x0000688c   Section       24  usb_device_dci.o(.constdata)
-    s_UsbDeviceEhciInterface                 0x0000688c   Data          24  usb_device_dci.o(.constdata)
-    .constdata                               0x000068a4   Section       24  usb_phy.o(.constdata)
-    .constdata                               0x000068bc   Section       16  fsl_clock.o(.constdata)
-    .constdata                               0x000068cc   Section       36  fsl_gpio.o(.constdata)
-    s_gpioBases                              0x000068cc   Data          24  fsl_gpio.o(.constdata)
-    s_gpioClock                              0x000068e4   Data          12  fsl_gpio.o(.constdata)
-    .constdata                               0x000068f0   Section       72  fsl_lpuart.o(.constdata)
-    s_lpuartBases                            0x000068f0   Data          36  fsl_lpuart.o(.constdata)
-    s_lpuartIRQ                              0x00006914   Data          18  fsl_lpuart.o(.constdata)
-    s_lpuartClock                            0x00006926   Data          18  fsl_lpuart.o(.constdata)
-    .constdata                               0x00006938   Section       26  clock_config.o(.constdata)
-    .constdata                               0x00006958   Section      136  pow.o(.constdata)
-    bp                                       0x00006958   Data          16  pow.o(.constdata)
-    dp_h                                     0x00006968   Data          16  pow.o(.constdata)
-    dp_l                                     0x00006978   Data          16  pow.o(.constdata)
-    L                                        0x00006988   Data          48  pow.o(.constdata)
-    P                                        0x000069b8   Data          40  pow.o(.constdata)
-    .constdata                               0x000069e0   Section        8  qnan.o(.constdata)
-    .conststring                             0x000069e8   Section      137  usb_device_cdc_acm.o(.conststring)
+    i.USB_DeviceCh9GetConfiguration          0x00003748   Section        0  usb_device_ch9.o(i.USB_DeviceCh9GetConfiguration)
+    USB_DeviceCh9GetConfiguration            0x00003749   Thumb Code    62  usb_device_ch9.o(i.USB_DeviceCh9GetConfiguration)
+    i.USB_DeviceCh9GetDescriptor             0x00003786   Section        0  usb_device_ch9.o(i.USB_DeviceCh9GetDescriptor)
+    USB_DeviceCh9GetDescriptor               0x00003787   Thumb Code   148  usb_device_ch9.o(i.USB_DeviceCh9GetDescriptor)
+    i.USB_DeviceCh9GetInterface              0x0000381a   Section        0  usb_device_ch9.o(i.USB_DeviceCh9GetInterface)
+    USB_DeviceCh9GetInterface                0x0000381b   Thumb Code    76  usb_device_ch9.o(i.USB_DeviceCh9GetInterface)
+    i.USB_DeviceCh9GetStatus                 0x00003866   Section        0  usb_device_ch9.o(i.USB_DeviceCh9GetStatus)
+    USB_DeviceCh9GetStatus                   0x00003867   Thumb Code   174  usb_device_ch9.o(i.USB_DeviceCh9GetStatus)
+    i.USB_DeviceCh9SetAddress                0x00003914   Section        0  usb_device_ch9.o(i.USB_DeviceCh9SetAddress)
+    USB_DeviceCh9SetAddress                  0x00003915   Thumb Code   120  usb_device_ch9.o(i.USB_DeviceCh9SetAddress)
+    i.USB_DeviceCh9SetClearFeature           0x0000398c   Section        0  usb_device_ch9.o(i.USB_DeviceCh9SetClearFeature)
+    USB_DeviceCh9SetClearFeature             0x0000398d   Thumb Code   168  usb_device_ch9.o(i.USB_DeviceCh9SetClearFeature)
+    i.USB_DeviceCh9SetConfiguration          0x00003a34   Section        0  usb_device_ch9.o(i.USB_DeviceCh9SetConfiguration)
+    USB_DeviceCh9SetConfiguration            0x00003a35   Thumb Code    92  usb_device_ch9.o(i.USB_DeviceCh9SetConfiguration)
+    i.USB_DeviceCh9SetInterface              0x00003a90   Section        0  usb_device_ch9.o(i.USB_DeviceCh9SetInterface)
+    USB_DeviceCh9SetInterface                0x00003a91   Thumb Code    66  usb_device_ch9.o(i.USB_DeviceCh9SetInterface)
+    i.USB_DeviceCh9SynchFrame                0x00003ad2   Section        0  usb_device_ch9.o(i.USB_DeviceCh9SynchFrame)
+    USB_DeviceCh9SynchFrame                  0x00003ad3   Thumb Code    70  usb_device_ch9.o(i.USB_DeviceCh9SynchFrame)
+    i.USB_DeviceClassAllocateHandle          0x00003b18   Section        0  usb_device_class.o(i.USB_DeviceClassAllocateHandle)
+    USB_DeviceClassAllocateHandle            0x00003b19   Thumb Code   124  usb_device_class.o(i.USB_DeviceClassAllocateHandle)
+    i.USB_DeviceClassCallback                0x00003b9c   Section        0  usb_device_class.o(i.USB_DeviceClassCallback)
+    i.USB_DeviceClassEvent                   0x00003be0   Section        0  usb_device_class.o(i.USB_DeviceClassEvent)
+    i.USB_DeviceClassFreeHandle              0x00003c7c   Section        0  usb_device_class.o(i.USB_DeviceClassFreeHandle)
+    USB_DeviceClassFreeHandle                0x00003c7d   Thumb Code    88  usb_device_class.o(i.USB_DeviceClassFreeHandle)
+    i.USB_DeviceClassGetDeviceHandle         0x00003cd8   Section        0  usb_device_class.o(i.USB_DeviceClassGetDeviceHandle)
+    i.USB_DeviceClassGetHandleByControllerId 0x00003d28   Section        0  usb_device_class.o(i.USB_DeviceClassGetHandleByControllerId)
+    USB_DeviceClassGetHandleByControllerId   0x00003d29   Thumb Code    72  usb_device_class.o(i.USB_DeviceClassGetHandleByControllerId)
+    i.USB_DeviceClassGetHandleByDeviceHandle 0x00003d74   Section        0  usb_device_class.o(i.USB_DeviceClassGetHandleByDeviceHandle)
+    USB_DeviceClassGetHandleByDeviceHandle   0x00003d75   Thumb Code    62  usb_device_class.o(i.USB_DeviceClassGetHandleByDeviceHandle)
+    i.USB_DeviceClassGetSpeed                0x00003db8   Section        0  usb_device_class.o(i.USB_DeviceClassGetSpeed)
+    i.USB_DeviceClassInit                    0x00003de4   Section        0  usb_device_class.o(i.USB_DeviceClassInit)
+    i.USB_DeviceClockInit                    0x00003eb4   Section        0  cdcacm.o(i.USB_DeviceClockInit)
+    i.USB_DeviceControl                      0x00003ee4   Section        0  usb_device_dci.o(i.USB_DeviceControl)
+    USB_DeviceControl                        0x00003ee5   Thumb Code    52  usb_device_dci.o(i.USB_DeviceControl)
+    i.USB_DeviceControlCallback              0x00003f18   Section        0  usb_device_ch9.o(i.USB_DeviceControlCallback)
+    i.USB_DeviceControlCallbackFeedback      0x0000414c   Section        0  usb_device_ch9.o(i.USB_DeviceControlCallbackFeedback)
+    USB_DeviceControlCallbackFeedback        0x0000414d   Thumb Code   132  usb_device_ch9.o(i.USB_DeviceControlCallbackFeedback)
+    i.USB_DeviceControlPipeInit              0x000041d0   Section        0  usb_device_ch9.o(i.USB_DeviceControlPipeInit)
+    i.USB_DeviceDeinit                       0x00004234   Section        0  usb_device_dci.o(i.USB_DeviceDeinit)
+    i.USB_DeviceDeinitEndpoint               0x0000425a   Section        0  usb_device_dci.o(i.USB_DeviceDeinitEndpoint)
+    i.USB_DeviceEhciCancel                   0x000042d2   Section        0  usb_device_ehci.o(i.USB_DeviceEhciCancel)
+    i.USB_DeviceEhciCancelControlPipe        0x0000443c   Section        0  usb_device_ehci.o(i.USB_DeviceEhciCancelControlPipe)
+    USB_DeviceEhciCancelControlPipe          0x0000443d   Thumb Code   258  usb_device_ehci.o(i.USB_DeviceEhciCancelControlPipe)
+    i.USB_DeviceEhciControl                  0x0000453e   Section        0  usb_device_ehci.o(i.USB_DeviceEhciControl)
+    i.USB_DeviceEhciDeinit                   0x000046b2   Section        0  usb_device_ehci.o(i.USB_DeviceEhciDeinit)
+    i.USB_DeviceEhciEndpointDeinit           0x000046e8   Section        0  usb_device_ehci.o(i.USB_DeviceEhciEndpointDeinit)
+    USB_DeviceEhciEndpointDeinit             0x000046e9   Thumb Code   162  usb_device_ehci.o(i.USB_DeviceEhciEndpointDeinit)
+    i.USB_DeviceEhciEndpointInit             0x0000478a   Section        0  usb_device_ehci.o(i.USB_DeviceEhciEndpointInit)
+    USB_DeviceEhciEndpointInit               0x0000478b   Thumb Code   358  usb_device_ehci.o(i.USB_DeviceEhciEndpointInit)
+    i.USB_DeviceEhciEndpointStall            0x000048f0   Section        0  usb_device_ehci.o(i.USB_DeviceEhciEndpointStall)
+    USB_DeviceEhciEndpointStall              0x000048f1   Thumb Code   158  usb_device_ehci.o(i.USB_DeviceEhciEndpointStall)
+    i.USB_DeviceEhciEndpointUnstall          0x0000498e   Section        0  usb_device_ehci.o(i.USB_DeviceEhciEndpointUnstall)
+    USB_DeviceEhciEndpointUnstall            0x0000498f   Thumb Code   128  usb_device_ehci.o(i.USB_DeviceEhciEndpointUnstall)
+    i.USB_DeviceEhciFillSetupBuffer          0x00004a0e   Section        0  usb_device_ehci.o(i.USB_DeviceEhciFillSetupBuffer)
+    USB_DeviceEhciFillSetupBuffer            0x00004a0f   Thumb Code   126  usb_device_ehci.o(i.USB_DeviceEhciFillSetupBuffer)
+    i.USB_DeviceEhciInit                     0x00004a8c   Section        0  usb_device_ehci.o(i.USB_DeviceEhciInit)
+    i.USB_DeviceEhciInterruptPortChange      0x00004b38   Section        0  usb_device_ehci.o(i.USB_DeviceEhciInterruptPortChange)
+    USB_DeviceEhciInterruptPortChange        0x00004b39   Thumb Code    80  usb_device_ehci.o(i.USB_DeviceEhciInterruptPortChange)
+    i.USB_DeviceEhciInterruptReset           0x00004b88   Section        0  usb_device_ehci.o(i.USB_DeviceEhciInterruptReset)
+    USB_DeviceEhciInterruptReset             0x00004b89   Thumb Code   106  usb_device_ehci.o(i.USB_DeviceEhciInterruptReset)
+    i.USB_DeviceEhciInterruptSof             0x00004bf2   Section        0  usb_device_ehci.o(i.USB_DeviceEhciInterruptSof)
+    USB_DeviceEhciInterruptSof               0x00004bf3   Thumb Code     2  usb_device_ehci.o(i.USB_DeviceEhciInterruptSof)
+    i.USB_DeviceEhciInterruptTokenDone       0x00004bf4   Section        0  usb_device_ehci.o(i.USB_DeviceEhciInterruptTokenDone)
+    USB_DeviceEhciInterruptTokenDone         0x00004bf5   Thumb Code   648  usb_device_ehci.o(i.USB_DeviceEhciInterruptTokenDone)
+    i.USB_DeviceEhciIsrFunction              0x00004e7c   Section        0  usb_device_ehci.o(i.USB_DeviceEhciIsrFunction)
+    i.USB_DeviceEhciRecv                     0x00004ed4   Section        0  usb_device_ehci.o(i.USB_DeviceEhciRecv)
+    i.USB_DeviceEhciSend                     0x00004ef2   Section        0  usb_device_ehci.o(i.USB_DeviceEhciSend)
+    i.USB_DeviceEhciSetDefaultState          0x00004f14   Section        0  usb_device_ehci.o(i.USB_DeviceEhciSetDefaultState)
+    USB_DeviceEhciSetDefaultState            0x00004f15   Thumb Code   198  usb_device_ehci.o(i.USB_DeviceEhciSetDefaultState)
+    i.USB_DeviceEhciTransfer                 0x00004fda   Section        0  usb_device_ehci.o(i.USB_DeviceEhciTransfer)
+    USB_DeviceEhciTransfer                   0x00004fdb   Thumb Code   528  usb_device_ehci.o(i.USB_DeviceEhciTransfer)
+    i.USB_DeviceFreeHandle                   0x000051ea   Section        0  usb_device_dci.o(i.USB_DeviceFreeHandle)
+    USB_DeviceFreeHandle                     0x000051eb   Thumb Code    28  usb_device_dci.o(i.USB_DeviceFreeHandle)
+    i.USB_DeviceGetConfigurationDescriptor   0x00005208   Section        0  usb_device_descriptor.o(i.USB_DeviceGetConfigurationDescriptor)
+    i.USB_DeviceGetControllerInterface       0x00005224   Section        0  usb_device_dci.o(i.USB_DeviceGetControllerInterface)
+    USB_DeviceGetControllerInterface         0x00005225   Thumb Code    30  usb_device_dci.o(i.USB_DeviceGetControllerInterface)
+    i.USB_DeviceGetDeviceDescriptor          0x00005248   Section        0  usb_device_descriptor.o(i.USB_DeviceGetDeviceDescriptor)
+    i.USB_DeviceGetStatus                    0x0000525c   Section        0  usb_device_dci.o(i.USB_DeviceGetStatus)
+    i.USB_DeviceGetStringDescriptor          0x000052f0   Section        0  usb_device_descriptor.o(i.USB_DeviceGetStringDescriptor)
+    i.USB_DeviceInit                         0x0000536c   Section        0  usb_device_dci.o(i.USB_DeviceInit)
+    i.USB_DeviceInitEndpoint                 0x00005472   Section        0  usb_device_dci.o(i.USB_DeviceInitEndpoint)
+    i.USB_DeviceIsrEnable                    0x000054f0   Section        0  cdcacm.o(i.USB_DeviceIsrEnable)
+    i.USB_DeviceNotification                 0x00005554   Section        0  usb_device_dci.o(i.USB_DeviceNotification)
+    USB_DeviceNotification                   0x00005555   Thumb Code   172  usb_device_dci.o(i.USB_DeviceNotification)
+    i.USB_DeviceNotificationTrigger          0x00005600   Section        0  usb_device_dci.o(i.USB_DeviceNotificationTrigger)
+    i.USB_DeviceRecvRequest                  0x00005628   Section        0  usb_device_dci.o(i.USB_DeviceRecvRequest)
+    i.USB_DeviceResetNotification            0x00005646   Section        0  usb_device_dci.o(i.USB_DeviceResetNotification)
+    USB_DeviceResetNotification              0x00005647   Thumb Code   100  usb_device_dci.o(i.USB_DeviceResetNotification)
+    i.USB_DeviceRun                          0x000056aa   Section        0  usb_device_dci.o(i.USB_DeviceRun)
+    i.USB_DeviceSendRequest                  0x000056ba   Section        0  usb_device_dci.o(i.USB_DeviceSendRequest)
+    i.USB_DeviceSetSpeed                     0x000056dc   Section        0  usb_device_descriptor.o(i.USB_DeviceSetSpeed)
+    i.USB_DeviceSetStatus                    0x0000583c   Section        0  usb_device_dci.o(i.USB_DeviceSetStatus)
+    i.USB_DeviceStallEndpoint                0x000058e4   Section        0  usb_device_dci.o(i.USB_DeviceStallEndpoint)
+    i.USB_DeviceTransfer                     0x00005904   Section        0  usb_device_dci.o(i.USB_DeviceTransfer)
+    USB_DeviceTransfer                       0x00005905   Thumb Code   194  usb_device_dci.o(i.USB_DeviceTransfer)
+    i.USB_DeviceUnstallEndpoint              0x000059c6   Section        0  usb_device_dci.o(i.USB_DeviceUnstallEndpoint)
+    i.USB_EhciPhyGetBase                     0x000059e8   Section        0  usb_phy.o(i.USB_EhciPhyGetBase)
+    i.USB_EhciPhyInit                        0x00005a48   Section        0  usb_phy.o(i.USB_EhciPhyInit)
+    i.USB_OTG1_IRQHandler                    0x00005ab8   Section        0  cdcacm.o(i.USB_OTG1_IRQHandler)
+    i.USB_OTG2_IRQHandler                    0x00005ac8   Section        0  cdcacm.o(i.USB_OTG2_IRQHandler)
+    i.USB_OsaEnterCritical                   0x00005ad8   Section        0  usb_osa_bm.o(i.USB_OsaEnterCritical)
+    i.USB_OsaExitCritical                    0x00005aec   Section        0  usb_osa_bm.o(i.USB_OsaExitCritical)
+    i.USB_OsaMutexCreate                     0x00005afc   Section        0  usb_osa_bm.o(i.USB_OsaMutexCreate)
+    i.USB_OsaMutexDestroy                    0x00005b10   Section        0  usb_osa_bm.o(i.USB_OsaMutexDestroy)
+    i.__ARM_fpclassify                       0x00005b16   Section        0  fpclassify.o(i.__ARM_fpclassify)
+    i.__hardfp_modf                          0x00005b48   Section        0  modf.o(i.__hardfp_modf)
+    i.__hardfp_pow                           0x00005c08   Section        0  pow.o(i.__hardfp_pow)
+    i.__kernel_poly                          0x000064e0   Section        0  poly.o(i.__kernel_poly)
+    i.__mathlib_dbl_divzero                  0x00006550   Section        0  dunder.o(i.__mathlib_dbl_divzero)
+    i.__mathlib_dbl_infnan2                  0x00006570   Section        0  dunder.o(i.__mathlib_dbl_infnan2)
+    i.__mathlib_dbl_invalid                  0x00006578   Section        0  dunder.o(i.__mathlib_dbl_invalid)
+    i.__mathlib_dbl_overflow                 0x00006590   Section        0  dunder.o(i.__mathlib_dbl_overflow)
+    i.__mathlib_dbl_underflow                0x000065a8   Section        0  dunder.o(i.__mathlib_dbl_underflow)
+    i.__set_errno                            0x000065c0   Section        0  errno.o(i.__set_errno)
+    i.board_init_power                       0x000065cc   Section        0  board.o(i.board_init_power)
+    i.fabs                                   0x0000661c   Section        0  fabs.o(i.fabs)
+    i.main                                   0x00006634   Section        0  main_imxrt1052.o(i.main)
+    i.sqrt                                   0x00006654   Section        0  sqrt.o(i.sqrt)
+    i.system_clock_info                      0x000066c0   Section        0  board.o(i.system_clock_info)
+    .constdata                               0x00006854   Section        3  cdcacm.o(.constdata)
+    .constdata                               0x00006858   Section       52  usb_device_ch9.o(.constdata)
+    s_UsbDeviceStandardRequest               0x00006858   Data          52  usb_device_ch9.o(.constdata)
+    .constdata                               0x0000688c   Section       32  usb_device_class.o(.constdata)
+    s_UsbDeviceClassInterfaceMap             0x0000688c   Data          32  usb_device_class.o(.constdata)
+    .constdata                               0x000068ac   Section        8  usb_device_ehci.o(.constdata)
+    .constdata                               0x000068b4   Section       24  usb_device_dci.o(.constdata)
+    s_UsbDeviceEhciInterface                 0x000068b4   Data          24  usb_device_dci.o(.constdata)
+    .constdata                               0x000068cc   Section       24  usb_phy.o(.constdata)
+    .constdata                               0x000068e4   Section       16  fsl_clock.o(.constdata)
+    .constdata                               0x000068f4   Section       36  fsl_gpio.o(.constdata)
+    s_gpioBases                              0x000068f4   Data          24  fsl_gpio.o(.constdata)
+    s_gpioClock                              0x0000690c   Data          12  fsl_gpio.o(.constdata)
+    .constdata                               0x00006918   Section       72  fsl_lpuart.o(.constdata)
+    s_lpuartBases                            0x00006918   Data          36  fsl_lpuart.o(.constdata)
+    s_lpuartIRQ                              0x0000693c   Data          18  fsl_lpuart.o(.constdata)
+    s_lpuartClock                            0x0000694e   Data          18  fsl_lpuart.o(.constdata)
+    .constdata                               0x00006960   Section       26  clock_config.o(.constdata)
+    .constdata                               0x00006980   Section      136  pow.o(.constdata)
+    bp                                       0x00006980   Data          16  pow.o(.constdata)
+    dp_h                                     0x00006990   Data          16  pow.o(.constdata)
+    dp_l                                     0x000069a0   Data          16  pow.o(.constdata)
+    L                                        0x000069b0   Data          48  pow.o(.constdata)
+    P                                        0x000069e0   Data          40  pow.o(.constdata)
+    .constdata                               0x00006a08   Section        8  qnan.o(.constdata)
+    .conststring                             0x00006a10   Section      137  usb_device_cdc_acm.o(.conststring)
     .data                                    0x20000000   Section       48  cdcacm.o(.data)
     s_lineCoding                             0x20000000   Data           7  cdcacm.o(.data)
     s_abstractState                          0x20000008   Data           2  cdcacm.o(.data)
@@ -1609,66 +1609,66 @@ Image Symbol Table
     USB_DeviceCdcAcmInterruptIn              0x00003389   Thumb Code    56  usb_device_cdc_acm.o(i.USB_DeviceCdcAcmInterruptIn)
     USB_DeviceCdcAcmRecv                     0x000033c1   Thumb Code   100  usb_device_cdc_acm.o(i.USB_DeviceCdcAcmRecv)
     USB_DeviceCdcAcmSend                     0x00003425   Thumb Code   134  usb_device_cdc_acm.o(i.USB_DeviceCdcAcmSend)
-    USB_DeviceCdcVcomCallback                0x000034ad   Thumb Code   548  cdcacm.o(i.USB_DeviceCdcVcomCallback)
-    USB_DeviceClassCallback                  0x00003b75   Thumb Code    68  usb_device_class.o(i.USB_DeviceClassCallback)
-    USB_DeviceClassEvent                     0x00003bb9   Thumb Code   150  usb_device_class.o(i.USB_DeviceClassEvent)
-    USB_DeviceClassGetDeviceHandle           0x00003cb1   Thumb Code    74  usb_device_class.o(i.USB_DeviceClassGetDeviceHandle)
-    USB_DeviceClassGetSpeed                  0x00003d91   Thumb Code    42  usb_device_class.o(i.USB_DeviceClassGetSpeed)
-    USB_DeviceClassInit                      0x00003dbd   Thumb Code   200  usb_device_class.o(i.USB_DeviceClassInit)
-    USB_DeviceClockInit                      0x00003e8d   Thumb Code    36  cdcacm.o(i.USB_DeviceClockInit)
-    USB_DeviceControlCallback                0x00003ef1   Thumb Code   560  usb_device_ch9.o(i.USB_DeviceControlCallback)
-    USB_DeviceControlPipeInit                0x000041a9   Thumb Code    94  usb_device_ch9.o(i.USB_DeviceControlPipeInit)
-    USB_DeviceDeinit                         0x0000420d   Thumb Code    38  usb_device_dci.o(i.USB_DeviceDeinit)
-    USB_DeviceDeinitEndpoint                 0x00004233   Thumb Code   120  usb_device_dci.o(i.USB_DeviceDeinitEndpoint)
-    USB_DeviceEhciCancel                     0x000042ab   Thumb Code   362  usb_device_ehci.o(i.USB_DeviceEhciCancel)
-    USB_DeviceEhciControl                    0x00004517   Thumb Code   372  usb_device_ehci.o(i.USB_DeviceEhciControl)
-    USB_DeviceEhciDeinit                     0x0000468b   Thumb Code    54  usb_device_ehci.o(i.USB_DeviceEhciDeinit)
-    USB_DeviceEhciInit                       0x00004a65   Thumb Code   156  usb_device_ehci.o(i.USB_DeviceEhciInit)
-    USB_DeviceEhciIsrFunction                0x00004e55   Thumb Code    88  usb_device_ehci.o(i.USB_DeviceEhciIsrFunction)
-    USB_DeviceEhciRecv                       0x00004ead   Thumb Code    30  usb_device_ehci.o(i.USB_DeviceEhciRecv)
-    USB_DeviceEhciSend                       0x00004ecb   Thumb Code    34  usb_device_ehci.o(i.USB_DeviceEhciSend)
-    USB_DeviceGetConfigurationDescriptor     0x000051e1   Thumb Code    24  usb_device_descriptor.o(i.USB_DeviceGetConfigurationDescriptor)
-    USB_DeviceGetDeviceDescriptor            0x00005221   Thumb Code    14  usb_device_descriptor.o(i.USB_DeviceGetDeviceDescriptor)
-    USB_DeviceGetStatus                      0x00005235   Thumb Code   146  usb_device_dci.o(i.USB_DeviceGetStatus)
-    USB_DeviceGetStringDescriptor            0x000052c9   Thumb Code   120  usb_device_descriptor.o(i.USB_DeviceGetStringDescriptor)
-    USB_DeviceInit                           0x00005345   Thumb Code   262  usb_device_dci.o(i.USB_DeviceInit)
-    USB_DeviceInitEndpoint                   0x0000544b   Thumb Code   126  usb_device_dci.o(i.USB_DeviceInitEndpoint)
-    USB_DeviceIsrEnable                      0x000054c9   Thumb Code    88  cdcacm.o(i.USB_DeviceIsrEnable)
-    USB_DeviceNotificationTrigger            0x000055d9   Thumb Code    40  usb_device_dci.o(i.USB_DeviceNotificationTrigger)
-    USB_DeviceRecvRequest                    0x00005601   Thumb Code    30  usb_device_dci.o(i.USB_DeviceRecvRequest)
-    USB_DeviceRun                            0x00005683   Thumb Code    16  usb_device_dci.o(i.USB_DeviceRun)
-    USB_DeviceSendRequest                    0x00005693   Thumb Code    34  usb_device_dci.o(i.USB_DeviceSendRequest)
-    USB_DeviceSetSpeed                       0x000056b5   Thumb Code   340  usb_device_descriptor.o(i.USB_DeviceSetSpeed)
-    USB_DeviceSetStatus                      0x00005815   Thumb Code   168  usb_device_dci.o(i.USB_DeviceSetStatus)
-    USB_DeviceStallEndpoint                  0x000058bd   Thumb Code    32  usb_device_dci.o(i.USB_DeviceStallEndpoint)
-    USB_DeviceUnstallEndpoint                0x0000599f   Thumb Code    32  usb_device_dci.o(i.USB_DeviceUnstallEndpoint)
-    USB_EhciPhyGetBase                       0x000059c1   Thumb Code    90  usb_phy.o(i.USB_EhciPhyGetBase)
-    USB_EhciPhyInit                          0x00005a21   Thumb Code   102  usb_phy.o(i.USB_EhciPhyInit)
-    USB_OTG1_IRQHandler                      0x00005a91   Thumb Code    12  cdcacm.o(i.USB_OTG1_IRQHandler)
-    USB_OTG2_IRQHandler                      0x00005aa1   Thumb Code    12  cdcacm.o(i.USB_OTG2_IRQHandler)
-    USB_OsaEnterCritical                     0x00005ab1   Thumb Code    20  usb_osa_bm.o(i.USB_OsaEnterCritical)
-    USB_OsaExitCritical                      0x00005ac5   Thumb Code    14  usb_osa_bm.o(i.USB_OsaExitCritical)
-    USB_OsaMutexCreate                       0x00005ad5   Thumb Code    16  usb_osa_bm.o(i.USB_OsaMutexCreate)
-    USB_OsaMutexDestroy                      0x00005ae9   Thumb Code     6  usb_osa_bm.o(i.USB_OsaMutexDestroy)
-    __ARM_fpclassify                         0x00005aef   Thumb Code    48  fpclassify.o(i.__ARM_fpclassify)
-    __hardfp_modf                            0x00005b21   Thumb Code   186  modf.o(i.__hardfp_modf)
-    __hardfp_pow                             0x00005be1   Thumb Code  2116  pow.o(i.__hardfp_pow)
-    __kernel_poly                            0x000064b9   Thumb Code   112  poly.o(i.__kernel_poly)
-    __mathlib_dbl_divzero                    0x00006529   Thumb Code    14  dunder.o(i.__mathlib_dbl_divzero)
-    __mathlib_dbl_infnan2                    0x00006549   Thumb Code     6  dunder.o(i.__mathlib_dbl_infnan2)
-    __mathlib_dbl_invalid                    0x00006551   Thumb Code    10  dunder.o(i.__mathlib_dbl_invalid)
-    __mathlib_dbl_overflow                   0x00006569   Thumb Code    10  dunder.o(i.__mathlib_dbl_overflow)
-    __mathlib_dbl_underflow                  0x00006581   Thumb Code    10  dunder.o(i.__mathlib_dbl_underflow)
-    __set_errno                              0x00006599   Thumb Code     6  errno.o(i.__set_errno)
-    board_init_power                         0x000065a5   Thumb Code    72  board.o(i.board_init_power)
-    fabs                                     0x000065f5   Thumb Code    24  fabs.o(i.fabs)
-    main                                     0x0000660d   Thumb Code    32  main_imxrt1052.o(i.main)
-    sqrt                                     0x0000662d   Thumb Code   106  sqrt.o(i.sqrt)
-    system_clock_info                        0x00006699   Thumb Code   144  board.o(i.system_clock_info)
-    armPllConfig_BOARD_BootClockRUN          0x00006938   Data           8  clock_config.o(.constdata)
-    sysPllConfig_BOARD_BootClockRUN          0x00006940   Data          16  clock_config.o(.constdata)
-    usb1PllConfig_BOARD_BootClockRUN         0x00006950   Data           2  clock_config.o(.constdata)
-    __mathlib_zero                           0x000069e0   Data           8  qnan.o(.constdata)
+    USB_DeviceCdcVcomCallback                0x000034ad   Thumb Code   564  cdcacm.o(i.USB_DeviceCdcVcomCallback)
+    USB_DeviceClassCallback                  0x00003b9d   Thumb Code    68  usb_device_class.o(i.USB_DeviceClassCallback)
+    USB_DeviceClassEvent                     0x00003be1   Thumb Code   150  usb_device_class.o(i.USB_DeviceClassEvent)
+    USB_DeviceClassGetDeviceHandle           0x00003cd9   Thumb Code    74  usb_device_class.o(i.USB_DeviceClassGetDeviceHandle)
+    USB_DeviceClassGetSpeed                  0x00003db9   Thumb Code    42  usb_device_class.o(i.USB_DeviceClassGetSpeed)
+    USB_DeviceClassInit                      0x00003de5   Thumb Code   200  usb_device_class.o(i.USB_DeviceClassInit)
+    USB_DeviceClockInit                      0x00003eb5   Thumb Code    36  cdcacm.o(i.USB_DeviceClockInit)
+    USB_DeviceControlCallback                0x00003f19   Thumb Code   560  usb_device_ch9.o(i.USB_DeviceControlCallback)
+    USB_DeviceControlPipeInit                0x000041d1   Thumb Code    94  usb_device_ch9.o(i.USB_DeviceControlPipeInit)
+    USB_DeviceDeinit                         0x00004235   Thumb Code    38  usb_device_dci.o(i.USB_DeviceDeinit)
+    USB_DeviceDeinitEndpoint                 0x0000425b   Thumb Code   120  usb_device_dci.o(i.USB_DeviceDeinitEndpoint)
+    USB_DeviceEhciCancel                     0x000042d3   Thumb Code   362  usb_device_ehci.o(i.USB_DeviceEhciCancel)
+    USB_DeviceEhciControl                    0x0000453f   Thumb Code   372  usb_device_ehci.o(i.USB_DeviceEhciControl)
+    USB_DeviceEhciDeinit                     0x000046b3   Thumb Code    54  usb_device_ehci.o(i.USB_DeviceEhciDeinit)
+    USB_DeviceEhciInit                       0x00004a8d   Thumb Code   156  usb_device_ehci.o(i.USB_DeviceEhciInit)
+    USB_DeviceEhciIsrFunction                0x00004e7d   Thumb Code    88  usb_device_ehci.o(i.USB_DeviceEhciIsrFunction)
+    USB_DeviceEhciRecv                       0x00004ed5   Thumb Code    30  usb_device_ehci.o(i.USB_DeviceEhciRecv)
+    USB_DeviceEhciSend                       0x00004ef3   Thumb Code    34  usb_device_ehci.o(i.USB_DeviceEhciSend)
+    USB_DeviceGetConfigurationDescriptor     0x00005209   Thumb Code    24  usb_device_descriptor.o(i.USB_DeviceGetConfigurationDescriptor)
+    USB_DeviceGetDeviceDescriptor            0x00005249   Thumb Code    14  usb_device_descriptor.o(i.USB_DeviceGetDeviceDescriptor)
+    USB_DeviceGetStatus                      0x0000525d   Thumb Code   146  usb_device_dci.o(i.USB_DeviceGetStatus)
+    USB_DeviceGetStringDescriptor            0x000052f1   Thumb Code   120  usb_device_descriptor.o(i.USB_DeviceGetStringDescriptor)
+    USB_DeviceInit                           0x0000536d   Thumb Code   262  usb_device_dci.o(i.USB_DeviceInit)
+    USB_DeviceInitEndpoint                   0x00005473   Thumb Code   126  usb_device_dci.o(i.USB_DeviceInitEndpoint)
+    USB_DeviceIsrEnable                      0x000054f1   Thumb Code    88  cdcacm.o(i.USB_DeviceIsrEnable)
+    USB_DeviceNotificationTrigger            0x00005601   Thumb Code    40  usb_device_dci.o(i.USB_DeviceNotificationTrigger)
+    USB_DeviceRecvRequest                    0x00005629   Thumb Code    30  usb_device_dci.o(i.USB_DeviceRecvRequest)
+    USB_DeviceRun                            0x000056ab   Thumb Code    16  usb_device_dci.o(i.USB_DeviceRun)
+    USB_DeviceSendRequest                    0x000056bb   Thumb Code    34  usb_device_dci.o(i.USB_DeviceSendRequest)
+    USB_DeviceSetSpeed                       0x000056dd   Thumb Code   340  usb_device_descriptor.o(i.USB_DeviceSetSpeed)
+    USB_DeviceSetStatus                      0x0000583d   Thumb Code   168  usb_device_dci.o(i.USB_DeviceSetStatus)
+    USB_DeviceStallEndpoint                  0x000058e5   Thumb Code    32  usb_device_dci.o(i.USB_DeviceStallEndpoint)
+    USB_DeviceUnstallEndpoint                0x000059c7   Thumb Code    32  usb_device_dci.o(i.USB_DeviceUnstallEndpoint)
+    USB_EhciPhyGetBase                       0x000059e9   Thumb Code    90  usb_phy.o(i.USB_EhciPhyGetBase)
+    USB_EhciPhyInit                          0x00005a49   Thumb Code   102  usb_phy.o(i.USB_EhciPhyInit)
+    USB_OTG1_IRQHandler                      0x00005ab9   Thumb Code    12  cdcacm.o(i.USB_OTG1_IRQHandler)
+    USB_OTG2_IRQHandler                      0x00005ac9   Thumb Code    12  cdcacm.o(i.USB_OTG2_IRQHandler)
+    USB_OsaEnterCritical                     0x00005ad9   Thumb Code    20  usb_osa_bm.o(i.USB_OsaEnterCritical)
+    USB_OsaExitCritical                      0x00005aed   Thumb Code    14  usb_osa_bm.o(i.USB_OsaExitCritical)
+    USB_OsaMutexCreate                       0x00005afd   Thumb Code    16  usb_osa_bm.o(i.USB_OsaMutexCreate)
+    USB_OsaMutexDestroy                      0x00005b11   Thumb Code     6  usb_osa_bm.o(i.USB_OsaMutexDestroy)
+    __ARM_fpclassify                         0x00005b17   Thumb Code    48  fpclassify.o(i.__ARM_fpclassify)
+    __hardfp_modf                            0x00005b49   Thumb Code   186  modf.o(i.__hardfp_modf)
+    __hardfp_pow                             0x00005c09   Thumb Code  2116  pow.o(i.__hardfp_pow)
+    __kernel_poly                            0x000064e1   Thumb Code   112  poly.o(i.__kernel_poly)
+    __mathlib_dbl_divzero                    0x00006551   Thumb Code    14  dunder.o(i.__mathlib_dbl_divzero)
+    __mathlib_dbl_infnan2                    0x00006571   Thumb Code     6  dunder.o(i.__mathlib_dbl_infnan2)
+    __mathlib_dbl_invalid                    0x00006579   Thumb Code    10  dunder.o(i.__mathlib_dbl_invalid)
+    __mathlib_dbl_overflow                   0x00006591   Thumb Code    10  dunder.o(i.__mathlib_dbl_overflow)
+    __mathlib_dbl_underflow                  0x000065a9   Thumb Code    10  dunder.o(i.__mathlib_dbl_underflow)
+    __set_errno                              0x000065c1   Thumb Code     6  errno.o(i.__set_errno)
+    board_init_power                         0x000065cd   Thumb Code    72  board.o(i.board_init_power)
+    fabs                                     0x0000661d   Thumb Code    24  fabs.o(i.fabs)
+    main                                     0x00006635   Thumb Code    32  main_imxrt1052.o(i.main)
+    sqrt                                     0x00006655   Thumb Code   106  sqrt.o(i.sqrt)
+    system_clock_info                        0x000066c1   Thumb Code   144  board.o(i.system_clock_info)
+    armPllConfig_BOARD_BootClockRUN          0x00006960   Data           8  clock_config.o(.constdata)
+    sysPllConfig_BOARD_BootClockRUN          0x00006968   Data          16  clock_config.o(.constdata)
+    usb1PllConfig_BOARD_BootClockRUN         0x00006978   Data           2  clock_config.o(.constdata)
+    __mathlib_zero                           0x00006a08   Data           8  qnan.o(.constdata)
     g_UsbDeviceCdcVcomCicEndpoints           0x20000030   Data           4  usb_device_descriptor.o(.data)
     g_UsbDeviceCdcVcomDicEndpoints           0x20000034   Data           8  usb_device_descriptor.o(.data)
     g_UsbDeviceCdcVcomCommunicationInterface 0x2000003c   Data          16  usb_device_descriptor.o(.data)
@@ -1690,8 +1690,8 @@ Image Symbol Table
     g_rtcXtalFreq                            0x20000170   Data           4  fsl_clock.o(.data)
     s_cdcVcom                                0x20000188   Data          16  cdcacm.o(.bss)
     g_cdcAcmHandle                           0x20000c80   Data          68  usb_device_cdc_acm.o(.bss.m_usb_global)
-    Image$$ARM_LIB_HEAP$$ZI$$Base            0x20000d4c   Number         0  anon$$obj.o ABSOLUTE
-    Image$$ARM_LIB_HEAP$$ZI$$Limit           0x2000114c   Number         0  anon$$obj.o ABSOLUTE
+    Image$$ARM_LIB_HEAP$$ZI$$Base            0x20016000   Number         0  anon$$obj.o ABSOLUTE
+    Image$$ARM_LIB_HEAP$$ZI$$Limit           0x2001e000   Number         0  anon$$obj.o ABSOLUTE
     Image$$ARM_LIB_STACK$$ZI$$Limit          0x20020000   Number         0  anon$$obj.o ABSOLUTE
     Image$$RW_m_config_text$$Base            0x60000000   Number         0  anon$$obj.o ABSOLUTE
     g_flash_config                           0x60000000   Data         512  uavrs_v2_flexspi_nor_flash.o(.boot_hdr.conf)
@@ -1957,7 +1957,7 @@ Memory Map of the image
 
 
 
-  Load Region LR_m_text (Base: 0x60002000, Size: 0x00007024, Max: 0x63fffc00, ABSOLUTE, COMPRESSED[0x00006f98])
+  Load Region LR_m_text (Base: 0x60002000, Size: 0x0000704c, Max: 0x63fffc00, ABSOLUTE, COMPRESSED[0x00006fc0])
 
     Execution Region VECTOR_RAM (Base: 0x00000000, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
 
@@ -1966,7 +1966,7 @@ Memory Map of the image
     0x00000000   0x00000400   Zero   RW            1    VECTOR_RAM.bss      anon$$obj.o
 
 
-    Execution Region ER_m_ram_text (Base: 0x00000400, Size: 0x00006674, Max: 0x0001fc00, ABSOLUTE)
+    Execution Region ER_m_ram_text (Base: 0x00000400, Size: 0x0000669c, Max: 0x0001fc00, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2066,120 +2066,120 @@ Memory Map of the image
     0x000033c0   0x00000064   Code   RO          113    i.USB_DeviceCdcAcmRecv  usb_device_cdc_acm.o
     0x00003424   0x00000086   Code   RO          114    i.USB_DeviceCdcAcmSend  usb_device_cdc_acm.o
     0x000034aa   0x00000002   PAD
-    0x000034ac   0x00000274   Code   RO           83    i.USB_DeviceCdcVcomCallback  cdcacm.o
-    0x00003720   0x0000003e   Code   RO          120    i.USB_DeviceCh9GetConfiguration  usb_device_ch9.o
-    0x0000375e   0x00000094   Code   RO          121    i.USB_DeviceCh9GetDescriptor  usb_device_ch9.o
-    0x000037f2   0x0000004c   Code   RO          122    i.USB_DeviceCh9GetInterface  usb_device_ch9.o
-    0x0000383e   0x000000ae   Code   RO          123    i.USB_DeviceCh9GetStatus  usb_device_ch9.o
-    0x000038ec   0x00000078   Code   RO          124    i.USB_DeviceCh9SetAddress  usb_device_ch9.o
-    0x00003964   0x000000a8   Code   RO          125    i.USB_DeviceCh9SetClearFeature  usb_device_ch9.o
-    0x00003a0c   0x0000005c   Code   RO          126    i.USB_DeviceCh9SetConfiguration  usb_device_ch9.o
-    0x00003a68   0x00000042   Code   RO          127    i.USB_DeviceCh9SetInterface  usb_device_ch9.o
-    0x00003aaa   0x00000046   Code   RO          128    i.USB_DeviceCh9SynchFrame  usb_device_ch9.o
-    0x00003af0   0x00000084   Code   RO          136    i.USB_DeviceClassAllocateHandle  usb_device_class.o
-    0x00003b74   0x00000044   Code   RO          137    i.USB_DeviceClassCallback  usb_device_class.o
-    0x00003bb8   0x0000009c   Code   RO          139    i.USB_DeviceClassEvent  usb_device_class.o
-    0x00003c54   0x0000005c   Code   RO          140    i.USB_DeviceClassFreeHandle  usb_device_class.o
-    0x00003cb0   0x00000050   Code   RO          141    i.USB_DeviceClassGetDeviceHandle  usb_device_class.o
-    0x00003d00   0x0000004c   Code   RO          142    i.USB_DeviceClassGetHandleByControllerId  usb_device_class.o
-    0x00003d4c   0x00000044   Code   RO          143    i.USB_DeviceClassGetHandleByDeviceHandle  usb_device_class.o
-    0x00003d90   0x0000002a   Code   RO          144    i.USB_DeviceClassGetSpeed  usb_device_class.o
-    0x00003dba   0x00000002   PAD
-    0x00003dbc   0x000000d0   Code   RO          145    i.USB_DeviceClassInit  usb_device_class.o
-    0x00003e8c   0x00000030   Code   RO           84    i.USB_DeviceClockInit  cdcacm.o
-    0x00003ebc   0x00000034   Code   RO          185    i.USB_DeviceControl  usb_device_dci.o
-    0x00003ef0   0x00000234   Code   RO          129    i.USB_DeviceControlCallback  usb_device_ch9.o
-    0x00004124   0x00000084   Code   RO          130    i.USB_DeviceControlCallbackFeedback  usb_device_ch9.o
-    0x000041a8   0x00000064   Code   RO          131    i.USB_DeviceControlPipeInit  usb_device_ch9.o
-    0x0000420c   0x00000026   Code   RO          186    i.USB_DeviceDeinit  usb_device_dci.o
-    0x00004232   0x00000078   Code   RO          187    i.USB_DeviceDeinitEndpoint  usb_device_dci.o
-    0x000042aa   0x0000016a   Code   RO          159    i.USB_DeviceEhciCancel  usb_device_ehci.o
-    0x00004414   0x00000102   Code   RO          160    i.USB_DeviceEhciCancelControlPipe  usb_device_ehci.o
-    0x00004516   0x00000174   Code   RO          161    i.USB_DeviceEhciControl  usb_device_ehci.o
-    0x0000468a   0x00000036   Code   RO          162    i.USB_DeviceEhciDeinit  usb_device_ehci.o
-    0x000046c0   0x000000a2   Code   RO          163    i.USB_DeviceEhciEndpointDeinit  usb_device_ehci.o
-    0x00004762   0x00000166   Code   RO          164    i.USB_DeviceEhciEndpointInit  usb_device_ehci.o
-    0x000048c8   0x0000009e   Code   RO          165    i.USB_DeviceEhciEndpointStall  usb_device_ehci.o
-    0x00004966   0x00000080   Code   RO          166    i.USB_DeviceEhciEndpointUnstall  usb_device_ehci.o
-    0x000049e6   0x0000007e   Code   RO          167    i.USB_DeviceEhciFillSetupBuffer  usb_device_ehci.o
-    0x00004a64   0x000000ac   Code   RO          168    i.USB_DeviceEhciInit  usb_device_ehci.o
-    0x00004b10   0x00000050   Code   RO          169    i.USB_DeviceEhciInterruptPortChange  usb_device_ehci.o
-    0x00004b60   0x0000006a   Code   RO          170    i.USB_DeviceEhciInterruptReset  usb_device_ehci.o
-    0x00004bca   0x00000002   Code   RO          171    i.USB_DeviceEhciInterruptSof  usb_device_ehci.o
-    0x00004bcc   0x00000288   Code   RO          172    i.USB_DeviceEhciInterruptTokenDone  usb_device_ehci.o
-    0x00004e54   0x00000058   Code   RO          173    i.USB_DeviceEhciIsrFunction  usb_device_ehci.o
-    0x00004eac   0x0000001e   Code   RO          174    i.USB_DeviceEhciRecv  usb_device_ehci.o
-    0x00004eca   0x00000022   Code   RO          175    i.USB_DeviceEhciSend  usb_device_ehci.o
-    0x00004eec   0x000000c6   Code   RO          176    i.USB_DeviceEhciSetDefaultState  usb_device_ehci.o
-    0x00004fb2   0x00000210   Code   RO          177    i.USB_DeviceEhciTransfer  usb_device_ehci.o
-    0x000051c2   0x0000001c   Code   RO          188    i.USB_DeviceFreeHandle  usb_device_dci.o
-    0x000051de   0x00000002   PAD
-    0x000051e0   0x0000001c   Code   RO          151    i.USB_DeviceGetConfigurationDescriptor  usb_device_descriptor.o
-    0x000051fc   0x00000024   Code   RO          189    i.USB_DeviceGetControllerInterface  usb_device_dci.o
-    0x00005220   0x00000014   Code   RO          152    i.USB_DeviceGetDeviceDescriptor  usb_device_descriptor.o
-    0x00005234   0x00000092   Code   RO          190    i.USB_DeviceGetStatus  usb_device_dci.o
-    0x000052c6   0x00000002   PAD
-    0x000052c8   0x0000007c   Code   RO          153    i.USB_DeviceGetStringDescriptor  usb_device_descriptor.o
-    0x00005344   0x00000106   Code   RO          192    i.USB_DeviceInit    usb_device_dci.o
-    0x0000544a   0x0000007e   Code   RO          193    i.USB_DeviceInitEndpoint  usb_device_dci.o
-    0x000054c8   0x00000064   Code   RO           85    i.USB_DeviceIsrEnable  cdcacm.o
-    0x0000552c   0x000000ac   Code   RO          194    i.USB_DeviceNotification  usb_device_dci.o
-    0x000055d8   0x00000028   Code   RO          195    i.USB_DeviceNotificationTrigger  usb_device_dci.o
-    0x00005600   0x0000001e   Code   RO          196    i.USB_DeviceRecvRequest  usb_device_dci.o
-    0x0000561e   0x00000064   Code   RO          197    i.USB_DeviceResetNotification  usb_device_dci.o
-    0x00005682   0x00000010   Code   RO          198    i.USB_DeviceRun     usb_device_dci.o
-    0x00005692   0x00000022   Code   RO          199    i.USB_DeviceSendRequest  usb_device_dci.o
-    0x000056b4   0x00000160   Code   RO          154    i.USB_DeviceSetSpeed  usb_device_descriptor.o
-    0x00005814   0x000000a8   Code   RO          200    i.USB_DeviceSetStatus  usb_device_dci.o
-    0x000058bc   0x00000020   Code   RO          201    i.USB_DeviceStallEndpoint  usb_device_dci.o
-    0x000058dc   0x000000c2   Code   RO          203    i.USB_DeviceTransfer  usb_device_dci.o
-    0x0000599e   0x00000020   Code   RO          204    i.USB_DeviceUnstallEndpoint  usb_device_dci.o
-    0x000059be   0x00000002   PAD
-    0x000059c0   0x00000060   Code   RO          239    i.USB_EhciPhyGetBase  usb_phy.o
-    0x00005a20   0x00000070   Code   RO          240    i.USB_EhciPhyInit   usb_phy.o
-    0x00005a90   0x00000010   Code   RO           86    i.USB_OTG1_IRQHandler  cdcacm.o
-    0x00005aa0   0x00000010   Code   RO           87    i.USB_OTG2_IRQHandler  cdcacm.o
-    0x00005ab0   0x00000014   Code   RO          210    i.USB_OsaEnterCritical  usb_osa_bm.o
-    0x00005ac4   0x0000000e   Code   RO          217    i.USB_OsaExitCritical  usb_osa_bm.o
-    0x00005ad2   0x00000002   PAD
-    0x00005ad4   0x00000014   Code   RO          225    i.USB_OsaMutexCreate  usb_osa_bm.o
-    0x00005ae8   0x00000006   Code   RO          226    i.USB_OsaMutexDestroy  usb_osa_bm.o
-    0x00005aee   0x00000030   Code   RO          564    i.__ARM_fpclassify  m_wv.l(fpclassify.o)
-    0x00005b1e   0x00000002   PAD
-    0x00005b20   0x000000c0   Code   RO          512    i.__hardfp_modf     m_wv.l(modf.o)
-    0x00005be0   0x000008d8   Code   RO          515    i.__hardfp_pow      m_wv.l(pow.o)
-    0x000064b8   0x00000070   Code   RO          565    i.__kernel_poly     m_wv.l(poly.o)
-    0x00006528   0x00000020   Code   RO          554    i.__mathlib_dbl_divzero  m_wv.l(dunder.o)
-    0x00006548   0x00000006   Code   RO          556    i.__mathlib_dbl_infnan2  m_wv.l(dunder.o)
-    0x0000654e   0x00000002   PAD
-    0x00006550   0x00000018   Code   RO          557    i.__mathlib_dbl_invalid  m_wv.l(dunder.o)
-    0x00006568   0x00000018   Code   RO          558    i.__mathlib_dbl_overflow  m_wv.l(dunder.o)
-    0x00006580   0x00000018   Code   RO          560    i.__mathlib_dbl_underflow  m_wv.l(dunder.o)
-    0x00006598   0x0000000c   Code   RO          593    i.__set_errno       mc_w.l(errno.o)
-    0x000065a4   0x00000050   Code   RO          464    i.board_init_power  board.o
-    0x000065f4   0x00000018   Code   RO          563    i.fabs              m_wv.l(fabs.o)
-    0x0000660c   0x00000020   Code   RO           30    i.main              main_imxrt1052.o
-    0x0000662c   0x0000006a   Code   RO          569    i.sqrt              m_wv.l(sqrt.o)
-    0x00006696   0x00000002   PAD
-    0x00006698   0x00000194   Code   RO          474    i.system_clock_info  board.o
-    0x0000682c   0x00000003   Data   RO           93    .constdata          cdcacm.o
-    0x0000682f   0x00000001   PAD
-    0x00006830   0x00000034   Data   RO          132    .constdata          usb_device_ch9.o
-    0x00006864   0x00000020   Data   RO          147    .constdata          usb_device_class.o
-    0x00006884   0x00000008   Data   RO          179    .constdata          usb_device_ehci.o
-    0x0000688c   0x00000018   Data   RO          206    .constdata          usb_device_dci.o
-    0x000068a4   0x00000018   Data   RO          242    .constdata          usb_phy.o
-    0x000068bc   0x00000010   Data   RO          292    .constdata          fsl_clock.o
-    0x000068cc   0x00000024   Data   RO          331    .constdata          fsl_gpio.o
-    0x000068f0   0x00000048   Data   RO          372    .constdata          fsl_lpuart.o
-    0x00006938   0x0000001a   Data   RO          485    .constdata          clock_config.o
-    0x00006952   0x00000006   PAD
-    0x00006958   0x00000088   Data   RO          518    .constdata          m_wv.l(pow.o)
-    0x000069e0   0x00000008   Data   RO          566    .constdata          m_wv.l(qnan.o)
-    0x000069e8   0x00000089   Data   RO          116    .conststring        usb_device_cdc_acm.o
+    0x000034ac   0x0000029c   Code   RO           83    i.USB_DeviceCdcVcomCallback  cdcacm.o
+    0x00003748   0x0000003e   Code   RO          120    i.USB_DeviceCh9GetConfiguration  usb_device_ch9.o
+    0x00003786   0x00000094   Code   RO          121    i.USB_DeviceCh9GetDescriptor  usb_device_ch9.o
+    0x0000381a   0x0000004c   Code   RO          122    i.USB_DeviceCh9GetInterface  usb_device_ch9.o
+    0x00003866   0x000000ae   Code   RO          123    i.USB_DeviceCh9GetStatus  usb_device_ch9.o
+    0x00003914   0x00000078   Code   RO          124    i.USB_DeviceCh9SetAddress  usb_device_ch9.o
+    0x0000398c   0x000000a8   Code   RO          125    i.USB_DeviceCh9SetClearFeature  usb_device_ch9.o
+    0x00003a34   0x0000005c   Code   RO          126    i.USB_DeviceCh9SetConfiguration  usb_device_ch9.o
+    0x00003a90   0x00000042   Code   RO          127    i.USB_DeviceCh9SetInterface  usb_device_ch9.o
+    0x00003ad2   0x00000046   Code   RO          128    i.USB_DeviceCh9SynchFrame  usb_device_ch9.o
+    0x00003b18   0x00000084   Code   RO          136    i.USB_DeviceClassAllocateHandle  usb_device_class.o
+    0x00003b9c   0x00000044   Code   RO          137    i.USB_DeviceClassCallback  usb_device_class.o
+    0x00003be0   0x0000009c   Code   RO          139    i.USB_DeviceClassEvent  usb_device_class.o
+    0x00003c7c   0x0000005c   Code   RO          140    i.USB_DeviceClassFreeHandle  usb_device_class.o
+    0x00003cd8   0x00000050   Code   RO          141    i.USB_DeviceClassGetDeviceHandle  usb_device_class.o
+    0x00003d28   0x0000004c   Code   RO          142    i.USB_DeviceClassGetHandleByControllerId  usb_device_class.o
+    0x00003d74   0x00000044   Code   RO          143    i.USB_DeviceClassGetHandleByDeviceHandle  usb_device_class.o
+    0x00003db8   0x0000002a   Code   RO          144    i.USB_DeviceClassGetSpeed  usb_device_class.o
+    0x00003de2   0x00000002   PAD
+    0x00003de4   0x000000d0   Code   RO          145    i.USB_DeviceClassInit  usb_device_class.o
+    0x00003eb4   0x00000030   Code   RO           84    i.USB_DeviceClockInit  cdcacm.o
+    0x00003ee4   0x00000034   Code   RO          185    i.USB_DeviceControl  usb_device_dci.o
+    0x00003f18   0x00000234   Code   RO          129    i.USB_DeviceControlCallback  usb_device_ch9.o
+    0x0000414c   0x00000084   Code   RO          130    i.USB_DeviceControlCallbackFeedback  usb_device_ch9.o
+    0x000041d0   0x00000064   Code   RO          131    i.USB_DeviceControlPipeInit  usb_device_ch9.o
+    0x00004234   0x00000026   Code   RO          186    i.USB_DeviceDeinit  usb_device_dci.o
+    0x0000425a   0x00000078   Code   RO          187    i.USB_DeviceDeinitEndpoint  usb_device_dci.o
+    0x000042d2   0x0000016a   Code   RO          159    i.USB_DeviceEhciCancel  usb_device_ehci.o
+    0x0000443c   0x00000102   Code   RO          160    i.USB_DeviceEhciCancelControlPipe  usb_device_ehci.o
+    0x0000453e   0x00000174   Code   RO          161    i.USB_DeviceEhciControl  usb_device_ehci.o
+    0x000046b2   0x00000036   Code   RO          162    i.USB_DeviceEhciDeinit  usb_device_ehci.o
+    0x000046e8   0x000000a2   Code   RO          163    i.USB_DeviceEhciEndpointDeinit  usb_device_ehci.o
+    0x0000478a   0x00000166   Code   RO          164    i.USB_DeviceEhciEndpointInit  usb_device_ehci.o
+    0x000048f0   0x0000009e   Code   RO          165    i.USB_DeviceEhciEndpointStall  usb_device_ehci.o
+    0x0000498e   0x00000080   Code   RO          166    i.USB_DeviceEhciEndpointUnstall  usb_device_ehci.o
+    0x00004a0e   0x0000007e   Code   RO          167    i.USB_DeviceEhciFillSetupBuffer  usb_device_ehci.o
+    0x00004a8c   0x000000ac   Code   RO          168    i.USB_DeviceEhciInit  usb_device_ehci.o
+    0x00004b38   0x00000050   Code   RO          169    i.USB_DeviceEhciInterruptPortChange  usb_device_ehci.o
+    0x00004b88   0x0000006a   Code   RO          170    i.USB_DeviceEhciInterruptReset  usb_device_ehci.o
+    0x00004bf2   0x00000002   Code   RO          171    i.USB_DeviceEhciInterruptSof  usb_device_ehci.o
+    0x00004bf4   0x00000288   Code   RO          172    i.USB_DeviceEhciInterruptTokenDone  usb_device_ehci.o
+    0x00004e7c   0x00000058   Code   RO          173    i.USB_DeviceEhciIsrFunction  usb_device_ehci.o
+    0x00004ed4   0x0000001e   Code   RO          174    i.USB_DeviceEhciRecv  usb_device_ehci.o
+    0x00004ef2   0x00000022   Code   RO          175    i.USB_DeviceEhciSend  usb_device_ehci.o
+    0x00004f14   0x000000c6   Code   RO          176    i.USB_DeviceEhciSetDefaultState  usb_device_ehci.o
+    0x00004fda   0x00000210   Code   RO          177    i.USB_DeviceEhciTransfer  usb_device_ehci.o
+    0x000051ea   0x0000001c   Code   RO          188    i.USB_DeviceFreeHandle  usb_device_dci.o
+    0x00005206   0x00000002   PAD
+    0x00005208   0x0000001c   Code   RO          151    i.USB_DeviceGetConfigurationDescriptor  usb_device_descriptor.o
+    0x00005224   0x00000024   Code   RO          189    i.USB_DeviceGetControllerInterface  usb_device_dci.o
+    0x00005248   0x00000014   Code   RO          152    i.USB_DeviceGetDeviceDescriptor  usb_device_descriptor.o
+    0x0000525c   0x00000092   Code   RO          190    i.USB_DeviceGetStatus  usb_device_dci.o
+    0x000052ee   0x00000002   PAD
+    0x000052f0   0x0000007c   Code   RO          153    i.USB_DeviceGetStringDescriptor  usb_device_descriptor.o
+    0x0000536c   0x00000106   Code   RO          192    i.USB_DeviceInit    usb_device_dci.o
+    0x00005472   0x0000007e   Code   RO          193    i.USB_DeviceInitEndpoint  usb_device_dci.o
+    0x000054f0   0x00000064   Code   RO           85    i.USB_DeviceIsrEnable  cdcacm.o
+    0x00005554   0x000000ac   Code   RO          194    i.USB_DeviceNotification  usb_device_dci.o
+    0x00005600   0x00000028   Code   RO          195    i.USB_DeviceNotificationTrigger  usb_device_dci.o
+    0x00005628   0x0000001e   Code   RO          196    i.USB_DeviceRecvRequest  usb_device_dci.o
+    0x00005646   0x00000064   Code   RO          197    i.USB_DeviceResetNotification  usb_device_dci.o
+    0x000056aa   0x00000010   Code   RO          198    i.USB_DeviceRun     usb_device_dci.o
+    0x000056ba   0x00000022   Code   RO          199    i.USB_DeviceSendRequest  usb_device_dci.o
+    0x000056dc   0x00000160   Code   RO          154    i.USB_DeviceSetSpeed  usb_device_descriptor.o
+    0x0000583c   0x000000a8   Code   RO          200    i.USB_DeviceSetStatus  usb_device_dci.o
+    0x000058e4   0x00000020   Code   RO          201    i.USB_DeviceStallEndpoint  usb_device_dci.o
+    0x00005904   0x000000c2   Code   RO          203    i.USB_DeviceTransfer  usb_device_dci.o
+    0x000059c6   0x00000020   Code   RO          204    i.USB_DeviceUnstallEndpoint  usb_device_dci.o
+    0x000059e6   0x00000002   PAD
+    0x000059e8   0x00000060   Code   RO          239    i.USB_EhciPhyGetBase  usb_phy.o
+    0x00005a48   0x00000070   Code   RO          240    i.USB_EhciPhyInit   usb_phy.o
+    0x00005ab8   0x00000010   Code   RO           86    i.USB_OTG1_IRQHandler  cdcacm.o
+    0x00005ac8   0x00000010   Code   RO           87    i.USB_OTG2_IRQHandler  cdcacm.o
+    0x00005ad8   0x00000014   Code   RO          210    i.USB_OsaEnterCritical  usb_osa_bm.o
+    0x00005aec   0x0000000e   Code   RO          217    i.USB_OsaExitCritical  usb_osa_bm.o
+    0x00005afa   0x00000002   PAD
+    0x00005afc   0x00000014   Code   RO          225    i.USB_OsaMutexCreate  usb_osa_bm.o
+    0x00005b10   0x00000006   Code   RO          226    i.USB_OsaMutexDestroy  usb_osa_bm.o
+    0x00005b16   0x00000030   Code   RO          564    i.__ARM_fpclassify  m_wv.l(fpclassify.o)
+    0x00005b46   0x00000002   PAD
+    0x00005b48   0x000000c0   Code   RO          512    i.__hardfp_modf     m_wv.l(modf.o)
+    0x00005c08   0x000008d8   Code   RO          515    i.__hardfp_pow      m_wv.l(pow.o)
+    0x000064e0   0x00000070   Code   RO          565    i.__kernel_poly     m_wv.l(poly.o)
+    0x00006550   0x00000020   Code   RO          554    i.__mathlib_dbl_divzero  m_wv.l(dunder.o)
+    0x00006570   0x00000006   Code   RO          556    i.__mathlib_dbl_infnan2  m_wv.l(dunder.o)
+    0x00006576   0x00000002   PAD
+    0x00006578   0x00000018   Code   RO          557    i.__mathlib_dbl_invalid  m_wv.l(dunder.o)
+    0x00006590   0x00000018   Code   RO          558    i.__mathlib_dbl_overflow  m_wv.l(dunder.o)
+    0x000065a8   0x00000018   Code   RO          560    i.__mathlib_dbl_underflow  m_wv.l(dunder.o)
+    0x000065c0   0x0000000c   Code   RO          593    i.__set_errno       mc_w.l(errno.o)
+    0x000065cc   0x00000050   Code   RO          464    i.board_init_power  board.o
+    0x0000661c   0x00000018   Code   RO          563    i.fabs              m_wv.l(fabs.o)
+    0x00006634   0x00000020   Code   RO           30    i.main              main_imxrt1052.o
+    0x00006654   0x0000006a   Code   RO          569    i.sqrt              m_wv.l(sqrt.o)
+    0x000066be   0x00000002   PAD
+    0x000066c0   0x00000194   Code   RO          474    i.system_clock_info  board.o
+    0x00006854   0x00000003   Data   RO           93    .constdata          cdcacm.o
+    0x00006857   0x00000001   PAD
+    0x00006858   0x00000034   Data   RO          132    .constdata          usb_device_ch9.o
+    0x0000688c   0x00000020   Data   RO          147    .constdata          usb_device_class.o
+    0x000068ac   0x00000008   Data   RO          179    .constdata          usb_device_ehci.o
+    0x000068b4   0x00000018   Data   RO          206    .constdata          usb_device_dci.o
+    0x000068cc   0x00000018   Data   RO          242    .constdata          usb_phy.o
+    0x000068e4   0x00000010   Data   RO          292    .constdata          fsl_clock.o
+    0x000068f4   0x00000024   Data   RO          331    .constdata          fsl_gpio.o
+    0x00006918   0x00000048   Data   RO          372    .constdata          fsl_lpuart.o
+    0x00006960   0x0000001a   Data   RO          485    .constdata          clock_config.o
+    0x0000697a   0x00000006   PAD
+    0x00006980   0x00000088   Data   RO          518    .constdata          m_wv.l(pow.o)
+    0x00006a08   0x00000008   Data   RO          566    .constdata          m_wv.l(qnan.o)
+    0x00006a10   0x00000089   Data   RO          116    .conststring        usb_device_cdc_acm.o
 
 
-    Execution Region RW_m_data (Base: 0x20000000, Size: 0x00000d4c, Max: 0x0001f800, ABSOLUTE, COMPRESSED[0x000000fc])
+    Execution Region RW_m_data (Base: 0x20000000, Size: 0x00000d4c, Max: 0x00016000, ABSOLUTE, COMPRESSED[0x000000fc])
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2200,18 +2200,18 @@ Memory Map of the image
     0x20000cdc   0x00000070   Zero   RW          205    .bss.m_usb_global   usb_device_dci.o
 
 
-    Execution Region ARM_LIB_HEAP (Base: 0x20000d4c, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
+    Execution Region ARM_LIB_HEAP (Base: 0x20016000, Size: 0x00008000, Max: 0x00008000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000d4c   0x00000400   Zero   RW            2    ARM_LIB_HEAP.bss    anon$$obj.o
+    0x20016000   0x00008000   Zero   RW            2    ARM_LIB_HEAP.bss    anon$$obj.o
 
 
-    Execution Region ARM_LIB_STACK (Base: 0x2001fc00, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
+    Execution Region ARM_LIB_STACK (Base: 0x2001e000, Size: 0x00002000, Max: 0x00002000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x2001fc00   0x00000400   Zero   RW            3    ARM_LIB_STACK.bss   anon$$obj.o
+    0x2001e000   0x00002000   Zero   RW            3    ARM_LIB_STACK.bss   anon$$obj.o
 
 
     Execution Region VECTOR_ROM (Base: 0x60002000, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
@@ -2246,11 +2246,6 @@ Memory Map of the image
     0x600027f8   0x00000030   Data   RO          611    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_m_ncache (Base: 0x81e00000, Size: 0x00000000, Max: 0x00200000, ABSOLUTE)
-
-    **** No section assigned to this execution region ****
-
-
 ==============================================================================
 
 Image component sizes
@@ -2259,7 +2254,7 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
       1678        394          0          0          0          0   board.o
-      1164        212          3         48       1060          0   cdcacm.o
+      1204        236          3         48       1060          0   cdcacm.o
        916        166         26          0          0          0   clock_config.o
       1832        166         16          8          0          0   fsl_clock.o
        154          4          0          0          0          0   fsl_debug_console.o
@@ -2286,8 +2281,8 @@ Image component sizes
        208         16         24          0          0          0   usb_phy.o
 
     ----------------------------------------------------------------------
-     22960       1606       3144        388       6084          0   Object Totals
-         0          0         48          0       3072          0   (incl. Generated)
+     23000       1630       3144        388      44996          0   Object Totals
+         0          0         48          0      41984          0   (incl. Generated)
         24          0         10          0        596          0   (incl. Padding)
 
     ----------------------------------------------------------------------
@@ -2348,15 +2343,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     26660       1994       3288        392       6084          0   Grand Totals
-     26660       1994       3288        252       6084          0   ELF Image Totals (compressed)
-     26660       1994       3288        252          0          0   ROM Totals
+     26700       2018       3288        392      44996          0   Grand Totals
+     26700       2018       3288        252      44996          0   ELF Image Totals (compressed)
+     26700       2018       3288        252          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                29948 (  29.25kB)
-    Total RW  Size (RW Data + ZI Data)              6476 (   6.32kB)
-    Total ROM Size (Code + RO Data + RW Data)      30200 (  29.49kB)
+    Total RO  Size (Code + RO Data)                29988 (  29.29kB)
+    Total RW  Size (RW Data + ZI Data)             45388 (  44.32kB)
+    Total ROM Size (Code + RO Data + RW Data)      30240 (  29.53kB)
 
 ==============================================================================
 

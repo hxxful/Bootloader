@@ -820,7 +820,7 @@ END GROUP
                 0x00000400                . = (. + __RAM_VECTOR_TABLE_SIZE_BYTES)
  *fill*         0x00000000      0x400 
 
-.text           0x60002400     0x4ab4
+.text           0x60002400     0x4afc
                 0x60002400                . = ALIGN (0x4)
                 0x60002400                flash_text_start = .
  *(.text)
@@ -1048,402 +1048,402 @@ END GROUP
                 0x60002944                __udivdi3
  *(.text*)
  .text.USB_DeviceCdcVcomCallback
-                0x60002b8c      0x1f4 build/imxrt1052_bl/imxrt/cdcacm.o
+                0x60002b8c      0x224 build/imxrt1052_bl/imxrt/cdcacm.o
                 0x60002b8c                USB_DeviceCdcVcomCallback
  .text.USB_DeviceCallback
-                0x60002d80       0xa4 build/imxrt1052_bl/imxrt/cdcacm.o
-                0x60002d80                USB_DeviceCallback
+                0x60002db0       0xa4 build/imxrt1052_bl/imxrt/cdcacm.o
+                0x60002db0                USB_DeviceCallback
  .text.USB_OTG1_IRQHandler
-                0x60002e24        0xc build/imxrt1052_bl/imxrt/cdcacm.o
-                0x60002e24                USB_OTG1_IRQHandler
+                0x60002e54        0xc build/imxrt1052_bl/imxrt/cdcacm.o
+                0x60002e54                USB_OTG1_IRQHandler
  .text.USB_OTG2_IRQHandler
-                0x60002e30        0xc build/imxrt1052_bl/imxrt/cdcacm.o
-                0x60002e30                USB_OTG2_IRQHandler
+                0x60002e60        0xc build/imxrt1052_bl/imxrt/cdcacm.o
+                0x60002e60                USB_OTG2_IRQHandler
  .text.USB_DeviceClockInit
-                0x60002e3c       0x3c build/imxrt1052_bl/imxrt/cdcacm.o
-                0x60002e3c                USB_DeviceClockInit
+                0x60002e6c       0x3c build/imxrt1052_bl/imxrt/cdcacm.o
+                0x60002e6c                USB_DeviceClockInit
  .text.USB_DeviceIsrEnable
-                0x60002e78       0x14 build/imxrt1052_bl/imxrt/cdcacm.o
-                0x60002e78                USB_DeviceIsrEnable
+                0x60002ea8       0x14 build/imxrt1052_bl/imxrt/cdcacm.o
+                0x60002ea8                USB_DeviceIsrEnable
  .text.USB_DeviceApplicationInit
-                0x60002e8c       0x54 build/imxrt1052_bl/imxrt/cdcacm.o
-                0x60002e8c                USB_DeviceApplicationInit
+                0x60002ebc       0x54 build/imxrt1052_bl/imxrt/cdcacm.o
+                0x60002ebc                USB_DeviceApplicationInit
  .text.SystemInitHook
-                0x60002ee0        0x2 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
-                0x60002ee0                SystemInitHook
- *fill*         0x60002ee2        0x2 
+                0x60002f10        0x2 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
+                0x60002f10                SystemInitHook
+ *fill*         0x60002f12        0x2 
  .text.SystemInit
-                0x60002ee4      0x118 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
-                0x60002ee4                SystemInit
+                0x60002f14      0x118 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
+                0x60002f14                SystemInit
  .text.CLOCK_GetOscFreq
-                0x60002ffc       0x20 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x6000302c       0x20 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
  .text.CLOCK_EnableUsbhs0Clock
-                0x6000301c       0x60 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x6000301c                CLOCK_EnableUsbhs0Clock
+                0x6000304c       0x60 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x6000304c                CLOCK_EnableUsbhs0Clock
  .text.CLOCK_InitArmPll
-                0x6000307c       0x44 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x6000307c                CLOCK_InitArmPll
+                0x600030ac       0x44 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x600030ac                CLOCK_InitArmPll
  .text.CLOCK_InitSysPll
-                0x600030c0       0x44 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x600030c0                CLOCK_InitSysPll
+                0x600030f0       0x44 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x600030f0                CLOCK_InitSysPll
  .text.CLOCK_InitUsb1Pll
-                0x60003104       0x48 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x60003104                CLOCK_InitUsb1Pll
+                0x60003134       0x48 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x60003134                CLOCK_InitUsb1Pll
  .text.CLOCK_EnableUsbhs0PhyPllClock
-                0x6000314c       0x50 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x6000314c                CLOCK_EnableUsbhs0PhyPllClock
+                0x6000317c       0x50 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x6000317c                CLOCK_EnableUsbhs0PhyPllClock
  .text.CLOCK_GetPllFreq
-                0x6000319c      0x1a0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x6000319c                CLOCK_GetPllFreq
+                0x600031cc      0x1a0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x600031cc                CLOCK_GetPllFreq
  .text.CLOCK_GetSysPfdFreq
-                0x6000333c       0x5c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x6000333c                CLOCK_GetSysPfdFreq
+                0x6000336c       0x5c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x6000336c                CLOCK_GetSysPfdFreq
  .text.CLOCK_GetPeriphClkFreq
-                0x60003398       0x94 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x600033c8       0x94 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
  .text.CLOCK_GetUsb1PfdFreq
-                0x6000342c       0x5c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x6000342c                CLOCK_GetUsb1PfdFreq
+                0x6000345c       0x5c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x6000345c                CLOCK_GetUsb1PfdFreq
  .text.CLOCK_GetFreq
-                0x60003488      0x104 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
-                0x60003488                CLOCK_GetFreq
+                0x600034b8      0x104 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+                0x600034b8                CLOCK_GetFreq
  .text.GPIO_PinWrite
-                0x6000358c       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
-                0x6000358c                GPIO_PinWrite
+                0x600035bc       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
+                0x600035bc                GPIO_PinWrite
  .text.GPIO_PinSetInterruptConfig
-                0x600035a4       0x76 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
-                0x600035a4                GPIO_PinSetInterruptConfig
- *fill*         0x6000361a        0x2 
+                0x600035d4       0x76 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
+                0x600035d4                GPIO_PinSetInterruptConfig
+ *fill*         0x6000364a        0x2 
  .text.GPIO_PinInit
-                0x6000361c       0x78 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
-                0x6000361c                GPIO_PinInit
+                0x6000364c       0x78 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
+                0x6000364c                GPIO_PinInit
  .text.CLOCK_ControlGate
-                0x60003694       0x24 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600036c4       0x24 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
  .text.LPUART_GetInstance
-                0x600036b8       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x600036b8                LPUART_GetInstance
+                0x600036e8       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600036e8                LPUART_GetInstance
  .text.LPUART_Init
-                0x600036d4      0x1a4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x600036d4                LPUART_Init
+                0x60003704      0x1a4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003704                LPUART_Init
  .text.LPUART_GetDefaultConfig
-                0x60003878       0x26 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x60003878                LPUART_GetDefaultConfig
+                0x600038a8       0x26 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600038a8                LPUART_GetDefaultConfig
  .text.LPUART_GetStatusFlags
-                0x6000389e        0xe build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x6000389e                LPUART_GetStatusFlags
+                0x600038ce        0xe build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600038ce                LPUART_GetStatusFlags
  .text.LPUART_ClearStatusFlags
-                0x600038ac       0x4c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x600038ac                LPUART_ClearStatusFlags
+                0x600038dc       0x4c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600038dc                LPUART_ClearStatusFlags
  .text.LPUART_WriteBlocking
-                0x600038f8       0x16 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x600038f8                LPUART_WriteBlocking
+                0x60003928       0x16 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003928                LPUART_WriteBlocking
  .text.LPUART_ReadBlocking
-                0x6000390e       0x94 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x6000390e                LPUART_ReadBlocking
- *fill*         0x600039a2        0x2 
+                0x6000393e       0x94 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x6000393e                LPUART_ReadBlocking
+ *fill*         0x600039d2        0x2 
  .text.LPUART1_DriverIRQHandler
-                0x600039a4       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x600039a4                LPUART1_DriverIRQHandler
+                0x600039d4       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600039d4                LPUART1_DriverIRQHandler
  .text.LPUART2_DriverIRQHandler
-                0x600039b8       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x600039b8                LPUART2_DriverIRQHandler
+                0x600039e8       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600039e8                LPUART2_DriverIRQHandler
  .text.LPUART3_DriverIRQHandler
-                0x600039cc       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x600039cc                LPUART3_DriverIRQHandler
+                0x600039fc       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x600039fc                LPUART3_DriverIRQHandler
  .text.LPUART4_DriverIRQHandler
-                0x600039e0       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x600039e0                LPUART4_DriverIRQHandler
+                0x60003a10       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003a10                LPUART4_DriverIRQHandler
  .text.LPUART5_DriverIRQHandler
-                0x600039f4       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x600039f4                LPUART5_DriverIRQHandler
+                0x60003a24       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003a24                LPUART5_DriverIRQHandler
  .text.LPUART6_DriverIRQHandler
-                0x60003a08       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x60003a08                LPUART6_DriverIRQHandler
+                0x60003a38       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003a38                LPUART6_DriverIRQHandler
  .text.LPUART7_DriverIRQHandler
-                0x60003a1c       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x60003a1c                LPUART7_DriverIRQHandler
+                0x60003a4c       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003a4c                LPUART7_DriverIRQHandler
  .text.LPUART8_DriverIRQHandler
-                0x60003a30       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
-                0x60003a30                LPUART8_DriverIRQHandler
+                0x60003a60       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+                0x60003a60                LPUART8_DriverIRQHandler
  .text.FLEXSPI_CheckAndClearError
-                0x60003a44       0x4e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
-                0x60003a44                FLEXSPI_CheckAndClearError
+                0x60003a74       0x4e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
+                0x60003a74                FLEXSPI_CheckAndClearError
  .text.FLEXSPI_TransferHandleIRQ
-                0x60003a92      0x14e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
-                0x60003a92                FLEXSPI_TransferHandleIRQ
+                0x60003ac2      0x14e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
+                0x60003ac2                FLEXSPI_TransferHandleIRQ
  .text.FLEXSPI_DriverIRQHandler
-                0x60003be0       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
-                0x60003be0                FLEXSPI_DriverIRQHandler
+                0x60003c10       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
+                0x60003c10                FLEXSPI_DriverIRQHandler
  .text.DbgConsole_RelocateLog
-                0x60003bf4       0x38 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
+                0x60003c24       0x38 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
  .text.DbgConsole_Init
-                0x60003c2c       0x10 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
-                0x60003c2c                DbgConsole_Init
+                0x60003c5c       0x10 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
+                0x60003c5c                DbgConsole_Init
  .text.DbgConsole_Printf
-                0x60003c3c       0x3c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
-                0x60003c3c                DbgConsole_Printf
+                0x60003c6c       0x3c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
+                0x60003c6c                DbgConsole_Printf
  .text.StrFormatPrintf
-                0x60003c78      0x57e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
-                0x60003c78                StrFormatPrintf
+                0x60003ca8      0x57e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
+                0x60003ca8                StrFormatPrintf
  .text.LOG_Init
-                0x600041f6       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
-                0x600041f6                LOG_Init
- .text.LOG_Pop  0x60004212       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
-                0x60004212                LOG_Pop
+                0x60004226       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
+                0x60004226                LOG_Init
+ .text.LOG_Pop  0x60004242       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
+                0x60004242                LOG_Pop
  .text.LOG_Push
-                0x6000422a        0x4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
-                0x6000422a                LOG_Push
- *fill*         0x6000422e        0x2 
- .text.IO_Init  0x60004230       0x44 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
-                0x60004230                IO_Init
+                0x6000425a        0x4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
+                0x6000425a                LOG_Push
+ *fill*         0x6000425e        0x2 
+ .text.IO_Init  0x60004260       0x44 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
+                0x60004260                IO_Init
  .text.IO_Transfer
-                0x60004274       0x30 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
-                0x60004274                IO_Transfer
+                0x600042a4       0x30 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
+                0x600042a4                IO_Transfer
  .text.SCB_DisableDCache
-                0x600042a4       0x54 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                0x600042d4       0x54 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
  .text.board_init_power
-                0x600042f8       0x34 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
-                0x600042f8                board_init_power
+                0x60004328       0x34 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                0x60004328                board_init_power
  .text.system_clock_info
-                0x6000432c       0xac build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
-                0x6000432c                system_clock_info
+                0x6000435c       0xac build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                0x6000435c                system_clock_info
  .text.BOARD_DebugConsoleSrcFreq
-                0x600043d8       0x5c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
-                0x600043d8                BOARD_DebugConsoleSrcFreq
+                0x60004408       0x5c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                0x60004408                BOARD_DebugConsoleSrcFreq
  .text.BOARD_InitDebugConsole
-                0x60004434       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
-                0x60004434                BOARD_InitDebugConsole
+                0x60004464       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                0x60004464                BOARD_InitDebugConsole
  .text.CopyAndUseRAMVectorTable
-                0x60004450       0x48 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
-                0x60004450                CopyAndUseRAMVectorTable
+                0x60004480       0x48 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                0x60004480                CopyAndUseRAMVectorTable
  .text.BOARD_ConfigMPU
-                0x60004498      0x160 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
-                0x60004498                BOARD_ConfigMPU
+                0x600044c8      0x160 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                0x600044c8                BOARD_ConfigMPU
  .text.CLOCK_SetMux
-                0x600045f8       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+                0x60004628       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
  .text.CLOCK_SetDiv
-                0x60004638       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+                0x60004668       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
  .text.BOARD_BootClockRUN
-                0x60004678      0x2fc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
-                0x60004678                BOARD_BootClockRUN
+                0x600046a8      0x2fc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+                0x600046a8                BOARD_BootClockRUN
  .text.BOARD_InitPins
-                0x60004974       0x28 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
-                0x60004974                BOARD_InitPins
+                0x600049a4       0x28 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
+                0x600049a4                BOARD_InitPins
  .text.USB_DeviceGetDeviceDescriptor
-                0x6000499c       0x10 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
-                0x6000499c                USB_DeviceGetDeviceDescriptor
+                0x600049cc       0x10 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
+                0x600049cc                USB_DeviceGetDeviceDescriptor
  .text.USB_DeviceGetConfigurationDescriptor
-                0x600049ac       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
-                0x600049ac                USB_DeviceGetConfigurationDescriptor
+                0x600049dc       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
+                0x600049dc                USB_DeviceGetConfigurationDescriptor
  .text.USB_DeviceGetStringDescriptor
-                0x600049c4       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
-                0x600049c4                USB_DeviceGetStringDescriptor
+                0x600049f4       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
+                0x600049f4                USB_DeviceGetStringDescriptor
  .text.USB_DeviceSetSpeed
-                0x60004a04       0x9c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
-                0x60004a04                USB_DeviceSetSpeed
+                0x60004a34       0x9c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
+                0x60004a34                USB_DeviceSetSpeed
  .text.USB_DeviceCh9GetDescriptor
-                0x60004aa0       0x72 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+                0x60004ad0       0x72 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
  .text.USB_DeviceCh9SetAddress
-                0x60004b12       0x54 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+                0x60004b42       0x54 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
  .text.USB_DeviceCh9SetClearFeature
-                0x60004b66       0x88 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+                0x60004b96       0x88 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
  .text.USB_DeviceCh9SynchFrame
-                0x60004bee       0x3c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+                0x60004c1e       0x3c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
  .text.USB_DeviceCh9GetStatus
-                0x60004c2a       0x8a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+                0x60004c5a       0x8a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
  .text.USB_DeviceCh9SetInterface
-                0x60004cb4       0x42 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+                0x60004ce4       0x42 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
  .text.USB_DeviceCh9GetInterface
-                0x60004cf6       0x3c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+                0x60004d26       0x3c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
  .text.USB_DeviceCh9GetConfiguration
-                0x60004d32       0x36 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+                0x60004d62       0x36 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
  .text.USB_DeviceCh9SetConfiguration
-                0x60004d68       0x60 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+                0x60004d98       0x60 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
  .text.USB_DeviceControlCallbackFeedback
-                0x60004dc8       0x6a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
- *fill*         0x60004e32        0x2 
+                0x60004df8       0x6a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+ *fill*         0x60004e62        0x2 
  .text.USB_DeviceControlCallback
-                0x60004e34      0x1c0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
-                0x60004e34                USB_DeviceControlCallback
+                0x60004e64      0x1c0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+                0x60004e64                USB_DeviceControlCallback
  .text.USB_DeviceControlPipeInit
-                0x60004ff4       0x54 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
-                0x60004ff4                USB_DeviceControlPipeInit
+                0x60005024       0x54 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+                0x60005024                USB_DeviceControlPipeInit
  .text.USB_DeviceClassGetHandleByDeviceHandle
-                0x60005048       0x30 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
+                0x60005078       0x30 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
  .text.USB_DeviceClassFreeHandle
-                0x60005078       0x38 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
+                0x600050a8       0x38 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
  .text.USB_DeviceClassGetHandleByControllerId
-                0x600050b0       0x34 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
+                0x600050e0       0x34 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
  .text.USB_DeviceClassGetDeviceHandle
-                0x600050e4       0x34 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
-                0x600050e4                USB_DeviceClassGetDeviceHandle
+                0x60005114       0x34 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
+                0x60005114                USB_DeviceClassGetDeviceHandle
  .text.USB_DeviceClassEvent
-                0x60005118       0x68 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
-                0x60005118                USB_DeviceClassEvent
+                0x60005148       0x68 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
+                0x60005148                USB_DeviceClassEvent
  .text.USB_DeviceClassCallback
-                0x60005180       0x38 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
-                0x60005180                USB_DeviceClassCallback
+                0x600051b0       0x38 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
+                0x600051b0                USB_DeviceClassCallback
  .text.USB_DeviceClassInit
-                0x600051b8       0xcc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
-                0x600051b8                USB_DeviceClassInit
+                0x600051e8       0xcc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
+                0x600051e8                USB_DeviceClassInit
  .text.USB_DeviceClassGetSpeed
-                0x60005284       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
-                0x60005284                USB_DeviceClassGetSpeed
+                0x600052b4       0x1c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
+                0x600052b4                USB_DeviceClassGetSpeed
  .text.USB_DeviceCdcAcmInterruptIn
-                0x600052a0       0x28 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
-                0x600052a0                USB_DeviceCdcAcmInterruptIn
+                0x600052d0       0x28 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+                0x600052d0                USB_DeviceCdcAcmInterruptIn
  .text.USB_DeviceCdcAcmBulkIn
-                0x600052c8       0x26 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
-                0x600052c8                USB_DeviceCdcAcmBulkIn
+                0x600052f8       0x26 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+                0x600052f8                USB_DeviceCdcAcmBulkIn
  .text.USB_DeviceCdcAcmBulkOut
-                0x600052ee       0x28 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
-                0x600052ee                USB_DeviceCdcAcmBulkOut
- *fill*         0x60005316        0x2 
+                0x6000531e       0x28 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+                0x6000531e                USB_DeviceCdcAcmBulkOut
+ *fill*         0x60005346        0x2 
  .text.USB_DeviceCdcAcmEndpointsInit
-                0x60005318      0x1a8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
-                0x60005318                USB_DeviceCdcAcmEndpointsInit
+                0x60005348      0x1a8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+                0x60005348                USB_DeviceCdcAcmEndpointsInit
  .text.USB_DeviceCdcAcmEndpointsDeinit
-                0x600054c0       0x4e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
-                0x600054c0                USB_DeviceCdcAcmEndpointsDeinit
- *fill*         0x6000550e        0x2 
+                0x600054f0       0x4e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+                0x600054f0                USB_DeviceCdcAcmEndpointsDeinit
+ *fill*         0x6000553e        0x2 
  .text.USB_DeviceCdcAcmEvent
-                0x60005510      0x32c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
-                0x60005510                USB_DeviceCdcAcmEvent
+                0x60005540      0x32c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+                0x60005540                USB_DeviceCdcAcmEvent
  .text.USB_DeviceCdcAcmInit
-                0x6000583c       0x70 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
-                0x6000583c                USB_DeviceCdcAcmInit
+                0x6000586c       0x70 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+                0x6000586c                USB_DeviceCdcAcmInit
  .text.USB_DeviceCdcAcmDeinit
-                0x600058ac       0x50 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
-                0x600058ac                USB_DeviceCdcAcmDeinit
+                0x600058dc       0x50 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+                0x600058dc                USB_DeviceCdcAcmDeinit
  .text.USB_DeviceCdcAcmSend
-                0x600058fc       0x7a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
-                0x600058fc                USB_DeviceCdcAcmSend
+                0x6000592c       0x7a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+                0x6000592c                USB_DeviceCdcAcmSend
  .text.USB_DeviceCdcAcmRecv
-                0x60005976       0x58 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
-                0x60005976                USB_DeviceCdcAcmRecv
+                0x600059a6       0x58 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+                0x600059a6                USB_DeviceCdcAcmRecv
  .text.USB_DeviceEhciSetDefaultState
-                0x600059ce       0xaa build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+                0x600059fe       0xaa build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
  .text.USB_DeviceEhciTransfer
-                0x60005a78      0x1aa build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+                0x60005aa8      0x1aa build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
  .text.USB_DeviceEhciCancelControlPipe
-                0x60005c22       0xcc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
- *fill*         0x60005cee        0x2 
+                0x60005c52       0xcc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+ *fill*         0x60005d1e        0x2 
  .text.USB_DeviceEhciInit
-                0x60005cf0       0x64 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
-                0x60005cf0                USB_DeviceEhciInit
+                0x60005d20       0x64 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+                0x60005d20                USB_DeviceEhciInit
  .text.USB_DeviceEhciDeinit
-                0x60005d54       0x28 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
-                0x60005d54                USB_DeviceEhciDeinit
+                0x60005d84       0x28 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+                0x60005d84                USB_DeviceEhciDeinit
  .text.USB_DeviceEhciSend
-                0x60005d7c        0xc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
-                0x60005d7c                USB_DeviceEhciSend
+                0x60005dac        0xc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+                0x60005dac                USB_DeviceEhciSend
  .text.USB_DeviceEhciRecv
-                0x60005d88        0x8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
-                0x60005d88                USB_DeviceEhciRecv
+                0x60005db8        0x8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+                0x60005db8                USB_DeviceEhciRecv
  .text.USB_DeviceEhciCancel
-                0x60005d90      0x112 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
-                0x60005d90                USB_DeviceEhciCancel
+                0x60005dc0      0x112 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+                0x60005dc0                USB_DeviceEhciCancel
  .text.USB_DeviceEhciEndpointDeinit
-                0x60005ea2       0x90 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+                0x60005ed2       0x90 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
  .text.USB_DeviceEhciControl
-                0x60005f32      0x2f0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
-                0x60005f32                USB_DeviceEhciControl
+                0x60005f62      0x2f0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+                0x60005f62                USB_DeviceEhciControl
  .text.USB_DeviceEhciIsrFunction
-                0x60006222      0x2d4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
-                0x60006222                USB_DeviceEhciIsrFunction
+                0x60006252      0x2d4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+                0x60006252                USB_DeviceEhciIsrFunction
  .text.USB_DeviceControl
-                0x600064f6       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x60006526       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
  .text.USB_DeviceFreeHandle
-                0x6000650a       0x1e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x6000653a       0x1e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
  .text.USB_DeviceTransfer
-                0x60006528       0x7e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x60006558       0x7e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
  .text.USB_DeviceNotificationTrigger
-                0x600065a6       0xaa build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
-                0x600065a6                USB_DeviceNotificationTrigger
+                0x600065d6       0xaa build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x600065d6                USB_DeviceNotificationTrigger
  .text.USB_DeviceRun
-                0x60006650        0x8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
-                0x60006650                USB_DeviceRun
+                0x60006680        0x8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x60006680                USB_DeviceRun
  .text.USB_DeviceDeinit
-                0x60006658       0x22 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
-                0x60006658                USB_DeviceDeinit
- *fill*         0x6000667a        0x2 
+                0x60006688       0x22 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x60006688                USB_DeviceDeinit
+ *fill*         0x600066aa        0x2 
  .text.USB_DeviceInit
-                0x6000667c       0xb4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
-                0x6000667c                USB_DeviceInit
+                0x600066ac       0xb4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x600066ac                USB_DeviceInit
  .text.USB_DeviceSendRequest
-                0x60006730        0xc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
-                0x60006730                USB_DeviceSendRequest
+                0x60006760        0xc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x60006760                USB_DeviceSendRequest
  .text.USB_DeviceRecvRequest
-                0x6000673c        0x8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
-                0x6000673c                USB_DeviceRecvRequest
+                0x6000676c        0x8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x6000676c                USB_DeviceRecvRequest
  .text.USB_DeviceInitEndpoint
-                0x60006744       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
-                0x60006744                USB_DeviceInitEndpoint
+                0x60006774       0x40 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x60006774                USB_DeviceInitEndpoint
  .text.USB_DeviceDeinitEndpoint
-                0x60006784       0x3e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
-                0x60006784                USB_DeviceDeinitEndpoint
+                0x600067b4       0x3e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x600067b4                USB_DeviceDeinitEndpoint
  .text.USB_DeviceStallEndpoint
-                0x600067c2       0x22 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
-                0x600067c2                USB_DeviceStallEndpoint
+                0x600067f2       0x22 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x600067f2                USB_DeviceStallEndpoint
  .text.USB_DeviceUnstallEndpoint
-                0x600067e4       0x22 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
-                0x600067e4                USB_DeviceUnstallEndpoint
+                0x60006814       0x22 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x60006814                USB_DeviceUnstallEndpoint
  .text.USB_DeviceGetStatus
-                0x60006806       0x42 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
-                0x60006806                USB_DeviceGetStatus
+                0x60006836       0x42 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x60006836                USB_DeviceGetStatus
  .text.USB_DeviceSetStatus
-                0x60006848       0x58 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
-                0x60006848                USB_DeviceSetStatus
+                0x60006878       0x58 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+                0x60006878                USB_DeviceSetStatus
  .text.USB_OsaEnterCritical
-                0x600068a0        0xc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
-                0x600068a0                USB_OsaEnterCritical
+                0x600068d0        0xc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
+                0x600068d0                USB_OsaEnterCritical
  .text.USB_OsaExitCritical
-                0x600068ac        0x6 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
-                0x600068ac                USB_OsaExitCritical
- *fill*         0x600068b2        0x2 
+                0x600068dc        0x6 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
+                0x600068dc                USB_OsaExitCritical
+ *fill*         0x600068e2        0x2 
  .text.USB_OsaMutexCreate
-                0x600068b4       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
-                0x600068b4                USB_OsaMutexCreate
+                0x600068e4       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
+                0x600068e4                USB_OsaMutexCreate
  .text.USB_OsaMutexDestroy
-                0x600068c8        0x4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
-                0x600068c8                USB_OsaMutexDestroy
+                0x600068f8        0x4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
+                0x600068f8                USB_OsaMutexDestroy
  .text.USB_EhciPhyGetBase
-                0x600068cc       0x58 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/phy/usb_phy.o
-                0x600068cc                USB_EhciPhyGetBase
+                0x600068fc       0x58 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/phy/usb_phy.o
+                0x600068fc                USB_EhciPhyGetBase
  .text.USB_EhciPhyInit
-                0x60006924       0x64 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/phy/usb_phy.o
-                0x60006924                USB_EhciPhyInit
+                0x60006954       0x64 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/phy/usb_phy.o
+                0x60006954                USB_EhciPhyInit
  .text.startup.main
-                0x60006988       0x20 build/imxrt1052_bl/main_imxrt1052.o
-                0x60006988                main
- .text._start   0x600069a8        0x6 build/imxrt1052_bl/main_imxrt1052.o
-                0x600069a8                _start
- .text.memset   0x600069ae       0x10 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memset.o)
-                0x600069ae                memset
- .text.strlen   0x600069be       0x10 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-strlen.o)
-                0x600069be                strlen
+                0x600069b8       0x20 build/imxrt1052_bl/main_imxrt1052.o
+                0x600069b8                main
+ .text._start   0x600069d8        0x6 build/imxrt1052_bl/main_imxrt1052.o
+                0x600069d8                _start
+ .text.memset   0x600069de       0x10 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-memset.o)
+                0x600069de                memset
+ .text.strlen   0x600069ee       0x10 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/cortex-m7/fpu/fpv5-sp-d16/libg_nano.a(lib_a-strlen.o)
+                0x600069ee                strlen
  *(.rodata)
- .rodata        0x600069ce        0x3 build/imxrt1052_bl/imxrt/cdcacm.o
- *fill*         0x600069d1        0x3 
- .rodata        0x600069d4       0x10 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
- .rodata        0x600069e4       0x24 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
- .rodata        0x60006a08       0x48 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
- .rodata        0x60006a50       0x1a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
-                0x60006a50                armPllConfig_BOARD_BootClockRUN
-                0x60006a58                sysPllConfig_BOARD_BootClockRUN
-                0x60006a68                usb1PllConfig_BOARD_BootClockRUN
- *fill*         0x60006a6a        0x2 
- .rodata        0x60006a6c       0x34 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
- .rodata        0x60006aa0       0x20 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
- .rodata        0x60006ac0       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
- .rodata        0x60006ad8        0xc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/phy/usb_phy.o
+ .rodata        0x600069fe        0x3 build/imxrt1052_bl/imxrt/cdcacm.o
+ *fill*         0x60006a01        0x3 
+ .rodata        0x60006a04       0x10 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+ .rodata        0x60006a14       0x24 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
+ .rodata        0x60006a38       0x48 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+ .rodata        0x60006a80       0x1a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+                0x60006a80                armPllConfig_BOARD_BootClockRUN
+                0x60006a88                sysPllConfig_BOARD_BootClockRUN
+                0x60006a98                usb1PllConfig_BOARD_BootClockRUN
+ *fill*         0x60006a9a        0x2 
+ .rodata        0x60006a9c       0x34 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+ .rodata        0x60006ad0       0x20 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
+ .rodata        0x60006af0       0x18 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+ .rodata        0x60006b08        0xc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/phy/usb_phy.o
  *(.rodata*)
  .rodata.str1.1
-                0x60006ae4       0x69 build/imxrt1052_bl/imxrt/cdcacm.o
+                0x60006b14       0x81 build/imxrt1052_bl/imxrt/cdcacm.o
  .rodata.str1.1
-                0x60006b4d      0x2b6 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+                0x60006b95      0x2b6 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
                                 0x2b9 (size before relaxing)
  .rodata.str1.1
-                0x60006e03       0xaf build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+                0x60006e4b       0xaf build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.glue_7t)
@@ -1451,55 +1451,55 @@ END GROUP
  *(.eh_frame)
  *(.init)
  *(.fini)
-                0x60006eb4                . = ALIGN (0x4)
- *fill*         0x60006eb2        0x2 
+                0x60006efc                . = ALIGN (0x4)
+ *fill*         0x60006efa        0x2 
 
-.vfp11_veneer   0x60006eb4        0x0
+.vfp11_veneer   0x60006efc        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x60006eb4        0x0
+.v4_bx          0x60006efc        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x60006eb4        0x0
+.iplt           0x60006efc        0x0
  .iplt          0x00000000        0x0 build/imxrt1052_bl/bl.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x60006eb4        0x8
-                0x60006eb4                __exidx_start = .
+.ARM            0x60006efc        0x8
+                0x60006efc                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x60006eb4        0x8 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_divdi3.o)
- .ARM.exidx     0x60006ebc        0x0 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_udivdi3.o)
+ .ARM.exidx     0x60006efc        0x8 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_divdi3.o)
+ .ARM.exidx     0x60006f04        0x0 /opt/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/cortex-m7/fpu/fpv5-sp-d16/libgcc.a(_udivdi3.o)
                                   0x8 (size before relaxing)
-                0x60006ebc                __exidx_end = .
-                0x60006ebc                flash_text_end = .
+                0x60006f04                __exidx_end = .
+                0x60006f04                flash_text_end = .
                 0x00000400                itcm_text_start = 0x400
 
-.rel.dyn        0x60006ebc        0x0
+.rel.dyn        0x60006f04        0x0
  .rel.iplt      0x00000000        0x0 build/imxrt1052_bl/bl.o
 
-.ctors          0x60006ebc        0x0
-                0x60006ebc                __CTOR_LIST__ = .
+.ctors          0x60006f04        0x0
+                0x60006f04                __CTOR_LIST__ = .
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x60006ebc                __CTOR_END__ = .
+                0x60006f04                __CTOR_END__ = .
 
-.dtors          0x60006ebc        0x0
-                0x60006ebc                __DTOR_LIST__ = .
+.dtors          0x60006f04        0x0
+                0x60006f04                __DTOR_LIST__ = .
  *crtbegin.o(.dtors)
  *crtbegin?.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x60006ebc                __DTOR_END__ = .
-                0x60006ebc                __etext = .
-                0x60006ebc                __DATA_ROM = .
+                0x60006f04                __DTOR_END__ = .
+                0x60006f04                __etext = .
+                0x60006f04                __DATA_ROM = .
 
-.data           0x20000000      0x15c load address 0x60006ebc
+.data           0x20000000      0x15c load address 0x60006f04
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                __DATA_RAM = .
                 0x20000000                __data_start__ = .
@@ -1529,12 +1529,12 @@ END GROUP
  *(.jcr*)
                 0x2000015c                . = ALIGN (0x4)
                 0x2000015c                __data_end__ = .
-                0x60007018                __NDATA_ROM = (__DATA_ROM + (__data_end__ - __data_start__))
+                0x60007060                __NDATA_ROM = (__DATA_ROM + (__data_end__ - __data_start__))
 
-.igot.plt       0x2000015c        0x0 load address 0x60007018
+.igot.plt       0x2000015c        0x0 load address 0x60007060
  .igot.plt      0x00000000        0x0 build/imxrt1052_bl/bl.o
 
-.ncache.init    0x2000015c        0x0 load address 0x60007018
+.ncache.init    0x2000015c        0x0 load address 0x60007060
                 0x2000015c                __noncachedata_start__ = .
  *(NonCacheable.init)
                 0x2000015c                . = ALIGN (0x4)
@@ -1545,7 +1545,7 @@ END GROUP
  *(NonCacheable)
                 0x2000015c                . = ALIGN (0x4)
                 0x2000015c                __noncachedata_end__ = .
-                0x60007018                __DATA_END = (__NDATA_ROM + (__noncachedata_init_end__ - __noncachedata_start__))
+                0x60007060                __DATA_END = (__NDATA_ROM + (__noncachedata_init_end__ - __noncachedata_start__))
                 0x64000000                text_end = (ORIGIN (m_text) + 0x3ffdc00)
                 0x00000001                ASSERT ((__DATA_END <= text_end), region m_text overflowed with text and data)
 
@@ -1672,33 +1672,33 @@ END GROUP
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region m_data overflowed with stack and heap)
 OUTPUT(build/imxrt1052_bl/imxrt1052_bl.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x20002
- .debug_info    0x00000000     0x21b6 build/imxrt1052_bl/imxrt/cdcacm.o
- .debug_info    0x000021b6      0xc68 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
- .debug_info    0x00002e1e     0x1c66 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
- .debug_info    0x00004a84      0xfe7 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
- .debug_info    0x00005a6b     0x2836 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
- .debug_info    0x000082a1     0x24f2 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
- .debug_info    0x0000a793      0x672 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
- .debug_info    0x0000ae05      0xa56 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
- .debug_info    0x0000b85b      0x459 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
- .debug_info    0x0000bcb4      0xeaa build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
- .debug_info    0x0000cb5e     0x3545 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
- .debug_info    0x000100a3     0x1304 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
- .debug_info    0x000113a7      0x8b5 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
- .debug_info    0x00011c5c       0xa8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
- .debug_info    0x00011d04      0x938 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
- .debug_info    0x0001263c      0xca4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
- .debug_info    0x000132e0     0x121a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
- .debug_info    0x000144fa     0x210c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
- .debug_info    0x00016606     0x15d8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
- .debug_info    0x00017bde     0x1a1d build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
- .debug_info    0x000195fb     0x2206 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
- .debug_info    0x0001b801     0x1925 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
- .debug_info    0x0001d126     0x1b8f build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
- .debug_info    0x0001ecb5      0x6c6 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/phy/usb_phy.o
- .debug_info    0x0001f37b      0xbf2 build/imxrt1052_bl/main_imxrt1052.o
- .debug_info    0x0001ff6d       0x95 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
+.debug_info     0x00000000    0x20052
+ .debug_info    0x00000000     0x2206 build/imxrt1052_bl/imxrt/cdcacm.o
+ .debug_info    0x00002206      0xc68 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
+ .debug_info    0x00002e6e     0x1c66 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+ .debug_info    0x00004ad4      0xfe7 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
+ .debug_info    0x00005abb     0x2836 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+ .debug_info    0x000082f1     0x24f2 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
+ .debug_info    0x0000a7e3      0x672 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
+ .debug_info    0x0000ae55      0xa56 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
+ .debug_info    0x0000b8ab      0x459 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
+ .debug_info    0x0000bd04      0xeaa build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
+ .debug_info    0x0000cbae     0x3545 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+ .debug_info    0x000100f3     0x1304 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+ .debug_info    0x000113f7      0x8b5 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
+ .debug_info    0x00011cac       0xa8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
+ .debug_info    0x00011d54      0x938 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
+ .debug_info    0x0001268c      0xca4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
+ .debug_info    0x00013330     0x121a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
+ .debug_info    0x0001454a     0x210c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+ .debug_info    0x00016656     0x15d8 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
+ .debug_info    0x00017c2e     0x1a1d build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+ .debug_info    0x0001964b     0x2206 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+ .debug_info    0x0001b851     0x1925 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+ .debug_info    0x0001d176     0x1b8f build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
+ .debug_info    0x0001ed05      0x6c6 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/phy/usb_phy.o
+ .debug_info    0x0001f3cb      0xbf2 build/imxrt1052_bl/main_imxrt1052.o
+ .debug_info    0x0001ffbd       0x95 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
 
 .debug_abbrev   0x00000000     0x43f0
  .debug_abbrev  0x00000000      0x3ee build/imxrt1052_bl/imxrt/cdcacm.o
@@ -1728,29 +1728,29 @@ OUTPUT(build/imxrt1052_bl/imxrt1052_bl.elf elf32-littlearm)
  .debug_abbrev  0x0000413c      0x2a0 build/imxrt1052_bl/main_imxrt1052.o
  .debug_abbrev  0x000043dc       0x14 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
 
-.debug_loc      0x00000000     0xaa89
- .debug_loc     0x00000000      0x5a5 build/imxrt1052_bl/imxrt/cdcacm.o
- .debug_loc     0x000005a5       0xe9 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
- .debug_loc     0x0000068e      0xa79 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
- .debug_loc     0x00001107      0x468 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
- .debug_loc     0x0000156f     0x1228 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
- .debug_loc     0x00002797      0xde3 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
- .debug_loc     0x0000357a      0x2ec build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
- .debug_loc     0x00003866     0x10ac build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
- .debug_loc     0x00004912      0x232 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
- .debug_loc     0x00004b44      0x1f7 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
- .debug_loc     0x00004d3b      0x7ce build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
- .debug_loc     0x00005509       0xca build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
- .debug_loc     0x000055d3       0x50 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
- .debug_loc     0x00005623       0xf3 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
- .debug_loc     0x00005716      0xe25 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
- .debug_loc     0x0000653b      0x63c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
- .debug_loc     0x00006b77      0xd8a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
- .debug_loc     0x00007901     0x1522 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
- .debug_loc     0x00008e23      0xe8e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
- .debug_loc     0x00009cb1      0xadf build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
- .debug_loc     0x0000a790      0x21d build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/phy/usb_phy.o
- .debug_loc     0x0000a9ad       0xdc build/imxrt1052_bl/main_imxrt1052.o
+.debug_loc      0x00000000     0xa8c6
+ .debug_loc     0x00000000      0x3e2 build/imxrt1052_bl/imxrt/cdcacm.o
+ .debug_loc     0x000003e2       0xe9 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
+ .debug_loc     0x000004cb      0xa79 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+ .debug_loc     0x00000f44      0x468 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
+ .debug_loc     0x000013ac     0x1228 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+ .debug_loc     0x000025d4      0xde3 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
+ .debug_loc     0x000033b7      0x2ec build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
+ .debug_loc     0x000036a3     0x10ac build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
+ .debug_loc     0x0000474f      0x232 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
+ .debug_loc     0x00004981      0x1f7 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
+ .debug_loc     0x00004b78      0x7ce build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+ .debug_loc     0x00005346       0xca build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+ .debug_loc     0x00005410       0x50 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
+ .debug_loc     0x00005460       0xf3 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
+ .debug_loc     0x00005553      0xe25 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+ .debug_loc     0x00006378      0x63c build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
+ .debug_loc     0x000069b4      0xd8a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+ .debug_loc     0x0000773e     0x1522 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+ .debug_loc     0x00008c60      0xe8e build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+ .debug_loc     0x00009aee      0xadf build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
+ .debug_loc     0x0000a5cd      0x21d build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/phy/usb_phy.o
+ .debug_loc     0x0000a7ea       0xdc build/imxrt1052_bl/main_imxrt1052.o
 
 .debug_aranges  0x00000000      0xab8
  .debug_aranges
@@ -1830,33 +1830,33 @@ OUTPUT(build/imxrt1052_bl/imxrt1052_bl.elf elf32-littlearm)
  .debug_ranges  0x00000ce8       0x30 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/phy/usb_phy.o
  .debug_ranges  0x00000d18       0xa0 build/imxrt1052_bl/main_imxrt1052.o
 
-.debug_line     0x00000000     0x6b37
- .debug_line    0x00000000      0x552 build/imxrt1052_bl/imxrt/cdcacm.o
- .debug_line    0x00000552      0x236 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
- .debug_line    0x00000788      0x62b build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
- .debug_line    0x00000db3      0x243 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
- .debug_line    0x00000ff6      0x7fb build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
- .debug_line    0x000017f1      0x6c3 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
- .debug_line    0x00001eb4      0x39a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
- .debug_line    0x0000224e      0x537 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
- .debug_line    0x00002785      0x2f4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
- .debug_line    0x00002a79      0x2d9 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
- .debug_line    0x00002d52      0x728 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
- .debug_line    0x0000347a      0x2bc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
- .debug_line    0x00003736      0x20a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
- .debug_line    0x00003940      0x118 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
- .debug_line    0x00003a58      0x206 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
- .debug_line    0x00003c5e      0x212 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
- .debug_line    0x00003e70      0x2ee build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
- .debug_line    0x0000415e      0x540 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
- .debug_line    0x0000469e      0x445 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
- .debug_line    0x00004ae3      0x670 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
- .debug_line    0x00005153      0x6d0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
- .debug_line    0x00005823      0x510 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
- .debug_line    0x00005d33      0x621 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
- .debug_line    0x00006354      0x2bd build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/phy/usb_phy.o
- .debug_line    0x00006611      0x379 build/imxrt1052_bl/main_imxrt1052.o
- .debug_line    0x0000698a      0x1ad build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
+.debug_line     0x00000000     0x6b39
+ .debug_line    0x00000000      0x554 build/imxrt1052_bl/imxrt/cdcacm.o
+ .debug_line    0x00000554      0x236 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/system_MIMXRT1052.o
+ .debug_line    0x0000078a      0x62b build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_clock.o
+ .debug_line    0x00000db5      0x243 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_gpio.o
+ .debug_line    0x00000ff8      0x7fb build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_lpuart.o
+ .debug_line    0x000017f3      0x6c3 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/drivers/fsl_flexspi.o
+ .debug_line    0x00001eb6      0x39a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/fsl_debug_console.o
+ .debug_line    0x00002250      0x537 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/str/fsl_str.o
+ .debug_line    0x00002787      0x2f4 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/log/fsl_log.o
+ .debug_line    0x00002a7b      0x2d9 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/utilities/io/fsl_io.o
+ .debug_line    0x00002d54      0x728 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/board.o
+ .debug_line    0x0000347c      0x2bc build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/clock_config.o
+ .debug_line    0x00003738      0x20a build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/pin_mux.o
+ .debug_line    0x00003942      0x118 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_sdram_ini_dcd.o
+ .debug_line    0x00003a5a      0x206 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/fsl_flexspi_nor_boot.o
+ .debug_line    0x00003c60      0x212 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/demo_apps/test/xip/uavrs_v2_flexspi_nor_flash.o
+ .debug_line    0x00003e72      0x2ee build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_descriptor.o
+ .debug_line    0x00004160      0x540 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_ch9.o
+ .debug_line    0x000046a0      0x445 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_class.o
+ .debug_line    0x00004ae5      0x670 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/boards/evkbimxrt1050/usb_examples/usb_device_cdc_vcom/bm/usb_device_cdc_acm.o
+ .debug_line    0x00005155      0x6d0 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_ehci.o
+ .debug_line    0x00005825      0x510 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/device/usb_device_dci.o
+ .debug_line    0x00005d35      0x621 build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/osa/usb_osa_bm.o
+ .debug_line    0x00006356      0x2bd build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/middleware/usb/phy/usb_phy.o
+ .debug_line    0x00006613      0x379 build/imxrt1052_bl/main_imxrt1052.o
+ .debug_line    0x0000698c      0x1ad build/imxrt1052_bl/lib/imxrt/sdk_2.4.1_mimxrt1052/devices/MIMXRT1052/gcc/startup_MIMXRT1052.o
 
 .debug_str      0x00000000     0xa2b4
  .debug_str     0x00000000     0x2a7a build/imxrt1052_bl/imxrt/cdcacm.o

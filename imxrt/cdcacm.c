@@ -266,6 +266,8 @@ usb_status_t USB_DeviceCdcVcomCallback(class_handle_t handle, uint32_t event, vo
                     USB0->INTEN &= ~USB_INTEN_SOFTOKEN_MASK;
 #endif
                 }
+                if(s_recvSize)
+                        PRINTF("vcom recv data len:%d\r\n", s_recvSize);
             }
         }
         break;
