@@ -231,7 +231,29 @@ led_toggle(unsigned led)
 		break;
 	}
 }
+
+/* 预防GCC编译报错 */
+#ifdef USB_DATA_ALIGN
+#undef USB_DATA_ALIGN
+#endif
+
+#include "usb_device_config.h"
+#include "usb.h"
+#include "usb_device.h"
+
+#include "usb_device_class.h"
+#include "usb_device_cdc_acm.h"
+#include "usb_device_ch9.h"
+#include "fsl_debug_console.h"
+
+#include "usb_device_descriptor.h"
+#include "virtual_com.h"
+
 extern void USB_DeviceApplicationInit(void);
+extern void APPTask(void);
+extern usb_status_t USB_DeviceCdcAcmSend(class_handle_t handle, uint8_t ep, uint8_t *buffer, uint32_t length);
+extern usb_cdc_vcom_struct_t s_cdcVcom;
+
 int
 main(void)
 {
@@ -248,17 +270,15 @@ main(void)
         
         /* 初始化状态LED灯 */
         //board_init_led();
-        /* 初始化HyperFlash */
-        //board_init_hyperflash();
-        
-        /* 初始化LED引脚 */
-        //LED_GPIO_Config();
         
         /* 显示系统时钟信息 */
         system_clock_info();
         USB_DeviceApplicationInit();
+        /* 初始化HyperFlash */
+        board_init_hyperflash();
         while(1) {
-                //USB_DeviceCdcAcmSend(s_cdcVcom.cdcAcmHandle, USB_CDC_VCOM_BULK_IN_ENDPOINT, NULL, 0);
+		APPTask();
+                USB_DeviceCdcAcmSend(s_cdcVcom.cdcAcmHandle, USB_CDC_VCOM_BULK_IN_ENDPOINT, NULL, 0);
         }
         /* 使GCC编译时不报错 */
         board_init();

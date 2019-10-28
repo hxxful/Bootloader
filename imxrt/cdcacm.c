@@ -357,14 +357,18 @@ usb_status_t USB_DeviceCdcVcomCallback(class_handle_t handle, uint32_t event, vo
             }
 
             /* activate carrier and DTE */
-            if (acmInfo->dteStatus & USB_DEVICE_CDC_CONTROL_SIG_BITMAP_DTE_PRESENCE)
-            {
-                acmInfo->uartState |= USB_DEVICE_CDC_UART_STATE_RX_CARRIER;
-            }
-            else
-            {
-                acmInfo->uartState &= (uint16_t)~USB_DEVICE_CDC_UART_STATE_RX_CARRIER;
-            }
+            /***********************修改过代码********************/
+            acmInfo->dteStatus |= USB_DEVICE_CDC_CONTROL_SIG_BITMAP_DTE_PRESENCE;
+            acmInfo->uartState |= USB_DEVICE_CDC_UART_STATE_RX_CARRIER;
+            /*****************************************************/
+//            if (acmInfo->dteStatus & USB_DEVICE_CDC_CONTROL_SIG_BITMAP_DTE_PRESENCE)
+//            {
+//                acmInfo->uartState |= USB_DEVICE_CDC_UART_STATE_RX_CARRIER;
+//            }
+//            else
+//            {
+//                acmInfo->uartState &= (uint16_t)~USB_DEVICE_CDC_UART_STATE_RX_CARRIER;
+//            }
 
             /* Indicates to DCE if DTE is present or not */
             acmInfo->dtePresent = (acmInfo->dteStatus & USB_DEVICE_CDC_CONTROL_SIG_BITMAP_DTE_PRESENCE) ? true : false;

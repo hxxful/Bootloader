@@ -7,8 +7,10 @@
 *.elf
 *.bin
 *.hex
+*.map
 Bootloader.zip
 Bootloader.sublime-workspace
 .gdbinit
 build/
-*.map
+lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/Objects
+lib/imxrt/sdk_2.4.1_mimxrt1052/boards/uavrs_v2/Listings

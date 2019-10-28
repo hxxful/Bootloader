@@ -34,7 +34,7 @@
 ".\objects\uavrs_v2_flexspi_nor_flash.o"
 ".\objects\uavrs_v2_sdram_ini_dcd.o"
 ".\objects\bsp_led.o"
---library_type=microlib --nodebug --diag_suppress 6314 --strict --scatter ".\MIMXRT1052xxxxx_nor_itcm_txt_ram.scf"
+--library_type=microlib --diag_suppress 6314 --strict --scatter ".\MIMXRT1052xxxxx_nor_itcm_txt_ram.scf"
 --keep=*(.boot_hdr.conf)
 --keep=*(.boot_hdr.ivt) --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
